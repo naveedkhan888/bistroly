@@ -146,15 +146,10 @@ add_action('elementor/element/container/section_layout/after_section_end', funct
 }, 10, 2 );
 
 
-/*** Add custom options only to outer containers ***/
+/*** Add custom options to Elementor container ***/
 add_action('elementor/element/container/section_layout/after_section_end', function( $container, $args ) {
 
-    // Exit if this container is nested (has a parent)
-    if ( $container->get_parent() ) {
-        return;
-    }
-
-    /* Add custom section for full width toggles */
+    /* Add custom section for additional classes */
     $container->start_controls_section(
         'custom_fullwidth_classes',
         [
