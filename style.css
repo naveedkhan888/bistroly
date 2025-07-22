@@ -2203,22 +2203,11 @@ Vertical Menu
         max-width: 100% !important;
         padding-left: calc((100% - 1300px) / 2) !important;
     }
- 
-.left-section {
-        max-width: 100% !important;
-        padding-right: calc((100% - var(--container-max-width)) / 2) !important;
+
+@media (max-width: 1024px) {
+  .right-section { max-width: 100% !important; padding-left: calc((100% - var(--container-max-width)) / 2) !important;}
 }
- 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .right-section > .e-child:first-child {
-    padding-right: calc((100% - var(--container-max-width)) / 1) !important;
-  }
-  
-  .left-section > .e-child:first-child {
-        max-width: 100% !important;
-        padding-right: calc((100% - var(--container-max-width)) / 1) !important;
-}
-}
+
 
 .alignleft {
   float: left;
