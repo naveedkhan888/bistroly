@@ -2199,6 +2199,27 @@ Vertical Menu
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
+.spacing_sec {
+        max-width: 100% !important;
+        padding-left: calc((100% - var(--container-max-width)) / 2) !important;
+    }
+ 
+.spacing_sec_right {
+        max-width: 100% !important;
+        padding-right: calc((100% - var(--container-max-width)) / 2) !important;
+}
+ 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .spacing_sec > .e-child:first-child {
+    padding-right: calc((100% - var(--container-max-width)) / 1) !important;
+  }
+  
+  .spacing_sec_right > .e-child:first-child {
+        max-width: 100% !important;
+        padding-right: calc((100% - var(--container-max-width)) / 1) !important;
+}
+}
+
 .alignleft {
   float: left;
   margin-right: 1.5em;
