@@ -150,7 +150,7 @@ add_action('elementor/element/container/section_layout/after_section_end', funct
 add_action('elementor/element/container/section_layout/after_section_end', function( $container, $args ) {
 
     // Exit if this container is nested (has a parent)
-    if ( $container->get_parent() ) {
+    if ( $container->get_data( 'parent' ) ) {
         return;
     }
 
