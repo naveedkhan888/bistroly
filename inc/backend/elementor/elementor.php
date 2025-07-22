@@ -149,6 +149,11 @@ add_action('elementor/element/container/section_layout/after_section_end', funct
 /*** Add custom options to Elementor container ***/
 add_action('elementor/element/container/section_layout/after_section_end', function( $container, $args ) {
 
+    // Exit if this container is nested (has a parent)
+    if ( $container->get_parent() ) {
+        return;
+    }
+
     /* Add custom section for additional classes */
     $container->start_controls_section(
         'custom_fullwidth_classes',
