@@ -149,8 +149,9 @@ add_action('elementor/element/container/section_layout/after_section_end', funct
 /*** Add custom options only to outer containers ***/
 add_action('elementor/element/container/section_layout/after_section_end', function( $container, $args ) {
 
-    // Exit if this container is nested (has a parent)
-    if ( $container->get_data( 'parent' ) ) {
+    // Exit if this container is nested (parent is also a container)
+    $parent = $container->get_parent();
+    if ( $parent && $parent->get_name() === 'container' ) {
         return;
     }
 
@@ -192,16 +193,22 @@ add_action('elementor/element/container/section_layout/after_section_end', funct
 /*** Add selected classes to the container frontend ***/
 add_filter('elementor/frontend/container/should_render', function( $should_render, $container ) {
 
+    // Skip if container is nested (parent is a container)
+    $parent = $container->get_parent();
+    if ( $parent && $parent->get_name() === 'container' ) {
+        return $should_render;
+    }
+
     // Get settings for display
     $settings = $container->get_settings();
 
     // Add "right-section" class if enabled
-    if ( isset( $settings['right_fullwidth'] ) && $settings['right_fullwidth'] === 'right-section' ) {
+    if ( !empty( $settings['right_fullwidth'] ) && $settings['right_fullwidth'] === 'right-section' ) {
         $container->add_render_attribute('_wrapper', 'class', 'right-section');
     }
 
     // Add "left-section" class if enabled
-    if ( isset( $settings['left_fullwidth'] ) && $settings['left_fullwidth'] === 'left-section' ) {
+    if ( !empty( $settings['left_fullwidth'] ) && $settings['left_fullwidth'] === 'left-section' ) {
         $container->add_render_attribute('_wrapper', 'class', 'left-section');
     }
 
