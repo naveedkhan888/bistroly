@@ -146,19 +146,10 @@ add_action('elementor/element/container/section_layout/after_section_end', funct
 }, 10, 2 );
 
 
-/*** Add custom options only to outer containers ***/
+/*** Add custom options to Elementor container ***/
 add_action('elementor/element/container/section_layout/after_section_end', function( $container, $args ) {
 
-    // Prevent adding controls for nested containers by checking hierarchy key
-    if ( isset( $container->get_data()['elements'] ) ) {
-        // If this container has "elements", it's a section (outer container)
-        // Proceed to add controls
-    } else {
-        // This is likely an inner/nested container; skip adding controls
-        return;
-    }
-
-    /* Add custom section for full width toggles */
+    /* Add custom section for additional classes */
     $container->start_controls_section(
         'custom_fullwidth_classes',
         [
@@ -197,15 +188,15 @@ add_action('elementor/element/container/section_layout/after_section_end', funct
 add_filter('elementor/frontend/container/should_render', function( $should_render, $container ) {
 
     // Get settings for display
-    $settings = $container->get_settings_for_display();
+    $settings = $container->get_settings();
 
     // Add "right-section" class if enabled
-    if ( !empty( $settings['right_fullwidth'] ) && $settings['right_fullwidth'] === 'right-section' ) {
+    if ( isset( $settings['right_fullwidth'] ) && $settings['right_fullwidth'] === 'right-section' ) {
         $container->add_render_attribute('_wrapper', 'class', 'right-section');
     }
 
     // Add "left-section" class if enabled
-    if ( !empty( $settings['left_fullwidth'] ) && $settings['left_fullwidth'] === 'left-section' ) {
+    if ( isset( $settings['left_fullwidth'] ) && $settings['left_fullwidth'] === 'left-section' ) {
         $container->add_render_attribute('_wrapper', 'class', 'left-section');
     }
 
