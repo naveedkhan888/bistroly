@@ -2205,6 +2205,12 @@ Vertical Menu
     }
 
 @media (max-width: 1024px) {
+  .e-con {
+    --container-max-width: 88%;
+  }
+  }
+
+@media (max-width: 1024px) {
   .right-section > .e-child:first-child:nth-last-child(n+2) {
     padding-right: calc((100% - var(--container-max-width)) / 1) !important;
   }
