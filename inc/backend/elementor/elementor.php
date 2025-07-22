@@ -149,9 +149,12 @@ add_action('elementor/element/container/section_layout/after_section_end', funct
 /*** Add custom options only to outer containers ***/
 add_action('elementor/element/container/section_layout/after_section_end', function( $container, $args ) {
 
-    // Exit if this container is nested (parent is also a container)
-    $parent = $container->get_parent();
-    if ( $parent && $parent->get_name() === 'container' ) {
+    // Prevent adding controls for nested containers by checking hierarchy key
+    if ( isset( $container->get_data()['elements'] ) ) {
+        // If this container has "elements", it's a section (outer container)
+        // Proceed to add controls
+    } else {
+        // This is likely an inner/nested container; skip adding controls
         return;
     }
 
@@ -193,14 +196,8 @@ add_action('elementor/element/container/section_layout/after_section_end', funct
 /*** Add selected classes to the container frontend ***/
 add_filter('elementor/frontend/container/should_render', function( $should_render, $container ) {
 
-    // Skip if container is nested (parent is a container)
-    $parent = $container->get_parent();
-    if ( $parent && $parent->get_name() === 'container' ) {
-        return $should_render;
-    }
-
     // Get settings for display
-    $settings = $container->get_settings();
+    $settings = $container->get_settings_for_display();
 
     // Add "right-section" class if enabled
     if ( !empty( $settings['right_fullwidth'] ) && $settings['right_fullwidth'] === 'right-section' ) {
