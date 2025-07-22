@@ -2207,7 +2207,6 @@ Vertical Menu
 @media (max-width: 1024px) {
   .e-con {
     --container-max-width: 88% !important;
-    --width : 88% !important;
   }
   }
 
