@@ -146,6 +146,66 @@ add_action('elementor/element/container/section_layout/after_section_end', funct
 }, 10, 2 );
 
 
+/*** Add custom options to Elementor container ***/
+add_action('elementor/element/container/section_layout/after_section_end', function( $container, $args ) {
+
+    /* Add custom section for additional classes */
+    $container->start_controls_section(
+        'custom_fullwidth_classes',
+        [
+            'label' => __( 'Full Width Options', 'skinetic' ),
+            'tab'   => \Elementor\Controls_Manager::TAB_LAYOUT,
+        ]
+    );
+
+    // Right Full Width toggle
+    $container->add_control(
+        'right_fullwidth',
+        [
+            'label'        => __( 'Right Full Width', 'skinetic' ),
+            'type'         => Elementor\Controls_Manager::SWITCHER,
+            'return_value' => 'right-section',
+            'prefix_class' => '',
+        ]
+    );
+
+    // Left Full Width toggle
+    $container->add_control(
+        'left_fullwidth',
+        [
+            'label'        => __( 'Left Full Width', 'skinetic' ),
+            'type'         => Elementor\Controls_Manager::SWITCHER,
+            'return_value' => 'left-section',
+            'prefix_class' => '',
+        ]
+    );
+
+    $container->end_controls_section();
+
+}, 10, 2 );
+
+/*** Add selected classes to the container frontend ***/
+add_filter('elementor/frontend/container/should_render', function( $should_render, $container ) {
+
+    // Get settings for display
+    $settings = $container->get_settings();
+
+    // Add "right-section" class if enabled
+    if ( isset( $settings['right_fullwidth'] ) && $settings['right_fullwidth'] === 'right-section' ) {
+        $container->add_render_attribute('_wrapper', 'class', 'right-section');
+    }
+
+    // Add "left-section" class if enabled
+    if ( isset( $settings['left_fullwidth'] ) && $settings['left_fullwidth'] === 'left-section' ) {
+        $container->add_render_attribute('_wrapper', 'class', 'left-section');
+    }
+
+    return $should_render;
+
+}, 10, 2 );
+
+
+
 /*** add options to columns ***/
 if ( did_action( 'elementor/loaded' ) ) {
     require get_template_directory() . '/inc/backend/elementor/column.php';
