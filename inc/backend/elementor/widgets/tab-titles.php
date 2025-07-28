@@ -191,7 +191,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 				'type' => Controls_Manager::SLIDER,
 				'range' => [ 'px' => [ 'min' => 10, 'max' => 100 ] ],
 				'selectors' => [
-					'{{WRAPPER}} .title-item .icon'     => 'font-size: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .title-item .icon i'     => 'font-size: {{SIZE}}{{UNIT}};',
 					'{{WRAPPER}} .title-item .icon svg' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
 				],
 			]
