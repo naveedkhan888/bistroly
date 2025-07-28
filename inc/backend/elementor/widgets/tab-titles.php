@@ -1,28 +1,22 @@
 <?php
-namespace Elementor; // Custom widgets must be defined in the Elementor namespace
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measure)
+namespace Elementor;
 
-/**
- * Widget Name: Tab Titles
- */
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 class CreamPoint_Tab_Titles extends Widget_Base {
 
-	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
 		return 'itabtitle';
 	}
 
-	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
 		return __( 'XP Tab Titles', 'skinetic' );
 	}
 
-	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
 	public function get_icon() {
 		return 'eicon-site-title';
 	}
 
-	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
 		return [ 'category_skinetic' ];
 	}
@@ -54,8 +48,6 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 				'default' => '#tab-1',
 			]
 		);
-
-		// Add icon control to the repeater
 		$repeater->add_control(
 			'icon',
 			[
@@ -69,33 +61,25 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		);
 
 		$this->add_control(
-		    'title_boxes',
-		    [
-		        'label'       => '',
-		        'type'        => Controls_Manager::REPEATER,
-		        'show_label'  => false,
-		        'fields'      => $repeater->get_controls(),
-		        'title_field' => '{{{titles}}}',
-		    ]
+			'title_boxes',
+			[
+				'label'       => '',
+				'type'        => Controls_Manager::REPEATER,
+				'show_label'  => false,
+				'fields'      => $repeater->get_controls(),
+				'title_field' => '{{{titles}}}',
+			]
 		);
+
 		$this->add_responsive_control(
 			'align',
 			[
 				'label' => __( 'Alignment', 'skinetic' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
-					'flex-start'  => [
-						'title' => __( 'Left', 'skinetic' ),
-						'icon' => 'eicon-text-align-left',
-					],
-					'center' => [
-						'title' => __( 'Center', 'skinetic' ),
-						'icon' => 'eicon-text-align-center',
-					],
-					'flex-end' => [
-						'title' => __( 'Right', 'skinetic' ),
-						'icon' => 'eicon-text-align-right',
-					],
+					'flex-start' => [ 'title' => __( 'Left' ), 'icon' => 'eicon-text-align-left' ],
+					'center'     => [ 'title' => __( 'Center' ), 'icon' => 'eicon-text-align-center' ],
+					'flex-end'   => [ 'title' => __( 'Right' ), 'icon' => 'eicon-text-align-right' ],
 				],
 				'selectors' => [
 					'{{WRAPPER}} .tab-titles' => 'justify-content: {{VALUE}};',
@@ -105,7 +89,8 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 
 		$this->end_controls_section();
 
-		// Styling Section
+		/** ---------- Style Section ---------- **/
+
 		$this->start_controls_section(
 			'style_section',
 			[
@@ -119,12 +104,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 			[
 				'label' => __( 'Spacing', 'skinetic' ),
 				'type' => Controls_Manager::SLIDER,
-				'range' => [
-					'px' => [
-						'min' => 0,
-						'max' => 150,
-					],
-				],
+				'range' => [ 'px' => [ 'min' => 0, 'max' => 150 ] ],
 				'selectors' => [
 					'{{WRAPPER}} .tab-titles .title-item' => 'margin: calc({{SIZE}}{{UNIT}}/2);',
 					'{{WRAPPER}} .tab-titles' => 'margin: calc(-{{SIZE}}{{UNIT}}/2);',
@@ -143,6 +123,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 				],
 			]
 		);
+
 		$this->add_control(
 			'radius_title',
 			[
@@ -175,9 +156,8 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Text Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
-				'default' => '',
 				'selectors' => [
 					'{{WRAPPER}} .title-item a' => 'color: {{VALUE}};',
 				]
@@ -188,10 +168,32 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 			[
 				'label' => __( 'Background', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
-				'default' => '',
 				'selectors' => [
 					'{{WRAPPER}} .title-item a' => 'background: {{VALUE}};',
 				]
+			]
+		);
+		$this->add_control(
+			'icon_color',
+			[
+				'label' => __( 'Icon Color', 'skinetic' ),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .title-item a .icon, {{WRAPPER}} .title-item a .icon svg' => 'color: {{VALUE}}; fill: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'icon_size',
+			[
+				'label' => __( 'Icon Size', 'skinetic' ),
+				'type' => Controls_Manager::SLIDER,
+				'range' => [ 'px' => [ 'min' => 10, 'max' => 100 ] ],
+				'selectors' => [
+					'{{WRAPPER}} .title-item .icon'     => 'font-size: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .title-item .icon svg' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+				],
 			]
 		);
 
@@ -200,16 +202,15 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->start_controls_tab(
 			'tab_title_hover',
 			[
-				'label' => __( 'Active/Hover', 'skinetic' ),
+				'label' => __( 'Hover / Active', 'skinetic' ),
 			]
 		);
 
 		$this->add_control(
 			'title_active_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Text Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
-				'default' => '',
 				'selectors' => [
 					'{{WRAPPER}} .title-item a:hover, {{WRAPPER}} .title-item a.tab-active' => 'color: {{VALUE}};',
 				]
@@ -220,42 +221,47 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 			[
 				'label' => __( 'Background', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
-				'default' => '',
 				'selectors' => [
 					'{{WRAPPER}} .title-item a:hover, {{WRAPPER}} .title-item a.tab-active' => 'background: {{VALUE}};',
 				]
+			]
+		);
+		$this->add_control(
+			'icon_hover_color',
+			[
+				'label' => __( 'Icon Hover Color', 'skinetic' ),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .title-item a:hover .icon, {{WRAPPER}} .title-item a:hover .icon svg, {{WRAPPER}} .title-item a.tab-active .icon, {{WRAPPER}} .title-item a.tab-active .icon svg' => 'color: {{VALUE}}; fill: {{VALUE}};',
+				],
 			]
 		);
 
 		$this->end_controls_tab();
 
 		$this->end_controls_tabs();
-
 		$this->end_controls_section();
 	}
 
 	protected function render() {
 		$settings = $this->get_settings_for_display();
 		?>
-
 		<div class="tab-titles">
 			<?php foreach ( $settings['title_boxes'] as $box ) : ?>
-			<div class="title-item font-second">
-				<a href="<?php echo esc_url( $box['title_link'] ); ?>">
-				    <?php if ( ! empty( $box['icon']['value'] ) ) : ?>
-				        <span class="icon">
-				            <?php Icons_Manager::render_icon( $box['icon'], [ 'aria-hidden' => 'true' ] ); ?>
-				        </span>
-				    <?php endif; ?>
-				    <?php echo esc_html( $box['titles'] ); ?>
-				</a>
-			</div>
+				<div class="title-item font-second">
+					<a href="<?php echo esc_url( $box['title_link'] ); ?>">
+						<?php if ( ! empty( $box['icon']['value'] ) ) : ?>
+							<span class="icon">
+								<?php Icons_Manager::render_icon( $box['icon'], [ 'aria-hidden' => 'true' ] ); ?>
+							</span>
+						<?php endif; ?>
+						<?php echo esc_html( $box['titles'] ); ?>
+					</a>
+				</div>
 			<?php endforeach; ?>
 		</div>
-
-	    <?php
+		<?php
 	}
-
 }
-// After the Schedule class is defined, I must register the new widget class with Elementor:
+
 Plugin::instance()->widgets_manager->register( new CreamPoint_Tab_Titles() );
