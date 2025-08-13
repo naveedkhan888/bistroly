@@ -265,13 +265,24 @@ class Skinetic_Testimonials extends Widget_Base{
 		);
 
 		$this->add_responsive_control(
-			'tcontent_padding',
+			'tcontent_box_padding',
 			[
-				'label' => __( 'Padding', 'skinetic' ),
+				'label' => __( 'Padding Box top', 'skinetic' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
-					'{{WRAPPER}} .xp-testimonials .ttext, {{WRAPPER}} .xp-testimonials .t-head' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .xp-testimonials .t-head' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+		$this->add_responsive_control(
+			'tcontent_padding',
+			[
+				'label' => __( 'Padding Photo Text', 'skinetic' ),
+				'type' => Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%' ],
+				'selectors' => [
+					'{{WRAPPER}} .xp-testimonials .ttext' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
