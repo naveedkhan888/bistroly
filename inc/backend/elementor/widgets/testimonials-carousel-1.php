@@ -3,7 +3,7 @@ namespace Elementor; // Custom widgets must be defined in the Elementor namespac
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measure)
 
 /**
- * Widget Name: Testimonial Carousel 1
+ * Widget Name: Testimonial Carousel 1 with Star Ratings
  */
 class Skinetic_Testimonials extends Widget_Base{
 
@@ -64,6 +64,23 @@ class Skinetic_Testimonials extends Widget_Base{
 				'default' => 'Developer',
 			]
 		);
+
+		$repeater->add_control(
+			'trating',
+			[
+				'label' => __( 'Rating:', 'skinetic' ),
+				'type' => Controls_Manager::SELECT,
+				'default' => '5',
+				'options' => [
+					'1' => __( '1 Star', 'skinetic' ),
+					'2' => __( '2 Stars', 'skinetic' ),
+					'3' => __( '3 Stars', 'skinetic' ),
+					'4' => __( '4 Stars', 'skinetic' ),
+					'5' => __( '5 Stars', 'skinetic' ),
+				],
+			]
+		);
+
 		$repeater->add_control(
 			'tcontent',
 			[
@@ -87,7 +104,8 @@ class Skinetic_Testimonials extends Widget_Base{
 							'url' => get_template_directory_uri().'/images/avatar-1.png',
 						],
 						'tname'	  => 'Oliver Simson',
-						'tjob'	  => 'Developer'
+						'tjob'	  => 'Developer',
+						'trating' => '5'
 		 
 		            ],
 		            [
@@ -96,7 +114,8 @@ class Skinetic_Testimonials extends Widget_Base{
 							'url' => get_template_directory_uri().'/images/avatar-1.png',
 						],
 						'tname'	  => 'Mary Grey',
-						'tjob'	  => 'Manager'
+						'tjob'	  => 'Manager',
+						'trating' => '4'
 		 
 		            ],
 		            [
@@ -105,7 +124,8 @@ class Skinetic_Testimonials extends Widget_Base{
 							'url' => get_template_directory_uri().'/images/avatar-1.png',
 						],
 						'tname'	  => 'Samanta Fox',
-						'tjob'	  => 'Designer'
+						'tjob'	  => 'Designer',
+						'trating' => '5'
 		 
 		            ]
 		            
@@ -455,6 +475,155 @@ class Skinetic_Testimonials extends Widget_Base{
 
 		$this->end_controls_section();
 
+		// Star Rating Styles
+		$this->start_controls_section(
+			'style_rating',
+			[
+				'label' => __( 'Star Rating', 'skinetic' ),
+				'tab' => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->add_control(
+			'rating_position',
+			[
+				'label' => __( 'Rating Position', 'skinetic' ),
+				'type' => Controls_Manager::SELECT,
+				'default' => 'after_name',
+				'options' => [
+					'before_content' => __( 'Before Content', 'skinetic' ),
+					'after_content' => __( 'After Content', 'skinetic' ),
+					'after_name' => __( 'After Name', 'skinetic' ),
+					'after_job' => __( 'After Job', 'skinetic' ),
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'rating_size',
+			[
+				'label' => __( 'Star Size', 'skinetic' ),
+				'type' => Controls_Manager::SLIDER,
+				'size_units' => [ 'px', 'em' ],
+				'range' => [
+					'px' => [
+						'min' => 10,
+						'max' => 50,
+					],
+					'em' => [
+						'min' => 0.5,
+						'max' => 3,
+						'step' => 0.1,
+					],
+				],
+				'default' => [
+					'size' => 16,
+					'unit' => 'px',
+				],
+				'selectors' => [
+					'{{WRAPPER}} .xp-testimonials .rating i' => 'font-size: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'rating_spacing',
+			[
+				'label' => __( 'Spacing Between Stars', 'skinetic' ),
+				'type' => Controls_Manager::SLIDER,
+				'size_units' => [ 'px' ],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 10,
+					],
+				],
+				'default' => [
+					'size' => 2,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .xp-testimonials .rating i:not(:last-child)' => 'margin-right: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'rating_margin',
+			[
+				'label' => __( 'Rating Margin', 'skinetic' ),
+				'type' => Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%', 'em' ],
+				'selectors' => [
+					'{{WRAPPER}} .xp-testimonials .rating' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_control(
+			'rating_align',
+			[
+				'label' => __( 'Alignment', 'skinetic' ),
+				'type' => Controls_Manager::CHOOSE,
+				'options' => [
+					'left' => [
+						'title' => __( 'Left', 'skinetic' ),
+						'icon' => 'eicon-text-align-left',
+					],
+					'center' => [
+						'title' => __( 'Center', 'skinetic' ),
+						'icon' => 'eicon-text-align-center',
+					],
+					'right' => [
+						'title' => __( 'Right', 'skinetic' ),
+						'icon' => 'eicon-text-align-right',
+					],
+				],
+				'default' => 'left',
+				'selectors' => [
+					'{{WRAPPER}} .xp-testimonials .rating' => 'text-align: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_control(
+			'star_filled_color',
+			[
+				'label' => __( 'Filled Star Color', 'skinetic' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '#ffb400',
+				'selectors' => [
+					'{{WRAPPER}} .xp-testimonials .rating .star-filled' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_control(
+			'star_empty_color',
+			[
+				'label' => __( 'Empty Star Color', 'skinetic' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '#e0e0e0',
+				'selectors' => [
+					'{{WRAPPER}} .xp-testimonials .rating .star-empty' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_control(
+			'star_style',
+			[
+				'label' => __( 'Star Style', 'skinetic' ),
+				'type' => Controls_Manager::SELECT,
+				'default' => 'solid',
+				'options' => [
+					'solid' => __( 'Solid', 'skinetic' ),
+					'outline' => __( 'Outline', 'skinetic' ),
+				],
+			]
+		);
+
+		$this->end_controls_section();
+
 		// Dots.
 		$this->start_controls_section(
 			'navigation_section',
@@ -612,6 +781,29 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->end_controls_section();
 	}
 
+	protected function render_stars( $rating, $star_style = 'solid' ) {
+		$stars_html = '<div class="rating">';
+		
+		for ( $i = 1; $i <= 5; $i++ ) {
+			if ( $i <= $rating ) {
+				if ( $star_style === 'outline' ) {
+					$stars_html .= '<i class="far fa-star star-filled"></i>';
+				} else {
+					$stars_html .= '<i class="fas fa-star star-filled"></i>';
+				}
+			} else {
+				if ( $star_style === 'outline' ) {
+					$stars_html .= '<i class="far fa-star star-empty"></i>';
+				} else {
+					$stars_html .= '<i class="fas fa-star star-empty"></i>';
+				}
+			}
+		}
+		
+		$stars_html .= '</div>';
+		return $stars_html;
+	}
+
 	protected function render() {
 		$settings = $this->get_settings_for_display();
 
@@ -633,14 +825,45 @@ class Skinetic_Testimonials extends Widget_Base{
 			<div class="owl-carousel owl-theme">
 				<?php if ( ! empty( $settings['testi_slider'] ) ) : foreach ( $settings['testi_slider'] as $testi ) : ?>
 				<div class="testi-item">
-					<?php if($testi['tcontent']) { echo '<div class="ttext">' .$testi['tcontent']. '</div>'; } ?>			
+					
+					<?php 
+					// Render rating before content if selected
+					if ( $settings['rating_position'] === 'before_content' && !empty( $testi['trating'] ) ) {
+						echo $this->render_stars( intval( $testi['trating'] ), $settings['star_style'] );
+					}
+					?>
+
+					<?php if($testi['tcontent']) { echo '<div class="ttext">' .$testi['tcontent']. '</div>'; } ?>
+
+					<?php 
+					// Render rating after content if selected
+					if ( $settings['rating_position'] === 'after_content' && !empty( $testi['trating'] ) ) {
+						echo $this->render_stars( intval( $testi['trating'] ), $settings['star_style'] );
+					}
+					?>			
+					
 					<div class="t-head flex-middle">
 						<?php if($testi['timage']['url']) { ?>
 							<div class="tphoto"><img src="<?php echo esc_url( $testi['timage']['url'] ); ?>" alt="<?php echo esc_attr( $testi['tname'] ); ?>"></div>
 						<?php } ?>
 						<div class="tinfo">
 							<?php if($testi['tname']) { echo '<h6>' .$testi['tname']. '</h6>'; } ?>
+							
+							<?php 
+							// Render rating after name if selected
+							if ( $settings['rating_position'] === 'after_name' && !empty( $testi['trating'] ) ) {
+								echo $this->render_stars( intval( $testi['trating'] ), $settings['star_style'] );
+							}
+							?>
+
 							<?php if($testi['tjob']) { echo '<span>' .$testi['tjob']. '</span>'; } ?>
+
+							<?php 
+							// Render rating after job if selected
+							if ( $settings['rating_position'] === 'after_job' && !empty( $testi['trating'] ) ) {
+								echo $this->render_stars( intval( $testi['trating'] ), $settings['star_style'] );
+							}
+							?>
 						</div>
 					</div>
 				</div>
@@ -652,7 +875,7 @@ class Skinetic_Testimonials extends Widget_Base{
 	}
 
 	public function get_keywords() {
-		return [ 'slider', 'says', 'quote' ];
+		return [ 'slider', 'says', 'quote', 'testimonial', 'rating', 'stars' ];
 	}
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
