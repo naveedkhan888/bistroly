@@ -683,6 +683,10 @@ mark, ins {
   left: 0;
   width: 100%;
 }
+.right_dottts .owl-carousel .owl-dots {
+  left: inherit;
+  right: 0;
+}
 .owl-carousel .owl-dots button.owl-dot {
   position: relative;
   width: 30px;
