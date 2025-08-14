@@ -439,7 +439,6 @@ class XP_Lists_Showcase extends Widget_Base {
     }
 
     protected function render() {
-        $is_editor = \Elementor\Plugin::$instance->editor->is_edit_mode();
         $settings = $this->get_settings_for_display();
         $show_top_border = $settings['show_top_border'] === 'yes' ? 'xptheme-has-top-border' : '';
         $show_bottom_border = $settings['show_bottom_border'] === 'yes' ? 'xptheme-has-bottom-border' : '';
