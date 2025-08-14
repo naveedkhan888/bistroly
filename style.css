@@ -4915,9 +4915,10 @@ object {
   gap: 10px;
   flex-direction: column;
   transition: all 0.3s ease-in-out;
+  border: 1px solid #FFFFFF24;
 }
 
-.tab-titles .title-item a:hover, 
+.tab-titles .title-item a:hover,  
 .tab-titles .title-item a.tab-active {
   border-color: #B58C67;
 }
