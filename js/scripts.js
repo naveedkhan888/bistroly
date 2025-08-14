@@ -341,4 +341,46 @@
         }
     }, 250);
 
+
+
+    // Core namespace setup
+    if (typeof xptheme === 'undefined') {
+        window.xptheme = {};
+    }
+    window.xpthemeCore = {};
+
+    // Initialize only the interactive link showcase functionality
+    xpthemeCore.shortcodes = {
+        xp_core_interactive_link_showcase: {
+            xpthemeInteractiveLinkShowcaseList: {
+                init: function() {
+                    var $holder = $('.xptheme-interactive-link-showcase.xptheme-layout--list');
+                    if ($holder.length) {
+                        $holder.each(function() {
+                            var $el = $(this),
+                                $images = $el.find('.xptheme-m-image'),
+                                $items = $el.find('.xptheme-m-item');
+
+                            $images.eq(0).addClass('xptheme--active');
+                            $items.eq(0).addClass('xptheme--active');
+
+                            $items.on('mouseenter', function() {
+                                var $this = $(this);
+                                $images.removeClass('xptheme--active').eq($this.index()).addClass('xptheme--active');
+                                $items.removeClass('xptheme--active').eq($this.index()).addClass('xptheme--active');
+                            });
+
+                            $el.addClass('xptheme--init');
+                        });
+                    }
+                }
+            }
+        }
+    };
+
+    // Initialize on document ready
+    $(document).ready(function() {
+        xpthemeCore.shortcodes.xp_core_interactive_link_showcase.xpthemeInteractiveLinkShowcaseList.init();
+    });
+
 } )( jQuery );
