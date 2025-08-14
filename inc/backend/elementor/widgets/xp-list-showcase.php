@@ -70,11 +70,51 @@ class XP_Lists_Showcase extends Widget_Base {
         );
 
         $repeater->add_control(
+            'title_tag',
+            [
+                'label' => __( 'Title HTML Tag', 'skinetic' ),
+                'type' => Controls_Manager::SELECT,
+                'options' => [
+                    'h1' => 'H1',
+                    'h2' => 'H2',
+                    'h3' => 'H3',
+                    'h4' => 'H4',
+                    'h5' => 'H5',
+                    'h6' => 'H6',
+                    'div' => 'div',
+                    'span' => 'span',
+                    'p' => 'p',
+                ],
+                'default' => 'h3',
+            ]
+        );
+
+        $repeater->add_control(
             'subtitle', [
                 'label' => __( 'Subtitle', 'skinetic' ),
                 'type' => Controls_Manager::TEXT,
                 'default' => __( 'List Subtitle', 'skinetic' ),
                 'label_block' => true,
+            ]
+        );
+
+        $repeater->add_control(
+            'subtitle_tag',
+            [
+                'label' => __( 'Subtitle HTML Tag', 'skinetic' ),
+                'type' => Controls_Manager::SELECT,
+                'options' => [
+                    'p' => 'p',
+                    'div' => 'div',
+                    'span' => 'span',
+                    'h1' => 'H1',
+                    'h2' => 'H2',
+                    'h3' => 'H3',
+                    'h4' => 'H4',
+                    'h5' => 'H5',
+                    'h6' => 'H6',
+                ],
+                'default' => 'p',
             ]
         );
 
@@ -135,11 +175,15 @@ class XP_Lists_Showcase extends Widget_Base {
                 'default' => [
                     [
                         'title' => __( 'Menu', 'skinetic' ),
+                        'title_tag' => 'h3',
                         'subtitle' => __( 'Main Courses', 'skinetic' ),
+                        'subtitle_tag' => 'p',
                     ],
                     [
                         'title' => __( 'Cocktails', 'skinetic' ),
+                        'title_tag' => 'h3',
                         'subtitle' => __( 'Mixed Drinks', 'skinetic' ),
+                        'subtitle_tag' => 'p',
                     ],
                 ],
                 'title_field' => '{{{ title }}}',
@@ -408,10 +452,12 @@ class XP_Lists_Showcase extends Widget_Base {
                         $this->add_link_attributes('link_' . $index, $item['link']);
                         $link_attr = $this->get_render_attribute_string('link_' . $index);
                     }
+                    $title_tag = !empty($item['title_tag']) ? $item['title_tag'] : 'h3';
+                    $subtitle_tag = !empty($item['subtitle_tag']) ? $item['subtitle_tag'] : 'p';
                 ?>
                     <a itemprop="url" class="xptheme-m-item xptheme-e" <?php echo $link_attr; ?>>
-                        <span class="xptheme-e-title"><?php echo esc_html($item['title']); ?></span>
-                        <span class="xptheme-e-subtitle"><?php echo esc_html($item['subtitle']); ?></span>
+                        <<?php echo esc_attr($title_tag); ?> class="xptheme-e-title"><?php echo esc_html($item['title']); ?></<?php echo esc_attr($title_tag); ?>>
+                        <<?php echo esc_attr($subtitle_tag); ?> class="xptheme-e-subtitle"><?php echo esc_html($item['subtitle']); ?></<?php echo esc_attr($subtitle_tag); ?>>
 
                         <?php if (!empty($item['image_1']['url'])): ?>
                             <img decoding="async" loading="lazy" src="<?php echo esc_url($item['image_1']['url']); ?>" alt="<?php echo esc_attr($item['title']); ?>" />
