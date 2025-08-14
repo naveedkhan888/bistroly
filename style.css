@@ -4916,6 +4916,11 @@ object {
   flex-direction: column;
 }
 
+.tab-titles .title-item a:hover, 
+.tab-titles .title-item a.tab-active {
+  border-color: #B58C67;
+}
+
 
 @media (max-width: 767px) {
   .tab-titles,

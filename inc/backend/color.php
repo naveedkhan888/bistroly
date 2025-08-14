@@ -201,6 +201,8 @@ if(!function_exists('skinetic_color_scheme')){
 			.xp-accordions .acc-item.current .acc-toggle,
 			.xp-tabs .tab-link.current, .xp-tabs .tab-link:hover,
 			.xp-video-button a:hover span,
+			.tab-titles .title-item a:hover, 
+			.tab-titles .title-item a.tab-active, 
 			.woocommerce div.product .woocommerce-tabs ul.tabs li a:hover,
 			.woocommerce div.product .woocommerce-tabs ul.tabs li.active a{ border-color: '.skinetic_get_option('main_color').'; }
 
