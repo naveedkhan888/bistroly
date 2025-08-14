@@ -439,16 +439,7 @@ class XP_Lists_Showcase extends Widget_Base {
     }
 
     protected function render() {
-
-        // Check if we are in Elementor editor mode
-        if ( \Elementor\Plugin::$instance->editor->is_edit_mode() ) {
-            echo '<div style="padding:20px; border:1px dashed #ccc; text-align:center; background:#f9f9f9;">
-                <strong>XP Lists Showcase</strong><br>
-                <em>Preview will appear on frontend</em>
-            </div>';
-            return;
-        }
-        
+        $is_editor = \Elementor\Plugin::$instance->editor->is_edit_mode();
         $settings = $this->get_settings_for_display();
         $show_top_border = $settings['show_top_border'] === 'yes' ? 'xptheme-has-top-border' : '';
         $show_bottom_border = $settings['show_bottom_border'] === 'yes' ? 'xptheme-has-bottom-border' : '';
