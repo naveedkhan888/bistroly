@@ -197,6 +197,37 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 			]
 		);
 
+		$this->add_control(
+			'title_border_color',
+			[
+				'label' => __( 'Border Color', 'skinetic' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .title-item a' => 'border: 1px solid {{VALUE}};',
+				],
+			]
+		);
+
+		// Border Width
+		$this->add_control(
+			'title_border_width',
+			[
+				'label' => __( 'Border Width', 'skinetic' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px' ],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 10,
+						'step' => 1,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .title-item a' => 'border-width: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
 		$this->end_controls_tab();
 
 		$this->start_controls_tab(
@@ -233,6 +264,17 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .title-item a:hover .icon, {{WRAPPER}} .title-item a:hover .icon svg, {{WRAPPER}} .title-item a.tab-active .icon, {{WRAPPER}} .title-item a.tab-active .icon svg' => 'color: {{VALUE}}; fill: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_control(
+			'title_border_color',
+			[
+				'label' => __( 'Border Color', 'skinetic' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .title-item a:hover' => 'border: 1px solid {{VALUE}};',
 				],
 			]
 		);
