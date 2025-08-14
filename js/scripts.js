@@ -343,44 +343,135 @@
 
 
 
-    // Core namespace setup
-    if (typeof xptheme === 'undefined') {
+    // Namespace setup with null check optimization
+    if (typeof window.xptheme === 'undefined') {
         window.xptheme = {};
     }
-    window.xpthemeCore = {};
-
-    // Initialize only the interactive link showcase functionality
+    window.xpthemeCore = window.xpthemeCore || {};
+    
+    // Cached selectors and optimized initialization
+    const SELECTORS = {
+        holder: '.xptheme-interactive-link-showcase.xptheme-layout--list',
+        images: '.xptheme-m-image',
+        items: '.xptheme-m-item',
+        active: 'xptheme--active',
+        init: 'xptheme--init'
+    };
+    
+    // Debounce function for performance
+    function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func.apply(this, args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+    
+    // Optimized interactive link showcase functionality
     xpthemeCore.shortcodes = {
         xp_core_interactive_link_showcase: {
             xpthemeInteractiveLinkShowcaseList: {
+                // Cache for initialized elements to prevent re-initialization
+                initializedElements: new WeakSet(),
+                
                 init: function() {
-                    var $holder = $('.xptheme-interactive-link-showcase.xptheme-layout--list');
-                    if ($holder.length) {
-                        $holder.each(function() {
-                            var $el = $(this),
-                                $images = $el.find('.xptheme-m-image'),
-                                $items = $el.find('.xptheme-m-item');
-
-                            $images.eq(0).addClass('xptheme--active');
-                            $items.eq(0).addClass('xptheme--active');
-
-                            $items.on('mouseenter', function() {
-                                var $this = $(this);
-                                $images.removeClass('xptheme--active').eq($this.index()).addClass('xptheme--active');
-                                $items.removeClass('xptheme--active').eq($this.index()).addClass('xptheme--active');
-                            });
-
-                            $el.addClass('xptheme--init');
+                    // Use modern selector with early return
+                    const holders = document.querySelectorAll(SELECTORS.holder);
+                    if (!holders.length) return;
+                    
+                    // Use DocumentFragment for batch DOM operations if needed
+                    const fragment = document.createDocumentFragment();
+                    
+                    holders.forEach((holder) => {
+                        // Skip if already initialized
+                        if (this.initializedElements.has(holder)) return;
+                        
+                        this.initializeHolder(holder);
+                        this.initializedElements.add(holder);
+                    });
+                },
+                
+                initializeHolder: function(holder) {
+                    const images = holder.querySelectorAll(SELECTORS.images);
+                    const items = holder.querySelectorAll(SELECTORS.items);
+                    
+                    if (!images.length || !items.length) return;
+                    
+                    // Batch DOM updates
+                    requestAnimationFrame(() => {
+                        // Set initial active states
+                        if (images[0]) images[0].classList.add(SELECTORS.active);
+                        if (items[0]) items[0].classList.add(SELECTORS.active);
+                        
+                        // Use event delegation for better performance
+                        this.attachEventListeners(holder, images, items);
+                        
+                        // Mark as initialized
+                        holder.classList.add(SELECTORS.init);
+                    });
+                },
+                
+                attachEventListeners: function(holder, images, items) {
+                    // Debounced mouse enter handler for performance
+                    const debouncedHandler = debounce((targetItem) => {
+                        const index = Array.from(items).indexOf(targetItem);
+                        if (index === -1) return;
+                        
+                        // Batch class operations
+                        requestAnimationFrame(() => {
+                            // Remove active classes efficiently
+                            images.forEach(img => img.classList.remove(SELECTORS.active));
+                            items.forEach(item => item.classList.remove(SELECTORS.active));
+                            
+                            // Add active classes
+                            if (images[index]) images[index].classList.add(SELECTORS.active);
+                            if (items[index]) items[index].classList.add(SELECTORS.active);
                         });
-                    }
+                    }, 16); // ~60fps throttling
+                    
+                    // Use event delegation on the holder
+                    holder.addEventListener('mouseenter', (e) => {
+                        const targetItem = e.target.closest(SELECTORS.items);
+                        if (targetItem && holder.contains(targetItem)) {
+                            debouncedHandler(targetItem);
+                        }
+                    }, { passive: true, capture: true });
+                },
+                
+                // Method to reinitialize if needed
+                reinit: function() {
+                    this.initializedElements = new WeakSet();
+                    this.init();
                 }
             }
         }
     };
-
-    // Initialize on document ready
-    $(document).ready(function() {
-        xpthemeCore.shortcodes.xp_core_interactive_link_showcase.xpthemeInteractiveLinkShowcaseList.init();
-    });
+    
+    // Optimized initialization with multiple fallbacks
+    function initializeShowcase() {
+        if (document.readyState === 'loading') {
+            // DOM is still loading
+            document.addEventListener('DOMContentLoaded', () => {
+                xpthemeCore.shortcodes.xp_core_interactive_link_showcase.xpthemeInteractiveLinkShowcaseList.init();
+            }, { once: true });
+        } else {
+            // DOM is already loaded
+            xpthemeCore.shortcodes.xp_core_interactive_link_showcase.xpthemeInteractiveLinkShowcaseList.init();
+        }
+    }
+    
+    // Initialize immediately if possible, otherwise wait for DOM
+    initializeShowcase();
+    
+    // Expose reinit method globally if needed
+    window.xpthemeReinitShowcase = function() {
+        xpthemeCore.shortcodes.xp_core_interactive_link_showcase.xpthemeInteractiveLinkShowcaseList.reinit();
+    };
 
 } )( jQuery );
+
+
