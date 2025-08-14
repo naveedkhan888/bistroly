@@ -9336,24 +9336,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   }
 }
 
-body {
-  font-family: Jost, sans-serif;
-  font-size: 17px;
-  line-height: 1.64706em;
-  font-weight: 300;
-  color: var(--qode-paragraph-color);
-  background-color: #102b2a;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-}
 
-a,
-p a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.2s ease-out;
-  cursor: pointer;
-}
 
 .xptheme-interactive-link-showcase {
   position: relative;
