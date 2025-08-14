@@ -4914,6 +4914,7 @@ object {
   border-radius: 0;
   gap: 10px;
   flex-direction: column;
+  transition: all 0.3s ease-in-out;
 }
 
 .tab-titles .title-item a:hover, 
