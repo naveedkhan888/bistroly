@@ -269,7 +269,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		);
 
 		$this->add_control(
-			'title_border_color',
+			'title_border_hover_color',
 			[
 				'label' => __( 'Border Color', 'skinetic' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
