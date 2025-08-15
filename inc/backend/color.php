@@ -30,6 +30,12 @@ if(!function_exists('skinetic_color_scheme')){
 			'
 			/****Second background Color****/
 			.post-box .post-inner, 
+			.site-header-cart, 
+			.xptf-cta-header .h-search-form-field .h-search-form-inner, 
+			.xptf-cta-header .h-search-form-field::after, 
+			.main-navigation ul ul.sub-menu:after, 
+			.main-navigation ul ul.sub-menu, 
+			.site-header-cart:after, 
 			.blog-post .author-bio, 
 			.comment-respond{ background: '.skinetic_get_option('secandary_th_color').';}
 				';

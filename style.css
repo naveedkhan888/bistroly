@@ -1200,7 +1200,7 @@ a {
   text-decoration: none;
 }
 a:visited {
-  color: #1a1b1e;
+  color: #ffffff;
 }
 a:hover, a:focus, a:active {
   color: #0f3d3a;
@@ -1456,7 +1456,7 @@ a:hover, a:active {
   float: none;
   margin: 0px 0px;
   padding: 0px 0px;
-  background: #fff;
+  background: #070E22;
   min-width: 250px;
   white-space: nowrap;
   position: absolute;
@@ -1498,7 +1498,7 @@ a:hover, a:active {
   left: 50px;
   opacity: 1;
   z-index: -1;
-  background: #fff;
+  background: #070E22;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -1526,7 +1526,7 @@ a:hover, a:active {
 .main-navigation ul li li a {
   font-size: 14px;
   line-height: 30px;
-  color: #1a1b1e;
+  color: #ffffff;
   text-align: left;
   display: block;
   padding: 8px 30px;
@@ -7510,7 +7510,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 }
 .xptf-cta-header .h-search-form-field .h-search-form-inner {
   padding: 30px;
-  background-color: #fff;
+  background-color: #070E22;
   box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
   -webkit-box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
@@ -7529,7 +7529,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   top: -5px;
   right: 33px;
   opacity: 1;
-  background: #fff;
+  background: #070E22;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -7580,8 +7580,8 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   top: -o-calc(100% + 12px);
   top: calc(100% + 12px);
   right: -30px;
-  background: #fff;
-  color: #1a1b1e;
+  background: #070E22;
+  color: #ffffff;
   width: 342px;
   padding: 30px;
   box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
@@ -7616,7 +7616,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   top: -5px;
   right: 33px;
   opacity: 1;
-  background: #fff;
+  background: #070E22;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
