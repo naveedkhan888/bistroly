@@ -29,7 +29,7 @@ if(!function_exists('skinetic_color_scheme')){
 			$color_scheme = 
 			'
 			/****Second background Color****/
-			.post-box .post-inner{ color: '.skinetic_get_option('secandary_th_color').';}
+			.post-box .post-inner{ background: '.skinetic_get_option('secandary_th_color').';}
 				';
 		}
 
