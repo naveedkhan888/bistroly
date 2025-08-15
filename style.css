@@ -350,7 +350,7 @@ input,
 select,
 optgroup,
 textarea {
-  color: #65605C;
+  color: #FFFFFFCC;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1.875;
@@ -1196,7 +1196,7 @@ a {
   -moz-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   -ms-transition: all 0.3s linear;
-  color: #1a1b1e;
+  color: #ffffff;
   text-decoration: none;
 }
 a:visited {
@@ -2309,7 +2309,7 @@ Vertical Menu
   -ms-transition: all 0.3s linear;
 }
 .post-box .post-inner {
-  background: #fff;
+  background: #070e22;
   margin-bottom: 60px;
   overflow: hidden;
   -webkit-border-radius: 15px;
@@ -2371,14 +2371,14 @@ Vertical Menu
   font-size: 13px;
   color: #818181;
   padding: 22px 40px;
-  border-top: 1px solid rgba(0, 0, 0, 0.10);
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
 }
 .post-box .entry-meta > span {
   margin-right: 0;
   display: inline-block;
 }
 .post-box .entry-meta a {
-  color: #818181;
+  color: #ffffff;
 }
 .post-box .entry-meta a:hover {
   color: #0f3d3a;
