@@ -2330,6 +2330,7 @@ Vertical Menu
   top: 40px;
   right: 40px;
   z-index: 2;
+  display: none;
 }
 .post-box .inner-post {
   padding: 38px 40px 25px;
