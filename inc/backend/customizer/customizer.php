@@ -1093,7 +1093,7 @@ function skinetic_customize_settings() {
             'priority' => 10,
             'output'   => array(
                 array(
-                    'element'  => 'body, .site-content',
+                    'element'  => 'body',
                     'property' => 'background-color',
                 ),
             ),
