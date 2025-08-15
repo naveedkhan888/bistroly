@@ -2327,9 +2327,8 @@ Vertical Menu
 }
 .post-box .entry-media .post-cat {
   position: absolute;
-  z-index: 1;
-  bottom: -12px;
-  left: 40px;
+  top: 40px;
+  right: 40px;
   z-index: 2;
 }
 .post-box .inner-post {
@@ -2353,7 +2352,8 @@ Vertical Menu
   line-height: 1;
   display: inline-block;
   color: #fff;
-  background: #0f3d3a;
+  border: 1px solid #b58c67;
+  background: transparent;
   padding: 7px 12px 6px;
   margin-right: 6px;
   -webkit-border-radius: 12px;
@@ -2402,6 +2402,11 @@ Vertical Menu
   color: #0f3d3a;
   border-color: #0f3d3a;
 }
+
+.post-box .entry-meta .btn-details {
+  display: none;
+}
+
 .post-box .entry-title {
   margin-bottom: 15px;
 }
