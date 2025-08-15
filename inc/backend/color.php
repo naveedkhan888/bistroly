@@ -24,6 +24,20 @@ if(!function_exists('skinetic_color_scheme')){
 		}
 
 
+		//Second background color
+	  	if( skinetic_get_option('secandary_th_color') != '#070E22' ){
+			$color_scheme = 
+			'
+			/****Second background Color****/
+			.post-box .post-inner{ color: '.skinetic_get_option('secandary_th_color').';}
+				';
+		}
+
+		if( !empty($color_scheme) ){
+			echo '<style type="text/css">'.$color_scheme.'</style>';
+		}
+
+
 		
 
 		//Heading Color

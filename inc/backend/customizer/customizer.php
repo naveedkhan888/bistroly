@@ -1135,6 +1135,14 @@ function skinetic_customize_settings() {
             'default'  => '#1F4843',
             'priority' => 10,
         ),
+        
+        'secandary_th_color'   => array(
+            'type'     => 'color',
+            'label'    => esc_html__( 'Second Color', 'skinetic' ),
+            'section'  => 'color_scheme',
+            'default'  => '#070E22',
+            'priority' => 10,
+        ),
 
         /*google atlantic*/
         'js_code'  => array(
