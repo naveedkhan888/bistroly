@@ -286,6 +286,7 @@ if(!function_exists('skinetic_color_scheme')){
 			.woocommerce .widget_price_filter .price_slider_amount button.button,
 			.tab-titles .title-item a.tab-active,
 			.tab-titles .title-item a:hover, 
+			.page-header .breadcrumbs li::before, 
 			.xp-counter-2.icounter .c-number.font-second span.num + span,
 			.custom-widget .custom-widget__icon i,  
 			.woocommerce div.product p.price,.woocommerce div.product span.price{ color: '.skinetic_get_option('main_color').'; }

@@ -2100,7 +2100,7 @@ Vertical Menu
 }
 .page-header .page-title {
   font-size: 42px;
-  color: #1a1b1e;
+  color: #ffffff;
   margin-bottom: 0;
   flex: 1;
   padding: 10px 0;
@@ -2113,13 +2113,13 @@ Vertical Menu
 }
 .page-header .breadcrumbs li {
   display: inline-block;
-  color: #1a1b1e;
+  color: #ffffff;
 }
 .page-header .breadcrumbs li:before {
   content: "\f124";
   font-family: xpicon !important;
   font-size: 14px;
-  color: #1a1b1e;
+  color: #b58c67;
   opacity: 0.6;
   margin: -2px 14px 0;
   display: inline-block;
@@ -2129,7 +2129,7 @@ Vertical Menu
   display: none;
 }
 .page-header .breadcrumbs li a {
-  color: #1a1b1e;
+  color: #ffffff;
   opacity: 0.6;
 }
 .page-header .breadcrumbs li a:hover {
@@ -2446,7 +2446,7 @@ Vertical Menu
   font-size: 22px;
   font-weight: 600;
   font-family: "Marcellus", sans-serif;
-  color: #1a1b1e;
+  color: #ffffff;
 }
 .post-box .link-box a:hover {
   color: #0f3d3a;
