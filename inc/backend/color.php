@@ -29,7 +29,9 @@ if(!function_exists('skinetic_color_scheme')){
 			$color_scheme = 
 			'
 			/****Second background Color****/
-			.post-box .post-inner{ background: '.skinetic_get_option('secandary_th_color').';}
+			.post-box .post-inner, 
+			.blog-post .author-bio, 
+			.comment-respond{ background: '.skinetic_get_option('secandary_th_color').';}
 				';
 		}
 
@@ -203,6 +205,8 @@ if(!function_exists('skinetic_color_scheme')){
 
 			/*Border Color*/
 			.xptf-btn.xptf-btn-border,
+			.page-pagination li a, 
+			.page-pagination li span, 
 			.features-service-wrapper .btn-details:hover,
 			.post-box .entry-meta .btn-details:hover,
 			.post-box .btn-play:hover i,
