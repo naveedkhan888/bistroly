@@ -83,7 +83,6 @@ if(!function_exists('skinetic_color_scheme')){
 			'
 
 			.xptf-btn.xptf-btn-main:hover, 
-			.form-submit .xptf-btn#submit:hover, 
 			.woocommerce #respond input#submit:hover, 
 			.woocommerce a.button:hover, 
 			.btn-loadmore.xptf-btn:hover, 
