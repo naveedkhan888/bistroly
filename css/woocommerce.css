@@ -78,6 +78,7 @@ WooCommerce styles override
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  background: #070E22;
 }
 .woocommerce ul.products li.product .product-media, .woocommerce-page ul.products li.product .product-media {
   position: relative;
@@ -786,7 +787,6 @@ WooCommerce styles override
   display: block;
   font-family: "Marcellus", sans-serif;
   font-size: 15px;
-  color: #1a1b1e;
   font-weight: 600;
   line-height: 22px;
 }
