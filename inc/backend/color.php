@@ -144,6 +144,7 @@ if(!function_exists('skinetic_color_scheme')){
 
 			/*Background Color*/
 			.bg-primary,
+			.widget .tagcloud a:hover, 
 			.woocommerce-mini-cart__buttons a.button.wc-forward, 
 			.image-box-price .price-box, 
 			.with-border-yes .icon-main .circle-animate::after, 

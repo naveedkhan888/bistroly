@@ -3252,8 +3252,8 @@ Vertical Menu
   border-radius: 15px;
 }
 .widget .tagcloud a:hover {
-  background: rgb(193, 153, 119, 0.1);
-  color: #0f3d3a;
+  background: #b58c67;
+  color: #ffffff;
   border-color: #0f3d3a;
 }
 .widget table {
@@ -3346,7 +3346,6 @@ Vertical Menu
 .widget-area .widget_product_categories ul li a,
 .widget-area .widget_archive ul li a {
   text-transform: uppercase;
-  color: #1a1b1e;
   display: inline-block;
   padding-left: 15px;
   position: relative;
@@ -3428,7 +3427,7 @@ Vertical Menu
   padding: 0 60px 0 20px;
   height: 48px;
   line-height: 1;
-  border-color: rgba(219, 219, 219, 0.1);
+  border-color: rgba(255, 255, 255, 0.15);
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
@@ -3518,7 +3517,6 @@ Vertical Menu
   line-height: 28px;
   cursor: pointer;
   margin-right: 7px;
-  background: #1a1b1e;
   color: #fff;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
