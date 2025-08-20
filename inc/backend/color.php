@@ -35,6 +35,7 @@ if(!function_exists('skinetic_color_scheme')){
 			.xptf-cta-header .h-search-form-field::after, 
 			.main-navigation ul ul.sub-menu:after, 
 			.main-navigation ul ul.sub-menu, 
+			.woocommerce .quantity .qty, 
 			.woocommerce ul.products li.product, 
 			.woocommerce-page ul.products li.product, 
 			.site-header-cart:after, 
