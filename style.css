@@ -506,7 +506,7 @@ mark, ins {
 }
 
 .text-dark {
-  color: #1a1b1e;
+  color: ;
 }
 
 .text-light {
@@ -663,7 +663,7 @@ mark, ins {
   line-height: 38px;
   width: 38px;
   height: 38px;
-  color: #1a1b1e;
+  color: ;
   background: rgba(220, 219, 219, 0.5);
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
@@ -749,7 +749,7 @@ mark, ins {
   width: 45px;
   height: 45px;
   line-height: 1;
-  background: #1a1b1e;
+  background: ;
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
@@ -1034,7 +1034,7 @@ td {
 
 
 .xptf-btn-dark {
-  background: #1a1b1e;
+  background: ;
 }
 .xptf-btn-dark:hover, .xptf-btn-dark:focus {
   color: #fff;
@@ -1067,14 +1067,14 @@ td {
 }
 .xptf-btn.xptf-btn-border.xptf-btn-light:hover, .xptf-btn.xptf-btn-border.xptf-btn-light:focus {
   background: #fff;
-  color: #1a1b1e;
+  color: ;
 }
 .xptf-btn.xptf-btn-border.xptf-btn-dark {
-  border-color: #1a1b1e;
-  color: #1a1b1e;
+  border-color: ;
+  color: ;
 }
 .xptf-btn.xptf-btn-border.xptf-btn-dark:hover, .xptf-btn.xptf-btn-border.xptf-btn-dark:focus {
-  background: #1a1b1e;
+  background: ;
   color: #fff;
 }
 
@@ -1440,7 +1440,7 @@ a:hover, a:active {
   text-decoration: none;
   text-align: center;
   outline: none;
-  color: #1a1b1e;
+  color: ;
   white-space: nowrap;
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
@@ -1819,7 +1819,7 @@ a:hover, a:active {
     left: 0;
     top: 50%;
     margin: -2px 0 0;
-    background: #1a1b1e;
+    background: ;
     height: 4px;
     padding: 0;
     border: none;
@@ -1839,7 +1839,7 @@ a:hover, a:active {
     top: -8px;
     width: 26px;
     height: 4px;
-    background: #1a1b1e;
+    background: ;
     -webkit-transform-origin: 1.5px center;
     transform-origin: 1.5px center;
     transition: all 0.3s ease;
@@ -1856,7 +1856,7 @@ a:hover, a:active {
     bottom: -8px;
     width: 26px;
     height: 4px;
-    background: #1a1b1e;
+    background: ;
     -webkit-transform-origin: 1.5px center;
     transform-origin: 1.5px center;
     transition: all 0.3s ease;
@@ -1908,7 +1908,7 @@ a:hover, a:active {
   .header_mobile .mobile_nav .mobile_mainmenu li a {
     padding: 9px 0;
     display: block;
-    color: #1a1b1e;
+    color: ;
     font-weight: 600;
     border-bottom: 1px solid #e5e5e5;
   }
@@ -2363,7 +2363,7 @@ Vertical Menu
   border-radius: 12px;
 }
 .post-box .post-cat a:hover {
-  background: #1a1b1e;
+  background: ;
 }
 .post-box .entry-meta {
   position: relative;
@@ -2724,7 +2724,7 @@ Vertical Menu
   font-family: "Marcellus", sans-serif;
   float: left;
   text-align: center;
-  background: #1a1b1e;
+  background: ;
   color: #fff;
   width: 40px;
   height: 40px;
@@ -2947,11 +2947,11 @@ Vertical Menu
   clear: both;
   padding-top: 25px;
   font-weight: 600;
-  color: #1a1b1e;
+  color: ;
 }
 
 .page-links a {
-  color: #1a1b1e;
+  color: ;
 }
 
 .page-links a:hover {
@@ -3013,7 +3013,7 @@ Vertical Menu
 }
 
 .sticky .post-inner {
-  background: #1a1b1e;
+  background: ;
   color: #fff;
 }
 
@@ -3261,7 +3261,7 @@ Vertical Menu
 }
 .widget table td#today {
   font-weight: 600;
-  color: #1a1b1e;
+  color: ;
 }
 
 .widget-area .widget {
@@ -3774,7 +3774,7 @@ object {
   -ms-transition: all 0.3s linear;
 }
 .icon-box .title-box a {
-  color: #1a1b1e;
+  color: ;
 }
 .icon-box p:last-child {
   margin-bottom: 0;
@@ -4290,10 +4290,10 @@ object {
   border-color: transparent;
 }
 .icon-box-grid .icon-box:hover .title-box {
-  color: #1a1b1e;
+  color: ;
 }
 .icon-box-grid .icon-box:hover .title-box a {
-  color: #1a1b1e;
+  color: ;
 }
 .icon-box-grid .icon-box:hover .icon-main {
   color: #0f3d3a;
@@ -4511,7 +4511,7 @@ object {
 .logos-carousel .owl-nav button.owl-next,
 .logos-carousel .owl-nav button.owl-prev {
   background: transparent;
-  color: #1a1b1e;
+  color: ;
   font-size: 21px;
 }
 .logos-carousel .owl-nav button.owl-next {
@@ -4588,7 +4588,7 @@ object {
 .xp-counter-2 .c-number {
   font-size: 48px;
   font-weight: 700;
-  color: #1a1b1e;
+  color: ;
   line-height: 1;
 }
 .xp-counter-2 p {
@@ -4767,7 +4767,7 @@ object {
   text-align: center;
   font-weight: 600;
   font-size: 24px;
-  color: #1a1b1e;
+  color: ;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -4836,7 +4836,7 @@ object {
   font-size: 14px;
   font-weight: 600;
   vertical-align: middle;
-  color: #1a1b1e;
+  color: ;
 }
 .xp-switcher .switch {
   margin: 0 15px;
@@ -4909,7 +4909,7 @@ object {
 }
 .tab-titles .title-item a {
   display: flex;
-  color: #1a1b1e;
+  color: ;
   padding: 15px 30px;
   background: transparent;
   -webkit-border-radius: 0;
@@ -5047,7 +5047,7 @@ object {
   display: none;
 }
 .xp-pricing-table .xptf-btn {
-  color: #1a1b1e;
+  color: ;
 }
 .xp-pricing-table .xptf-btn:hover {
   color: #fff;
@@ -5148,7 +5148,7 @@ object {
   -ms-transition: all 0.3s linear;
 }
 .project_filters li a:focus, .project_filters li a:active {
-  color: #1a1b1e;
+  color: ;
 }
 .project_filters li a .filter-count {
   position: absolute;
@@ -5380,7 +5380,7 @@ object {
   padding: 0;
 }
 .projects-grid.style-2 div.portfolio-info .portfolio-info-inner h5 a {
-  color: #1a1b1e;
+  color: ;
 }
 .projects-grid.style-2 div.portfolio-info .portfolio-info-inner .portfolio-cates {
   padding: 0;
@@ -5565,7 +5565,7 @@ object {
 
 
 .project-slider .projects-box .portfolio-info h5 a {
-  color: #1a1b1e;
+  color: ;
   background: #fff;
   padding: 5px 20px;
   transform: translateX(-101%);
@@ -5591,7 +5591,7 @@ object {
   margin-bottom: 0;
 }
 .project-slider .projects-box .portfolio-info .portfolio-cates a {
-  color: #1a1b1e;
+  color: ;
   line-height: 1;
   display: inline;
   padding: 5px 20px;
@@ -5896,7 +5896,7 @@ object {
   position: relative;
 }
 .xp-team h6 a:hover {
-  color: #1a1b1e;
+  color: ;
 }
 .fab {
   font-family: "fontawesome";
@@ -5916,7 +5916,7 @@ object {
   height: 40px;
   line-height: 40px;
   font-size: 14px;
-  background: #1a1b1e;
+  background: ;
   color: #fff;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -5925,7 +5925,7 @@ object {
 .team-1 .team-social span, .team-1 .team-social a:hover {
   cursor: pointer;
   background: #fff;
-  color: #1a1b1e;
+  color: ;
   font-weight: bold;
 }
 .team-1 .team-social span:before {
@@ -5957,7 +5957,7 @@ object {
   transform: rotate(45deg);
 }
 .team-1:hover .team-info {
-  background: #1a1b1e;
+  background: ;
 }
 .team-1:hover .team-info h6,
 .team-1:hover .team-info h6 a {
@@ -6078,7 +6078,7 @@ object {
 }
 .circle-social .team-social a svg {
   width: 12px;
-  fill: #1a1b1e;
+  fill: ;
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
@@ -6118,7 +6118,7 @@ object {
   color: #fff;
 }
 .team-form ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #1a1b1e;
+  color: ;
 }
 .team-form .xptf-btn {
   background: #fff;
@@ -6138,7 +6138,7 @@ object {
   padding-bottom: 15px;
 }
 .member-info li span {
-  color: #1a1b1e;
+  color: ;
   font-family: "Marcellus", sans-serif;
   font-weight: 600;
 }
@@ -6180,7 +6180,7 @@ object {
   font-family: "Marcellus", sans-serif;
   font-size: 16px;
   font-weight: 600;
-  color: #1a1b1e;
+  color: ;
   padding: 9px 20px;
   background: #f6f6f6;
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -6238,7 +6238,7 @@ object {
   float: left;
   text-align: center;
   text-transform: uppercase;
-  color: #1a1b1e;
+  color: ;
   border-bottom: 3px solid #d7d7d7;
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
@@ -6419,7 +6419,7 @@ object {
 .xp-testimonials-carousel-2 .owl-nav button.owl-prev,
 .xp-testimonials-carousel-2 .owl-nav button.owl-next {
   background: rgba(220, 219, 219, 0.5);
-  color: #1a1b1e;
+  color: ;
 }
 
 .dots-vertical .owl-dots {
@@ -6511,7 +6511,7 @@ object {
 }
 .xp-video-button > span {
   font-size: 14px;
-  color: #1a1b1e;
+  color: ;
   text-transform: uppercase;
   font-weight: 600;
   margin-left: 10px;
@@ -6611,7 +6611,7 @@ object {
 .wpcf7 textarea {
   width: 100%;
   vertical-align: middle;
-  color: #1a1b1e;
+  color: ;
   background: transparent;
 }
 .wpcf7 p {
@@ -6644,7 +6644,7 @@ object {
 .wpcf7 div.wpcf7-validation-errors,
 .wpcf7 div.wpcf7-acceptance-missing {
   background: #f7e700;
-  color: #1a1b1e;
+  color: ;
 }
 
 .wpcf7-placeholder-light .wpcf7-form-control::-webkit-input-placeholder { /*WebKit browsers*/
@@ -6845,7 +6845,7 @@ object {
 .form_icon .main_wraper:focus-within textarea::placeholder,
 .form_icon .main_wraper:focus-within input.wpcf7-form-control::placeholder{
   opacity: 1;
-  color: #1a1b1e;
+  color: ;
 }
 
 .form_icon .main_wraper:focus-within .bottom_line::before {
@@ -6927,7 +6927,7 @@ object {
 
 .light_form .main_wraper textarea::placeholder,
 .light_form .main_wraper input.wpcf7-form-control::placeholder {
-    color: #1a1b1e;
+    color: ;
     opacity: 1;
 }
 
@@ -6966,11 +6966,11 @@ object {
 }
 .light_form .mc4wp-form-fields .subscribe-inner-form input[type="email"] {
   border-color: rgba(255, 255, 255, 0.15);
-  color: #1a1b1e;
+  color: ;
 }
 
 .light_form .mc4wp-form-fields .subscribe-inner-form .subscribe-btn-icon {
-  color: #1a1b1e;
+  color: ;
 }
 
 
@@ -7235,7 +7235,7 @@ body .elementor-widget:not(:last-child) {
 }
 
 div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
-  color: #1a1b1e;
+  color: ;
   font-weight: 700;
   font-family: "Marcellus", sans-serif;
   line-height: 1.2;
@@ -7308,7 +7308,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   font-weight: 900;
   padding: 10px 13px;
   margin-top: 8px;
-  background: #1a1b1e;
+  background: ;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -7476,7 +7476,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   cursor: pointer;
 }
 .xptf-cta-header .toggle_search i {
-  color: #1a1b1e;
+  color: ;
   text-align: center;
   display: inline-block;
   vertical-align: middle;
@@ -7641,10 +7641,10 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 .xp-minicart {
   position: relative;
   display: inline-block;
-  color: #1a1b1e;
+  color: ;
 }
 .xp-minicart:hover, .xp-minicart:visited, .xp-minicart:focus {
-  color: #1a1b1e;
+  color: ;
 }
 .xp-minicart i:before {
   font-size: 22px;
@@ -7697,7 +7697,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   padding: 2px 10px 2px 0;
 }
 #lang_choice_wp-widget-polylang option {
-  color: #1a1b1e;
+  color: ;
   outline: none;
   padding: 10px;
 }
@@ -7715,7 +7715,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 }
 
 .header-mobile .is-stuck {
-  background-color: #1a1b1e;
+  background-color: ;
 }
 .is-fixed.is-stuck {
   box-shadow: 15px 15px 38px 0px rgba(0, 0, 0, 0.09);
@@ -7726,7 +7726,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   border: none;
   outline: none;
   padding: 0;
-  color: #1a1b1e;
+  color: ;
 }
 .mmenu-toggle button i:before {
   font-size: 21px;
@@ -7880,7 +7880,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   line-height: 1;
 }
 .panel-btn i {
-  color: #1a1b1e;
+  color: ;
   cursor: pointer;
 }
 .panel-btn i:before {
@@ -7921,7 +7921,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   position: absolute;
   right: 30px;
   top: 30px;
-  color: #1a1b1e;
+  color: ;
   font-size: 20px;
   width: 50px;
   height: 50px;
@@ -8116,7 +8116,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   margin: 10px 15px 0;
 }
 .error-404 .page-content form button {
-  background: #1a1b1e;
+  background: ;
 }
 .error-404 .page-content form button:hover {
   background: #0f3d3a;
@@ -8882,8 +8882,8 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 
 .medical-service-item:hover .service-icon-wrapper i,
 .medical-service-item:hover .service-icon-wrapper svg {
-  fill: #1a1b1e;
-  color: #1a1b1e;
+  fill: ;
+  color: ;
 }
 
 .elementor-widget-custom_medical_services .service-icon-wrapper i,
