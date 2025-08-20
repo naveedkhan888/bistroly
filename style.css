@@ -8028,7 +8028,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 #back-to-top {
   background: transparent;
   color: #fff;
-  border: 0 none;
+  border: 1px solid #b58c67;
   cursor: pointer;
   width: 46px;
   height: 46px;

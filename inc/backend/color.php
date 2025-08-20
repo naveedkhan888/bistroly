@@ -187,7 +187,6 @@ if(!function_exists('skinetic_color_scheme')){
 			.post-box .post-cat a:hover, 
 			.xp-heading > span.is_line:before,
 			.mc4wp-form-fields .subscribe-inner-form .subscribe-btn-icon:hover,
-			#back-to-top,
 			.error-404 .page-content form button:hover,
 			.woocommerce ul.products li.product .added_to_cart, .woocommerce ul.products li.product .product_type_grouped, .woocommerce-page ul.products li.product .added_to_cart, .woocommerce-page ul.products li.product .product_type_grouped,
 			.woocommerce #respond input#submit.alt, .woocommerce a.button.alt,.woocommerce button.button.alt, .woocommerce input.button.alt,.woocommerce #respond input#submit, .woocommerce a.button,.woocommerce input.button, .woocommerce button.button.alt.disabled,
