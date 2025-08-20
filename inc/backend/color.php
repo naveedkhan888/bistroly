@@ -31,6 +31,11 @@ if(!function_exists('skinetic_color_scheme')){
 			/****Second background Color****/
 			.post-box .post-inner, 
 			.site-header-cart, 
+			.woocommerce .cart-collaterals .cart_totals,
+			.woocommerce-page .cart-collaterals .cart_totals, 
+			.woocommerce-error, 
+			.woocommerce-info, 
+			.woocommerce-message, 
 			.xptf-cta-header .h-search-form-field .h-search-form-inner, 
 			.xptf-cta-header .h-search-form-field::after, 
 			.main-navigation ul ul.sub-menu:after, 
@@ -212,6 +217,8 @@ if(!function_exists('skinetic_color_scheme')){
 			/*Border Color*/
 			.xptf-btn.xptf-btn-border,
 			.page-pagination li a, 
+			.woocommerce form .form-row .input-text:focus, 
+			.woocommerce form .form-row select:focus, 
 			.page-pagination li span, 
 			.elementor-social-icons-wrapper a.elementor-social-icon, 
 			.features-service-wrapper .btn-details:hover,
