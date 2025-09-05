@@ -1135,6 +1135,7 @@ textarea {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+  background: transparent;
 }
 input[type=text]:focus,
 input[type=email]:focus,
@@ -4896,6 +4897,13 @@ object {
   margin: -5px;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: flex;
+}
+.tab-titles .title-item .icon {
+  justify-content: center;
+  display: flex;
+}
+.tab-titles .title-item .icon svg {
   display: flex;
 }
 .tab-titles .title-item {

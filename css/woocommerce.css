@@ -421,7 +421,7 @@ WooCommerce styles override
   min-width: 177px;
   text-align: center;
   font-weight: 600;
-  color: ;
+  color: #ffffff;
   text-transform: uppercase;
   font-size: 14px;
   border-bottom: 3px solid rgba(255, 255, 255, 0.15);
@@ -876,6 +876,7 @@ WooCommerce styles override
   background-color: #0f3d3a;
   text-transform: uppercase;
   padding: 14px 10px;
+  border: 1px solid #b58c67;
   min-width: 46%;
   margin: 0 2%;
   text-align: center;
