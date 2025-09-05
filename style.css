@@ -4905,6 +4905,7 @@ object {
 }
 .tab-titles .title-item .icon svg {
   display: flex;
+  width: 32px;
 }
 .tab-titles .title-item {
   font-size: 14px;
@@ -4917,15 +4918,15 @@ object {
 }
 .tab-titles .title-item a {
   display: flex;
-  color: ;
   padding: 16px 26px;
   background: transparent;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
+  align-items: center;
   gap: 20px;
   transition: all 0.3s ease-in-out;
-  border: 1px solid #FFFFFF24;
+  border: 1px solid #FFFFFF0F;
 }
 
 .tab-titles .title-item a:hover,  
