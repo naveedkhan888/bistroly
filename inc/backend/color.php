@@ -46,6 +46,9 @@ if(!function_exists('skinetic_color_scheme')){
 			.site-header-cart:after, 
 			.blog-post .author-bio, 
 			.comment-respond{ background: '.skinetic_get_option('secandary_th_color').';}
+
+			/****Second background gradient Color****/
+			.team-2 .team-thumb:before{ background-image: linear-gradient(180deg, transparent 0%, '.skinetic_get_option('secandary_th_color').' 100%);}
 				';
 		}
 
