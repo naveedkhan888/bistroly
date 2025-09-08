@@ -325,7 +325,7 @@ class Skinetic_Team_Carousel extends Widget_Base{
 		        'name' => 'team_thumb_bg',
 		        'label' => __( 'Team Thumb Background', 'skinetic' ),
 		        'types' => [ 'classic', 'gradient' ],
-		        'selector' => '{{WRAPPER}} .xp-team .team-thumb',
+		        'selector' => '{{WRAPPER}} .xp-team .team-thumb:before',
 		    ]
 		);
 
