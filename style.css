@@ -5999,7 +5999,7 @@ object {
   position: absolute;
   bottom: 0;
   left: 50%;
-  width: calc(100% - 40px);
+  width: calc(100% - 80px);
   opacity: 0;
   visibility: hidden;
   -webkit-transform: translateX(-50%);
@@ -6019,7 +6019,7 @@ object {
   font-size: 14px;
 }
 .team-2:hover .team-info {
-  bottom: 20px;
+  bottom: 40px;
   opacity: 1;
   visibility: visible;
 }
@@ -6095,7 +6095,7 @@ object {
   line-height: 30px;
   font-size: 12px;
   margin-right: 7px;
-  border: 1px solid rgba(11, 11, 11, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -6105,7 +6105,8 @@ object {
 }
 .circle-social .team-social a svg {
   width: 12px;
-  fill: ;
+  height: 12px;
+  fill: #ffffff;
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
