@@ -5881,8 +5881,8 @@ object {
   -ms-transition: all 0.3s linear;
 }
 .xp-team .team-info {
-  background: #fff;
-  padding: 28px 30px;
+  background: transparent;
+  padding: 0;
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
@@ -6005,12 +6005,12 @@ object {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
-  box-shadow: 6px 6px 13px 0 rgba(255, 255, 255, 0.15);
-  -webkit-box-shadow: 6px 6px 13px 0 rgba(255, 255, 255, 0.15);
-  -moz-box-shadow: 6px 6px 13px 0 rgba(255, 255, 255, 0.15);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
 }
 .team-2 .team-info h6 {
   font-size: 24px;
