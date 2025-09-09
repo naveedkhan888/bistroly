@@ -1459,6 +1459,7 @@ a:hover, a:active {
   margin: 0px 0px;
   padding: 0px 0px;
   background: #070E22;
+  border: 1px solid #FFFFFF0F;
   min-width: 250px;
   white-space: nowrap;
   position: absolute;
@@ -1535,7 +1536,7 @@ a:hover, a:active {
   position: relative;
   text-decoration: none;
   outline: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  border-bottom: 1px solid #FFFFFF0F;
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
