@@ -5890,7 +5890,7 @@ object {
   -ms-transition: all 0.3s linear;
 }
 .xp-team .team-info h6 {
-  margin-bottom: 5px;
+  margin-bottom: 0;
   font-weight: 600;
 }
 .xp-team .team-info span {
