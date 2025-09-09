@@ -1084,63 +1084,68 @@ function skinetic_customize_settings() {
 			'priority'    => 3,
 		),
 
-		/*color scheme*/
-        'bg_body'      => array(
-            'type'     => 'color',
-            'label'    => esc_html__( 'Background Body', 'skinetic' ),
-            'section'  => 'color_scheme',
-            'default'  => '',
-            'priority' => 10,
-            'output'   => array(
-                array(
-                    'element'  => 'body',
-                    'property' => 'background-color',
-                ),
-            ),
-        ),
-        'main_color'   => array(
+		/* Color Scheme */
+        'primary_color' => array(
             'type'     => 'color',
             'label'    => esc_html__( 'Primary Color', 'skinetic' ),
             'section'  => 'color_scheme',
-            'default'  => '#0f3d3a',
-            'priority' => 10,
-        ),
-        'heading_color'   => array(
-            'type'     => 'color',
-            'label'    => esc_html__( 'Heading Color', 'skinetic' ),
-            'section'  => 'color_scheme',
-            'default'  => '#191717',
-            'priority' => 10,
-        ),
-        'btn_hover_dark'   => array(
-            'type'     => 'color',
-            'label'    => esc_html__( 'Button Hover & Dark', 'skinetic' ),
-            'section'  => 'color_scheme',
-            'default'  => '#191717',
+            'default'  => '#383537',
             'priority' => 10,
         ),
 
-        'btn_main_color'   => array(
+        'secondary_color' => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Button Main Color', 'skinetic' ),
+            'label'    => esc_html__( 'Secondary Color', 'skinetic' ),
             'section'  => 'color_scheme',
-            'default'  => '#BDF49D',
+            'default'  => '#e9dfde',
             'priority' => 10,
         ),
 
-        'btn_dark_color'   => array(
+        'text_color' => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Button Dark Color', 'skinetic' ),
+            'label'    => esc_html__( 'Text Color', 'skinetic' ),
             'section'  => 'color_scheme',
-            'default'  => '#1F4843',
+            'default'  => '#1d1312',
             'priority' => 10,
         ),
-        
-        'secandary_th_color'   => array(
+
+        'accent_color' => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Second Color', 'skinetic' ),
+            'label'    => esc_html__( 'Accent Color', 'skinetic' ),
             'section'  => 'color_scheme',
-            'default'  => '#070E22',
+            'default'  => '#8f605c',
+            'priority' => 10,
+        ),
+
+        'bg_color' => array(
+            'type'     => 'color',
+            'label'    => esc_html__( 'Background Color', 'skinetic' ),
+            'section'  => 'color_scheme',
+            'default'  => '#f4efef',
+            'priority' => 10,
+        ),
+
+        'white_color' => array(
+            'type'     => 'color',
+            'label'    => esc_html__( 'White Color', 'skinetic' ),
+            'section'  => 'color_scheme',
+            'default'  => '#FFFFFF',
+            'priority' => 10,
+        ),
+
+        'divider_color' => array(
+            'type'     => 'color',
+            'label'    => esc_html__( 'Divider Color', 'skinetic' ),
+            'section'  => 'color_scheme',
+            'default'  => '#8f605c3b',
+            'priority' => 10,
+        ),
+
+        'dark_divider_color' => array(
+            'type'     => 'color',
+            'label'    => esc_html__( 'Dark Divider Color', 'skinetic' ),
+            'section'  => 'color_scheme',
+            'default'  => '#3835373b',
             'priority' => 10,
         ),
 
