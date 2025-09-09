@@ -1113,7 +1113,7 @@ function skinetic_customize_settings() {
             'type'     => 'color',
             'label'    => esc_html__( 'Accent Color', 'skinetic' ),
             'section'  => 'color_scheme',
-            'default'  => '#8f605c',
+            'default'  => '#0E1730',
             'priority' => 10,
         ),
 

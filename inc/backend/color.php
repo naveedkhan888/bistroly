@@ -10,7 +10,7 @@ if(!function_exists('skinetic_color_scheme')){
 		$primary_color      = skinetic_get_option('primary_color', '#b58c67');
 		$secondary_color    = skinetic_get_option('secondary_color', '#cccccc');
 		$text_color         = skinetic_get_option('text_color', '#1d1312');
-		$accent_color       = skinetic_get_option('accent_color', '#8f605c');
+		$accent_color       = skinetic_get_option('accent_color', '#0E1730');
 		$bg_color           = skinetic_get_option('bg_color', '#f4efef');
 		$white_color        = skinetic_get_option('white_color', '#FFFFFF');
 		$divider_color      = skinetic_get_option('divider_color', '#8f605c3b');
