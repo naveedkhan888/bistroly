@@ -1493,6 +1493,7 @@ a:hover, a:active {
   left: 0;
 }
 .main-navigation ul ul.sub-menu:after {
+  display: none;
   content: "";
   position: absolute;
   height: 15px;
