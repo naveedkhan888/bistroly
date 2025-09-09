@@ -907,7 +907,7 @@ td {
   --divider-color: var(--primary-color); }
 .elementor-social-icons-wrapper a.elementor-social-icon {
   background: transparent;
-  border: 1px solid #b58c67;
+  border: 1px solid var(--primary-color);
 }
 
 .is-stuck.blurred_background {
@@ -1459,8 +1459,8 @@ a:hover, a:active {
   float: none;
   margin: 0px 0px;
   padding: 0px 0px;
-  background: #070E22;
-  border: 1px solid #FFFFFF0F;
+  background: var(--accent-color);
+  border: 1px solid var(--divider-color);
   min-width: 250px;
   white-space: nowrap;
   position: absolute;
@@ -2124,7 +2124,7 @@ Vertical Menu
   content: "\f124";
   font-family: xpicon !important;
   font-size: 14px;
-  color: #b58c67;
+  color: var(--primary-color);
   opacity: 0.6;
   margin: -2px 14px 0;
   display: inline-block;
@@ -2358,7 +2358,7 @@ Vertical Menu
   line-height: 1;
   display: inline-block;
   color: #fff;
-  border: 1px solid #b58c67;
+  border: 1px solid var(--primary-color);
   background: transparent;
   padding: 7px 12px 6px;
   margin-right: 6px;
@@ -2554,7 +2554,7 @@ Vertical Menu
   text-align: center;
   line-height: 40px;
   margin-right: 5px;
-  border: 1px solid #b58c67;
+  border: 1px solid var(--primary-color);
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
@@ -3250,13 +3250,13 @@ Vertical Menu
   line-height: 1;
   display: inline-block;
   vertical-align: middle;
-  border: 1px solid #b58c67;
+  border: 1px solid var(--primary-color);
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
 }
 .widget .tagcloud a:hover {
-  background: #b58c67;
+  background: var(--primary-color);
   color: #ffffff;
   border-color: var(--primary-color);
 }
@@ -8058,7 +8058,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 #back-to-top {
   background: transparent;
   color: #fff;
-  border: 1px solid #b58c67;
+  border: 1px solid var(--primary-color);
   cursor: pointer;
   width: 46px;
   height: 46px;

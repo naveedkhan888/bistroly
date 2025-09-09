@@ -103,7 +103,7 @@ WooCommerce styles override
   margin-bottom: 0;
 }
 .woocommerce ul.products li.product .price .woocommerce-Price-amount, .woocommerce-page ul.products li.product .price .woocommerce-Price-amount {
-  color: #0f3d3a;
+  color: var(--primary-color);
 }
 .woocommerce ul.products li.product .price del, .woocommerce-page ul.products li.product .price del {
   color: #636363;
@@ -173,7 +173,7 @@ WooCommerce styles override
   font-family: "Marcellus", sans-serif;
   font-weight: 600;
   text-align: center;
-  background: #0f3d3a;
+  background: var(--primary-color);
   cursor: pointer;
   border: 1px solid transparent;
   color: #fff;
@@ -432,13 +432,13 @@ WooCommerce styles override
   -ms-transition: all 0.35s ease-in-out;
 }
 .woocommerce div.product .woocommerce-tabs ul.tabs li a:hover {
-  border-color: #0f3d3a;
+  border-color: var(--primary-color);
 }
 .woocommerce-product-details__short-description p {
 
 }
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
-  border-color: #0f3d3a;
+  border-color: var(--primary-color);
   color: #ffffff !important;
 }
 
@@ -491,7 +491,7 @@ WooCommerce styles override
   font-weight: 600;
 }
 .woocommerce table.shop_table td.product-price, .woocommerce table.shop_table td.product-subtotal {
-  color: #0f3d3a;
+  color: var(--primary-color);
 }
 .woocommerce table.shop_table td.actions {
   padding-top: 40px;
@@ -575,17 +575,17 @@ WooCommerce styles override
 }
 
 .woocommerce-message {
-  border-top-color: #0f3d3a;
+  border-top-color: var(--primary-color);
 }
 .woocommerce-message:before {
-  color: #0f3d3a;
+  color: var(--primary-color);
 }
 
 .woocommerce-info {
-  border-top-color: #0f3d3a;
+  border-top-color: var(--primary-color);
 }
 .woocommerce-info:before {
-  color: #0f3d3a;
+  color: var(--primary-color);
 }
 
 .woocommerce .cart-collaterals,
@@ -729,7 +729,7 @@ WooCommerce styles override
 .woocommerce button.button.alt, .woocommerce input.button.alt,
 .woocommerce #respond input#submit, .woocommerce a.button,
 .woocommerce input.button, .woocommerce button.button.alt.disabled {
-  background-color: #0f3d3a;
+  background-color: var(--primary-color);
 }
 .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover,
 .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover,
@@ -739,7 +739,7 @@ WooCommerce styles override
 }
 
 .woocommerce button.button {
-  background-color: #0f3d3a;
+  background-color: var(--primary-color);
 }
 .woocommerce button.button:hover {
   background-color: #1e73be;
@@ -750,7 +750,7 @@ WooCommerce styles override
  */
 /* widget product */
 .woocommerce .woocommerce-Price-amount {
-  color: #0f3d3a;
+  color: var(--primary-color);
   font-weight: 600;
 }
 .woocommerce .site ul.product_list_widget li {
@@ -791,7 +791,7 @@ WooCommerce styles override
 }
 
 .woocommerce .site ul.product_list_widget li a:not(.remove):hover {
-  color: #0f3d3a;
+  color: var(--primary-color);
 }
 .woocommerce .site ul.product_list_widget li .star-rating {
   float: none;
@@ -873,10 +873,10 @@ WooCommerce styles override
   font-size: 13px;
   font-weight: 600;
   border-radius: 0;
-  background-color: #0f3d3a;
+  background-color: var(--primary-color);
   text-transform: uppercase;
   padding: 14px 10px;
-  border: 1px solid #b58c67;
+  border: 1px solid var(--primary-color);
   min-width: 46%;
   margin: 0 2%;
   text-align: center;
@@ -909,7 +909,7 @@ WooCommerce styles override
   color: ;
 }
 .woocommerce .woocommerce-widget-layered-nav-list li a:hover {
-  color: #0f3d3a;
+  color: var(--primary-color);
 }
 .woocommerce .woocommerce-widget-layered-nav-list li span.count {
   color: #666666;
@@ -949,7 +949,7 @@ WooCommerce styles override
   font-size: 14px;
   letter-spacing: 0.5px;
   background: none;
-  color: #0f3d3a;
+  color: var(--primary-color);
   box-shadow: none;
   text-transform: uppercase;
 }
@@ -984,7 +984,7 @@ WooCommerce styles override
 
 .woocommerce div.product p.price,
 .woocommerce div.product span.price {
-  color: #0f3d3a;
+  color: var(--primary-color);
 }
 
 .woocommerce div.product .entry-summary p.price,
