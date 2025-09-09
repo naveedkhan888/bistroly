@@ -116,69 +116,19 @@ WooCommerce styles override
   background: transparent;
 }
 .woocommerce ul.products li.product .wrapper-add-to-cart, .woocommerce-page ul.products li.product .wrapper-add-to-cart {
-  visibility: hidden;
-  opacity: 0;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: -50px;
-  z-index: 2;
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
+  
 }
 .woocommerce ul.products li.product .add_to_cart_button, .woocommerce-page ul.products li.product .add_to_cart_button {
-  display: block;
-  margin-top: 0px;
-  padding: 20px 23px;
-  -webkit-transform: translateY(20px);
-  -ms-transform: translateY(20px);
-  transform: translateY(20px);
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
+
 }
 .woocommerce ul.products li.product .add_to_cart_button:hover, .woocommerce-page ul.products li.product .add_to_cart_button:hover {
-  background: #ffffff;
+
 }
 .woocommerce ul.products li.product .add_to_cart_button.added, .woocommerce-page ul.products li.product .add_to_cart_button.added {
   display: none;
 }
 .woocommerce ul.products li.product .added_to_cart, .woocommerce ul.products li.product .product_type_grouped, .woocommerce-page ul.products li.product .added_to_cart, .woocommerce-page ul.products li.product .product_type_grouped {
-  display: block;
-  width: 100%;
-  margin-top: 0px;
-  padding: 20px 23px;
-  transition: all 0.3s linear;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  -ms-transition: all 0.3s linear;
-  font-size: 14px;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  padding: 14px 30px;
-  line-height: 1.42857143;
-  display: inline-block;
-  margin-bottom: 0;
-  text-decoration: none;
-  text-transform: uppercase;
-  white-space: nowrap;
-  vertical-align: middle;
-  font-family: "Marcellus", sans-serif;
-  font-weight: 600;
-  text-align: center;
-  background: var(--primary-color);
-  cursor: pointer;
-  border: 1px solid transparent;
-  color: #fff;
-  outline: none;
-  position: relative;
+  
 }
 .woocommerce ul.products li.product .added_to_cart:hover, .woocommerce ul.products li.product .added_to_cart:focus, .woocommerce ul.products li.product .product_type_grouped:hover, .woocommerce ul.products li.product .product_type_grouped:focus, .woocommerce-page ul.products li.product .added_to_cart:hover, .woocommerce-page ul.products li.product .added_to_cart:focus, .woocommerce-page ul.products li.product .product_type_grouped:hover, .woocommerce-page ul.products li.product .product_type_grouped:focus {
   background: #ffffff;
@@ -190,9 +140,7 @@ WooCommerce styles override
   background: #ffffff;
 }
 .woocommerce ul.products li.product:hover .wrapper-add-to-cart, .woocommerce-page ul.products li.product:hover .wrapper-add-to-cart {
-  visibility: visible;
-  opacity: 1;
-  bottom: 0;
+
 }
 .woocommerce ul.products li.product:hover .add_to_cart_button, .woocommerce-page ul.products li.product:hover .add_to_cart_button {
   -webkit-transform: translateY(0px);
