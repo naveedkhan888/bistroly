@@ -1089,7 +1089,7 @@ function skinetic_customize_settings() {
             'type'     => 'color',
             'label'    => esc_html__( 'Primary Color', 'skinetic' ),
             'section'  => 'color_scheme',
-            'default'  => '#383537',
+            'default'  => '#b58c67',
             'priority' => 10,
         ),
 
