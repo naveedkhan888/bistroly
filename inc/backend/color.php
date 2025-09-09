@@ -1,9 +1,29 @@
 <?php 
 
+
 //Custom Style Frontend
 if(!function_exists('skinetic_color_scheme')){
     function skinetic_color_scheme(){
 	  	$color_scheme = '';
+
+	  	// Get theme options
+		$main_color      = skinetic_get_option('main_color', '#0f3d3a');
+		$secondary_color = skinetic_get_option('secondary_color', '#ff6600'); // example
+		$heading_color   = skinetic_get_option('heading_color', '#222222');   // example
+
+		// Always output variables inside :root
+		$color_scheme .= "
+		:root {
+		    --main-color: {$main_color};
+		    --secondary-color: {$secondary_color};
+		    --heading-color: {$heading_color};
+		}
+		";
+
+		// Print CSS
+		if( !empty($color_scheme) ){
+		    echo '<style type="text/css">'.$color_scheme.'</style>';
+		}
 
 	  	//Heading Color
 	  	if( skinetic_get_option('heading_color') != '#191717' ){
