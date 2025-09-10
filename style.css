@@ -6743,6 +6743,18 @@ object {
     outline: none !important;
 }
 
+/* Style the options */
+select option {
+  background-color: #fff; /* dropdown options background */
+  color: #333;
+}
+
+/* Style selected option */
+select option:checked {
+  background-color: #007BFF; /* selected option background */
+  color: #fff;
+}
+
 .wpcf7 select {
     -webkit-appearance: none; 
     -moz-appearance: none;
