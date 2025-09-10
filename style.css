@@ -4899,17 +4899,7 @@ object {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  grid-area: 40px;
-}
-
-.tab-titles .title-item:not(:last-child)::after {
-  content: "";
-  display: inline-block;
-  width: 1px;                /* thickness of separator */
-  height: 16px;              /* adjust to match text size */
-  background-color: #ddd;    /* separator color */
-  margin: 0 10px;            /* spacing around separator */
-  vertical-align: middle;    /* aligns with text */
+  gap: 40px;
 }
 .tab-titles .title-item .icon {
   justify-content: center;
