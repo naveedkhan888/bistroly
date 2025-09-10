@@ -4928,6 +4928,9 @@ object {
 .tab-titles .title-item:hover .icon {
   transform: translateY(-4px);
 }
+.tab-titles .title-item:hover .icon svg {
+  color: var(--primary-color);
+}
 .tab-titles .text_icn {
   line-height: 1;
 }
