@@ -4902,12 +4902,14 @@ object {
   grid-area: 40px;
 }
 
-.tab-titles .title-item + .title-item::before {
+.tab-titles .title-item:not(:last-child)::after {
   content: "";
-  display: block;
-  width: 1px;             /* thickness of separator */
-  background: #ddd;       /* separator color */
-  margin: 0 12px;         /* spacing around separator */
+  display: inline-block;
+  width: 1px;                /* thickness of separator */
+  height: 16px;              /* adjust to match text size */
+  background-color: #ddd;    /* separator color */
+  margin: 0 10px;            /* spacing around separator */
+  vertical-align: middle;    /* aligns with text */
 }
 .tab-titles .title-item .icon {
   justify-content: center;
