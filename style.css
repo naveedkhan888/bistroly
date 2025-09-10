@@ -1009,7 +1009,7 @@ td {
   display: block;
 }
 .xptf-btn:hover span {
-  transform: translate(0,40px);
+  transform: translate(0,100%);
   opacity: 0;
 }
 .xptf-btn:hover:before {
@@ -4905,6 +4905,7 @@ object {
 .tab-titles .title-item .icon {
   justify-content: center;
   display: flex;
+  transition: all 0.3s ease-in-out;
 }
 .tab-titles .title-item .icon svg {
   display: flex;
@@ -4924,9 +4925,6 @@ object {
 }
 .tab-titles .title-item:hover {
   transform: translateY(-8px);
-}
-.tab-titles .title-item:hover .icon {
-  transform: translateY(-4px);
 }
 .tab-titles .title-item:hover .icon svg {
   color: var(--primary-color);
@@ -8250,6 +8248,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 .food-price-menu .menu-item .content .item-separator {
     flex-grow: 1;
     margin: 0 10px;
+    border-top-color: var(--divider-color);
 }
 
 /* Price styling */
