@@ -4897,7 +4897,7 @@ object {
 }
 .tab-titles {
   justify-content: center;
-  margin: -5px;
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4909,6 +4909,8 @@ object {
 .tab-titles .title-item .icon svg {
   display: flex;
   width: 32px;
+  color: var(--white-color);
+  fill: var(--white-color);
 }
 .tab-titles .title-item {
   font-size: 14px;
@@ -4921,15 +4923,16 @@ object {
 }
 .tab-titles .title-item a {
   display: flex;
-  padding: 12px 24px;
+  padding: 0;
   background: transparent;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
   transition: all 0.3s ease-in-out;
-  border: 1px solid #FFFFFF0F;
+  border: 0;
+  flex-direction: column;
 }
 
 .tab-titles .title-item a:hover,  
