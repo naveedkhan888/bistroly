@@ -1055,7 +1055,7 @@ td {
 .xptf-btn.xptf-btn-border {
   background: transparent;
   border-color: var(--primary-color);
-  color: var(--primary-color);
+  color: var(--white-color);
 }
 
 .xptf-btn.xptf-btn-border:hover, .xptf-btn.xptf-btn-border:focus {
@@ -3935,9 +3935,7 @@ object {
   margin-bottom: 12px;
 }
 .icon-box-2:hover .icon-main {
-  box-shadow: 6px 6px 13px 0 rgba(255, 255, 255, 0.15);
-  -webkit-box-shadow: 6px 6px 13px 0 rgba(255, 255, 255, 0.15);
-  -moz-box-shadow: 6px 6px 13px 0 rgba(255, 255, 255, 0.15);
+  transform: rotateY(180deg);
 }
 
 .icon-right {
