@@ -4893,14 +4893,21 @@ object {
 /*--------------------------------------------------------------
 ## Tab Titles
 --------------------------------------------------------------*/
-.tab-titles .title-item a .icon i {
-}
 .tab-titles {
   justify-content: center;
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  grid-area: 40px;
+}
+
+.tab-titles .title-item + .title-item::before {
+  content: "";
+  display: block;
+  width: 1px;             /* thickness of separator */
+  background: #ddd;       /* separator color */
+  margin: 0 12px;         /* spacing around separator */
 }
 .tab-titles .title-item .icon {
   justify-content: center;
@@ -4919,7 +4926,7 @@ object {
   text-transform: uppercase;
   display: inline-block;
   vertical-align: middle;
-  margin: 0 10px;
+  margin: 0;
   transition: all 0.3s ease-in-out;
   text-align: center;
 }
@@ -4934,7 +4941,7 @@ object {
 }
 .tab-titles .title-item a {
   display: flex;
-  padding: 20px 26px;
+  padding: 0;
   background: transparent;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
@@ -4942,7 +4949,7 @@ object {
   align-items: center;
   gap: 20px;
   transition: all 0.3s ease-in-out;
-  border: 1px solid var(--divider-color);
+  border: 0px solid var(--divider-color);
   flex-direction: column;
 }
 
