@@ -4908,7 +4908,7 @@ object {
 }
 .tab-titles .title-item .icon svg {
   display: flex;
-  width: 32px;
+  width: 40px;
   color: var(--white-color);
   fill: var(--white-color);
 }
@@ -4918,20 +4918,30 @@ object {
   text-transform: uppercase;
   display: inline-block;
   vertical-align: middle;
-  margin: 10px;
+  margin: 0 10px;
+  transition: all 0.3s ease-in-out;
   text-align: center;
+}
+.tab-titles .title-item:hover {
+  transform: translateY(-8px);
+}
+.tab-titles .title-item:hover .icon {
+  transform: translateY(-4px);
+}
+.tab-titles .text_icn {
+  line-height: 1;
 }
 .tab-titles .title-item a {
   display: flex;
-  padding: 0;
+  padding: 20px 26px;
   background: transparent;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
   transition: all 0.3s ease-in-out;
-  border: 0;
+  border: 1px solid var(--divider-color);
   flex-direction: column;
 }
 
