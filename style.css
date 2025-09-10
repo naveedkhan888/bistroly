@@ -4899,7 +4899,7 @@ object {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 40px;
+  gap: 50px;
 }
 .tab-titles .title-item .icon {
   justify-content: center;
@@ -6751,7 +6751,7 @@ select option {
 
 /* Style selected option */
 select option:checked {
-  background-color: #007BFF; /* selected option background */
+  background-color: var(--primary-color); /* selected option background */
   color: #fff;
 }
 
