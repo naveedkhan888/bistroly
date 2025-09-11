@@ -74,11 +74,11 @@ WooCommerce styles override
   text-align: center;
   margin-bottom: 35px;
   padding: 20px 20px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--divider-color);
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  background: var(--secondary-color);
+  background: var(--primary-color);
 }
 .woocommerce ul.products li.product .product-media, .woocommerce-page ul.products li.product .product-media {
   position: relative;
@@ -183,7 +183,7 @@ WooCommerce styles override
 
 
 .woocommerce-error, .woocommerce-info, .woocommerce-message {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
 }
 
 
@@ -372,7 +372,7 @@ WooCommerce styles override
   color: #ffffff;
   text-transform: uppercase;
   font-size: 14px;
-  border-bottom: 3px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 3px solid var(--divider-color);
   transition: all 0.35s ease-in-out;
   -webkit-transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
@@ -410,7 +410,7 @@ WooCommerce styles override
 }
 
 .woocommerce-cart-form table, .woocommerce-cart-form th, .woocommerce-cart-form td {
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--divider-color);
 }
 .woocommerce form .form-row label {
 
@@ -432,7 +432,7 @@ WooCommerce styles override
 }
 .woocommerce table.shop_table td {
   padding: 15px 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid var(--divider-color);
 }
 .woocommerce table.shop_table td.product-name a {
   font-size: 16px;
@@ -458,7 +458,7 @@ WooCommerce styles override
   box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
   -webkit-box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
-  background: var(--secondary-color);
+  background: var(--primary-color);
 }
 
 .woocommerce-cart .wc-proceed-to-checkout {
@@ -479,7 +479,7 @@ WooCommerce styles override
 .woocommerce .quantity .qty {
   color: #ffffff;
   border: none;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   padding: 15px;
   text-align: center;
   width: 85px;
@@ -510,14 +510,14 @@ WooCommerce styles override
   margin: 0 10px 0 0;
   color: #ffffff;
   border-radius: 0;
-  border-color: rgba(255, 255, 255, 0.15);
+  border-color: var(--divider-color);
   background: transparent;
 }
 
 #add_payment_method table.cart td.actions .coupon .input-text,
 .woocommerce-cart table.cart td.actions .coupon .input-text,
 .woocommerce-checkout table.cart td.actions .coupon .input-text {
-  border-color: rgba(255, 255, 255, 0.15);
+  border-color: var(--divider-color);
   color: #ffffff;
   background: transparent;
 }
@@ -531,6 +531,9 @@ WooCommerce styles override
 
 .woocommerce-info {
   border-top-color: var(--primary-color);
+  border-left: 1px solid var(--divider-color);
+  border-right: 1px solid var(--divider-color);
+  border-bottom: 1px solid var(--divider-color);
 }
 .woocommerce-info:before {
   color: var(--primary-color);
