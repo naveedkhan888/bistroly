@@ -8,6 +8,7 @@ if(!function_exists('skinetic_color_scheme')){
 
 	  	// Get theme options with fallbacks
 		$primary_color      = skinetic_get_option('primary_color', '#b58c67');
+		$e_global_color_primary   = skinetic_get_option('e_global_color_primary', '#cccccc');
 		$secondary_color    = skinetic_get_option('secondary_color', '#cccccc');
 		$text_color         = skinetic_get_option('text_color', '#1d1312');
 		$accent_color       = skinetic_get_option('accent_color', '#0E1730');
@@ -20,6 +21,7 @@ if(!function_exists('skinetic_color_scheme')){
 		$color_scheme .= "
 		:root {
 		    --primary-color: {$primary_color};
+		    --e-global-color-primary: {$e_global_color_primary};
 		    --secondary-color: {$secondary_color};
 		    --text-color: {$text_color};
 		    --accent-color: {$accent_color};
