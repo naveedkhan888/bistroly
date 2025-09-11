@@ -139,6 +139,14 @@ WooCommerce styles override
 .woocommerce ul.products li.product .added_to_cart:hover, .woocommerce ul.products li.product .product_type_grouped:hover, .woocommerce-page ul.products li.product .added_to_cart:hover, .woocommerce-page ul.products li.product .product_type_grouped:hover {
   background: #ffffff;
 }
+.woocommerce ul.products li.product:hover .wrapper-add-to-cart, .woocommerce-page ul.products li.product:hover .wrapper-add-to-cart {
+
+}
+.woocommerce ul.products li.product:hover .add_to_cart_button, .woocommerce-page ul.products li.product:hover .add_to_cart_button {
+  -webkit-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+}
 
 .woocommerce .site-main .product.sale span.onsale {
   color: #fff;
