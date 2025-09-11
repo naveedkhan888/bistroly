@@ -441,7 +441,7 @@ blockquote {
 blockquote:before {
   content: "\f120";
   font-family: xpcustomicon;
-  font-size: 29px;
+  font-size: 40px;
   position: absolute;
   left: 50%;
   top: 0;
@@ -453,9 +453,6 @@ blockquote:before {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  box-shadow: 6px 6px 13px 0 rgba(255, 255, 255, 0.1);
-  -webkit-box-shadow: 6px 6px 13px 0 rgba(255, 255, 255, 0.1);
-  -moz-box-shadow: 6px 6px 13px 0 rgba(255, 255, 255, 0.1);
 }
 blockquote cite {
   font-style: normal;
@@ -2682,12 +2679,13 @@ Vertical Menu
 }
 .blog-post .author-bio {
   overflow: hidden;
-  background: var(--primary-color);
+  background: var(--accent-color);
   padding: 40px;
   margin-bottom: 45px;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+  border: 1px solid var(--divider-color);
 }
 .blog-post .author-bio .author-image {
   float: left;
@@ -3142,13 +3140,8 @@ Vertical Menu
 
 .comment-respond {
   padding: 55px 60px;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
-  -webkit-box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
-  -moz-box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
-  background: var(--primary-color);
+  background: var(--accent-color);
+  border: 1px solid var(--divider-color);
 }
 .comment-respond .comment-reply-title {
   margin-bottom: 10px;
