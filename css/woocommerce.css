@@ -44,6 +44,7 @@ WooCommerce styles override
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+  background-color: transparent;
 }
 
 .woocommerce ul.products li.product .star-rating,
@@ -110,7 +111,7 @@ WooCommerce styles override
   margin-right: 5px;
 }
 .woocommerce ul.products li.product .price del .woocommerce-Price-amount, .woocommerce-page ul.products li.product .price del .woocommerce-Price-amount {
-  color: #636363;
+  color: #ffffff;
 }
 .woocommerce ul.products li.product .price ins, .woocommerce-page ul.products li.product .price ins {
   background: transparent;

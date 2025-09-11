@@ -3724,6 +3724,12 @@ object {
   color: var(--primary-color);
 }
 
+.icon_new.elementor-widget-icon.elementor-view-framed .elementor-icon, 
+.icon_new.elementor-widget-icon.elementor-view-default .elementor-icon,  {
+  fill: var(--primary-color);
+  color: var(--primary-color);
+}
+
 /*--------------------------------------------------------------
 ## Icon Box
 --------------------------------------------------------------*/
@@ -4916,6 +4922,9 @@ object {
   text-align: center;
 }
 .tab-titles .title-item:hover .icon svg {
+  color: var(--primary-color);
+}
+.tab-titles .title-item a.tab-active .hover_tab_titleees span {
   color: var(--primary-color);
 }
 .title-item .hover_tab_titleees span {
