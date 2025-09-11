@@ -78,7 +78,7 @@ WooCommerce styles override
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  background: #070E22;
+  background: var(--secondary-color);
 }
 .woocommerce ul.products li.product .product-media, .woocommerce-page ul.products li.product .product-media {
   position: relative;
@@ -183,7 +183,7 @@ WooCommerce styles override
 
 
 .woocommerce-error, .woocommerce-info, .woocommerce-message {
-  background-color: #070E22;
+  background-color: var(--secondary-color);
 }
 
 
@@ -458,7 +458,7 @@ WooCommerce styles override
   box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
   -webkit-box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
-  background: #070E22;
+  background: var(--secondary-color);
 }
 
 .woocommerce-cart .wc-proceed-to-checkout {
@@ -479,7 +479,7 @@ WooCommerce styles override
 .woocommerce .quantity .qty {
   color: #ffffff;
   border: none;
-  background-color: #070E22;
+  background-color: var(--secondary-color);
   padding: 15px;
   text-align: center;
   width: 85px;
