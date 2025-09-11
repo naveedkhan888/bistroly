@@ -1093,14 +1093,6 @@ function skinetic_customize_settings() {
             'priority' => 10,
         ),
 
-        'e_global_color_primary' => array(
-            'type'     => 'color',
-            'label'    => esc_html__( 'El Primary Color', 'skinetic' ),
-            'section'  => 'color_scheme',
-            'default'  => '#cccccc',
-            'priority' => 10,
-        ),
-
         'secondary_color' => array(
             'type'     => 'color',
             'label'    => esc_html__( 'Secondary Color', 'skinetic' ),
