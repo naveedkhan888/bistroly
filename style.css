@@ -441,7 +441,7 @@ blockquote {
 blockquote:before {
   content: "\f120";
   font-family: xpcustomicon;
-  font-size: 40px;
+  font-size: 29px;
   position: absolute;
   left: 50%;
   top: 0;
@@ -450,6 +450,12 @@ blockquote:before {
   line-height: 50px;
   margin-left: -25px;
   color: var(--primary-color);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  box-shadow: 6px 6px 13px 0 rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 6px 6px 13px 0 rgba(255, 255, 255, 0.1);
+  -moz-box-shadow: 6px 6px 13px 0 rgba(255, 255, 255, 0.1);
 }
 blockquote cite {
   font-style: normal;
@@ -880,7 +886,7 @@ th {
 table,
 th,
 td {
-  border: 1px solid var(--divider-color);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 th {
@@ -1123,7 +1129,7 @@ input[type=datetime],
 input[type=datetime-local],
 input[type=color],
 textarea {
-  border: 1px solid var(--divider-color);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   padding: 11px 24px;
   box-sizing: border-box;
   outline: none;
@@ -2611,7 +2617,7 @@ Vertical Menu
   line-height: 1;
   display: inline-block;
   vertical-align: middle;
-  border: 1px solid var(--divider-color);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -2682,7 +2688,6 @@ Vertical Menu
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  border: 1px solid var(--divider-color);
 }
 .blog-post .author-bio .author-image {
   float: left;
@@ -3144,7 +3149,6 @@ Vertical Menu
   -webkit-box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
   background: var(--primary-color);
-  border: 1px solid var(--divider-color);
 }
 .comment-respond .comment-reply-title {
   margin-bottom: 10px;
@@ -3273,7 +3277,7 @@ Vertical Menu
 .widget-area .widget .widget-title {
   padding-bottom: 18px;
   margin-bottom: 35px;
-  border-bottom: 1px solid var(--divider-color);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   position: relative;
 }
 .widget-area .widget .widget-title:before {
@@ -3830,7 +3834,7 @@ object {
   height: 119px;
   left: -15px;
   top: -15px;
-  border: 1px solid var(--divider-color);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   -webkit-animation: circle_animation 2s infinite linear;
   -moz-animation: circle_animation 2s infinite linear;
   -o-animation: circle_animation 2s infinite linear;
@@ -6750,7 +6754,7 @@ object {
     width: 100%;
     padding: 11px 24px; 
     margin-top: 0;
-    border: 1px solid var(--divider-color); 
+    border: 1px solid rgba(255, 255, 255, 0.15); 
     border-radius: 0; 
     font-size: 14px; 
     box-sizing: border-box; 
@@ -7003,7 +7007,7 @@ select option:checked {
 }
 
 .light_form .main_wraper .bottom_line {
-    background-color: var(--divider-color);
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 .light_form .main_wraper .bottom_line::before {
@@ -7036,7 +7040,7 @@ select option:checked {
   padding-top: 14px;
 }
 .light_form .mc4wp-form-fields .subscribe-inner-form input[type="email"] {
-  border-color: var(--divider-color);
+  border-color: rgba(255, 255, 255, 0.15);
   color: ;
 }
 

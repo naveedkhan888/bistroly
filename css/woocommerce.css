@@ -74,7 +74,7 @@ WooCommerce styles override
   text-align: center;
   margin-bottom: 35px;
   padding: 20px 20px;
-  border: 1px solid var(--divider-color);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -372,7 +372,7 @@ WooCommerce styles override
   color: #ffffff;
   text-transform: uppercase;
   font-size: 14px;
-  border-bottom: 3px solid var(--divider-color);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.15);
   transition: all 0.35s ease-in-out;
   -webkit-transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
@@ -410,7 +410,7 @@ WooCommerce styles override
 }
 
 .woocommerce-cart-form table, .woocommerce-cart-form th, .woocommerce-cart-form td {
-  border: 1px solid var(--divider-color);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 .woocommerce form .form-row label {
 
@@ -432,7 +432,7 @@ WooCommerce styles override
 }
 .woocommerce table.shop_table td {
   padding: 15px 12px;
-  border-top: 1px solid var(--divider-color);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 .woocommerce table.shop_table td.product-name a {
   font-size: 16px;
@@ -510,14 +510,14 @@ WooCommerce styles override
   margin: 0 10px 0 0;
   color: #ffffff;
   border-radius: 0;
-  border-color: var(--divider-color);
+  border-color: rgba(255, 255, 255, 0.15);
   background: transparent;
 }
 
 #add_payment_method table.cart td.actions .coupon .input-text,
 .woocommerce-cart table.cart td.actions .coupon .input-text,
 .woocommerce-checkout table.cart td.actions .coupon .input-text {
-  border-color: var(--divider-color);
+  border-color: rgba(255, 255, 255, 0.15);
   color: #ffffff;
   background: transparent;
 }
@@ -531,9 +531,6 @@ WooCommerce styles override
 
 .woocommerce-info {
   border-top-color: var(--primary-color);
-  border-left: 1px solid var(--divider-color);
-  border-right: 1px solid var(--divider-color);
-  border-bottom: 1px solid var(--divider-color);
 }
 .woocommerce-info:before {
   color: var(--primary-color);
