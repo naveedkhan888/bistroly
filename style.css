@@ -51,8 +51,8 @@ Skinetic is distributed under the terms of the GNU General Public License v2 or 
  */
  
 :root {
-        --e-global-color-primary: var(--primary-color);
-    }
+  --e-global-color-primary: var(--primary-color) !important;
+}
 
 html {
   line-height: 1.15; /* 1 */
