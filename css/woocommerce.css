@@ -488,7 +488,7 @@ WooCommerce styles override
   font-family: "Marcellus", sans-serif;
   font-size: 16px;
   font-weight: 700;
-  border-radius: 15px;
+  border-radius: 0;
 }
 
 .woocommerce #content table.cart td.actions,
@@ -509,7 +509,7 @@ WooCommerce styles override
   line-height: 47px;
   margin: 0 10px 0 0;
   color: #ffffff;
-  border-radius: 15px;
+  border-radius: 0;
   border-color: rgba(255, 255, 255, 0.15);
   background: transparent;
 }
@@ -656,9 +656,9 @@ WooCommerce styles override
   outline: none;
   color: #fff;
   transition: all 0.3s;
-  -webkit-border-radius: 35px;
-  -moz-border-radius: 35px;
-  border-radius: 35px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   border: 0;
 }
 .woocommerce #respond input#submit.disabled:hover, .woocommerce #respond input#submit:disabled:hover,

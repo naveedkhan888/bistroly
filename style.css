@@ -666,9 +666,9 @@ mark, ins {
   height: 38px;
   color: ;
   background: rgba(220, 219, 219, 0.5);
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 .btn-details i:before {
   font-size: 16px;
@@ -972,9 +972,9 @@ td {
   -o-transition: all 0.3s linear;
   -ms-transition: all 0.3s linear;
   font-size: 14px;
-  -webkit-border-radius: 35px;
-  -moz-border-radius: 35px;
-  border-radius: 35px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   padding: 14px 30px;
   line-height: 1.42857143;
   display: inline-block;
@@ -1085,7 +1085,7 @@ td {
 .woocommerce button.button, 
 .woocommerce-mini-cart__buttons a.button.wc-forward.wc-forward, 
 .woocommerce-cart .wc-proceed-to-checkout a.checkout-button {
-  border-radius: 35px;
+  border-radius: 0;
 }
 
 .main-form input::-webkit-input-placeholder { /* Chrome, Safari, Edge */
@@ -2037,7 +2037,7 @@ Vertical Menu
 .vertical-services-menu li {
     border-bottom: 0;
     overflow: hidden;
-    border-radius: 15px;
+    border-radius: 0;
     background: #FCF4F6;
     margin: 0 0 10px 0;
 }
@@ -2317,9 +2317,9 @@ Vertical Menu
   background: #070e22;
   margin-bottom: 60px;
   overflow: hidden;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   box-shadow: 8px 8px 30px 0 rgba(255, 255, 255, 0.1);
   -webkit-box-shadow: 8px 8px 30px 0 rgba(255, 255, 255, 0.1);
   -moz-box-shadow: 8px 8px 30px 0 rgba(255, 255, 255, 0.1);
@@ -2555,9 +2555,9 @@ Vertical Menu
   line-height: 40px;
   margin-right: 5px;
   border: 1px solid var(--primary-color);
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 .page-pagination li a i:before, .page-pagination li span i:before {
   font-size: 16px;
@@ -2685,9 +2685,9 @@ Vertical Menu
   background: var(--secondary-color);
   padding: 40px;
   margin-bottom: 45px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 .blog-post .author-bio .author-image {
   float: left;
@@ -3251,9 +3251,9 @@ Vertical Menu
   display: inline-block;
   vertical-align: middle;
   border: 1px solid var(--primary-color);
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 .widget .tagcloud a:hover {
   background: var(--primary-color);
@@ -3433,9 +3433,9 @@ Vertical Menu
   line-height: 1;
   background: transparent;
   border-color: rgba(255, 255, 255, 0.15);
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 
 .search-form .search-submit {
@@ -3456,9 +3456,9 @@ Vertical Menu
   -moz-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   -ms-transition: all 0.3s linear;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 .search-form .search-submit i {
   color: #fff;
@@ -3477,9 +3477,9 @@ Vertical Menu
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 .author-widget_wrapper .author-widget_image-wrapper {
@@ -3543,7 +3543,7 @@ Vertical Menu
 }
 
 .qodef-e-title.woocommerce-loop-category__title {
-  border-radius: 15px;
+  border-radius: 0;
 }
 
 /*--------------------------------------------------------------
@@ -3696,9 +3696,9 @@ object {
   background: var(--primary-color);
   padding: 5px 20px;
   border: 1px solid var(--primary-color);
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   margin-bottom: 16px;
 }
 .xp-heading > span.is_line {
@@ -4957,9 +4957,9 @@ object {
   display: flex;
   padding: 0;
   background: transparent;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   align-items: center;
   gap: 20px;
   transition: all 0.3s ease-in-out;
@@ -5617,7 +5617,7 @@ object {
   transform: translateX(-101%);
   transition: all 0.3s ease;
   display: inline-block;
-  border-radius: 15px;
+  border-radius: 0;
 }
 
 .project-slider .projects-box:hover .portfolio-info h5 a {
@@ -5647,7 +5647,7 @@ object {
   transition: all 0.3s ease;
   transition-delay: 50ms;
   transition-duration: 0.3s;
-  border-radius: 15px;
+  border-radius: 0;
 }
 .project-slider .projects-box:hover .portfolio-info .portfolio-cates a {
   transform: translateX(0);
@@ -6250,9 +6250,9 @@ object {
   padding: 9px 20px;
   background: #f6f6f6;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
@@ -8128,9 +8128,9 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   -ms-transition: all 0.2s linear;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 #back-to-top.show {
   opacity: 1;
