@@ -297,7 +297,10 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 								<?php Icons_Manager::render_icon( $box['icon'], [ 'aria-hidden' => 'true' ] ); ?>
 							</span>
 						<?php endif; ?>
-						<span class="text_icn"><?php echo esc_html( $box['titles'] ); ?></span>
+						<div class="hover_tab_titleees">
+							<span class="text_icn"><?php echo esc_html( $box['titles'] ); ?></span>
+							<span class="text_icn_hover"><?php echo esc_html( $box['titles'] ); ?></span>
+						</div>
 					</a>
 				</div>
 			<?php endforeach; ?>
