@@ -3430,7 +3430,10 @@ Vertical Menu
   -moz-border-radius: 0;
   border-radius: 0;
 }
-.search-form .search-field:placeholder {
+.search-form .search-field:placeholder, 
+.search-form .search-field::-webkit-input-placeholder, 
+.search-form .search-field:-moz-placeholder, 
+.search-form .search-field:-ms-input-placeholder {
   color: #FFFFFFCC;
   opacity: 1;
 }
