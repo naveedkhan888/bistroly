@@ -7663,7 +7663,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  border: 1px solid var(--divider-color);
+  
 }
 .site-header-cart .woocommerce-mini-cart__buttons {
   margin-bottom: -15px;
@@ -7682,7 +7682,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   top: -5px;
   right: 33px;
   opacity: 1;
-  background: var(--accent-color);
+  background: var(--primary-color);
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
