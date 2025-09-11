@@ -13,7 +13,7 @@ if(!function_exists('skinetic_color_scheme')){
 		$accent_color       = skinetic_get_option('accent_color', '#0E1730');
 		$bg_color           = skinetic_get_option('bg_color', '#f4efef');
 		$white_color        = skinetic_get_option('white_color', '#FFFFFF');
-		$divider_color      = skinetic_get_option('divider_color', '#D20303');
+		$divider_color      = skinetic_get_option('divider_color', '#FFFFFF14');
 		$dark_divider_color = skinetic_get_option('dark_divider_color', '#3835373b'); // example fallback
 
 		// Output variables inside :root
