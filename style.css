@@ -1473,9 +1473,9 @@ a:hover, a:active {
   -webkit-transform: translateY(30px);
   -ms-transform: translateY(30px);
   transform: translateY(30px);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -1495,7 +1495,6 @@ a:hover, a:active {
   left: 0;
 }
 .main-navigation ul ul.sub-menu:after {
-  display: none;
   content: "";
   position: absolute;
   height: 15px;
@@ -2763,9 +2762,9 @@ Vertical Menu
   -ms-transition: all 0.3s linear;
 }
 .post-nav > div .thumb-post img {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   width: 70px;
 }
 .post-nav > div .thumb-post:before {
@@ -2785,9 +2784,9 @@ Vertical Menu
   -moz-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   -ms-transition: all 0.3s linear;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   z-index: 2;
   opacity: 0;
 }
@@ -3084,9 +3083,9 @@ Vertical Menu
   float: left;
 }
 .comments-area .comment-item .gravatar img {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 .comments-area .comment-item .comment-content:not(.pingback) {
   padding-left: 110px;
@@ -3143,9 +3142,9 @@ Vertical Menu
 
 .comment-respond {
   padding: 55px 60px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
   -webkit-box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
@@ -3404,9 +3403,9 @@ Vertical Menu
   margin-right: 20px;
   width: 75px;
   overflow: hidden;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 .widget .recent-news h6 {
   margin-bottom: 10px;
@@ -3800,9 +3799,9 @@ object {
   box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
   -webkit-box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 .icon-box-1 .icon-main {
   background: rgb(193, 153, 119, 0.1);
@@ -3914,9 +3913,9 @@ object {
   -moz-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   -ms-transition: all 0.3s linear;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   margin-bottom: 0;
 }
 .icon-box-2 .icon-main i {
@@ -4014,9 +4013,9 @@ object {
   margin: 0;
   padding: 35px 35px 35px 70px;
   background: #f5f5f5;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
@@ -4337,9 +4336,9 @@ object {
   box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
   -webkit-box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 .xp-image-box .content-box {
   padding: 30px 30px 27px;
@@ -4411,9 +4410,9 @@ object {
 --------------------------------------------------------------*/
 .xp-flip-box {
   position: relative;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   overflow: hidden;
 }
 .xp-flip-box .inner-box {
@@ -5295,9 +5294,9 @@ object {
 .projects-grid .projects-box {
   position: relative;
   overflow: hidden;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 .projects-grid .projects-box .portfolio-info {
   width: 100%;
@@ -5585,9 +5584,9 @@ object {
 /* project carousel */
 .project-slider .projects-box {
   overflow: hidden;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 .project-slider .projects-box img {
   transition: all 0.3s linear;
@@ -5907,9 +5906,9 @@ object {
 .xp-team {
   text-align: center;
   overflow: hidden;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
   -webkit-box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
@@ -6433,9 +6432,9 @@ object {
 }
 .xp-testimonials-carousel .testi-item {
   background: #fff;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
   -webkit-box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
@@ -6606,9 +6605,9 @@ object {
   overflow: hidden;
   position: relative;
   background: #fff;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
   -webkit-box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
@@ -6798,7 +6797,7 @@ select option:checked {
 .ui-datepicker {
     background-color: #ffffff;
     border: 1px solid #dddddd;
-    border-radius: 5px;
+    border-radius: 0;
     box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
     font-family: 'Arial', sans-serif;
     font-size: 14px;
@@ -7586,13 +7585,13 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 }
 .xptf-cta-header .h-search-form-field .h-search-form-inner {
   padding: 30px;
-  background-color: var(--secondary-color);
+  background-color: var(--accent-color);
   box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
   -webkit-box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 .xptf-cta-header .h-search-form-field input {
   background: transparent;
@@ -7671,9 +7670,9 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 .site-header-cart .woocommerce-mini-cart__buttons {
   margin-bottom: -15px;
@@ -8013,9 +8012,9 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   -moz-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   -ms-transition: all 0.3s linear;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   background: #f5f5f5;
   text-align: center;
 }
@@ -8251,7 +8250,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   font-size: 74%;
   text-transform: uppercase;
   color: #fff;
-  border-radius: 5px;
+  border-radius: 0;
   padding: 1px 10px;
   font-weight: 600;
   margin: 0 0 0 10px;
@@ -9041,7 +9040,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   padding: 10px;
   background-color: #ffe4e4;
   border: 1px solid red;
-  border-radius: 5px;
+  border-radius: 0;
 }
 
 @media (max-width: 1024px) {
