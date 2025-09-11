@@ -1137,7 +1137,7 @@ function skinetic_customize_settings() {
             'type'     => 'color',
             'label'    => esc_html__( 'Divider Color', 'skinetic' ),
             'section'  => 'color_scheme',
-            'default'  => '#8f605c3b',
+            'default'  => '#D20303',
             'priority' => 10,
         ),
 
