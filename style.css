@@ -2124,7 +2124,7 @@ Vertical Menu
   font-family: xpicon !important;
   font-size: 14px;
   color: var(--primary-color);
-  opacity: 0.6;
+  opacity: 1;
   margin: -2px 14px 0;
   display: inline-block;
   vertical-align: middle;
@@ -7663,7 +7663,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  
+
 }
 .site-header-cart .woocommerce-mini-cart__buttons {
   margin-bottom: -15px;
