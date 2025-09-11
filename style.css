@@ -4921,14 +4921,37 @@ object {
   transition: all 0.3s ease-in-out;
   text-align: center;
 }
-.tab-titles .title-item:hover {
-  transform: translateY(-8px);
-}
 .tab-titles .title-item:hover .icon svg {
   color: var(--primary-color);
 }
+.title-item .hover_tab_titleees span {
+  transition: all 0.4s ease-in-out;
+}
+.title-item .hover_tab_titleees {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.tab-titles .title-item a:hover .text_icn {
+  transform: translate(0, 100%);
+  opacity: 0;
+}
+.tab-titles .title-item a:hover .text_icn_hover {
+  opacity: 1;
+  transform: translate(0,0);
+}
+.hover_tab_titleees span.text_icn_hover {
+  position: absolute;
+  transform: translate(0,-100%);
+  line-height: 1;
+}
+.tab-titles .title-item a:hover {
+  color: var(--white-color);
+}
 .tab-titles .text_icn {
   line-height: 1;
+  opacity: 1;
 }
 .tab-titles .title-item a {
   display: flex;
