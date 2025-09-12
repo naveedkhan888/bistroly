@@ -4903,8 +4903,8 @@ object {
     transition: width 0.3s ease;
 }
 
-.tab-titles .title-item a.border-right, 
-.tab-titles .title-item a.border-left {
+.tab-titles .title-item a .border-right, 
+.tab-titles .title-item a .border-left {
     width: 2px;
     height: 0;
     transition: height 0.3s ease;
@@ -4912,6 +4912,7 @@ object {
 
 .bg_anim {
   background: var(--primary-color);
+  position: absolute;
 }
 
 .tab-titles .title-item a .border-top { top: 0; right: 0; }
@@ -4920,18 +4921,17 @@ object {
 .tab-titles .title-item a .border-left { bottom: 0; left: 0; }
 
 .tab-titles .title-item a:hover .border-top,
-.tab-titles .title-item a:hover .border-bottom {
+.tab-titles .title-item a.tab-active .border-top,
+.tab-titles .title-item a:hover .border-bottom, 
+.tab-titles .title-item a.tab-active .border-bottom {
     width: 100%;
 }
 
 .tab-titles .title-item a:hover .border-right,
-.tab-titles .title-item a:hover .border-left {
+.tab-titles .title-item a.tab-active .border-right,
+.tab-titles .title-item a:hover .border-left, 
+.tab-titles .title-item a.tab-active .border-left  {
     height: 100%;
-}
-
-.tab-titles .title-item a:hover,  
-.tab-titles .title-item a.tab-active {
-  border-color: #B58C67;
 }
 
 .tab-titles {
@@ -4968,7 +4968,7 @@ object {
   color: var(--primary-color);
 }
 .tab-titles .title-item a.tab-active .hover_tab_titleees span {
-  color: var(--primary-color);
+  
 }
 .title-item .hover_tab_titleees span {
   transition: all 0.4s ease-in-out;
@@ -5000,8 +5000,9 @@ object {
   opacity: 1;
 }
 .tab-titles .title-item a {
+  position: relative;
   display: flex;
-  padding: 0;
+  padding: 22px 30px;
   background: transparent;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -5012,8 +5013,6 @@ object {
   border: 1px solid var(--divider-color);
   flex-direction: column;
 }
-
-
 
 
 @media (max-width: 767px) {
