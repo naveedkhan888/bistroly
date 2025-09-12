@@ -4899,13 +4899,13 @@ object {
 .tab-titles .title-item a .border-top, 
 .tab-titles .title-item a .border-bottom {
     width: 0;
-    height: 2px;
+    height: 1px;
     transition: width 0.3s ease;
 }
 
 .tab-titles .title-item a .border-right, 
 .tab-titles .title-item a .border-left {
-    width: 2px;
+    width: 1px;
     height: 0;
     transition: height 0.3s ease;
 }
@@ -5010,7 +5010,7 @@ object {
   align-items: center;
   gap: 20px;
   transition: all 0.3s ease-in-out;
-  border: 1px solid var(--divider-color);
+  box-shadow: inset 0px 0px 0px 1px var(--divider-color);
   flex-direction: column;
 }
 
