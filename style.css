@@ -4940,7 +4940,7 @@ object {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 50px;
+  gap: 30px;
 }
 .tab-titles .title-item .icon {
   justify-content: center;
