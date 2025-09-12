@@ -3686,7 +3686,7 @@ object {
   letter-spacing: 1.8px;
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
-  color: #191717;
+  color: var(--white-color);
   margin-bottom: 10px;
 }
 .xp-heading > span.is_highlight {
@@ -4891,6 +4891,49 @@ object {
 /*--------------------------------------------------------------
 ## Tab Titles
 --------------------------------------------------------------*/
+
+
+/* Border Animation Button */
+
+
+.tab-titles .title-item a .border-top, 
+.tab-titles .title-item a .border-bottom {
+    width: 0;
+    height: 2px;
+    transition: width 0.3s ease;
+}
+
+.tab-titles .title-item a.border-right, 
+.tab-titles .title-item a.border-left {
+    width: 2px;
+    height: 0;
+    transition: height 0.3s ease;
+}
+
+.bg_anim {
+  background: var(--primary-color);
+}
+
+.tab-titles .title-item a .border-top { top: 0; right: 0; }
+.tab-titles .title-item a .border-right { top: 0; right: 0; }
+.tab-titles .title-item a .border-bottom { bottom: 0; left: 0; }
+.tab-titles .title-item a .border-left { bottom: 0; left: 0; }
+
+.tab-titles .title-item a:hover .border-top,
+.tab-titles .title-item a:hover .border-bottom {
+    width: 100%;
+}
+
+.tab-titles .title-item a:hover .border-right,
+.tab-titles .title-item a:hover .border-left {
+    height: 100%;
+}
+
+.tab-titles .title-item a:hover,  
+.tab-titles .title-item a.tab-active {
+  border-color: #B58C67;
+}
+
 .tab-titles {
   justify-content: center;
   margin: 0;
@@ -4966,14 +5009,11 @@ object {
   align-items: center;
   gap: 20px;
   transition: all 0.3s ease-in-out;
-  border: 0px solid var(--divider-color);
+  border: 1px solid var(--divider-color);
   flex-direction: column;
 }
 
-.tab-titles .title-item a:hover,  
-.tab-titles .title-item a.tab-active {
-  border-color: #B58C67;
-}
+
 
 
 @media (max-width: 767px) {

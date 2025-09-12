@@ -301,6 +301,10 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 							<span class="text_icn"><?php echo esc_html( $box['titles'] ); ?></span>
 							<span class="text_icn_hover"><?php echo esc_html( $box['titles'] ); ?></span>
 						</div>
+						<div class="border-top bg_anim"></div>
+				        <div class="border-right bg_anim"></div>
+				        <div class="border-bottom bg_anim"></div>
+				        <div class="border-left bg_anim"></div>
 					</a>
 				</div>
 			<?php endforeach; ?>
