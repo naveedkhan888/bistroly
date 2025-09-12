@@ -4968,7 +4968,7 @@ object {
   color: var(--primary-color);
 }
 .tab-titles .title-item a.tab-active .hover_tab_titleees span {
-  
+  color: var(--white-color);
 }
 .title-item .hover_tab_titleees span {
   transition: all 0.4s ease-in-out;
