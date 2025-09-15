@@ -50,6 +50,13 @@ Skinetic is distributed under the terms of the GNU General Public License v2 or 
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
+body[class*="elementor-kit"] {
+  --e-global-color-primary: var(--primary-color);
+  --e-global-color-secondary: var(--secondary-color);
+  --e-global-color-text: var(--text-color);
+  --e-global-color-accent:var(--accent-color);
+}
+
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -7332,6 +7339,17 @@ select option:checked {
 /*--------------------------------------------------------------
 ## Miscellaneous
 --------------------------------------------------------------*/
+@media (min-width: 767px) {
+  .qodef-qi-image-gallery .qodef-grid-inner > .qodef-e:nth-of-type(2n+1) {
+    transform: rotate(-5deg) translateY(48px);
+  }
+
+  .qodef-qi-image-gallery .qodef-grid-inner > .qodef-e:nth-of-type(5n) {
+    transform: rotate(-358deg) translateY(48px);
+  }
+}
+
+
 .site-overlay {
   cursor: url(images/close.png) 16 16, default;
   background: transparent;
