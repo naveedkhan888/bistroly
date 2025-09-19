@@ -7349,6 +7349,10 @@ select option:checked {
   }
 }
 
+.verticle_text {
+  writing-mode: vertical-lr;
+}
+
 
 .site-overlay {
   cursor: url(images/close.png) 16 16, default;
