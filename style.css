@@ -2154,6 +2154,11 @@ Vertical Menu
   }
 }
 @media (max-width: 767px) {
+  .right_dottts .owl-carousel .owl-dots {
+    left: 0;
+    right: inherit;
+    width: 100%;
+  }
   .page-header .container {
     width: 100%;
   }
