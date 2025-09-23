@@ -14,7 +14,7 @@ body.royal_preloader {
     height: auto;
     margin: 0;
     z-index: 9999999999;
-    background: var(--accent-color) !important;
+    background: var(--accent-color);
 }
 #royal_preloader.royal_preloader_number:before,
 #royal_preloader.royal_preloader_progress:before {

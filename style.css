@@ -7796,6 +7796,11 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   right: -30px;
   width: 340px;
 }
+.royal_preloader_percentage, 
+#royal_preloader, 
+#royal_preloader.royal_preloader_logo .royal_preloader_loader div {
+  background: var(--accent-color);
+}
 .xptf-cta-header .h-search-form-field .h-search-form-inner {
   padding: 30px;
   background-color: var(--accent-color);
