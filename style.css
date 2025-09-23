@@ -6996,6 +6996,11 @@ select option:checked {
     border-radius: 0;
 }
 
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: transparent !important;
+  color: white;
+}
+
 .select2-container .select2-selection--single .select2-selection__rendered {
   padding: 14px 10px 13px 36px !important;
   color: inherit !important;
