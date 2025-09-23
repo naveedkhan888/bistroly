@@ -6853,8 +6853,8 @@ select option:checked {
   border: none;
   padding: 10px;
   color: #d1cbb3; /* Light beige text */
-  font-family: 'Inter', sans-serif;
   font-size: 14px;
+  width: auto;
 }
 
 /* Header */
@@ -6936,7 +6936,19 @@ select option:checked {
 }
 
 
+.select2-container .select2-selection--single {
+  background-color: transparent;
+  border: 0;
+}
 
+
+/* Remove search field space when search is disabled */
+.select2-dropdown .select2-search {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
 
 /* Icon Form */
 .form_icon .main_wraper{
