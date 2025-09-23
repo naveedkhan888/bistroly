@@ -6845,6 +6845,98 @@ select option:checked {
 
 
 
+/* Date Picker UI */
+
+/* Base calendar container */
+.ui-datepicker {
+  background: #1e3832; /* Dark green background */
+  border: none;
+  padding: 10px;
+  color: #d1cbb3; /* Light beige text */
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+/* Header */
+.ui-datepicker-header {
+  background: transparent;
+  border: none;
+  color: #d1cbb3;
+  font-weight: 500;
+  text-align: center;
+  padding: 8px 0;
+}
+
+/* Month + Year text */
+.ui-datepicker-title {
+  color: #d1cbb3;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Navigation arrows */
+.ui-datepicker-prev, .ui-datepicker-next {
+  cursor: pointer;
+  color: #d1cbb3;
+  border: none;
+  background: transparent;
+}
+.ui-datepicker-prev-hover, .ui-datepicker-next-hover {
+  background: transparent;
+  color: #f5d19a; /* Hover color */
+}
+
+/* Days of the week (Su, Mo, etc.) */
+.ui-datepicker thead th {
+  color: #d1cbb3;
+  font-weight: 400;
+  padding: 4px 0;
+}
+
+/* Day cells */
+.ui-datepicker td {
+  padding: 4px;
+}
+.ui-datepicker td a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  color: #d1cbb3;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect */
+.ui-datepicker td a:hover {
+  background: #2a4a42;
+  color: #f5d19a;
+}
+
+/* Selected date */
+.ui-datepicker td a.ui-state-active {
+  border: 1px solid #f5d19a;
+  color: #f5d19a;
+  background: transparent;
+}
+
+/* Today’s date */
+.ui-datepicker td a.ui-state-highlight {
+  background: #000;
+  color: #fff;
+  border-radius: 4px;
+}
+
+/* Remove default jQuery UI borders */
+.ui-widget-content {
+  border: none;
+  background: transparent;
+}
+
+
+
 
 /* Icon Form */
 .form_icon .main_wraper{
