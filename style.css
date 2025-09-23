@@ -6849,14 +6849,17 @@ select option:checked {
 
 /* Base calendar container */
 .ui-datepicker {
-  background: #1e3832; /* Dark green background */
-  border: none;
+  background: var(--accent-color); /* Dark green background */
+  border: 1px solid var(--divider-color) !important;
   padding: 10px;
   color: #d1cbb3; /* Light beige text */
   font-size: 14px;
   width: auto;
 }
 
+.ui-datepicker table {
+  border: 0;
+}
 /* Header */
 .ui-datepicker-header {
   background: transparent;
@@ -6901,18 +6904,20 @@ select option:checked {
   display: inline-block;
   width: 30px;
   height: 30px;
-  line-height: 30px;
+  line-height: 25px;
   text-align: center;
   text-decoration: none;
-  border-radius: 4px;
-  color: #d1cbb3;
+  border-radius: 0;
+  color: var(--white-color);
+  opacity: 0.7;
   transition: all 0.2s ease;
 }
 
 /* Hover effect */
 .ui-datepicker td a:hover {
-  background: #2a4a42;
-  color: #f5d19a;
+  background: transparent;
+  color: var(--white-color);
+  opacity: 1;
 }
 
 /* Selected date */
@@ -6924,15 +6929,16 @@ select option:checked {
 
 /* Today’s date */
 .ui-datepicker td a.ui-state-highlight {
-  background: #000;
-  color: #fff;
-  border-radius: 4px;
+  background: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 0;
+  opacity: 1;
 }
 
-/* Remove default jQuery UI borders */
-.ui-widget-content {
-  border: none;
-  background: transparent;
+.ui-state-highlight, 
+.ui-widget-content .ui-state-highlight, 
+.ui-widget-header .ui-state-highlight {
+  border: 1px solid var(--primary-color);
 }
 
 
@@ -6970,8 +6976,9 @@ select option:checked {
 }
 
 .select2-container--default .select2-results > .select2-results__options {
-  background: var(--primary-color);
+  background: var(--accent-color);
   padding: 15px;
+  border: 1px solid var(--divider-color);
 }
 .select2-results__option {
   padding: 0; }
