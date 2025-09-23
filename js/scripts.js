@@ -385,10 +385,18 @@
 
     function initSelect2() {
         $('select.select2').each(function() {
+            // Destroy any existing select2
+            if ($(this).hasClass("select2-hidden-accessible")) {
+                $(this).select2('destroy');
+            }
+
+            // Initialize as single select without search
             $(this).select2({
                 width: '100%',
-                multiple: false, // force single-select dropdown
-                placeholder: $(this).attr('placeholder') || '' // use CF7 placeholder
+                minimumResultsForSearch: -1, // disable search box
+                placeholder: $(this).find('option[disabled]:selected').text() 
+                            || $(this).find('option:first').text(),
+                allowClear: true
             });
         });
     }
