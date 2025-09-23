@@ -6984,8 +6984,8 @@ select option:checked {
 }
 
 .select2-container--open .select2-dropdown {
-    margin-top: 20px;   /* space below input */
-    margin-bottom: 20px; /* space above input */
+    margin-top: 30px;   /* space below input */
+    margin-bottom: 30px; /* space above input */
 }
 .select2-container .select2-selection--single, 
 .select2-container--default .select2-selection--single {
