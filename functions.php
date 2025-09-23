@@ -172,6 +172,9 @@ function skinetic_scripts() {
     /** jquery ui Date Picker **/
     wp_enqueue_style( 'jquery-ui-datepicker', get_template_directory_uri().'/css/jquery-ui.css');
 
+    /** Select 2 jquery (css) **/
+    wp_enqueue_style( 'select-2-css', get_template_directory_uri().'/css/select2.min.css');
+
 	/** Theme stylesheet. **/
 	wp_enqueue_style( 'skinetic-style', get_stylesheet_uri() );	
 
@@ -186,6 +189,7 @@ function skinetic_scripts() {
 	wp_enqueue_script( 'easypiechart', get_template_directory_uri() . '/js/easypiechart.min.js', array( 'jquery' ), '20200716', true );
 	wp_enqueue_script( 'countdown', get_template_directory_uri() . '/js/jquery.countdown.min.js', array( 'jquery' ), '20180910', true );
 	wp_enqueue_script( 'jquery-ui', get_template_directory_uri() . '/js/jquery-ui.js', array( 'jquery' ), '20180915', true );
+	wp_enqueue_script( 'select2-js', get_template_directory_uri() . '/js/select2.min.js', array( 'jquery' ), '20180917', true );
     wp_enqueue_script( 'skinetic-elementor', get_template_directory_uri() . '/js/elementor.js', array( 'jquery' ), '20200716', true );
 	wp_enqueue_script( 'skinetic-elementor-header', get_template_directory_uri() . '/js/elementor-header.js', array('jquery'), '20200716', true );
 	wp_enqueue_script( 'skinetic-scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '20200716', true );

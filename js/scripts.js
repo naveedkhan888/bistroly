@@ -383,6 +383,18 @@
         xpthemeCore.shortcodes.xp_core_interactive_link_showcase.xpthemeInteractiveLinkShowcaseList.init();
     });
 
+    function initSelect2() {
+        $('select.select2').select2({
+            width: '100%'
+        });
+    }
+    initSelect2();
+
+    // Re-initialize after CF7 Ajax reload
+    document.addEventListener('wpcf7mailsent', initSelect2, false);
+    document.addEventListener('wpcf7invalid', initSelect2, false);
+    document.addEventListener('wpcf7spam', initSelect2, false);
+
 	$( function() {
 	    $( "#datepicker" ).datepicker();
 	  } );
