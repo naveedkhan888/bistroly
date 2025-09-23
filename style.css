@@ -6963,6 +6963,25 @@ select option:checked {
   font-weight: 400;  
 }
 
+.select2-container .select2-dropdown, .select2-container .select2-selection {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+.select2-container--default .select2-results > .select2-results__options {
+  background: var(--primary-color);
+  padding: 15px;
+}
+.select2-results__option {
+  padding: 0; }
+
+.select2-container--default .select2-results__option--selected {
+  background-color: transparent;
+}
+.select2-results__option:hover {
+  background: transparent !important;
+}
 
 .select2-container--open .select2-dropdown {
     margin-top: 20px;   /* space below input */
