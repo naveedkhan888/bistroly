@@ -6950,6 +6950,11 @@ select option:checked {
     padding: 0 !important;
 }
 
+.select2-container--open .select2-dropdown {
+    margin-top: 2px;   /* space below input */
+    margin-bottom: 2px; /* space above input */
+}
+
 /* Icon Form */
 .form_icon .main_wraper{
     position: relative;
