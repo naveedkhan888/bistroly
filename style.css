@@ -6948,8 +6948,8 @@ select option:checked {
 
 /* Selected date */
 .ui-datepicker td a.ui-state-active {
-  border: 1px solid #f5d19a;
-  color: #f5d19a;
+  border: 1px solid var(--primary-color) !important;
+  color: var(--white-color) !important;
   background: transparent;
 }
 
