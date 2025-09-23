@@ -169,6 +169,9 @@ function skinetic_scripts() {
 	/** Lightgallery Popup **/
     wp_enqueue_style( 'lightgallery', get_template_directory_uri().'/css/lightgallery.css');
 
+    /** jquery ui Date Picker **/
+    wp_enqueue_style( 'jquery-ui-datepicker', get_template_directory_uri().'/css/jquery-ui.css');
+
 	/** Theme stylesheet. **/
 	wp_enqueue_style( 'skinetic-style', get_stylesheet_uri() );	
 
