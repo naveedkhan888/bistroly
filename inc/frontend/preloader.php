@@ -87,7 +87,7 @@ function preloader_customize_settings() {
             'type'     => 'color',
             'label'    => esc_html__( 'Percent Text Color', 'skinetic' ),
             'section'  => 'preload_section',
-            'default'  => '',
+            'default'  => 'inherit',
             'priority' => 14,
             'active_callback' => array(
                 array(
@@ -101,7 +101,7 @@ function preloader_customize_settings() {
             'type'     => 'color',
             'label'    => esc_html__( 'Background Color', 'skinetic' ),
             'section'  => 'preload_section',
-            'default'  => '',
+            'default'  => 'inherit',
             'priority' => 15,
             'active_callback' => array(
                 array(
