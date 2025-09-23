@@ -1,5 +1,5 @@
 body.royal_preloader {
-    background: none;
+    background: var(--accent-color);
     visibility: hidden;    
 }
 #royal_preloader {
