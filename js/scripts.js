@@ -384,8 +384,12 @@
     });
 
     function initSelect2() {
-        $('select.select2').select2({
-            width: '100%'
+        $('select.select2').each(function() {
+            $(this).select2({
+                width: '100%',
+                multiple: false, // force single-select dropdown
+                placeholder: $(this).attr('placeholder') || '' // use CF7 placeholder
+            });
         });
     }
     initSelect2();
