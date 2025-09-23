@@ -6951,7 +6951,7 @@ select option:checked {
 }
 
 .drop_dwn_arrow .select2-container:before, 
-.drop_dwn_arrow .wpcf7-form-control-wrap:before {
+.drop_dwn_arrow.date_picker .wpcf7-form-control-wrap:before {
   position: absolute;
   right: 1px;
   top: 50%;
