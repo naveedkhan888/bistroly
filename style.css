@@ -6857,6 +6857,10 @@ select option:checked {
   width: auto;
 }
 
+#datepicker {
+  cursor: pointer;
+}
+
 .ui-datepicker table {
   border: 0;
 }
@@ -6991,8 +6995,10 @@ select option:checked {
   font-family: "xpcustomicon";
   content: "\f100";
   font-size: 9px;
+  color: var(--primary-color);
   line-height: 1;
   font-weight: 400;  
+  z-index: -1;
 }
 
 .select2-container .select2-dropdown, .select2-container .select2-selection {
