@@ -383,4 +383,8 @@
         xpthemeCore.shortcodes.xp_core_interactive_link_showcase.xpthemeInteractiveLinkShowcaseList.init();
     });
 
+	$( function() {
+	    $( "#datepicker" ).datepicker();
+	  } );
+
 } )( jQuery );
