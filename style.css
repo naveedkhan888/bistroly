@@ -6872,7 +6872,7 @@ select option:checked {
 
 /* Month + Year text */
 .ui-datepicker-title {
-  color: var(--primary-color);
+  color: var(--white-color);
   font-size: 15px;
   font-weight: 500;
 }
@@ -6891,7 +6891,7 @@ select option:checked {
 
 /* Days of the week (Su, Mo, etc.) */
 .ui-datepicker thead th {
-  color: var(--primary-color);
+  color: var(--white-color);
   font-weight: 400;
   padding: 4px 0;
 }
@@ -6943,7 +6943,7 @@ select option:checked {
   background: transparent;
   color: var(--white-color);
   opacity: 1;
-  border-color: var(--primary-color) !important;
+  border: 1px solid var(--primary-color) !important;
 }
 
 /* Selected date */
