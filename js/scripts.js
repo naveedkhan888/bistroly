@@ -383,14 +383,4 @@
         xpthemeCore.shortcodes.xp_core_interactive_link_showcase.xpthemeInteractiveLinkShowcaseList.init();
     });
 
-
-    jQuery(document).ready(function($) {
-	    $('.datepicker-field').datepicker({
-	        dateFormat: "yy-mm-dd", // adjust format as needed
-	        changeMonth: true,
-	        changeYear: true,
-	        showAnim: "slideDown"
-	    });
-	});
-
 } )( jQuery );

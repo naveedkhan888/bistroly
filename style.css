@@ -6843,28 +6843,6 @@ select option:checked {
     
 }
 
-.ui-datepicker {
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 10px;
-  font-size: 14px;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.ui-datepicker td a {
-  background: #f9f9f9;
-  border-radius: 4px;
-  padding: 6px;
-  text-align: center;
-  display: block;
-  color: #333;
-}
-
-.ui-datepicker td a:hover {
-  background: #ccc;
-  color: #fff;
-}
 
 
 
