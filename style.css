@@ -6862,7 +6862,7 @@ select option:checked {
 }
 
 .ui-datepicker td a:hover {
-  background: #0073e6;
+  background: #ccc;
   color: #fff;
 }
 
