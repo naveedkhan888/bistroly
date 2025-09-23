@@ -6951,8 +6951,8 @@ select option:checked {
 }
 
 .select2-container--open .select2-dropdown {
-    margin-top: 2px;   /* space below input */
-    margin-bottom: 2px; /* space above input */
+    margin-top: 20px;   /* space below input */
+    margin-bottom: 20px; /* space above input */
 }
 
 /* Icon Form */
