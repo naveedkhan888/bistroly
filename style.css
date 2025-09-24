@@ -6930,6 +6930,10 @@ select option:checked {
   font-weight: normal;
 }
 
+.ui-widget-header a {
+  color: var(--primary-color);
+}
+
 .ui-datepicker .ui-datepicker-next-hover {
   right: 2px;
 }
