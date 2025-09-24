@@ -181,7 +181,7 @@ body.royal_preloader {
     height: 40px;
     line-height: 40px;
     margin: 0px;
-    color: #072E77;
+    color: var(--white-color) !important;
     text-align: center;
     font-family: 'Open Sans';
     font-size: 13px;
