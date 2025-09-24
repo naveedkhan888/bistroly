@@ -6907,8 +6907,8 @@ select option:checked {
   color: var(--white-color) !important;
 }
 
-.ui-icon.ui-icon-circle-triangle-w, 
-.ui-icon.ui-icon-circle-triangle-e {
+.ui-datepicker .ui-datepicker-prev, 
+.ui-datepicker .ui-datepicker-next {
 
 }
 
