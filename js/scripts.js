@@ -37,6 +37,10 @@
 			showPercentage : true,
 			text_colour: $color,
 			background:  $bgcolor,
+			onComplete: function () {
+	            // add custom exit animation when done
+	            $('#royal_preloader').addClass('preloader-exit');
+	        }
 		});        
 	};
 
