@@ -6929,6 +6929,15 @@ select option:checked {
   font-family: 'xpcustomicon';
   font-weight: normal;
 }
+
+.ui-datepicker .ui-datepicker-next-hover {
+  right: 2px;
+}
+.ui-datepicker .ui-datepicker-prev-hover, 
+.ui-datepicker .ui-datepicker-next-hover {
+  top: 2px;
+}
+
 /* Day cells */
 .ui-datepicker td {
   padding: 4px;
