@@ -6907,10 +6907,16 @@ select option:checked {
   color: var(--white-color) !important;
 }
 
+.ui-icon.ui-icon-circle-triangle-e, 
+.ui-icon.ui-icon-circle-triangle-w {
+  display: none;
+}
+
 .ui-datepicker .ui-datepicker-prev, 
 .ui-datepicker .ui-datepicker-next {
 
 }
+
 
 .ui-datepicker .ui-datepicker-prev:before {
   content: "\f12e";
