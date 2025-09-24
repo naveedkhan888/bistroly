@@ -6912,13 +6912,13 @@ select option:checked {
 
 }
 
-.ui-icon.ui-icon-circle-triangle-w:before {
+.ui-datepicker .ui-datepicker-prev:before {
   content: "\f12e";
   font-family: 'xpcustomicon';
   font-weight: normal;
 }
 
-.ui-icon.ui-icon-circle-triangle-e:before {
+.ui-datepicker .ui-datepicker-next:before {
   content: "\f143";
   font-family: 'xpcustomicon';
   font-weight: normal;
