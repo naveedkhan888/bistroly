@@ -6739,7 +6739,7 @@ object {
   margin-bottom: 45px;
 }
 .inquiry_form p {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 .wpcf7 p:last-child {
   margin-bottom: 0;
@@ -7216,7 +7216,7 @@ select option:checked {
 
 /* dark form css for the light theme   */
 .light_form .main_wraper i {
-    color: var(--white-color);
+    color: rgba(255,255,255,0.5);
 }
 
 .light_form .main_wraper textarea,
