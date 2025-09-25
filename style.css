@@ -7216,7 +7216,7 @@ select option:checked {
 
 /* dark form css for the light theme   */
 .light_form .main_wraper i {
-    color: #65605c;
+    color: var(--white-color);
 }
 
 .light_form .main_wraper textarea,
@@ -7230,11 +7230,11 @@ select option:checked {
 }
 
 .light_form .main_wraper .bottom_line {
-    background-color: var(--divider-color);
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 .light_form .main_wraper .bottom_line::before {
-    background-color: #65605c;
+    background-color: #ffffff;
 }
 
 .light_form .custom-checkbox {
