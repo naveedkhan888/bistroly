@@ -7194,7 +7194,7 @@ select option:checked {
   content: "";
   width: 8px;
   height: 8px;
-  background-color: #ffffffba; 
+  background-color: var(--primary-color); 
   position: absolute;
   border-radius: 0;
   top: 50%;
@@ -7238,24 +7238,19 @@ select option:checked {
 }
 
 .light_form .custom-checkbox {
-    color: #65605c;
+    color: #ffffff;
 }
 
 .light_form .custom-checkbox .checkmark {
-    border: 1px solid #65605c;
-    background-color: #ffffff;
+    border: 1px solid rgba(255,255,255,0.5);
 }
 
 .light_form .custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
-    background-color: #65605c;
 }
 
 .light_form .formcheckbox_link {
-    color: #65605c;
+    color: #ffffff;
 }
-.light_form .formcheckbox_link{
-  color: #000000 !important;
-} 
 .light_form .formcheckbox_link:hover {
     color: #555555;
 }
