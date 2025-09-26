@@ -76,6 +76,9 @@ body {
   overflow: hidden;
   background: var(--accent-color);
 }
+body, html {
+  background: var(--accent-color);
+}
 
 /* Grouping content
    ========================================================================== */
