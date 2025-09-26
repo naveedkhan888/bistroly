@@ -1608,6 +1608,7 @@ a:hover, a:active {
   opacity: 0;
   transform: scale(0);
   font-size: 0;
+  color: var(--primary-color);
 }
 
 .main-navigation.no-line ul li li a:hover,
@@ -1629,7 +1630,7 @@ a:hover, a:active {
 }
 .main-navigation ul > li.menu-item-has-children:hover > a, 
 .main-navigation ul > li.current_page_item > a::after {
-  color: var(--primary-color);
+  color: var(--white-color);
 }
 .main-navigation ul > li.menu-item-has-children:hover > a:after {
   color: var(--primary-color);
