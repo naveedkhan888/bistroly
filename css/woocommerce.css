@@ -271,6 +271,7 @@ WooCommerce styles override
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+  background: var(--accent-color);
 }
 
 .woocommerce #reviews #comments ol.commentlist {
@@ -382,6 +383,7 @@ WooCommerce styles override
 }
 .woocommerce div.product .woocommerce-tabs ul.tabs li a:hover {
   border-color: var(--primary-color);
+  color: var(--white-color);
 }
 .woocommerce-product-details__short-description p {
 
