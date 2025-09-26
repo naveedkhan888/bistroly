@@ -3458,8 +3458,8 @@ Vertical Menu
   outline: none;
   text-align: center;
   vertical-align: middle;
-  color: #666666;
-  background: var(--primary-color);
+  color: var(--primary-color);
+  background: transparent;
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
@@ -3476,7 +3476,12 @@ Vertical Menu
   font-size: 21px;
 }
 .search-form .search-submit:hover {
-  background: #1e73be;
+  background: var(--primary-color);
+  color: #ffffff;
+}
+
+.search-form .search-submit:hover i {
+  color: #ffffff;
 }
 
 .author-widget_wrapper {
