@@ -720,7 +720,7 @@ mark, ins {
   margin: 0;
   width: 8px;
   height: 8px;
-  background: #9d9ea2;
+  background: var(--white-color);
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -3734,6 +3734,10 @@ object {
 }
 .xp-heading .main-head {
   margin-bottom: 0;
+}
+
+.qodef-qi-animated-text .qodef-m-title {
+  overflow: inherit;
 }
 
 /*--------------------------------------------------------------
