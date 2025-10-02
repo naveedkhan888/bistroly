@@ -1097,7 +1097,7 @@ function bistroly_customize_settings() {
             'type'     => 'color',
             'label'    => esc_html__( 'Secondary Color', 'bistroly' ),
             'section'  => 'color_scheme',
-            'default'  => '#e9dfde',
+            'default'  => '#151E36',
             'priority' => 10,
         ),
 
