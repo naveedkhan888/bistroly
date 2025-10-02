@@ -2,7 +2,7 @@
 /**
  * Hooks for importer
  *
- * @package Skinetic
+ * @package Bistroly
  */
 
 
@@ -12,7 +12,7 @@
  * @since  1.0
  *
  */
-function skinetic_importer() {
+function bistroly_importer() {
 	return array(
 		array(
 			'name'       => 'Main Demo (all layout)',
@@ -74,4 +74,4 @@ function skinetic_importer() {
 	);
 }
 
-add_filter( 'soo_demo_packages', 'skinetic_importer', 30 );
+add_filter( 'soo_demo_packages', 'bistroly_importer', 30 );

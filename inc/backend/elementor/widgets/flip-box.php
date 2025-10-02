@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Flip Box
  */
-class Skinetic_Flip_Box extends Widget_Base{
+class Bistroly_Flip_Box extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Skinetic_Flip_Box extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Flip Box', 'skinetic' );
+		return __( 'XP Flip Box', 'bistroly' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Skinetic_Flip_Box extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_skinetic' ];
+		return [ 'category_bistroly' ];
 	}
 
 	protected function register_controls() {
@@ -33,13 +33,13 @@ class Skinetic_Flip_Box extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Flip Box', 'skinetic' ),
+				'label' => __( 'Flip Box', 'bistroly' ),
 			]
 		);
 		$this->add_control(
 	       'image_box',
 	        [
-	           'label' => esc_html__( 'Image Box', 'skinetic' ),
+	           'label' => esc_html__( 'Image Box', 'bistroly' ),
 	           'type'  => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
@@ -60,18 +60,18 @@ class Skinetic_Flip_Box extends Widget_Base{
 		$this->add_control(
 			'number',
 			[
-				'label' => __( 'Number', 'skinetic' ),
+				'label' => __( 'Number', 'bistroly' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( '01', 'skinetic' ),
+				'default' => __( '01', 'bistroly' ),
 			]
 		);
 
 		$this->add_control(
 			'title',
 			[
-				'label' => __( 'Title', 'skinetic' ),
+				'label' => __( 'Title', 'bistroly' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Client Learning Programs', 'skinetic' ),
+				'default' => __( 'Client Learning Programs', 'bistroly' ),
 			]
 		);
 
@@ -80,7 +80,7 @@ class Skinetic_Flip_Box extends Widget_Base{
 			[
 				'label' => 'Description',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Our firm has helped clients engaged in more than 100 different subsectors of the aerospace, space markets.', 'skinetic' ),
+				'default' => __( 'Our firm has helped clients engaged in more than 100 different subsectors of the aerospace, space markets.', 'bistroly' ),
 			]
 		);
 
@@ -89,16 +89,16 @@ class Skinetic_Flip_Box extends Widget_Base{
 			[
 				'label' => 'Label Button',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( '<i class="xp-webicon-trajectory"></i> Explore More', 'skinetic' ),
+				'default' => __( '<i class="xp-webicon-trajectory"></i> Explore More', 'bistroly' ),
 			]
 		);
 
 		$this->add_control(
 			'link',
 			[
-				'label' => __( 'Link', 'skinetic' ),
+				'label' => __( 'Link', 'bistroly' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://your-link.com', 'skinetic' ),
+				'placeholder' => __( 'https://your-link.com', 'bistroly' ),
 				'condition' => [
 					'label_link!' => '',
 				],
@@ -112,7 +112,7 @@ class Skinetic_Flip_Box extends Widget_Base{
 		$this->start_controls_section(
 			'style_content_section',
 			[
-				'label' => __( 'Content', 'skinetic' ),
+				'label' => __( 'Content', 'bistroly' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -121,14 +121,14 @@ class Skinetic_Flip_Box extends Widget_Base{
 		$this->add_control(
 			'heading_gereral',
 			[
-				'label' => __( 'Gereral', 'skinetic' ),
+				'label' => __( 'Gereral', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
 		$this->add_responsive_control(
 			'box_padding',
 			[
-				'label' => __( 'Padding Box', 'skinetic' ),
+				'label' => __( 'Padding Box', 'bistroly' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -139,7 +139,7 @@ class Skinetic_Flip_Box extends Widget_Base{
 		$this->add_control(
 			'radius_box',
 			[
-				'label' => __( 'Border Radius', 'skinetic' ),
+				'label' => __( 'Border Radius', 'bistroly' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -152,7 +152,7 @@ class Skinetic_Flip_Box extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'skinetic' ),
+				'label' => __( 'Title', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -160,7 +160,7 @@ class Skinetic_Flip_Box extends Widget_Base{
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => __( 'Spacing', 'skinetic' ),
+				'label' => __( 'Spacing', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -176,7 +176,7 @@ class Skinetic_Flip_Box extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -196,7 +196,7 @@ class Skinetic_Flip_Box extends Widget_Base{
 		$this->add_control(
 			'heading_num',
 			[
-				'label' => __( 'Number', 'skinetic' ),
+				'label' => __( 'Number', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -205,7 +205,7 @@ class Skinetic_Flip_Box extends Widget_Base{
 		$this->add_control(
 			'num_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -227,14 +227,14 @@ class Skinetic_Flip_Box extends Widget_Base{
 		$this->start_controls_section(
 			'style_overlay_section',
 			[
-				'label' => __( 'Hover', 'skinetic' ),
+				'label' => __( 'Hover', 'bistroly' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'overlay_padding',
 			[
-				'label' => __( 'Padding Box', 'skinetic' ),
+				'label' => __( 'Padding Box', 'bistroly' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -246,7 +246,7 @@ class Skinetic_Flip_Box extends Widget_Base{
 		$this->add_control(
 			'overlay_bg',
 			[
-				'label' => __( 'Background', 'skinetic' ),
+				'label' => __( 'Background', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -259,7 +259,7 @@ class Skinetic_Flip_Box extends Widget_Base{
 		$this->add_control(
 			'heading_des',
 			[
-				'label' => __( 'Description', 'skinetic' ),
+				'label' => __( 'Description', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -267,7 +267,7 @@ class Skinetic_Flip_Box extends Widget_Base{
 		$this->add_control(
 			'des_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -287,7 +287,7 @@ class Skinetic_Flip_Box extends Widget_Base{
 		$this->add_control(
 			'heading_btn',
 			[
-				'label' => __( 'Button', 'skinetic' ),
+				'label' => __( 'Button', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -298,7 +298,7 @@ class Skinetic_Flip_Box extends Widget_Base{
 		$this->add_responsive_control(
 			'btn_space',
 			[
-				'label' => __( 'Spacing', 'skinetic' ),
+				'label' => __( 'Spacing', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -317,7 +317,7 @@ class Skinetic_Flip_Box extends Widget_Base{
 		$this->add_control(
 			'btn_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -331,7 +331,7 @@ class Skinetic_Flip_Box extends Widget_Base{
 		$this->add_control(
 			'btn_hcolor',
 			[
-				'label' => __( 'Hover Color', 'skinetic' ),
+				'label' => __( 'Hover Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -397,5 +397,5 @@ class Skinetic_Flip_Box extends Widget_Base{
 	}
 
 }
-// After the Skinetic_Flip_Box class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Skinetic_Flip_Box() );
+// After the Bistroly_Flip_Box class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Bistroly_Flip_Box() );

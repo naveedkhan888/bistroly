@@ -13,7 +13,7 @@ class XP_Image_Box_Food extends Widget_Base {
     }
 
     public function get_title() {
-        return __( 'XP Image Box Food', 'skinetic' );
+        return __( 'XP Image Box Food', 'bistroly' );
     }
 
     public function get_icon() {
@@ -21,33 +21,33 @@ class XP_Image_Box_Food extends Widget_Base {
     }
 
     public function get_categories() {
-        return [ 'category_skinetic' ];
+        return [ 'category_bistroly' ];
     }
 
     protected function register_controls() {
         $this->start_controls_section(
             'content_section',
             [
-                'label' => __( 'Image Box', 'skinetic' ),
+                'label' => __( 'Image Box', 'bistroly' ),
             ]
         );
 
         $this->add_responsive_control(
             'align',
             [
-                'label' => __( 'Alignment', 'skinetic' ),
+                'label' => __( 'Alignment', 'bistroly' ),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'left'    => [
-                        'title' => __( 'Left', 'skinetic' ),
+                        'title' => __( 'Left', 'bistroly' ),
                         'icon' => 'eicon-text-align-left',
                     ],
                     'center' => [
-                        'title' => __( 'Center', 'skinetic' ),
+                        'title' => __( 'Center', 'bistroly' ),
                         'icon' => 'eicon-text-align-center',
                     ],
                     'right' => [
-                        'title' => __( 'Right', 'skinetic' ),
+                        'title' => __( 'Right', 'bistroly' ),
                         'icon' => 'eicon-text-align-right',
                     ]
                 ],
@@ -60,7 +60,7 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_control(
             'image_box',
             [
-                'label' => esc_html__( 'Image Box', 'skinetic' ),
+                'label' => esc_html__( 'Image Box', 'bistroly' ),
                 'type'  => Controls_Manager::MEDIA,
                 'default' => [
                     'url' => Utils::get_placeholder_image_src(),
@@ -81,16 +81,16 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_control(
             'title',
             [
-                'label' => __( 'Title', 'skinetic' ),
+                'label' => __( 'Title', 'bistroly' ),
                 'type' => Controls_Manager::TEXTAREA,
-                'default' => __( 'Marketing Research', 'skinetic' ),
+                'default' => __( 'Marketing Research', 'bistroly' ),
             ]
         );
 
         $this->add_control(
             'header_size',
             [
-                'label' => __( 'Title HTML Tag', 'skinetic' ),
+                'label' => __( 'Title HTML Tag', 'bistroly' ),
                 'type' => Controls_Manager::SELECT,
                 'options' => [
                     'h1' => 'H1',
@@ -112,16 +112,16 @@ class XP_Image_Box_Food extends Widget_Base {
             [
                 'label' => 'Description',
                 'type' => Controls_Manager::TEXTAREA,
-                'default' => __( 'Analysis of the market as a whole and its particular components (competitors, consumers, product, etc.)', 'skinetic' ),
+                'default' => __( 'Analysis of the market as a whole and its particular components (competitors, consumers, product, etc.)', 'bistroly' ),
             ]
         );
 
         $this->add_control(
             'link',
             [
-                'label' => __( 'Link', 'skinetic' ),
+                'label' => __( 'Link', 'bistroly' ),
                 'type' => Controls_Manager::URL,
-                'placeholder' => __( 'https://your-link.com', 'skinetic' ),
+                'placeholder' => __( 'https://your-link.com', 'bistroly' ),
                 'default' => [
                     'url' => '#'
                 ],
@@ -133,7 +133,7 @@ class XP_Image_Box_Food extends Widget_Base {
             [
                 'label' => 'Label Button',
                 'type' => Controls_Manager::TEXT,
-                'default' => __( 'Explore More', 'skinetic' ),
+                'default' => __( 'Explore More', 'bistroly' ),
                 'label_block' => true,
                 'condition' => [
                     'link[url]!' => '',
@@ -145,9 +145,9 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_control(
             'price',
             [
-                'label' => __( 'Price', 'skinetic' ),
+                'label' => __( 'Price', 'bistroly' ),
                 'type' => Controls_Manager::TEXT,
-                'default' => __( '99.99', 'skinetic' ),
+                'default' => __( '99.99', 'bistroly' ),
                 'label_block' => true,
             ]
         );
@@ -159,7 +159,7 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->start_controls_section(
             'style_content_section',
             [
-                'label' => __( 'Content', 'skinetic' ),
+                'label' => __( 'Content', 'bistroly' ),
                 'tab'   => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -168,7 +168,7 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_control(
             'heading_general',
             [
-                'label' => __( 'General', 'skinetic' ),
+                'label' => __( 'General', 'bistroly' ),
                 'type' => Controls_Manager::HEADING,
             ]
         );
@@ -176,7 +176,7 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_control(
             'box_bg',
             [
-                'label' => __( 'Background', 'skinetic' ),
+                'label' => __( 'Background', 'bistroly' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -188,7 +188,7 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_responsive_control(
             'box_padding',
             [
-                'label' => __( 'Padding Box', 'skinetic' ),
+                'label' => __( 'Padding Box', 'bistroly' ),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', 'em', '%' ],
                 'selectors' => [
@@ -200,7 +200,7 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_control(
             'radius_box',
             [
-                'label' => __( 'Border Radius', 'skinetic' ),
+                'label' => __( 'Border Radius', 'bistroly' ),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%' ],
                 'selectors' => [
@@ -221,7 +221,7 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_control(
             'heading_title',
             [
-                'label' => __( 'Title', 'skinetic' ),
+                'label' => __( 'Title', 'bistroly' ),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -230,7 +230,7 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_responsive_control(
             'title_space',
             [
-                'label' => __( 'Spacing', 'skinetic' ),
+                'label' => __( 'Spacing', 'bistroly' ),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -247,7 +247,7 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_control(
             'title_color',
             [
-                'label' => __( 'Color', 'skinetic' ),
+                'label' => __( 'Color', 'bistroly' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -259,7 +259,7 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_control(
             'title_hcolor',
             [
-                'label' => __( 'Hover Color', 'skinetic' ),
+                'label' => __( 'Hover Color', 'bistroly' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -283,7 +283,7 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_control(
             'heading_des',
             [
-                'label' => __( 'Description', 'skinetic' ),
+                'label' => __( 'Description', 'bistroly' ),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -292,7 +292,7 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_control(
             'des_color',
             [
-                'label' => __( 'Color', 'skinetic' ),
+                'label' => __( 'Color', 'bistroly' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -313,7 +313,7 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_control(
             'heading_price',
             [
-                'label' => __( 'Price', 'skinetic' ),
+                'label' => __( 'Price', 'bistroly' ),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -322,7 +322,7 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_control(
             'price_color',
             [
-                'label' => __( 'Color', 'skinetic' ),
+                'label' => __( 'Color', 'bistroly' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -334,7 +334,7 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_control(
             'price_bg_color',
             [
-                'label' => __( 'Background Color', 'skinetic' ),
+                'label' => __( 'Background Color', 'bistroly' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -368,7 +368,7 @@ class XP_Image_Box_Food extends Widget_Base {
 
         echo '<div class="xp_bx_price xp-image-box ' . esc_attr(isset($settings['custom_class']) ? $settings['custom_class'] : '') . '">';
         echo '<div class="image-box">';
-        echo '<img src="' . esc_url($settings['image_box']['url']) . '" alt="' . esc_attr__('Image', 'skinetic') . '" />';
+        echo '<img src="' . esc_url($settings['image_box']['url']) . '" alt="' . esc_attr__('Image', 'bistroly') . '" />';
         echo '</div>';
         echo '<div class="content-box image-box-price">';
         echo '<' . esc_html($settings['header_size']) . ' class="title-box">';
@@ -403,7 +403,7 @@ class XP_Image_Box_Food extends Widget_Base {
     #>
     <div class="xp_bx_price xp-image-box {{{ settings.custom_class }}}">
         <div class="image-box">
-            <img src="{{{ settings.image_box.url }}}" alt="<?php esc_attr_e( 'Image', 'skinetic' ); ?>">
+            <img src="{{{ settings.image_box.url }}}" alt="<?php esc_attr_e( 'Image', 'bistroly' ); ?>">
         </div>
         <div class="content-box image-box-price">
             <{{ header_tag }} class="title-box">

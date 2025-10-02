@@ -1,8 +1,8 @@
 <?php
 
 // Load the theme's custom Widgets so that they appear in the Elementor element panel.
-add_action( 'elementor/widgets/register', 'skinetic_register_elementor_widgets' );
-function skinetic_register_elementor_widgets() {
+add_action( 'elementor/widgets/register', 'bistroly_register_elementor_widgets' );
+function bistroly_register_elementor_widgets() {
     // Include PHP files for Elementor widgets
     // These files contain registration logic for custom Elementor widgets
     locate_template('/inc/backend/elementor/widgets/widgets.php', true, true);
@@ -10,20 +10,20 @@ function skinetic_register_elementor_widgets() {
 
 }
 
-// Add a custom 'category_skinetic' category for to the Elementor element panel so that our theme's widgets have their own category.
+// Add a custom 'category_bistroly' category for to the Elementor element panel so that our theme's widgets have their own category.
 add_action( 'elementor/init', function() {
     \Elementor\Plugin::$instance->elements_manager->add_category( 
-        'category_skinetic',
+        'category_bistroly',
         [
-            'title' => __( 'Skinetic', 'skinetic' ),
+            'title' => __( 'Bistroly', 'bistroly' ),
             'icon' => 'fa fa-plug', //default icon
         ],
         1 // position
     );
     \Elementor\Plugin::$instance->elements_manager->add_category( 
-        'category_skinetic_header',
+        'category_bistroly_header',
         [
-            'title' => __( 'XP Header', 'skinetic' ),
+            'title' => __( 'XP Header', 'bistroly' ),
             'icon' => 'fa fa-plug', //default icon
         ],
         2 // position
@@ -31,7 +31,7 @@ add_action( 'elementor/init', function() {
 });
 
 // Post types with Elementor
-function skinetic_add_cpt_support() {
+function bistroly_add_cpt_support() {
     
     //if exists, assign to $cpt_support var
     $cpt_support = get_option( 'elementor_cpt_support' );
@@ -61,10 +61,10 @@ function skinetic_add_cpt_support() {
     
     //otherwise do nothing, portfolio already exists in elementor_cpt_support option
 }
-add_action( 'elementor/init', 'skinetic_add_cpt_support' );
+add_action( 'elementor/init', 'bistroly_add_cpt_support' );
 
 // Upload SVG for Elementor
-function skinetic_unfiltered_files_upload() {
+function bistroly_unfiltered_files_upload() {
     
     //if exists, assign to $cpt_support var
     $cpt_support = get_option( 'elementor_unfiltered_files_upload' );
@@ -75,17 +75,17 @@ function skinetic_unfiltered_files_upload() {
         update_option( 'elementor_unfiltered_files_upload', $cpt_support ); //write it to the database
     }
 }
-add_action( 'elementor/init', 'skinetic_unfiltered_files_upload' );
+add_action( 'elementor/init', 'bistroly_unfiltered_files_upload' );
 
 
 
 /*Fix Elementor Pro*/
-function skinetic_register_elementor_locations( $elementor_theme_manager ) {
+function bistroly_register_elementor_locations( $elementor_theme_manager ) {
 
     $elementor_theme_manager->register_all_core_location();
 
 }
-add_action( 'elementor/theme/register_locations', 'skinetic_register_elementor_locations' );
+add_action( 'elementor/theme/register_locations', 'bistroly_register_elementor_locations' );
 
 /*** add options to sections ***/
 add_action('elementor/element/container/section_layout/after_section_end', function( $container, $args ) {
@@ -94,14 +94,14 @@ add_action('elementor/element/container/section_layout/after_section_end', funct
     $container->start_controls_section(
         'header_custom_class',
         [
-            'label' => __( 'For Header', 'skinetic' ),
+            'label' => __( 'For Header', 'bistroly' ),
             'tab' => \Elementor\Controls_Manager::TAB_LAYOUT,
         ]
     );
     $container->add_control(
         'sticky_class',
         [
-            'label'        => __( 'Sticky On/Off', 'skinetic' ),
+            'label'        => __( 'Sticky On/Off', 'bistroly' ),
             'type'         => Elementor\Controls_Manager::SWITCHER,
             'return_value' => 'is-fixed',
             'prefix_class' => '',
@@ -110,7 +110,7 @@ add_action('elementor/element/container/section_layout/after_section_end', funct
     $container->add_control(
         'sticky_background',
         [
-            'label'     => __( 'Background Scroll', 'skinetic' ),
+            'label'     => __( 'Background Scroll', 'bistroly' ),
             'type'      => Elementor\Controls_Manager::COLOR,
             'selectors' => [
                 '{{WRAPPER}}.is-fixed.is-stuck' => 'background: {{VALUE}};',
@@ -123,7 +123,7 @@ add_action('elementor/element/container/section_layout/after_section_end', funct
     $container->add_responsive_control(
         'offset_space',
         [
-            'label' => __( 'Offset', 'skinetic' ),
+            'label' => __( 'Offset', 'bistroly' ),
             'type' => Elementor\Controls_Manager::SLIDER,
             'range' => [
                 'px' => [
@@ -153,7 +153,7 @@ add_action('elementor/element/container/section_layout/after_section_end', funct
     $container->start_controls_section(
         'custom_fullwidth_classes',
         [
-            'label' => __( 'Full Width Options', 'skinetic' ),
+            'label' => __( 'Full Width Options', 'bistroly' ),
             'tab'   => \Elementor\Controls_Manager::TAB_LAYOUT,
         ]
     );
@@ -162,7 +162,7 @@ add_action('elementor/element/container/section_layout/after_section_end', funct
     $container->add_control(
         'right_fullwidth',
         [
-            'label'        => __( 'Right Full Width', 'skinetic' ),
+            'label'        => __( 'Right Full Width', 'bistroly' ),
             'type'         => Elementor\Controls_Manager::SWITCHER,
             'return_value' => 'right-section',
             'prefix_class' => '',
@@ -173,7 +173,7 @@ add_action('elementor/element/container/section_layout/after_section_end', funct
     $container->add_control(
         'left_fullwidth',
         [
-            'label'        => __( 'Left Full Width', 'skinetic' ),
+            'label'        => __( 'Left Full Width', 'bistroly' ),
             'type'         => Elementor\Controls_Manager::SWITCHER,
             'return_value' => 'left-section',
             'prefix_class' => '',

@@ -2,19 +2,19 @@
 
 
 //Custom Style Frontend
-if(!function_exists('skinetic_color_scheme')){
-    function skinetic_color_scheme(){
+if(!function_exists('bistroly_color_scheme')){
+    function bistroly_color_scheme(){
 	  	$color_scheme = '';
 
 	  	// Get theme options with fallbacks
-		$primary_color      = skinetic_get_option('primary_color', '#b58c67');
-		$secondary_color    = skinetic_get_option('secondary_color', '#e9dfde');
-		$text_color         = skinetic_get_option('text_color', '#1d1312');
-		$accent_color       = skinetic_get_option('accent_color', '#0E1730');
-		$bg_color           = skinetic_get_option('bg_color', '#f4efef');
-		$white_color        = skinetic_get_option('white_color', '#FFFFFF');
-		$divider_color      = skinetic_get_option('divider_color', '#FFFFFF14');
-		$dark_divider_color = skinetic_get_option('dark_divider_color', '#3835373b'); // example fallback
+		$primary_color      = bistroly_get_option('primary_color', '#b58c67');
+		$secondary_color    = bistroly_get_option('secondary_color', '#e9dfde');
+		$text_color         = bistroly_get_option('text_color', '#1d1312');
+		$accent_color       = bistroly_get_option('accent_color', '#0E1730');
+		$bg_color           = bistroly_get_option('bg_color', '#f4efef');
+		$white_color        = bistroly_get_option('white_color', '#FFFFFF');
+		$divider_color      = bistroly_get_option('divider_color', '#FFFFFF14');
+		$dark_divider_color = bistroly_get_option('dark_divider_color', '#3835373b'); // example fallback
 
 		// Output variables inside :root
 		$color_scheme .= "
@@ -38,12 +38,12 @@ if(!function_exists('skinetic_color_scheme')){
 
     }
 }
-add_action('wp_head', 'skinetic_color_scheme');
+add_action('wp_head', 'bistroly_color_scheme');
 
 //Custom Second Font
-if(!function_exists('skinetic_second_font')){
-	function skinetic_second_font(){
-		$second_font = skinetic_get_option( 'second_font', [] );
+if(!function_exists('bistroly_second_font')){
+	function bistroly_second_font(){
+		$second_font = bistroly_get_option( 'second_font', [] );
 		$data_font = '';
 
 		if ( is_array($second_font) && !empty($second_font['font-family']) && $second_font['font-family'] != 'Marcellus' ) {
@@ -116,4 +116,4 @@ if(!function_exists('skinetic_second_font')){
 		}
 	}
 }
-add_action('wp_head', 'skinetic_second_font');
+add_action('wp_head', 'bistroly_second_font');

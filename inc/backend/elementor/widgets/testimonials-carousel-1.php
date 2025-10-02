@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Testimonial Carousel 1 with Star Ratings
  */
-class Skinetic_Testimonials extends Widget_Base{
+class Bistroly_Testimonials extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Skinetic_Testimonials extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Testimonial Carousel 1', 'skinetic' );
+		return __( 'XP Testimonial Carousel 1', 'bistroly' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Skinetic_Testimonials extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_skinetic' ];
+		return [ 'category_bistroly' ];
 	}
 
 	protected function register_controls() {
@@ -32,14 +32,14 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->start_controls_section(
 			'section_testimonials',
 			[
-				'label' => __( 'Testimonials', 'skinetic' ),
+				'label' => __( 'Testimonials', 'bistroly' ),
 			]
 		);
 		$repeater = new Repeater();
 		$repeater->add_control(
 			'timage',
 			[
-				'label' => __( 'Avatar:', 'skinetic' ),
+				'label' => __( 'Avatar:', 'bistroly' ),
 				'type' => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => get_template_directory_uri().'/images/avatar-3.png',
@@ -50,7 +50,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$repeater->add_control(
 			'tname',
 			[
-				'label' => __( 'Name:', 'skinetic' ),
+				'label' => __( 'Name:', 'bistroly' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => 'Emilia Clarke',
 			]
@@ -59,7 +59,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$repeater->add_control(
 			'tjob',
 			[
-				'label' => __( 'Job:', 'skinetic' ),
+				'label' => __( 'Job:', 'bistroly' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => 'Developer',
 			]
@@ -68,15 +68,15 @@ class Skinetic_Testimonials extends Widget_Base{
 		$repeater->add_control(
 			'trating',
 			[
-				'label' => __( 'Rating:', 'skinetic' ),
+				'label' => __( 'Rating:', 'bistroly' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '5',
 				'options' => [
-					'1' => __( '1 Star', 'skinetic' ),
-					'2' => __( '2 Stars', 'skinetic' ),
-					'3' => __( '3 Stars', 'skinetic' ),
-					'4' => __( '4 Stars', 'skinetic' ),
-					'5' => __( '5 Stars', 'skinetic' ),
+					'1' => __( '1 Star', 'bistroly' ),
+					'2' => __( '2 Stars', 'bistroly' ),
+					'3' => __( '3 Stars', 'bistroly' ),
+					'4' => __( '4 Stars', 'bistroly' ),
+					'5' => __( '5 Stars', 'bistroly' ),
 				],
 			]
 		);
@@ -84,7 +84,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$repeater->add_control(
 			'tcontent',
 			[
-				'label' => __( 'Content:', 'skinetic' ),
+				'label' => __( 'Content:', 'bistroly' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'rows' => '10',
 				'default' => '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."',
@@ -99,7 +99,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		        'show_label'  => false,
 		        'default'     => [
 		            [
-		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'skinetic' ),
+		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'bistroly' ),
 		                'timage'  => [
 							'url' => get_template_directory_uri().'/images/avatar-1.png',
 						],
@@ -109,7 +109,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		 
 		            ],
 		            [
-		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'skinetic' ),
+		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'bistroly' ),
 		                'timage'  => [
 							'url' => get_template_directory_uri().'/images/avatar-1.png',
 						],
@@ -119,7 +119,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		 
 		            ],
 		            [
-		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'skinetic' ),
+		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'bistroly' ),
 		                'timage'  => [
 							'url' => get_template_directory_uri().'/images/avatar-1.png',
 						],
@@ -140,10 +140,10 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_responsive_control(
 			'tshow',
 			[
-				'label' => __( 'Slides To Show', 'skinetic' ),
+				'label' => __( 'Slides To Show', 'bistroly' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'' => __( 'Default', 'skinetic' ),
+					'' => __( 'Default', 'bistroly' ),
 				] + $slides_show,
 				'default' => ''
 			]
@@ -151,31 +151,31 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_control(
 			'loop',
 			[
-				'label' => __( 'Loop', 'skinetic' ),
+				'label' => __( 'Loop', 'bistroly' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true' => __( 'Yes', 'skinetic' ),
-					'false' => __( 'No', 'skinetic' ),
+					'true' => __( 'Yes', 'bistroly' ),
+					'false' => __( 'No', 'bistroly' ),
 				]
 			]
 		);
 		$this->add_control(
 			'autoplay',
 			[
-				'label' => __( 'Autoplay', 'skinetic' ),
+				'label' => __( 'Autoplay', 'bistroly' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'skinetic' ),
-					'false' => __( 'No', 'skinetic' ),
+					'true' => __( 'Yes', 'bistroly' ),
+					'false' => __( 'No', 'bistroly' ),
 				]
 			]
 		);
 		$this->add_control(
 			'timeout',
 			[
-				'label' => __( 'Autoplay Timeout', 'skinetic' ),
+				'label' => __( 'Autoplay Timeout', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -195,24 +195,24 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_control(
 			'arrows',
 			[
-				'label' => __( 'Arrows', 'skinetic' ),
+				'label' => __( 'Arrows', 'bistroly' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true'   => __( 'Yes', 'skinetic' ),
-					'false'  => __( 'No', 'skinetic' ),
+					'true'   => __( 'Yes', 'bistroly' ),
+					'false'  => __( 'No', 'bistroly' ),
 				],
 			]
 		);
 		$this->add_control(
 			'dots',
 			[
-				'label' => __( 'Dots', 'skinetic' ),
+				'label' => __( 'Dots', 'bistroly' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true'   => __( 'Yes', 'skinetic' ),
-					'false'  => __( 'No', 'skinetic' ),
+					'true'   => __( 'Yes', 'bistroly' ),
+					'false'  => __( 'No', 'bistroly' ),
 				],
 			]
 		);
@@ -223,14 +223,14 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->start_controls_section(
 			'style_general',
 			[
-				'label' => __( 'General', 'skinetic' ),
+				'label' => __( 'General', 'bistroly' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'is_reverse',
 			[
-				'label'   => esc_html__( 'Reverse content', 'skinetic' ),
+				'label'   => esc_html__( 'Reverse content', 'bistroly' ),
 				'type'    => Controls_Manager::SWITCHER,
 				'return_value' => 'yes',
 				'default' => 'no',
@@ -240,7 +240,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_control(
 			'tcontent_bg',
 			[
-				'label' => __( 'Background Color', 'skinetic' ),
+				'label' => __( 'Background Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -252,7 +252,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_control(
 			'tcontent_color',
 			[
-				'label' => __( 'Text Color', 'skinetic' ),
+				'label' => __( 'Text Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -264,7 +264,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_control(
 			'line_color',
 			[
-				'label' => __( 'Line Color', 'skinetic' ),
+				'label' => __( 'Line Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -287,7 +287,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_responsive_control(
 			'tcontent_box_padding',
 			[
-				'label' => __( 'Padding Box top', 'skinetic' ),
+				'label' => __( 'Padding Box top', 'bistroly' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -298,7 +298,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_responsive_control(
 			'tcontent_padding',
 			[
-				'label' => __( 'Padding Photo Text', 'skinetic' ),
+				'label' => __( 'Padding Photo Text', 'bistroly' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -309,7 +309,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_control(
 			'radius_boxes',
 			[
-				'label' => __( 'Border Radius', 'skinetic' ),
+				'label' => __( 'Border Radius', 'bistroly' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -330,7 +330,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->start_controls_section(
 			'style_tinfo',
 			[
-				'label' => __( 'Information', 'skinetic' ),
+				'label' => __( 'Information', 'bistroly' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -339,7 +339,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_control(
 			'style_timage',
 			[
-				'label' => __( 'Photo', 'skinetic' ),
+				'label' => __( 'Photo', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -347,7 +347,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_responsive_control(
 			'spacing_img',
 			[
-				'label' => __( 'Spacing', 'skinetic' ),
+				'label' => __( 'Spacing', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -365,7 +365,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_control(
 			'image_border_radius',
 			[
-				'label' => __( 'Border Radius', 'skinetic' ),
+				'label' => __( 'Border Radius', 'bistroly' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -377,7 +377,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_control(
 			'quote_color',
 			[
-				'label' => __( 'Icon Color', 'skinetic' ),
+				'label' => __( 'Icon Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -388,7 +388,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_control(
 			'quote_bg',
 			[
-				'label' => __( 'Icon Background', 'skinetic' ),
+				'label' => __( 'Icon Background', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -401,7 +401,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_control(
 			'style_tname',
 			[
-				'label' => __( 'Name', 'skinetic' ),
+				'label' => __( 'Name', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -409,7 +409,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_responsive_control(
 			'spacing_name',
 			[
-				'label' => __( 'Spacing', 'skinetic' ),
+				'label' => __( 'Spacing', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -426,7 +426,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_control(
 			'name_color',
 			[
-				'label' => __( 'Text Color', 'skinetic' ),
+				'label' => __( 'Text Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -447,7 +447,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_control(
 			'style_tjob',
 			[
-				'label' => __( 'Job', 'skinetic' ),
+				'label' => __( 'Job', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -456,7 +456,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_control(
 			'job_color',
 			[
-				'label' => __( 'Text Color', 'skinetic' ),
+				'label' => __( 'Text Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -479,7 +479,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->start_controls_section(
 			'style_rating',
 			[
-				'label' => __( 'Star Rating', 'skinetic' ),
+				'label' => __( 'Star Rating', 'bistroly' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -487,14 +487,14 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_control(
 			'rating_position',
 			[
-				'label' => __( 'Rating Position', 'skinetic' ),
+				'label' => __( 'Rating Position', 'bistroly' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'after_name',
 				'options' => [
-					'before_content' => __( 'Before Content', 'skinetic' ),
-					'after_content' => __( 'After Content', 'skinetic' ),
-					'after_name' => __( 'After Name', 'skinetic' ),
-					'after_job' => __( 'After Job', 'skinetic' ),
+					'before_content' => __( 'Before Content', 'bistroly' ),
+					'after_content' => __( 'After Content', 'bistroly' ),
+					'after_name' => __( 'After Name', 'bistroly' ),
+					'after_job' => __( 'After Job', 'bistroly' ),
 				],
 			]
 		);
@@ -502,7 +502,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_responsive_control(
 			'rating_size',
 			[
-				'label' => __( 'Star Size', 'skinetic' ),
+				'label' => __( 'Star Size', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', 'em' ],
 				'range' => [
@@ -529,7 +529,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_responsive_control(
 			'rating_spacing',
 			[
-				'label' => __( 'Spacing Between Stars', 'skinetic' ),
+				'label' => __( 'Spacing Between Stars', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -550,7 +550,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_responsive_control(
 			'rating_margin',
 			[
-				'label' => __( 'Rating Margin', 'skinetic' ),
+				'label' => __( 'Rating Margin', 'bistroly' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'selectors' => [
@@ -562,19 +562,19 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_control(
 			'rating_align',
 			[
-				'label' => __( 'Alignment', 'skinetic' ),
+				'label' => __( 'Alignment', 'bistroly' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left' => [
-						'title' => __( 'Left', 'skinetic' ),
+						'title' => __( 'Left', 'bistroly' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'skinetic' ),
+						'title' => __( 'Center', 'bistroly' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'skinetic' ),
+						'title' => __( 'Right', 'bistroly' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -588,7 +588,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_control(
 			'star_filled_color',
 			[
-				'label' => __( 'Filled Star Color', 'skinetic' ),
+				'label' => __( 'Filled Star Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '#ffb400',
 				'selectors' => [
@@ -600,7 +600,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_control(
 			'star_empty_color',
 			[
-				'label' => __( 'Empty Star Color', 'skinetic' ),
+				'label' => __( 'Empty Star Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '#e0e0e0',
 				'selectors' => [
@@ -612,12 +612,12 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_control(
 			'star_style',
 			[
-				'label' => __( 'Star Style', 'skinetic' ),
+				'label' => __( 'Star Style', 'bistroly' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'solid',
 				'options' => [
-					'solid' => __( 'Solid', 'skinetic' ),
-					'outline' => __( 'Outline', 'skinetic' ),
+					'solid' => __( 'Solid', 'bistroly' ),
+					'outline' => __( 'Outline', 'bistroly' ),
 				],
 			]
 		);
@@ -628,7 +628,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->start_controls_section(
 			'navigation_section',
 			[
-				'label' => __( 'Dots', 'skinetic' ),
+				'label' => __( 'Dots', 'bistroly' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'dots' => 'true',
@@ -639,7 +639,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_responsive_control(
 			'dots_spacing',
 			[
-				'label' => __( 'Spacing', 'skinetic' ),
+				'label' => __( 'Spacing', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -656,7 +656,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_control(
             'dots_bgcolor',
             [
-                'label' => __( 'Color', 'skinetic' ),
+                'label' => __( 'Color', 'bistroly' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot span' => 'background: {{VALUE}};',
@@ -667,7 +667,7 @@ class Skinetic_Testimonials extends Widget_Base{
         $this->add_control(
             'dots_active_bgcolor',
             [
-                'label' => __( 'Color Active', 'skinetic' ),
+                'label' => __( 'Color Active', 'bistroly' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot.active span' => 'background: {{VALUE}};',
@@ -681,7 +681,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->start_controls_section(
 			'style_nav',
 			[
-				'label' => __( 'Arrows', 'skinetic' ),
+				'label' => __( 'Arrows', 'bistroly' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'arrows' => 'true',
@@ -691,7 +691,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_responsive_control(
 			'arrow_spacing',
 			[
-				'label' => __( 'Spacing', 'skinetic' ),
+				'label' => __( 'Spacing', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -708,7 +708,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_responsive_control(
 			'arrow_width',
 			[
-				'label' => __( 'Width', 'skinetic' ),
+				'label' => __( 'Width', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -724,7 +724,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_control(
 			'arrow_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -736,7 +736,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_color',
 			[
-				'label' => __( 'Background', 'skinetic' ),
+				'label' => __( 'Background', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -747,7 +747,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_control(
 			'arrow_hcolor',
 			[
-				'label' => __( 'Color Hover', 'skinetic' ),
+				'label' => __( 'Color Hover', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -758,7 +758,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_hcolor',
 			[
-				'label' => __( 'Background Hover', 'skinetic' ),
+				'label' => __( 'Background Hover', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -769,7 +769,7 @@ class Skinetic_Testimonials extends Widget_Base{
 		$this->add_control(
 			'radius_arrow',
 			[
-				'label' => __( 'Border Radius', 'skinetic' ),
+				'label' => __( 'Border Radius', 'bistroly' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -879,4 +879,4 @@ class Skinetic_Testimonials extends Widget_Base{
 	}
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Skinetic_Testimonials() );
+Plugin::instance()->widgets_manager->register( new Bistroly_Testimonials() );

@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Icon Box 1
  */
-class Skinetic_IconBox1 extends Widget_Base{
+class Bistroly_IconBox1 extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Icon Box 1', 'skinetic' );
+		return __( 'XP Icon Box 1', 'bistroly' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_skinetic' ];
+		return [ 'category_bistroly' ];
 	}
 
 	protected function register_controls() {
@@ -33,26 +33,26 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Icon Box', 'skinetic' ),
+				'label' => __( 'Icon Box', 'bistroly' ),
 			]
 		);
 
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'skinetic' ),
+				'label' => __( 'Alignment', 'bistroly' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'skinetic' ),
+						'title' => __( 'Left', 'bistroly' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'skinetic' ),
+						'title' => __( 'Center', 'bistroly' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'skinetic' ),
+						'title' => __( 'Right', 'bistroly' ),
 						'icon' => 'eicon-text-align-right',
 					]
 				],
@@ -65,7 +65,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_control(
 			'icon_font',
 			[
-				'label' => __( 'Icon', 'skinetic' ),
+				'label' => __( 'Icon', 'bistroly' ),
 				'type' => Controls_Manager::ICONS,
 				'fa4compatibility' => 'icon',
 				'default' => [
@@ -78,15 +78,15 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_control(
 			'title',
 			[
-				'label' => __( 'Title', 'skinetic' ),
+				'label' => __( 'Title', 'bistroly' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Design & Planning', 'skinetic' ),
+				'default' => __( 'Design & Planning', 'bistroly' ),
 			]
 		);
 		$this->add_control(
 			'header_size',
 			[
-				'label' => __( 'Title HTML Tag', 'skinetic' ),
+				'label' => __( 'Title HTML Tag', 'bistroly' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
 					'h1' => 'H1',
@@ -108,16 +108,16 @@ class Skinetic_IconBox1 extends Widget_Base{
 			[
 				'label' => 'Description',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'We will help you to get the result you dreamed of.', 'skinetic' ),
+				'default' => __( 'We will help you to get the result you dreamed of.', 'bistroly' ),
 			]
 		);
 
 		$this->add_control(
 			'link',
 			[
-				'label' => __( 'Link', 'skinetic' ),
+				'label' => __( 'Link', 'bistroly' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://your-link.com', 'skinetic' ),
+				'placeholder' => __( 'https://your-link.com', 'bistroly' ),
 				'default'	=> [
 					'url'	=> '#'
 				],
@@ -127,9 +127,9 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_control(
 			'btn_text',
 			[
-				'label' => __( 'Label Button', 'skinetic' ),
+				'label' => __( 'Label Button', 'bistroly' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( ' Learn More <i class="xp-webicon-trajectory"></i>', 'skinetic' ),
+				'default' => __( ' Learn More <i class="xp-webicon-trajectory"></i>', 'bistroly' ),
 				'condition' => [
 					'link[url]!' => '',
 				]
@@ -143,7 +143,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->start_controls_section(
 			'style_box_section',
 			[
-				'label' => __( 'General', 'skinetic' ),
+				'label' => __( 'General', 'bistroly' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);		
@@ -151,7 +151,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_control(
 			'is_line',
 			[
-				'label'   => esc_html__( 'Bottom Line', 'skinetic' ),
+				'label'   => esc_html__( 'Bottom Line', 'bistroly' ),
 				'type'    => Controls_Manager::SWITCHER,
 				'prefix_class' => 'bline-',
 				'default' => 'yes',
@@ -160,7 +160,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_control(
 			'line_color',
 			[
-				'label' => __( 'Line Color', 'skinetic' ),
+				'label' => __( 'Line Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -188,13 +188,13 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_bg_normal',
 			[
-				'label' => __( 'Normal', 'skinetic' ),
+				'label' => __( 'Normal', 'bistroly' ),
 			]
 		);
 		$this->add_control(
 			'bg_box',
 			[
-				'label' => __( 'Background Box', 'skinetic' ),
+				'label' => __( 'Background Box', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -215,13 +215,13 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_bg_hover',
 			[
-				'label' => __( 'Hover', 'skinetic' ),
+				'label' => __( 'Hover', 'bistroly' ),
 			]
 		);
 		$this->add_control(
 			'hover_dark',
 			[
-				'label'   => esc_html__( 'Dark Style', 'skinetic' ),
+				'label'   => esc_html__( 'Dark Style', 'bistroly' ),
 				'type'    => Controls_Manager::SWITCHER,
 				'prefix_class' => 'hover-dark-',
 				'default' => 'yes',
@@ -230,7 +230,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_control(
 			'bg_hover_box',
 			[
-				'label' => __( 'Background Box', 'skinetic' ),
+				'label' => __( 'Background Box', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -249,7 +249,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_control(
 			'bg_hover_icon_color',
 			[
-				'label' => __( 'Icon Color', 'skinetic' ),
+				'label' => __( 'Icon Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -262,7 +262,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_control(
 			'bg_hover_icon_bg',
 			[
-				'label' => __( 'Background Icon', 'skinetic' ),
+				'label' => __( 'Background Icon', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -280,7 +280,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_control(
 			'bg_hover_title_color',
 			[
-				'label' => __( 'Title Color', 'skinetic' ),
+				'label' => __( 'Title Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -293,7 +293,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_control(
 			'bg_hover_des_color',
 			[
-				'label' => __( 'Description Color', 'skinetic' ),
+				'label' => __( 'Description Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -309,7 +309,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_control(
 			'bg_hover_link_btn_color',
 			[
-				'label' => __( 'Button Color', 'skinetic' ),
+				'label' => __( 'Button Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -324,7 +324,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_control(
 			'heading_hcircle',
 			[
-				'label' => __( 'Border Circle', 'skinetic' ),
+				'label' => __( 'Border Circle', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -336,7 +336,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_control(
 			'circle_hcolor',
 			[
-				'label' => __( 'Border Color', 'skinetic' ),
+				'label' => __( 'Border Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -350,7 +350,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_control(
 			'dot_hcolor',
 			[
-				'label' => __( 'Dot Color', 'skinetic' ),
+				'label' => __( 'Dot Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -369,14 +369,14 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->start_controls_section(
 			'style_icon_section',
 			[
-				'label' => __( 'Icon', 'skinetic' ),
+				'label' => __( 'Icon', 'bistroly' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'is_border',
 			[
-				'label'   => esc_html__( 'Border Circle', 'skinetic' ),
+				'label'   => esc_html__( 'Border Circle', 'bistroly' ),
 				'type'    => Controls_Manager::SWITCHER,
 				'prefix_class' => 'with-border-',
 				'default' => 'no',
@@ -385,7 +385,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_space',
 			[
-				'label' => __( 'Spacing', 'skinetic' ),
+				'label' => __( 'Spacing', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -401,7 +401,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_size',
 			[
-				'label' => __( 'Size', 'skinetic' ),
+				'label' => __( 'Size', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -418,7 +418,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_bg_width',
 			[
-				'label' => __( 'Background Width', 'skinetic' ),
+				'label' => __( 'Background Width', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -436,7 +436,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_control(
 			'radius_box',
 			[
-				'label' => __( 'Border Radius', 'skinetic' ),
+				'label' => __( 'Border Radius', 'bistroly' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -447,7 +447,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_control(
 			'icon_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -459,7 +459,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_control(
 			'icon_bg',
 			[
-				'label' => __( 'Background', 'skinetic' ),
+				'label' => __( 'Background', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -479,7 +479,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_control(
 			'heading_circle',
 			[
-				'label' => __( 'Border Circle', 'skinetic' ),
+				'label' => __( 'Border Circle', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -490,7 +490,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_control(
 			'circle_color',
 			[
-				'label' => __( 'Border Color', 'skinetic' ),
+				'label' => __( 'Border Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -504,7 +504,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_control(
 			'dot_color',
 			[
-				'label' => __( 'Dot Color', 'skinetic' ),
+				'label' => __( 'Dot Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -521,7 +521,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->start_controls_section(
 			'style_content_section',
 			[
-				'label' => __( 'Content', 'skinetic' ),
+				'label' => __( 'Content', 'bistroly' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -530,14 +530,14 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'skinetic' ),
+				'label' => __( 'Title', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => __( 'Spacing', 'skinetic' ),
+				'label' => __( 'Spacing', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -553,7 +553,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -564,7 +564,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_control(
 			'title_hover_color',
 			[
-				'label' => __( 'Hover Color', 'skinetic' ),
+				'label' => __( 'Hover Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -587,7 +587,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_control(
 			'heading_des',
 			[
-				'label' => __( 'Description', 'skinetic' ),
+				'label' => __( 'Description', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -598,7 +598,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_control(
 			'des_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -624,7 +624,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_control(
 			'heading_link',
 			[
-				'label' => __( 'Button', 'skinetic' ),
+				'label' => __( 'Button', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -636,7 +636,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_responsive_control(
 			'btn_space',
 			[
-				'label' => __( 'Spacing', 'skinetic' ),
+				'label' => __( 'Spacing', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -656,7 +656,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_control(
 			'link_btn_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -671,7 +671,7 @@ class Skinetic_IconBox1 extends Widget_Base{
 		$this->add_control(
 			'link_btn_hover_color',
 			[
-				'label' => __( 'Hover Color', 'skinetic' ),
+				'label' => __( 'Hover Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -742,5 +742,5 @@ class Skinetic_IconBox1 extends Widget_Base{
 		return [ 'service' ];
 	}
 }
-// After the Skinetic_IconBox1 class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Skinetic_IconBox1() );
+// After the Bistroly_IconBox1 class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Bistroly_IconBox1() );

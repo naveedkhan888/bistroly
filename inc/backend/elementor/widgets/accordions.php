@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Accordions
  */
-class Skinetic_Accordions extends Widget_Base{
+class Bistroly_Accordions extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Skinetic_Accordions extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Accordions', 'skinetic' );
+		return __( 'XP Accordions', 'bistroly' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Skinetic_Accordions extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_skinetic' ];
+		return [ 'category_bistroly' ];
 	}
 
 	protected function register_controls() {
@@ -33,7 +33,7 @@ class Skinetic_Accordions extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Accordions', 'skinetic' ),
+				'label' => __( 'Accordions', 'bistroly' ),
 			]
 		);
 
@@ -42,10 +42,10 @@ class Skinetic_Accordions extends Widget_Base{
 		$repeater->add_control(
 			'acc_title',
 			[
-				'label' => __( 'Title & Content', 'skinetic' ),
+				'label' => __( 'Title & Content', 'bistroly' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Accordion Title', 'skinetic' ),
-				'placeholder' => __( 'Accordion Title', 'skinetic' ),
+				'default' => __( 'Accordion Title', 'bistroly' ),
+				'placeholder' => __( 'Accordion Title', 'bistroly' ),
 				'label_block' => true,
 			]
 		);
@@ -53,9 +53,9 @@ class Skinetic_Accordions extends Widget_Base{
 		$repeater->add_control(
 			'acc_content',
 			[
-				'label' => __( 'Content', 'skinetic' ),
-				'default' => __( 'Accordion Content', 'skinetic' ),
-				'placeholder' => __( 'Accordion Content', 'skinetic' ),
+				'label' => __( 'Content', 'bistroly' ),
+				'default' => __( 'Accordion Content', 'bistroly' ),
+				'placeholder' => __( 'Accordion Content', 'bistroly' ),
 				'type' => Controls_Manager::WYSIWYG,
 				'show_label' => false,
 			]
@@ -64,17 +64,17 @@ class Skinetic_Accordions extends Widget_Base{
 		$this->add_control(
 			'xp_accs',
 			[
-				'label' => __( 'Accordion Items', 'skinetic' ),
+				'label' => __( 'Accordion Items', 'bistroly' ),
 				'type' => Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 				'default' => [
 					[
-						'acc_title' => __( 'Accordion #1', 'skinetic' ),
-						'acc_content' => __( 'The basic philosophy of our studio is to create individual, aesthetically stunning solutions for our customers by lightning-fast development of projects employing unique styles.', 'skinetic' ),
+						'acc_title' => __( 'Accordion #1', 'bistroly' ),
+						'acc_content' => __( 'The basic philosophy of our studio is to create individual, aesthetically stunning solutions for our customers by lightning-fast development of projects employing unique styles.', 'bistroly' ),
 					],
 					[
-						'acc_title' => __( 'Accordion #2', 'skinetic' ),
-						'acc_content' => __( 'The basic philosophy of our studio is to create individual, aesthetically stunning solutions for our customers by lightning-fast development of projects employing unique styles.', 'skinetic' ),
+						'acc_title' => __( 'Accordion #2', 'bistroly' ),
+						'acc_content' => __( 'The basic philosophy of our studio is to create individual, aesthetically stunning solutions for our customers by lightning-fast development of projects employing unique styles.', 'bistroly' ),
 					],
 				],
 				'title_field' => '{{{ acc_title }}}',
@@ -83,7 +83,7 @@ class Skinetic_Accordions extends Widget_Base{
 		$this->add_control(
 			'default_active',
 			[
-				'label'   => esc_html__( 'Default Active', 'skinetic' ),
+				'label'   => esc_html__( 'Default Active', 'bistroly' ),
 				'type'    => Controls_Manager::SWITCHER,
 				'default' => 'yes'
 			]
@@ -91,7 +91,7 @@ class Skinetic_Accordions extends Widget_Base{
 		$this->add_control(
 			'item_active',
 			[
-				'label' => esc_html__( 'Item Active', 'skinetic' ),
+				'label' => esc_html__( 'Item Active', 'bistroly' ),
 				'type' => Controls_Manager::NUMBER,
 				'min' => 1,
 				'step' => 1,
@@ -109,14 +109,14 @@ class Skinetic_Accordions extends Widget_Base{
 		$this->start_controls_section(
 			'style_title',
 			[
-				'label' => __( 'Title', 'skinetic' ),
+				'label' => __( 'Title', 'bistroly' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'bg_title',
 			[
-				'label' => __( 'Background', 'skinetic' ),
+				'label' => __( 'Background', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -127,7 +127,7 @@ class Skinetic_Accordions extends Widget_Base{
 		$this->add_control(
 			'bg_title_active',
 			[
-				'label' => __( 'Background Active', 'skinetic' ),
+				'label' => __( 'Background Active', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -138,7 +138,7 @@ class Skinetic_Accordions extends Widget_Base{
 		$this->add_control(
 			'title_border',
 			[
-				'label' => __( 'Border Color', 'skinetic' ),
+				'label' => __( 'Border Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -149,7 +149,7 @@ class Skinetic_Accordions extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -160,7 +160,7 @@ class Skinetic_Accordions extends Widget_Base{
 		$this->add_control(
 			'title_color_active',
 			[
-				'label' => __( 'Color Active', 'skinetic' ),
+				'label' => __( 'Color Active', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -178,7 +178,7 @@ class Skinetic_Accordions extends Widget_Base{
 		$this->add_responsive_control(
 			'title_padding',
 			[
-				'label' => __( 'Padding', 'skinetic' ),
+				'label' => __( 'Padding', 'bistroly' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -192,14 +192,14 @@ class Skinetic_Accordions extends Widget_Base{
 		$this->start_controls_section(
 			'style_content',
 			[
-				'label' => __( 'Content', 'skinetic' ),
+				'label' => __( 'Content', 'bistroly' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'bg_content',
 			[
-				'label' => __( 'Background', 'skinetic' ),
+				'label' => __( 'Background', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -210,7 +210,7 @@ class Skinetic_Accordions extends Widget_Base{
 		$this->add_control(
 			'content_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -228,7 +228,7 @@ class Skinetic_Accordions extends Widget_Base{
 		$this->add_responsive_control(
 			'content_padding',
 			[
-				'label' => __( 'Padding', 'skinetic' ),
+				'label' => __( 'Padding', 'bistroly' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -275,5 +275,5 @@ class Skinetic_Accordions extends Widget_Base{
 	}
 
 }
-// After the Skinetic_Accordions class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Skinetic_Accordions() );
+// After the Bistroly_Accordions class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Bistroly_Accordions() );

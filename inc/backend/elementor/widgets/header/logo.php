@@ -3,14 +3,14 @@ namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class Skinetic_Logo extends Widget_Base {
+class Bistroly_Logo extends Widget_Base {
 
 	public function get_name() {
 		return 'ilogo';
 	}
 
 	public function get_title() {
-		return __( 'XP Logo', 'skinetic' );
+		return __( 'XP Logo', 'bistroly' );
 	}
 
 	public function get_icon() {
@@ -18,7 +18,7 @@ class Skinetic_Logo extends Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'category_skinetic_header' ];
+		return [ 'category_bistroly_header' ];
 	}
 
 	protected function register_controls() {
@@ -26,26 +26,26 @@ class Skinetic_Logo extends Widget_Base {
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Logo', 'skinetic' ),
+				'label' => __( 'Logo', 'bistroly' ),
 			]
 		);
 
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'skinetic' ),
+				'label' => __( 'Alignment', 'bistroly' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'skinetic' ),
+						'title' => __( 'Left', 'bistroly' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'skinetic' ),
+						'title' => __( 'Center', 'bistroly' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'skinetic' ),
+						'title' => __( 'Right', 'bistroly' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -58,19 +58,19 @@ class Skinetic_Logo extends Widget_Base {
 		$this->add_control(
 			'logo_image',
 			[
-				'label' => esc_html__( 'Image', 'skinetic' ),
+				'label' => esc_html__( 'Image', 'bistroly' ),
 				'type'  => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => '',
 				],
-				'description' => esc_html__( 'Upload a custom logo. If empty, site logo from Customizer will be used.', 'skinetic' ),
+				'description' => esc_html__( 'Upload a custom logo. If empty, site logo from Customizer will be used.', 'bistroly' ),
 			]
 		);
 
 		$this->add_responsive_control(
 			'logo_width',
 			[
-				'label' => __( 'Width', 'skinetic' ),
+				'label' => __( 'Width', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -87,7 +87,7 @@ class Skinetic_Logo extends Widget_Base {
 		$this->add_responsive_control(
 			'logo_height',
 			[
-				'label' => __( 'Height', 'skinetic' ),
+				'label' => __( 'Height', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -135,4 +135,4 @@ class Skinetic_Logo extends Widget_Base {
 	}
 }
 
-Plugin::instance()->widgets_manager->register( new Skinetic_Logo() );
+Plugin::instance()->widgets_manager->register( new Bistroly_Logo() );

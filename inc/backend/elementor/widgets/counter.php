@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Counter
  */
-class Skinetic_Counter extends Widget_Base{
+class Bistroly_Counter extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Skinetic_Counter extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Counter 1', 'skinetic' );
+		return __( 'XP Counter 1', 'bistroly' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Skinetic_Counter extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_skinetic' ];
+		return [ 'category_bistroly' ];
 	}
 
 	protected function register_controls() {
@@ -32,26 +32,26 @@ class Skinetic_Counter extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Counter', 'skinetic' ),
+				'label' => __( 'Counter', 'bistroly' ),
 			]
 		);
 		$this->add_control(
 			'pos_num',
 			[
-				'label' => __( 'Number Position', 'skinetic' ),
+				'label' => __( 'Number Position', 'bistroly' ),
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'left',
 				'options' => [
 					'left' => [
-						'title' => __( 'Left', 'skinetic' ),
+						'title' => __( 'Left', 'bistroly' ),
 						'icon' => 'eicon-h-align-left',
 					],
 					'top' => [
-						'title' => __( 'Top', 'skinetic' ),
+						'title' => __( 'Top', 'bistroly' ),
 						'icon' => 'eicon-v-align-top',
 					],
 					'right' => [
-						'title' => __( 'Right', 'skinetic' ),
+						'title' => __( 'Right', 'bistroly' ),
 						'icon' => 'eicon-h-align-right',
 					],
 				],
@@ -62,20 +62,20 @@ class Skinetic_Counter extends Widget_Base{
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'skinetic' ),
+				'label' => __( 'Alignment', 'bistroly' ),
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'skinetic' ),
+						'title' => __( 'Left', 'bistroly' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'skinetic' ),
+						'title' => __( 'Center', 'bistroly' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'skinetic' ),
+						'title' => __( 'Right', 'bistroly' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -91,9 +91,9 @@ class Skinetic_Counter extends Widget_Base{
 		$this->add_control(
 			'title',
 			[
-				'label' => __( 'Title:', 'skinetic' ),
+				'label' => __( 'Title:', 'bistroly' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Current Clients', 'skinetic' ),
+				'default' => __( 'Current Clients', 'bistroly' ),
 			]
 		);
 
@@ -102,23 +102,23 @@ class Skinetic_Counter extends Widget_Base{
 			[
 				'label' => 'Number:',
 				'type' => Controls_Manager::TEXT,
-				'default' => __( '180', 'skinetic' ),
+				'default' => __( '180', 'bistroly' ),
 			]
 		);
 
 		$this->add_control(
 			'after_number',
 			[
-				'label' => __( 'After Number:', 'skinetic' ),
+				'label' => __( 'After Number:', 'bistroly' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( '', 'skinetic' ),
+				'default' => __( '', 'bistroly' ),
 			]
 		);		
 
 		$this->add_control(
 			'time',
 			[
-				'label' => __( 'Duration', 'skinetic' ),
+				'label' => __( 'Duration', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -141,7 +141,7 @@ class Skinetic_Counter extends Widget_Base{
 		$this->start_controls_section(
 			'style_content_section',
 			[
-				'label' => __( 'Style', 'skinetic' ),
+				'label' => __( 'Style', 'bistroly' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -150,7 +150,7 @@ class Skinetic_Counter extends Widget_Base{
 		$this->add_control(
 			'heading_number',
 			[
-				'label' => __( 'Number', 'skinetic' ),
+				'label' => __( 'Number', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -158,7 +158,7 @@ class Skinetic_Counter extends Widget_Base{
 		$this->add_control(
 			'number_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -178,7 +178,7 @@ class Skinetic_Counter extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'skinetic' ),
+				'label' => __( 'Title', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -186,7 +186,7 @@ class Skinetic_Counter extends Widget_Base{
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => __( 'Spacing', 'skinetic' ),
+				'label' => __( 'Spacing', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -204,7 +204,7 @@ class Skinetic_Counter extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -240,5 +240,5 @@ class Skinetic_Counter extends Widget_Base{
 		return [ 'funfact', 'number' ];
 	}
 }
-// After the Skinetic_Counter class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Skinetic_Counter() );
+// After the Bistroly_Counter class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Bistroly_Counter() );

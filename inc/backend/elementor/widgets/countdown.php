@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Contact Info
  */
-class Skinetic_CountDown extends Widget_Base{
+class Bistroly_CountDown extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Skinetic_CountDown extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP CountDown', 'skinetic' );
+		return __( 'XP CountDown', 'bistroly' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Skinetic_CountDown extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_skinetic' ];
+		return [ 'category_bistroly' ];
 	}
 
 	protected function register_controls() {
@@ -32,30 +32,30 @@ class Skinetic_CountDown extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'CountDown', 'skinetic' ),
+				'label' => __( 'CountDown', 'bistroly' ),
 			]
 		);
 
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'skinetic' ),
+				'label' => __( 'Alignment', 'bistroly' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'skinetic' ),
+						'title' => __( 'Left', 'bistroly' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'skinetic' ),
+						'title' => __( 'Center', 'bistroly' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'skinetic' ),
+						'title' => __( 'Right', 'bistroly' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
-				// 'prefix_class' => 'skinetic%s-align-',
+				// 'prefix_class' => 'bistroly%s-align-',
 				'selectors' => [
 					'{{WRAPPER}}' => 'text-align: {{VALUE}};',
 				],
@@ -67,16 +67,16 @@ class Skinetic_CountDown extends Widget_Base{
 			[
 				'label' => 'Date - Time',
 				'type' => Controls_Manager::DATE_TIME,
-				'default' => __( '2025-10-26 12:00', 'skinetic' ),
+				'default' => __( '2025-10-26 12:00', 'bistroly' ),
 			]
 		);
 
 		$this->add_control(
 			'zone',
 			[
-				'label' => __( 'UTC Timezone Offset', 'skinetic' ),
+				'label' => __( 'UTC Timezone Offset', 'bistroly' ),
 				'type' => Controls_Manager::NUMBER,
-				'default' => __( '0', 'skinetic' ),
+				'default' => __( '0', 'bistroly' ),
 			]
 		);
 
@@ -85,39 +85,39 @@ class Skinetic_CountDown extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_title_normal',
 			[
-				'label' => __( 'One', 'skinetic' ),
+				'label' => __( 'One', 'bistroly' ),
 			]
 		);
 		$this->add_control(
 			'day',
 			[
-				'label' => __( 'Day', 'skinetic' ),
+				'label' => __( 'Day', 'bistroly' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Day', 'skinetic' ),
+				'default' => __( 'Day', 'bistroly' ),
 			]
 		);
 		$this->add_control(
 			'hour',
 			[
-				'label' => __( 'Hour', 'skinetic' ),
+				'label' => __( 'Hour', 'bistroly' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Hour', 'skinetic' ),
+				'default' => __( 'Hour', 'bistroly' ),
 			]
 		);
 		$this->add_control(
 			'min',
 			[
-				'label' => __( 'Minute', 'skinetic' ),
+				'label' => __( 'Minute', 'bistroly' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Minute', 'skinetic' ),
+				'default' => __( 'Minute', 'bistroly' ),
 			]
 		);
 		$this->add_control(
 			'second',
 			[
-				'label' => __( 'Second', 'skinetic' ),
+				'label' => __( 'Second', 'bistroly' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Second', 'skinetic' ),
+				'default' => __( 'Second', 'bistroly' ),
 			]
 		);
 
@@ -126,39 +126,39 @@ class Skinetic_CountDown extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_title_active',
 			[
-				'label' => __( 'Multi', 'skinetic' ),
+				'label' => __( 'Multi', 'bistroly' ),
 			]
 		);
 		$this->add_control(
 			'days',
 			[
-				'label' => __( 'Days', 'skinetic' ),
+				'label' => __( 'Days', 'bistroly' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Days', 'skinetic' ),
+				'default' => __( 'Days', 'bistroly' ),
 			]
 		);
 		$this->add_control(
 			'hours',
 			[
-				'label' => __( 'Hours', 'skinetic' ),
+				'label' => __( 'Hours', 'bistroly' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Hours', 'skinetic' ),
+				'default' => __( 'Hours', 'bistroly' ),
 			]
 		);
 		$this->add_control(
 			'mins',
 			[
-				'label' => __( 'Minutes', 'skinetic' ),
+				'label' => __( 'Minutes', 'bistroly' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Minutes', 'skinetic' ),
+				'default' => __( 'Minutes', 'bistroly' ),
 			]
 		);
 		$this->add_control(
 			'seconds',
 			[
-				'label' => __( 'Seconds', 'skinetic' ),
+				'label' => __( 'Seconds', 'bistroly' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Seconds', 'skinetic' ),
+				'default' => __( 'Seconds', 'bistroly' ),
 			]
 		);
 
@@ -171,7 +171,7 @@ class Skinetic_CountDown extends Widget_Base{
 		$this->start_controls_section(
 			'style_content_section',
 			[
-				'label' => __( 'Style', 'skinetic' ),
+				'label' => __( 'Style', 'bistroly' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -180,7 +180,7 @@ class Skinetic_CountDown extends Widget_Base{
 		$this->add_control(
 			'heading_number',
 			[
-				'label' => __( 'Number', 'skinetic' ),
+				'label' => __( 'Number', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -188,7 +188,7 @@ class Skinetic_CountDown extends Widget_Base{
 		$this->add_control(
 			'number_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -206,7 +206,7 @@ class Skinetic_CountDown extends Widget_Base{
 		$this->add_responsive_control(
 			'number_space',
 			[
-				'label' => __( 'Spacing', 'skinetic' ),
+				'label' => __( 'Spacing', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -224,7 +224,7 @@ class Skinetic_CountDown extends Widget_Base{
 		$this->add_control(
 			'heading_titles',
 			[
-				'label' => __( 'Texts', 'skinetic' ),
+				'label' => __( 'Texts', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -233,7 +233,7 @@ class Skinetic_CountDown extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -253,7 +253,7 @@ class Skinetic_CountDown extends Widget_Base{
 		$this->add_control(
 			'heading_sepe',
 			[
-				'label' => __( 'Seperator', 'skinetic' ),
+				'label' => __( 'Seperator', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -261,7 +261,7 @@ class Skinetic_CountDown extends Widget_Base{
 		$this->add_control(
 			'sepe_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -295,5 +295,5 @@ class Skinetic_CountDown extends Widget_Base{
 	}
 
 }
-// After the Skinetic_CountDown class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Skinetic_CountDown() );
+// After the Bistroly_CountDown class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Bistroly_CountDown() );

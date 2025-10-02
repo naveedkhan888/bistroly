@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Switcher
  */
-class Skinetic_Switcher extends Widget_Base{
+class Bistroly_Switcher extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Skinetic_Switcher extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Switcher(Pricing Table)', 'skinetic' );
+		return __( 'XP Switcher(Pricing Table)', 'bistroly' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Skinetic_Switcher extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_skinetic' ];
+		return [ 'category_bistroly' ];
 	}
 
 	protected function register_controls() {
@@ -32,29 +32,29 @@ class Skinetic_Switcher extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Switcher', 'skinetic' ),
+				'label' => __( 'Switcher', 'bistroly' ),
 			]
 		);
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'skinetic' ),
+				'label' => __( 'Alignment', 'bistroly' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'skinetic' ),
+						'title' => __( 'Left', 'bistroly' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'skinetic' ),
+						'title' => __( 'Center', 'bistroly' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'skinetic' ),
+						'title' => __( 'Right', 'bistroly' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
-				// 'prefix_class' => 'skinetic%s-align-',
+				// 'prefix_class' => 'bistroly%s-align-',
 				'selectors' => [
 					'{{WRAPPER}} .xp-switcher' => 'text-align: {{VALUE}};',
 				],
@@ -63,18 +63,18 @@ class Skinetic_Switcher extends Widget_Base{
         $this->add_control(
 			'title_left',
 			[
-				'label' => __( 'Title Left', 'skinetic' ),
+				'label' => __( 'Title Left', 'bistroly' ),
 				'type' => Controls_Manager::TEXT,
-                'default' => __( 'Monthly', 'skinetic' ),
+                'default' => __( 'Monthly', 'bistroly' ),
                 'label_block' => true,
 			]
         );
         $this->add_control(
 			'title_right',
 			[
-				'label' => __( 'Title Right', 'skinetic' ),
+				'label' => __( 'Title Right', 'bistroly' ),
 				'type' => Controls_Manager::TEXT,
-                'default' => __( 'Yearly', 'skinetic' ),
+                'default' => __( 'Yearly', 'bistroly' ),
                 'label_block' => true,
 			]
 		);
@@ -86,7 +86,7 @@ class Skinetic_Switcher extends Widget_Base{
 		$this->start_controls_section(
 			'style_icon_section',
 			[
-				'label' => __( 'Switcher', 'skinetic' ),
+				'label' => __( 'Switcher', 'bistroly' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -95,14 +95,14 @@ class Skinetic_Switcher extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'skinetic' ),
+				'label' => __( 'Title', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 			]
         );
         $this->add_responsive_control(
 			'title_space',
 			[
-				'label' => __( 'Spacing', 'skinetic' ),
+				'label' => __( 'Spacing', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -118,7 +118,7 @@ class Skinetic_Switcher extends Widget_Base{
         $this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -140,7 +140,7 @@ class Skinetic_Switcher extends Widget_Base{
 		$this->add_control(
 			'heading_toggle',
 			[
-				'label' => __( 'Toggle', 'skinetic' ),
+				'label' => __( 'Toggle', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -148,7 +148,7 @@ class Skinetic_Switcher extends Widget_Base{
 		$this->add_control(
 			'toggle_bg',
 			[
-				'label' => __( 'Background', 'skinetic' ),
+				'label' => __( 'Background', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -159,7 +159,7 @@ class Skinetic_Switcher extends Widget_Base{
 		$this->add_control(
 			'toggle_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -189,4 +189,4 @@ class Skinetic_Switcher extends Widget_Base{
 
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Skinetic_Switcher() );
+Plugin::instance()->widgets_manager->register( new Bistroly_Switcher() );

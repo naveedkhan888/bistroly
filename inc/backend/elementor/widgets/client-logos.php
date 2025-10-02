@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Client Logos
  */
-class Skinetic_Image_Carousel extends Widget_Base{
+class Bistroly_Image_Carousel extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Skinetic_Image_Carousel extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Client Logos', 'skinetic' );
+		return __( 'XP Client Logos', 'bistroly' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Skinetic_Image_Carousel extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_skinetic' ];
+		return [ 'category_bistroly' ];
 	}
 
 	protected function register_controls() {
@@ -32,7 +32,7 @@ class Skinetic_Image_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Logos', 'skinetic' ),
+				'label' => __( 'Logos', 'bistroly' ),
 			]
 		);
 
@@ -40,15 +40,15 @@ class Skinetic_Image_Carousel extends Widget_Base{
 		$repeater->add_control(
 			'title',
 			[
-				'label' => __( 'Name', 'skinetic' ),
+				'label' => __( 'Name', 'bistroly' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( '', 'skinetic' ),
+				'default' => __( '', 'bistroly' ),
 			]
 		);
 		$repeater->add_control(
 			'image_partner',
 			[
-				'label' => __( 'Image', 'skinetic' ),
+				'label' => __( 'Image', 'bistroly' ),
 				'type' => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
@@ -58,7 +58,7 @@ class Skinetic_Image_Carousel extends Widget_Base{
 		$repeater->add_control(
 			'image_link',
 			[
-				'label' => __( 'Link', 'skinetic' ),
+				'label' => __( 'Link', 'bistroly' ),
 				'type' => Controls_Manager::URL,
 				'default' => [],
 			]
@@ -90,10 +90,10 @@ class Skinetic_Image_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'tshow',
 			[
-				'label' => __( 'Slides To Show', 'skinetic' ),
+				'label' => __( 'Slides To Show', 'bistroly' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'' => __( 'Default', 'skinetic' ),
+					'' => __( 'Default', 'bistroly' ),
 				] + $slides_show,
 				'default' => ''
 			]
@@ -102,31 +102,31 @@ class Skinetic_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'loop',
 			[
-				'label' => __( 'Loop', 'skinetic' ),
+				'label' => __( 'Loop', 'bistroly' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'skinetic' ),
-					'false' => __( 'No', 'skinetic' ),
+					'true' => __( 'Yes', 'bistroly' ),
+					'false' => __( 'No', 'bistroly' ),
 				]
 			]
 		);
 		$this->add_control(
 			'autoplay',
 			[
-				'label' => __( 'Autoplay', 'skinetic' ),
+				'label' => __( 'Autoplay', 'bistroly' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'skinetic' ),
-					'false' => __( 'No', 'skinetic' ),
+					'true' => __( 'Yes', 'bistroly' ),
+					'false' => __( 'No', 'bistroly' ),
 				]
 			]
 		);
 		$this->add_control(
 			'timeout',
 			[
-				'label' => __( 'Autoplay Timeout', 'skinetic' ),
+				'label' => __( 'Autoplay Timeout', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -146,24 +146,24 @@ class Skinetic_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrows',
 			[
-				'label' => __( 'Arrows', 'skinetic' ),
+				'label' => __( 'Arrows', 'bistroly' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true'   => __( 'Yes', 'skinetic' ),
-					'false'  => __( 'No', 'skinetic' ),
+					'true'   => __( 'Yes', 'bistroly' ),
+					'false'  => __( 'No', 'bistroly' ),
 				],
 			]
 		);
 		$this->add_control(
 			'dots',
 			[
-				'label' => __( 'Dots', 'skinetic' ),
+				'label' => __( 'Dots', 'bistroly' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true'   => __( 'Yes', 'skinetic' ),
-					'false'  => __( 'No', 'skinetic' ),
+					'true'   => __( 'Yes', 'bistroly' ),
+					'false'  => __( 'No', 'bistroly' ),
 				],
 			]
 		);
@@ -175,26 +175,26 @@ class Skinetic_Image_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'image_style_section',
 			[
-				'label' => __( 'Style Logos', 'skinetic' ),
+				'label' => __( 'Style Logos', 'bistroly' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Vertical Align', 'skinetic' ),
+				'label' => __( 'Vertical Align', 'bistroly' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'flex-start'    => [
-						'title' => __( 'Top', 'skinetic' ),
+						'title' => __( 'Top', 'bistroly' ),
 						'icon' => 'eicon-v-align-top',
 					],
 					'center' => [
-						'title' => __( 'Center', 'skinetic' ),
+						'title' => __( 'Center', 'bistroly' ),
 						'icon' => 'eicon-v-align-middle',
 					],
 					'flex-end' => [
-						'title' => __( 'Bottom', 'skinetic' ),
+						'title' => __( 'Bottom', 'bistroly' ),
 						'icon' => 'eicon-v-align-bottom',
 					],
 				],
@@ -207,7 +207,7 @@ class Skinetic_Image_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'img_height',
 			[
-				'label' => __( 'Height', 'skinetic' ),
+				'label' => __( 'Height', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -228,7 +228,7 @@ class Skinetic_Image_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'img_spacing',
 			[
-				'label' => __( 'Spacing', 'skinetic' ),
+				'label' => __( 'Spacing', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -247,14 +247,14 @@ class Skinetic_Image_Carousel extends Widget_Base{
 
 		$this->start_controls_tab( 'normal',
 			[
-				'label' => __( 'Normal', 'skinetic' ),
+				'label' => __( 'Normal', 'bistroly' ),
 			]
 		);
 
 		$this->add_control(
 			'opacity',
 			[
-				'label' => __( 'Opacity', 'skinetic' ),
+				'label' => __( 'Opacity', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -281,14 +281,14 @@ class Skinetic_Image_Carousel extends Widget_Base{
 
 		$this->start_controls_tab( 'img_hover_effects',
 			[
-				'label' => __( 'Hover', 'skinetic' ),
+				'label' => __( 'Hover', 'bistroly' ),
 			]
 		);
 
 		$this->add_control(
 			'opacity_hover',
 			[
-				'label' => __( 'Opacity', 'skinetic' ),
+				'label' => __( 'Opacity', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -321,7 +321,7 @@ class Skinetic_Image_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'navigation_section',
 			[
-				'label' => __( 'Dots', 'skinetic' ),
+				'label' => __( 'Dots', 'bistroly' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'dots' => 'true',
@@ -332,7 +332,7 @@ class Skinetic_Image_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'dots_spacing',
 			[
-				'label' => __( 'Spacing', 'skinetic' ),
+				'label' => __( 'Spacing', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -349,7 +349,7 @@ class Skinetic_Image_Carousel extends Widget_Base{
 		$this->add_control(
             'dots_bgcolor',
             [
-                'label' => __( 'Color', 'skinetic' ),
+                'label' => __( 'Color', 'bistroly' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot span' => 'background: {{VALUE}};',
@@ -360,7 +360,7 @@ class Skinetic_Image_Carousel extends Widget_Base{
         $this->add_control(
             'dots_active_bgcolor',
             [
-                'label' => __( 'Color Active', 'skinetic' ),
+                'label' => __( 'Color Active', 'bistroly' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot.active span' => 'background: {{VALUE}};',
@@ -374,7 +374,7 @@ class Skinetic_Image_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'style_nav',
 			[
-				'label' => __( 'Arrows', 'skinetic' ),
+				'label' => __( 'Arrows', 'bistroly' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'arrows' => 'true',
@@ -384,7 +384,7 @@ class Skinetic_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -395,7 +395,7 @@ class Skinetic_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_hcolor',
 			[
-				'label' => __( 'Color Hover', 'skinetic' ),
+				'label' => __( 'Color Hover', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -406,7 +406,7 @@ class Skinetic_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_color',
 			[
-				'label' => __( 'Background', 'skinetic' ),
+				'label' => __( 'Background', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -417,7 +417,7 @@ class Skinetic_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_hcolor',
 			[
-				'label' => __( 'Background Hover', 'skinetic' ),
+				'label' => __( 'Background Hover', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -428,7 +428,7 @@ class Skinetic_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'radius_arrow',
 			[
-				'label' => __( 'Border Radius', 'skinetic' ),
+				'label' => __( 'Border Radius', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -519,5 +519,5 @@ class Skinetic_Image_Carousel extends Widget_Base{
 	}
 
 }
-// After the Skinetic_Image_Carousel class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Skinetic_Image_Carousel() );
+// After the Bistroly_Image_Carousel class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Bistroly_Image_Carousel() );

@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Skinetic
+ * @package Bistroly
  */
 
 ?>
@@ -14,7 +14,7 @@
 	</div><!-- #content -->
 	<?php
 		if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'footer' ) ) {
-			skinetic_footer_builder();
+			bistroly_footer_builder();
 		}
 	?>
 </div><!-- #page -->

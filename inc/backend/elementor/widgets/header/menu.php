@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Menu
  */
-class Skinetic_Menu extends Widget_Base{
+class Bistroly_Menu extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Skinetic_Menu extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Nav Menu', 'skinetic' );
+		return __( 'XP Nav Menu', 'bistroly' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Skinetic_Menu extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_skinetic_header' ];
+		return [ 'category_bistroly_header' ];
 	}
 
 	protected function register_controls() {
@@ -32,7 +32,7 @@ class Skinetic_Menu extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Menu', 'skinetic' ),
+				'label' => __( 'Menu', 'bistroly' ),
 			]
 		);
 
@@ -40,7 +40,7 @@ class Skinetic_Menu extends Widget_Base{
 		$this->add_control(
 			'nav_menu',
 			[
-				'label' => esc_html__( 'Select Menu', 'skinetic' ),
+				'label' => esc_html__( 'Select Menu', 'bistroly' ),
 				'type' => Controls_Manager::SELECT,
 				'multiple' => false,
 				'options' => $menus,
@@ -52,19 +52,19 @@ class Skinetic_Menu extends Widget_Base{
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'skinetic' ),
+				'label' => __( 'Alignment', 'bistroly' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'skinetic' ),
+						'title' => __( 'Left', 'bistroly' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'skinetic' ),
+						'title' => __( 'Center', 'bistroly' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'skinetic' ),
+						'title' => __( 'Right', 'bistroly' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -81,14 +81,14 @@ class Skinetic_Menu extends Widget_Base{
 		$this->start_controls_section(
 			'style_menu_section',
 			[
-				'label' => __( 'Menu Parents', 'skinetic' ),
+				'label' => __( 'Menu Parents', 'bistroly' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'space_item',
 			[
-				'label' => __( 'Spacing Items', 'skinetic' ),
+				'label' => __( 'Spacing Items', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -106,7 +106,7 @@ class Skinetic_Menu extends Widget_Base{
 		$this->add_control(
 			'text_color',
 			[
-				'label' => __( 'Text Color', 'skinetic' ),
+				'label' => __( 'Text Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -117,7 +117,7 @@ class Skinetic_Menu extends Widget_Base{
 		$this->add_control(
 			'arrow_color',
 			[
-				'label' => __( 'Arrow Color', 'skinetic' ),
+				'label' => __( 'Arrow Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -128,7 +128,7 @@ class Skinetic_Menu extends Widget_Base{
 		$this->add_control(
 			'text_hover_color',
 			[
-				'label' => __( 'Text Hover Color', 'skinetic' ),
+				'label' => __( 'Text Hover Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -162,14 +162,14 @@ class Skinetic_Menu extends Widget_Base{
 		$this->start_controls_section(
 			'style_smenu_section',
 			[
-				'label' => __( 'Dropdown Menus', 'skinetic' ),
+				'label' => __( 'Dropdown Menus', 'bistroly' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'smenu_width',
 			[
-				'label' => __( 'Width', 'skinetic' ),
+				'label' => __( 'Width', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -185,7 +185,7 @@ class Skinetic_Menu extends Widget_Base{
 		$this->add_control(
 			'smenu_radius',
 			[
-				'label' => __( 'Border Radius', 'skinetic' ),
+				'label' => __( 'Border Radius', 'bistroly' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -205,7 +205,7 @@ class Skinetic_Menu extends Widget_Base{
 		$this->add_control(
 			'bg_s_color',
 			[
-				'label' => __( 'Background Color', 'skinetic' ),
+				'label' => __( 'Background Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -216,7 +216,7 @@ class Skinetic_Menu extends Widget_Base{
 		$this->add_control(
 			'item_title',
 			[
-				'label' => __( 'Menu Items', 'skinetic' ),
+				'label' => __( 'Menu Items', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -224,7 +224,7 @@ class Skinetic_Menu extends Widget_Base{
 		$this->add_control(
 			'text_s_color',
 			[
-				'label' => __( 'Text Color', 'skinetic' ),
+				'label' => __( 'Text Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -235,7 +235,7 @@ class Skinetic_Menu extends Widget_Base{
 		$this->add_control(
 			'text_s_hover_color',
 			[
-				'label' => __( 'Text Hover Color', 'skinetic' ),
+				'label' => __( 'Text Hover Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -246,7 +246,7 @@ class Skinetic_Menu extends Widget_Base{
 		$this->add_control(
 			'bg_s_hover_color',
 			[
-				'label' => __( 'Background Hover Color', 'skinetic' ),
+				'label' => __( 'Background Hover Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -257,7 +257,7 @@ class Skinetic_Menu extends Widget_Base{
 		$this->add_control(
 			'border_s_color',
 			[
-				'label' => __( 'Border Color', 'skinetic' ),
+				'label' => __( 'Border Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -311,5 +311,5 @@ class Skinetic_Menu extends Widget_Base{
 	}
 
 }
-// After the Skinetic_Menu class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Skinetic_Menu() );
+// After the Bistroly_Menu class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Bistroly_Menu() );

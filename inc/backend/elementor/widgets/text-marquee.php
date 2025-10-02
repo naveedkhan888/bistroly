@@ -3,14 +3,14 @@ namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class Skinetic_Elementor_Text_Marquee extends Widget_Base {
+class Bistroly_Elementor_Text_Marquee extends Widget_Base {
 
 	public function get_name() {
-		return 'skinetic_elementor_text_marquee';
+		return 'bistroly_elementor_text_marquee';
 	}
 
 	public function get_title() {
-		return esc_html__( 'Text Marquee', 'skinetic' );
+		return esc_html__( 'Text Marquee', 'bistroly' );
 	}
 
 	public function get_icon() {
@@ -18,7 +18,7 @@ class Skinetic_Elementor_Text_Marquee extends Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'skinetic' ];
+		return [ 'bistroly' ];
 	}
 
 	public function get_script_depends() {
@@ -31,14 +31,14 @@ class Skinetic_Elementor_Text_Marquee extends Widget_Base {
 		$this->start_controls_section(
 			'section_content',
 			[
-				'label' => esc_html__( 'Content', 'skinetic' ),
+				'label' => esc_html__( 'Content', 'bistroly' ),
 			]
 		);	
 
 			$this->add_control(
 				'icon',
 				[
-					'label' => esc_html__( 'Icon', 'skinetic' ),
+					'label' => esc_html__( 'Icon', 'bistroly' ),
 					'type' => \Elementor\Controls_Manager::ICONS,
 					'default' => [
 						'value' => 'flaticon flaticon-flower',
@@ -52,9 +52,9 @@ class Skinetic_Elementor_Text_Marquee extends Widget_Base {
 			$repeater->add_control(
 				'text',
 				[
-					'label' => esc_html__( 'Text', 'skinetic' ),
+					'label' => esc_html__( 'Text', 'bistroly' ),
 					'type' => \Elementor\Controls_Manager::TEXTAREA,
-					'default' => esc_html__( 'Your Text' , 'skinetic' ),
+					'default' => esc_html__( 'Your Text' , 'bistroly' ),
 					'show_label' => true,
 				]
 			);
@@ -70,7 +70,7 @@ class Skinetic_Elementor_Text_Marquee extends Widget_Base {
 			$repeater->add_control(
 				'color',
 				[
-					'label' => esc_html__( 'Color', 'skinetic' ),
+					'label' => esc_html__( 'Color', 'bistroly' ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'selectors' => [
 						'{{WRAPPER}} {{CURRENT_ITEM}}' => 'color: {{VALUE}}',
@@ -81,21 +81,21 @@ class Skinetic_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_control(
 				'items',
 				[
-					'label' => esc_html__( 'Items', 'skinetic' ),
+					'label' => esc_html__( 'Items', 'bistroly' ),
 					'type' => \Elementor\Controls_Manager::REPEATER,
 					'fields' => $repeater->get_controls(),
 					'default' => [
 						[
-							'text' => esc_html__( '100% Natural & Paraben-Free','skinetic' ),
+							'text' => esc_html__( '100% Natural & Paraben-Free','bistroly' ),
 						],
 						[
-							'text' => esc_html__( 'Get 20% Off For Your First Order','skinetic' ),
+							'text' => esc_html__( 'Get 20% Off For Your First Order','bistroly' ),
 						],
 						[
-							'text' => esc_html__( 'No Artificial Fragrances', 'skinetic' ),
+							'text' => esc_html__( 'No Artificial Fragrances', 'bistroly' ),
 						],
 						[
-							'text' => esc_html__( 'Completely Aluminum Free', 'skinetic' ),
+							'text' => esc_html__( 'Completely Aluminum Free', 'bistroly' ),
 						],
 					],
 				]
@@ -106,7 +106,7 @@ class Skinetic_Elementor_Text_Marquee extends Widget_Base {
 		$this->start_controls_section(
 			'general_section_style',
 			[
-				'label' => esc_html__( 'General', 'skinetic' ),
+				'label' => esc_html__( 'General', 'bistroly' ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -123,7 +123,7 @@ class Skinetic_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_responsive_control(
 				'general_opacity',
 				[
-					'label' => esc_html__( 'Opacity', 'skinetic' ),
+					'label' => esc_html__( 'Opacity', 'bistroly' ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px' ],
 					'range' => [
@@ -142,7 +142,7 @@ class Skinetic_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_responsive_control(
 				'general_padding',
 				[
-					'label' => esc_html__( 'Padding', 'skinetic' ),
+					'label' => esc_html__( 'Padding', 'bistroly' ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em', 'rem' ],
 					'selectors' => [
@@ -156,7 +156,7 @@ class Skinetic_Elementor_Text_Marquee extends Widget_Base {
 		$this->start_controls_section(
 			'icon_section_style',
 			[
-				'label' => esc_html__( 'Icon', 'skinetic' ),
+				'label' => esc_html__( 'Icon', 'bistroly' ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -164,7 +164,7 @@ class Skinetic_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_responsive_control(
 				'icon_size',
 				[
-					'label' => esc_html__( 'Size', 'skinetic' ),
+					'label' => esc_html__( 'Size', 'bistroly' ),
 					'type' => Controls_Manager::SLIDER,
 					'size_units' => [ 'px' ],
 					'range' => [
@@ -184,7 +184,7 @@ class Skinetic_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_control(
 				'icon_color',
 				[
-					'label' => esc_html__( 'Color', 'skinetic' ),
+					'label' => esc_html__( 'Color', 'bistroly' ),
 					'type' => Controls_Manager::COLOR,
 					'selectors' => [
 						'{{WRAPPER}} .xp-text-marquee .icon i' => 'color : {{VALUE}};',
@@ -196,7 +196,7 @@ class Skinetic_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_responsive_control(
 				'icon_margin',
 				[
-					'label' => esc_html__( 'Margin', 'skinetic' ),
+					'label' => esc_html__( 'Margin', 'bistroly' ),
 					'type' => Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', 'em', '%' ],
 					'selectors' => [
@@ -210,7 +210,7 @@ class Skinetic_Elementor_Text_Marquee extends Widget_Base {
 		$this->start_controls_section(
 			'text_section_style',
 			[
-				'label' => esc_html__( 'Text', 'skinetic' ),
+				'label' => esc_html__( 'Text', 'bistroly' ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -226,7 +226,7 @@ class Skinetic_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_control(
 				'text_color',
 				[
-					'label' => esc_html__( 'Color', 'skinetic' ),
+					'label' => esc_html__( 'Color', 'bistroly' ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'selectors' => [
 						'{{WRAPPER}} .xp-text-marquee .content .text' => 'color: {{VALUE}}',
@@ -237,7 +237,7 @@ class Skinetic_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_responsive_control(
 				'text_wrapper_width',
 				[
-					'label' => esc_html__( 'Width (%)', 'skinetic' ),
+					'label' => esc_html__( 'Width (%)', 'bistroly' ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ '%' ],
 					'range' => [
@@ -259,7 +259,7 @@ class Skinetic_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_responsive_control(
 				'space_between',
 				[
-					'label' => esc_html__( 'Space Between', 'skinetic' ),
+					'label' => esc_html__( 'Space Between', 'bistroly' ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%', 'em', 'rem' ],
 					'range' => [
@@ -282,13 +282,13 @@ class Skinetic_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_control(
 				'time_duration',
 				[
-					'label' => esc_html__( 'Time Duration', 'skinetic' ),
+					'label' => esc_html__( 'Time Duration', 'bistroly' ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'default' => 'normal',
 					'options' => [
-						'slow' => esc_html__( 'Slow', 'skinetic' ),
-						'normal' => esc_html__( 'Normal', 'skinetic' ),
-						'fast' => esc_html__( 'Fast', 'skinetic' ),
+						'slow' => esc_html__( 'Slow', 'bistroly' ),
+						'normal' => esc_html__( 'Normal', 'bistroly' ),
+						'fast' => esc_html__( 'Fast', 'bistroly' ),
 					],
 				]
 			);
@@ -296,12 +296,12 @@ class Skinetic_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_control(
 				'direction',
 				[
-					'label' => esc_html__( 'Direction', 'skinetic' ),
+					'label' => esc_html__( 'Direction', 'bistroly' ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'default' => 'rtl',
 					'options' => [
-						'ltr' => esc_html__( 'Left to Right', 'skinetic' ),
-						'rtl' => esc_html__( 'Right to Left', 'skinetic' ),
+						'ltr' => esc_html__( 'Left to Right', 'bistroly' ),
+						'rtl' => esc_html__( 'Right to Left', 'bistroly' ),
 					],
 				]
 			);
@@ -371,4 +371,4 @@ class Skinetic_Elementor_Text_Marquee extends Widget_Base {
 
 	
 }
-Plugin::instance()->widgets_manager->register_widget_type( new Skinetic_Elementor_Text_Marquee() );
+Plugin::instance()->widgets_manager->register_widget_type( new Bistroly_Elementor_Text_Marquee() );

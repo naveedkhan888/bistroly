@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Progress Bars 
  */
-class Skinetic_Progress_Bars extends Widget_Base{
+class Bistroly_Progress_Bars extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Skinetic_Progress_Bars extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Progress Bars', 'skinetic' );
+		return __( 'XP Progress Bars', 'bistroly' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Skinetic_Progress_Bars extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_skinetic' ];
+		return [ 'category_bistroly' ];
 	}
 
 	protected function register_controls() {
@@ -33,19 +33,19 @@ class Skinetic_Progress_Bars extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Content', 'skinetic' ),
+				'label' => __( 'Content', 'bistroly' ),
 			]
 		);
 
 		$this->add_control(
 			'bar_style',
 			[
-				'label' 	=> __( 'Bar Style', 'skinetic' ),
+				'label' 	=> __( 'Bar Style', 'bistroly' ),
 				'type'  	=> Controls_Manager::SELECT,
 				'default' 	=> 'line',
 				'options' 	=> [
-					'line'    => __( 'Style 1: Line', 'skinetic' ),
-					'circle'  => __( 'Style 2: Circle', 'skinetic' ),
+					'line'    => __( 'Style 1: Line', 'bistroly' ),
+					'circle'  => __( 'Style 2: Circle', 'bistroly' ),
 				]
 			]
 		);
@@ -55,7 +55,7 @@ class Skinetic_Progress_Bars extends Widget_Base{
 			[
 				'label' => 'Title',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Keyword Research', 'skinetic' ),
+				'default' => __( 'Keyword Research', 'bistroly' ),
 			]
 		);
 		$this->add_control(
@@ -72,7 +72,7 @@ class Skinetic_Progress_Bars extends Widget_Base{
 		$this->add_control(
 			'percent_text',
 			[
-				'label'   => esc_html__( 'Show Percent Text', 'skinetic' ),
+				'label'   => esc_html__( 'Show Percent Text', 'bistroly' ),
 				'type'    => Controls_Manager::SWITCHER,
 				'default' => 'yes',
 			]
@@ -80,19 +80,19 @@ class Skinetic_Progress_Bars extends Widget_Base{
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'skinetic' ),
+				'label' => __( 'Alignment', 'bistroly' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'skinetic' ),
+						'title' => __( 'Left', 'bistroly' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'skinetic' ),
+						'title' => __( 'Center', 'bistroly' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'skinetic' ),
+						'title' => __( 'Right', 'bistroly' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -112,14 +112,14 @@ class Skinetic_Progress_Bars extends Widget_Base{
 		$this->start_controls_section(
 			'bar_style_section',
 			[
-				'label' => __( 'Progress Bar', 'skinetic' ),
+				'label' => __( 'Progress Bar', 'bistroly' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'bar_bg',
 			[
-				'label' => __( 'Background', 'skinetic' ),
+				'label' => __( 'Background', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -130,7 +130,7 @@ class Skinetic_Progress_Bars extends Widget_Base{
 		$this->add_control(
 			'bar_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '#0f3d3a',
 				'condition' => [
@@ -141,7 +141,7 @@ class Skinetic_Progress_Bars extends Widget_Base{
 		$this->add_responsive_control(
 			'bar_height',
 			[
-				'label' => __( 'Height', 'skinetic' ),
+				'label' => __( 'Height', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -160,7 +160,7 @@ class Skinetic_Progress_Bars extends Widget_Base{
 		$this->add_responsive_control(
 			'bar_size',
 			[
-				'label' => __( 'Circle Width', 'skinetic' ),
+				'label' => __( 'Circle Width', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -179,7 +179,7 @@ class Skinetic_Progress_Bars extends Widget_Base{
 		$this->add_control(
 			'lbar_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '#0f3d3a',
 				'selectors' => [
@@ -193,7 +193,7 @@ class Skinetic_Progress_Bars extends Widget_Base{
 		$this->add_control(
 			'bg_color',
 			[
-				'label' => __( 'Line Color', 'skinetic' ),
+				'label' => __( 'Line Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -205,7 +205,7 @@ class Skinetic_Progress_Bars extends Widget_Base{
 		$this->add_responsive_control(
 			'line_height_circle',
 			[
-				'label' => __( 'Line Height', 'skinetic' ),
+				'label' => __( 'Line Height', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -222,7 +222,7 @@ class Skinetic_Progress_Bars extends Widget_Base{
 		$this->add_control(
 			'radius_line',
 			[
-				'label' => __( 'Border Radius', 'skinetic' ),
+				'label' => __( 'Border Radius', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -244,7 +244,7 @@ class Skinetic_Progress_Bars extends Widget_Base{
 		$this->start_controls_section(
 			'style_text_section',
 			[
-				'label' => __( 'Text', 'skinetic' ),
+				'label' => __( 'Text', 'bistroly' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -253,14 +253,14 @@ class Skinetic_Progress_Bars extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'skinetic' ),
+				'label' => __( 'Title', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => __( 'Spacing', 'skinetic' ),
+				'label' => __( 'Spacing', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -277,7 +277,7 @@ class Skinetic_Progress_Bars extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -297,7 +297,7 @@ class Skinetic_Progress_Bars extends Widget_Base{
 		$this->add_control(
 			'heading_percent',
 			[
-				'label' => __( 'Percent', 'skinetic' ),
+				'label' => __( 'Percent', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -305,7 +305,7 @@ class Skinetic_Progress_Bars extends Widget_Base{
 		$this->add_control(
 			'per_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -316,7 +316,7 @@ class Skinetic_Progress_Bars extends Widget_Base{
 		$this->add_control(
 			'per_bg',
 			[
-				'label' => __( 'Background', 'skinetic' ),
+				'label' => __( 'Background', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -334,7 +334,7 @@ class Skinetic_Progress_Bars extends Widget_Base{
 		$this->add_responsive_control(
 			'per_width',
 			[
-				'label' => __( 'Width', 'skinetic' ),
+				'label' => __( 'Width', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -385,5 +385,5 @@ class Skinetic_Progress_Bars extends Widget_Base{
 		return [ 'circle', 'percent' ];
 	}
 }
-// After the Skinetic_Progress_Bars class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Skinetic_Progress_Bars() );
+// After the Bistroly_Progress_Bars class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Bistroly_Progress_Bars() );

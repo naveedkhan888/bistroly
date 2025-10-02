@@ -2,7 +2,7 @@
 /**
  * Theme customizer
  *
- * @package Skinetic
+ * @package Bistroly
  */
 
 // Exit if accessed directly
@@ -17,7 +17,7 @@ add_action('after_setup_theme', function() {
     }
 }, 20);
 
-class Skinetic_Customize {
+class Bistroly_Customize {
 	/**
 	 * Customize settings
 	 *
@@ -143,18 +143,18 @@ class Skinetic_Customize {
  *
  * @return bool|string
  */
-function skinetic_get_option( $name ) {
-	global $skinetic_customize;
+function bistroly_get_option( $name ) {
+	global $bistroly_customize;
 
 	$value = false;
 
 	if ( class_exists( 'Kirki' ) ) {
-		$value = Kirki::get_option( 'skinetic', $name );
-	} elseif ( ! empty( $skinetic_customize ) ) {
-		$value = $skinetic_customize->get_option( $name );
+		$value = Kirki::get_option( 'bistroly', $name );
+	} elseif ( ! empty( $bistroly_customize ) ) {
+		$value = $bistroly_customize->get_option( $name );
 	}
 
-	return apply_filters( 'skinetic_get_option', $value, $name );
+	return apply_filters( 'bistroly_get_option', $value, $name );
 }
 
 /**
@@ -164,14 +164,14 @@ function skinetic_get_option( $name ) {
  *
  * @return mixed
  */
-function skinetic_get_option_default( $name ) {
-	global $skinetic_customize;
+function bistroly_get_option_default( $name ) {
+	global $bistroly_customize;
 
-	if ( empty( $skinetic_customize ) ) {
+	if ( empty( $bistroly_customize ) ) {
 		return false;
 	}
 
-	return $skinetic_customize->get_option_default( $name );
+	return $bistroly_customize->get_option_default( $name );
 }
 
 /**
@@ -179,12 +179,12 @@ function skinetic_get_option_default( $name ) {
  *
  * @param object $wp_customize
  */
-function skinetic_customize_modify( $wp_customize ) {
+function bistroly_customize_modify( $wp_customize ) {
 	$wp_customize->get_section( 'title_tagline' )->panel     = 'general';
 	$wp_customize->get_section( 'static_front_page' )->panel = 'general';
 }
 
-add_action( 'customize_register', 'skinetic_customize_modify' );
+add_action( 'customize_register', 'bistroly_customize_modify' );
 
 
 /**
@@ -195,27 +195,27 @@ add_action( 'customize_register', 'skinetic_customize_modify' );
  *
  * @return array
  */
-function skinetic_customize_settings() {
+function bistroly_customize_settings() {
 	/**
 	 * Customizer configuration
 	 */
 
 	$settings = array(
-		'theme' => 'skinetic',
+		'theme' => 'bistroly',
 	);
 
 	$panels = array(
 		'general'         => array(
 			'priority'    => 5,
-			'title'       => esc_html__( 'General', 'skinetic' ),
+			'title'       => esc_html__( 'General', 'bistroly' ),
         ),
         'blog'        => array(
-			'title'      => esc_html__( 'Blog', 'skinetic' ),
+			'title'      => esc_html__( 'Blog', 'bistroly' ),
 			'priority'   => 10,
 			'capability' => 'edit_theme_options',
 		),
         'portfolio'       => array(
-			'title'       => esc_html__( 'Portfolio', 'skinetic' ),
+			'title'       => esc_html__( 'Portfolio', 'bistroly' ),
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',			
 		),
@@ -224,28 +224,28 @@ function skinetic_customize_settings() {
 	$sections = array(
         /* header */
         'main_header'     => array(
-            'title'       => esc_html__( 'Header', 'skinetic' ),
+            'title'       => esc_html__( 'Header', 'bistroly' ),
             'description' => '',
             'priority'    => 8,
             'capability'  => 'edit_theme_options',
         ),
         /* page header */
         'page_header'     => array(
-            'title'       => esc_html__( 'Page Header', 'skinetic' ),
+            'title'       => esc_html__( 'Page Header', 'bistroly' ),
             'description' => '',
             'priority'    => 9,
             'capability'  => 'edit_theme_options',
         ),
         /* blog */
         'blog_page'           => array(
-			'title'       => esc_html__( 'Blog Page', 'skinetic' ),
+			'title'       => esc_html__( 'Blog Page', 'bistroly' ),
 			'description' => '',
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
 			'panel'       => 'blog',
 		),
         'single_post'           => array(
-			'title'       => esc_html__( 'Single Post', 'skinetic' ),
+			'title'       => esc_html__( 'Single Post', 'bistroly' ),
 			'description' => '',
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
@@ -253,46 +253,46 @@ function skinetic_customize_settings() {
         ),
         /* footer */
         'footer'         => array(
-			'title'      => esc_html__( 'Footer', 'skinetic' ),
+			'title'      => esc_html__( 'Footer', 'bistroly' ),
 			'priority'   => 10,
 			'capability' => 'edit_theme_options',
 		),
         /* portfolio */
         'portfolio_page'  => array(
-			'title'       => esc_html__( 'Archive Page', 'skinetic' ),
+			'title'       => esc_html__( 'Archive Page', 'bistroly' ),
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
 			'panel'       => 'portfolio',			
 		),
 		'portfolio_post'  => array(
-			'title'       => esc_html__( 'Single Page', 'skinetic' ),
+			'title'       => esc_html__( 'Single Page', 'bistroly' ),
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
 			'panel'       => 'portfolio',			
 		),
 		/* typography */
 		'typography'           => array(
-            'title'       => esc_html__( 'Typography', 'skinetic' ),
+            'title'       => esc_html__( 'Typography', 'bistroly' ),
             'description' => '',
             'priority'    => 15,
             'capability'  => 'edit_theme_options',
         ),
 		/* 404 */
 		'error_404'       => array(
-            'title'       => esc_html__( '404', 'skinetic' ),
+            'title'       => esc_html__( '404', 'bistroly' ),
             'description' => '',
             'priority'    => 11,
             'capability'  => 'edit_theme_options',
         ),
         /* color scheme */
         'color_scheme'   => array(
-			'title'      => esc_html__( 'Color Scheme', 'skinetic' ),
+			'title'      => esc_html__( 'Color Scheme', 'bistroly' ),
 			'priority'   => 200,
 			'capability' => 'edit_theme_options',
 		),
 		/* js code */
 		'script_code'   => array(
-			'title'      => esc_html__( 'Google Analytics(Script Code)', 'skinetic' ),
+			'title'      => esc_html__( 'Google Analytics(Script Code)', 'bistroly' ),
 			'priority'   => 210,
 			'capability' => 'edit_theme_options',
 		),
@@ -302,47 +302,47 @@ function skinetic_customize_settings() {
         /* header settings */
 		'header_layout'   => array(
 			'type'        => 'select',  
-	 		'label'       => esc_attr__( 'Select Header Desktop', 'skinetic' ), 
-	 		'description' => esc_attr__( 'Choose the header on desktop.', 'skinetic' ), 
+	 		'label'       => esc_attr__( 'Select Header Desktop', 'bistroly' ), 
+	 		'description' => esc_attr__( 'Choose the header on desktop.', 'bistroly' ), 
 	 		'section'     => 'main_header', 
 	 		'default'     => '', 
 	 		'priority'    => 3,
-	 		'placeholder' => esc_attr__( 'Select a header', 'skinetic' ), 
+	 		'placeholder' => esc_attr__( 'Select a header', 'bistroly' ), 
 	 		'choices'     => ( class_exists( 'Kirki_Helper' ) ) ? Kirki_Helper::get_posts( array( 'post_type' => 'xp_header_builders', 'posts_per_page' => -1 ) ) : array(),
 		),
 		'header_fixed'    => array(
             'type'        => 'toggle',
-			'label'       => esc_html__( 'Header Transparent?', 'skinetic' ),
-	 		'description' => esc_attr__( 'Enable when your header is transparent.', 'skinetic' ), 
+			'label'       => esc_html__( 'Header Transparent?', 'bistroly' ),
+	 		'description' => esc_attr__( 'Enable when your header is transparent.', 'bistroly' ), 
             'section'     => 'main_header',
 			'default'     => '1',
 			'priority'    => 4,
         ),
         'header_mobile'   => array(
 			'type'        => 'select',  
-	 		'label'       => esc_attr__( 'Select Header Mobile', 'skinetic' ), 
-	 		'description' => esc_attr__( 'Choose the header on mobile.', 'skinetic' ), 
+	 		'label'       => esc_attr__( 'Select Header Mobile', 'bistroly' ), 
+	 		'description' => esc_attr__( 'Choose the header on mobile.', 'bistroly' ), 
 	 		'section'     => 'main_header', 
 	 		'default'     => '', 
 	 		'priority'    => 5,
-	 		'placeholder' => esc_attr__( 'Select a header', 'skinetic' ), 
+	 		'placeholder' => esc_attr__( 'Select a header', 'bistroly' ), 
 	 		'choices'     => ( class_exists( 'Kirki_Helper' ) ) ? Kirki_Helper::get_posts( array( 'post_type' => 'xp_header_builders', 'posts_per_page' => -1 ) ) : array(),
         ),
         'is_sidepanel'    => array(
             'type'        => 'toggle',
-            'label'       => esc_html__( 'Side Panel for all site?', 'skinetic' ),
+            'label'       => esc_html__( 'Side Panel for all site?', 'bistroly' ),
             'section'     => 'main_header',
             'default'     => '1',
             'priority'    => 6,
         ),
         'sidepanel_layout'     => array(
 			'type'        => 'select',  
-	 		'label'       => esc_attr__( 'Select Side Panel', 'skinetic' ), 
-	 		'description' => esc_attr__( 'Choose the side panel on header.', 'skinetic' ), 
+	 		'label'       => esc_attr__( 'Select Side Panel', 'bistroly' ), 
+	 		'description' => esc_attr__( 'Choose the side panel on header.', 'bistroly' ), 
 	 		'section'     => 'main_header', 
 	 		'default'     => '', 
 	 		'priority'    => 6,
-	 		'placeholder' => esc_attr__( 'Select a panel', 'skinetic' ), 
+	 		'placeholder' => esc_attr__( 'Select a panel', 'bistroly' ), 
 	 		'choices'     => ( class_exists( 'Kirki_Helper' ) ) ? Kirki_Helper::get_posts( array( 'post_type' => 'xp_header_builders', 'posts_per_page' => -1 ) ) : array(),
             'active_callback' => array(
                 array(
@@ -354,7 +354,7 @@ function skinetic_customize_settings() {
 		),
 		'panel_left'     => array(
             'type'        => 'toggle',
-			'label'       => esc_html__( 'Side Panel On Left', 'skinetic' ),
+			'label'       => esc_html__( 'Side Panel On Left', 'bistroly' ),
             'section'     => 'main_header',
 			'default'     => '0',
 			'priority'    => 7,
@@ -374,14 +374,14 @@ function skinetic_customize_settings() {
         /*page header */
         'pheader_switch'  => array(
             'type'        => 'toggle',
-            'label'       => esc_html__( 'Page Header On/Off', 'skinetic' ),
+            'label'       => esc_html__( 'Page Header On/Off', 'bistroly' ),
             'section'     => 'page_header',
             'default'     => 1,
             'priority'    => 10,
         ),
         'breadcrumbs'     => array(
             'type'        => 'toggle',
-            'label'       => esc_html__( 'Breadcrumbs On/Off', 'skinetic' ),
+            'label'       => esc_html__( 'Breadcrumbs On/Off', 'bistroly' ),
             'section'     => 'page_header',
             'default'     => 1,
             'priority'    => 10,
@@ -395,7 +395,7 @@ function skinetic_customize_settings() {
         ),
         'left_bread'     => array(
             'type'        => 'toggle',
-            'label'       => esc_html__( 'Breadcrumbs On Left', 'skinetic' ),
+            'label'       => esc_html__( 'Breadcrumbs On Left', 'bistroly' ),
             'section'     => 'page_header',
             'default'     => 0,
             'priority'    => 10,
@@ -414,7 +414,7 @@ function skinetic_customize_settings() {
         ),
         'pheader_img'  => array(
             'type'     => 'image',
-            'label'    => esc_html__( 'Background Image', 'skinetic' ),
+            'label'    => esc_html__( 'Background Image', 'bistroly' ),
             'section'  => 'page_header',
             'default'  => '',
             'priority' => 10,
@@ -434,7 +434,7 @@ function skinetic_customize_settings() {
         ),
         'pheader_color'    => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Background Color', 'skinetic' ),
+            'label'    => esc_html__( 'Background Color', 'bistroly' ),
             'section'  => 'page_header',
             'priority' => 10,
             'output'    => array(
@@ -453,7 +453,7 @@ function skinetic_customize_settings() {
         ),
         'ptitle_color'    => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Title Color', 'skinetic' ),
+            'label'    => esc_html__( 'Title Color', 'bistroly' ),
             'section'  => 'page_header',
             'priority' => 10,
             'output'    => array(
@@ -472,7 +472,7 @@ function skinetic_customize_settings() {
         ),
         'bread_color'    => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Breadcrumbs Color', 'skinetic' ),
+            'label'    => esc_html__( 'Breadcrumbs Color', 'bistroly' ),
             'section'  => 'page_header',
             'priority' => 10,
             'output'    => array(
@@ -496,14 +496,14 @@ function skinetic_customize_settings() {
         ),
         'pheader_height'  => array(
             'type'     => 'dimensions',
-            'label'    => esc_html__( 'Page Header Height (Ex: 300px)', 'skinetic' ),
+            'label'    => esc_html__( 'Page Header Height (Ex: 300px)', 'bistroly' ),
             'section'  => 'page_header',
             'transport' => 'auto',
             'priority' => 10,
             'choices'   => array(
-                'desktop' => esc_attr__( 'Desktop', 'skinetic' ),
-                'tablet'  => esc_attr__( 'Tablet', 'skinetic' ),
-                'mobile'  => esc_attr__( 'Mobile', 'skinetic' ),
+                'desktop' => esc_attr__( 'Desktop', 'bistroly' ),
+                'tablet'  => esc_attr__( 'Tablet', 'bistroly' ),
+                'mobile'  => esc_attr__( 'Mobile', 'bistroly' ),
             ),
             'output'   => array(
                 array(
@@ -540,14 +540,14 @@ function skinetic_customize_settings() {
         ),
         'head_size'  => array(
             'type'     => 'dimensions',
-            'label'    => esc_html__( 'Page Title Size (Ex: 30px)', 'skinetic' ),
+            'label'    => esc_html__( 'Page Title Size (Ex: 30px)', 'bistroly' ),
             'section'  => 'page_header',
             'transport' => 'auto',
             'priority' => 10,
             'choices'   => array(
-                'desktop' => esc_attr__( 'Desktop', 'skinetic' ),
-                'tablet'  => esc_attr__( 'Tablet', 'skinetic' ),
-                'mobile'  => esc_attr__( 'Mobile', 'skinetic' ),
+                'desktop' => esc_attr__( 'Desktop', 'bistroly' ),
+                'tablet'  => esc_attr__( 'Tablet', 'bistroly' ),
+                'mobile'  => esc_attr__( 'Mobile', 'bistroly' ),
             ),
             'output'   => array(
                 array(
@@ -585,11 +585,11 @@ function skinetic_customize_settings() {
         /* blog settings */
 		'blog_layout'           => array(
 			'type'        => 'radio-image',
-			'label'       => esc_html__( 'Blog Layout', 'skinetic' ),
+			'label'       => esc_html__( 'Blog Layout', 'bistroly' ),
 			'section'     => 'blog_page',
 			'default'     => 'content-sidebar',
 			'priority'    => 7,
-			'description' => esc_html__( 'Select default sidebar for the blog page.', 'skinetic' ),
+			'description' => esc_html__( 'Select default sidebar for the blog page.', 'bistroly' ),
 			'choices'     => array(
 				'content-sidebar' 	=> get_template_directory_uri() . '/inc/backend/images/right.png',
 				'sidebar-content' 	=> get_template_directory_uri() . '/inc/backend/images/left.png',
@@ -598,27 +598,27 @@ function skinetic_customize_settings() {
 		),
         'blog_style'           => array(
             'type'        => 'select',
-            'label'       => esc_html__( 'Blog Style', 'skinetic' ),
+            'label'       => esc_html__( 'Blog Style', 'bistroly' ),
             'section'     => 'blog_page',
             'default'     => 'list',
             'priority'    => 8,
-            'description' => esc_html__( 'Select style default for the blog page.', 'skinetic' ),
+            'description' => esc_html__( 'Select style default for the blog page.', 'bistroly' ),
             'choices'     => array(
-                'list' => esc_attr__( 'Blog List', 'skinetic' ),
-                'grid' => esc_attr__( 'Blog Grid', 'skinetic' ),
+                'list' => esc_attr__( 'Blog List', 'bistroly' ),
+                'grid' => esc_attr__( 'Blog Grid', 'bistroly' ),
             ),
         ),
         'blog_columns'           => array(
             'type'        => 'select',
-            'label'       => esc_html__( 'Blog Columns', 'skinetic' ),
+            'label'       => esc_html__( 'Blog Columns', 'bistroly' ),
             'section'     => 'blog_page',
             'default'     => 'pf_2_cols',
             'priority'    => 8,
-            'description' => esc_html__( 'Select columns default for the blog page.', 'skinetic' ),
+            'description' => esc_html__( 'Select columns default for the blog page.', 'bistroly' ),
             'choices'     => array(
-                'pf_2_cols' => esc_attr__( '2 Columns', 'skinetic' ),
-                'pf_3_cols' => esc_attr__( '3 Columns', 'skinetic' ),
-                'pf_4_cols' => esc_attr__( '4 Columns', 'skinetic' ),
+                'pf_2_cols' => esc_attr__( '2 Columns', 'bistroly' ),
+                'pf_3_cols' => esc_attr__( '3 Columns', 'bistroly' ),
+                'pf_4_cols' => esc_attr__( '4 Columns', 'bistroly' ),
             ),
             'active_callback' => array(
                 array(
@@ -630,20 +630,20 @@ function skinetic_customize_settings() {
         ),	
 		'post_entry_meta'              => array(
             'type'     => 'multicheck',
-            'label'    => esc_html__( 'Entry Meta', 'skinetic' ),
+            'label'    => esc_html__( 'Entry Meta', 'bistroly' ),
             'section'  => 'blog_page',
             'default'  => array( 'date', 'author', 'comm' ),
             'choices'  => array(
-                'date'    => esc_html__( 'Date', 'skinetic' ),
-                'author'  => esc_html__( 'Author', 'skinetic' ),
-                'comm'    => esc_html__( 'Comment', 'skinetic' ),
+                'date'    => esc_html__( 'Date', 'bistroly' ),
+                'author'  => esc_html__( 'Author', 'bistroly' ),
+                'comm'    => esc_html__( 'Comment', 'bistroly' ),
             ),
             'priority' => 10,
         ),
         /* single blog */
         'single_post_layout'           => array(
             'type'        => 'radio-image',
-            'label'       => esc_html__( 'Layout', 'skinetic' ),
+            'label'       => esc_html__( 'Layout', 'bistroly' ),
             'section'     => 'single_post',
             'default'     => 'content-sidebar',
             'priority'    => 10,
@@ -655,14 +655,14 @@ function skinetic_customize_settings() {
         ),
         'ptitle_post'               => array(
 			'type'            => 'text',
-			'label'           => esc_html__( 'Page Title', 'skinetic' ),
+			'label'           => esc_html__( 'Page Title', 'bistroly' ),
 			'section'         => 'single_post',
-			'default'         => esc_html__( 'Blog Single', 'skinetic' ),
+			'default'         => esc_html__( 'Blog Single', 'bistroly' ),
 			'priority'        => 10,
 		),
 		'single_separator1'     => array(
 			'type'        => 'custom',
-			'label'       => esc_html__( 'Social Share', 'skinetic' ),
+			'label'       => esc_html__( 'Social Share', 'bistroly' ),
 			'section'     => 'single_post',
 			'default'     => '<hr>',
 			'priority'    => 10,
@@ -672,41 +672,41 @@ function skinetic_customize_settings() {
             'section'  => 'single_post',
             'default'  => array( 'twitter', 'facebook', 'pinterest', 'linkedin' ),
             'choices'  => array(
-                'twit'  	=> esc_html__( 'Twitter', 'skinetic' ),
-                'face'    	=> esc_html__( 'Facebook', 'skinetic' ),
-                'pint'     	=> esc_html__( 'Pinterest', 'skinetic' ),
-                'link'     	=> esc_html__( 'Linkedin', 'skinetic' ),
-                'google'  	=> esc_html__( 'Google Plus', 'skinetic' ),
-                'tumblr'    => esc_html__( 'Tumblr', 'skinetic' ),
-                'reddit'    => esc_html__( 'Reddit', 'skinetic' ),
-                'vk'     	=> esc_html__( 'VK', 'skinetic' ),
+                'twit'  	=> esc_html__( 'Twitter', 'bistroly' ),
+                'face'    	=> esc_html__( 'Facebook', 'bistroly' ),
+                'pint'     	=> esc_html__( 'Pinterest', 'bistroly' ),
+                'link'     	=> esc_html__( 'Linkedin', 'bistroly' ),
+                'google'  	=> esc_html__( 'Google Plus', 'bistroly' ),
+                'tumblr'    => esc_html__( 'Tumblr', 'bistroly' ),
+                'reddit'    => esc_html__( 'Reddit', 'bistroly' ),
+                'vk'     	=> esc_html__( 'VK', 'bistroly' ),
             ),
             'priority' => 10,
         ),
         'single_separator2'     => array(
 			'type'        => 'custom',
-			'label'       => esc_html__( 'Entry Footer', 'skinetic' ),
+			'label'       => esc_html__( 'Entry Footer', 'bistroly' ),
 			'section'     => 'single_post',
 			'default'     => '<hr>',
 			'priority'    => 10,
 		),
         'author_box'      => array(
 			'type'        => 'checkbox',
-			'label'       => esc_attr__( 'Author Info Box', 'skinetic' ),
+			'label'       => esc_attr__( 'Author Info Box', 'bistroly' ),
 			'section'     => 'single_post',
 			'default'     => true,
 			'priority'    => 10,
 		),
 		'post_nav'     	  => array(
 			'type'        => 'checkbox',
-			'label'       => esc_attr__( 'Post Navigation', 'skinetic' ),
+			'label'       => esc_attr__( 'Post Navigation', 'bistroly' ),
 			'section'     => 'single_post',
 			'default'     => true,
 			'priority'    => 10,
 		),
 		'related_post'    => array(
 			'type'        => 'checkbox',
-			'label'       => esc_attr__( 'Related Posts', 'skinetic' ),
+			'label'       => esc_attr__( 'Related Posts', 'bistroly' ),
 			'section'     => 'single_post',
 			'default'     => true,
 			'priority'    => 10,
@@ -714,20 +714,20 @@ function skinetic_customize_settings() {
         /* project settings */
 		'portfolio_archive'           => array(
 			'type'        => 'select',
-			'label'       => esc_html__( 'Portfolio Archive', 'skinetic' ),
+			'label'       => esc_html__( 'Portfolio Archive', 'bistroly' ),
 			'section'     => 'portfolio_page',
 			'default'     => 'archive_default',
 			'priority'    => 1,
-			'description' => esc_html__( 'Select page default for the portfolio archive page.', 'skinetic' ),
+			'description' => esc_html__( 'Select page default for the portfolio archive page.', 'bistroly' ),
 			'choices'     => array(
-				'archive_default' => esc_attr__( 'Archive page default', 'skinetic' ),
-				'archive_custom' => esc_attr__( 'Archive page custom', 'skinetic' ),
+				'archive_default' => esc_attr__( 'Archive page default', 'bistroly' ),
+				'archive_custom' => esc_attr__( 'Archive page custom', 'bistroly' ),
 			),
 		),
 		'archive_page_custom'     => array(
 			'type'        => 'dropdown-pages',  
-	 		'label'       => esc_attr__( 'Select Page', 'skinetic' ), 
-	 		'description' => esc_attr__( 'Choose a custom page for archive portfolio page.', 'skinetic' ), 
+	 		'label'       => esc_attr__( 'Select Page', 'bistroly' ), 
+	 		'description' => esc_attr__( 'Choose a custom page for archive portfolio page.', 'bistroly' ), 
 	 		'section'     => 'portfolio_page', 
 	 		'default'     => '', 
 	 		'priority'    => 2,	 		
@@ -741,15 +741,15 @@ function skinetic_customize_settings() {
 		),
 		'portfolio_column'           => array(
 			'type'        => 'select',
-			'label'       => esc_html__( 'Portfolio Columns', 'skinetic' ),
+			'label'       => esc_html__( 'Portfolio Columns', 'bistroly' ),
 			'section'     => 'portfolio_page',
 			'default'     => '3cl',
 			'priority'    => 3,
-			'description' => esc_html__( 'Select default column for the portfolio page.', 'skinetic' ),
+			'description' => esc_html__( 'Select default column for the portfolio page.', 'bistroly' ),
 			'choices'     => array(
-				'2cl' => esc_attr__( '2 Column', 'skinetic' ),
-				'3cl' => esc_attr__( '3 Column', 'skinetic' ),
-				'4cl' => esc_attr__( '4 Column', 'skinetic' ),
+				'2cl' => esc_attr__( '2 Column', 'bistroly' ),
+				'3cl' => esc_attr__( '3 Column', 'bistroly' ),
+				'4cl' => esc_attr__( '4 Column', 'bistroly' ),
 			),
 			'active_callback' => array(
 				array(
@@ -761,15 +761,15 @@ function skinetic_customize_settings() {
 		),
 		'portfolio_style'           => array(
 			'type'        => 'select',
-			'label'       => esc_html__( 'Hover Style', 'skinetic' ),
+			'label'       => esc_html__( 'Hover Style', 'bistroly' ),
 			'section'     => 'portfolio_page',
 			'default'     => 'style1',
 			'priority'    => 4,
-			'description' => esc_html__( 'Select default style for the portfolio page.', 'skinetic' ),
+			'description' => esc_html__( 'Select default style for the portfolio page.', 'bistroly' ),
 			'choices'     => array(
-				'style1' => esc_attr__( 'Background Overlay', 'skinetic' ),
-				'style2' => esc_attr__( 'Background Solid', 'skinetic' ),
-				'style3' => esc_attr__( 'Hidden', 'skinetic' ),
+				'style1' => esc_attr__( 'Background Overlay', 'bistroly' ),
+				'style2' => esc_attr__( 'Background Solid', 'bistroly' ),
+				'style3' => esc_attr__( 'Hidden', 'bistroly' ),
 			),
 			'active_callback' => array(
 				array(
@@ -783,8 +783,8 @@ function skinetic_customize_settings() {
 			'type'        => 'number',
 			'section'     => 'portfolio_page',
 			'priority'    => 5,
-			'label'       => esc_html__( 'Posts per page', 'skinetic' ),			
-			'description' => esc_html__( 'Change Posts Per Page for Portfolio Archive, Taxonomy.', 'skinetic' ),
+			'label'       => esc_html__( 'Posts per page', 'bistroly' ),			
+			'description' => esc_html__( 'Change Posts Per Page for Portfolio Archive, Taxonomy.', 'bistroly' ),
 			'default'     => '',
 			'active_callback' => array(
 				array(
@@ -796,23 +796,23 @@ function skinetic_customize_settings() {
 		),
 		'pf_nav'     	  => array(
 			'type'        => 'toggle',
-			'label'       => esc_attr__( 'Projects Navigation On/Off', 'skinetic' ),
+			'label'       => esc_attr__( 'Projects Navigation On/Off', 'bistroly' ),
 			'section'     => 'portfolio_post',
 			'default'     => 1,
 			'priority'    => 7,
 		),
 		'pf_related_switch'     => array(
 			'type'        => 'toggle',
-			'label'       => esc_attr__( 'Related Projects On/Off', 'skinetic' ),
+			'label'       => esc_attr__( 'Related Projects On/Off', 'bistroly' ),
 			'section'     => 'portfolio_post',
 			'default'     => 1,
 			'priority'    => 7,
 		),
 		'pf_related_text'      => array(
 			'type'            => 'text',
-			'label'           => esc_html__( 'Related Projects Heading', 'skinetic' ),
+			'label'           => esc_html__( 'Related Projects Heading', 'bistroly' ),
 			'section'         => 'portfolio_post',
-			'default'         => esc_html__( 'Related Projects', 'skinetic' ),
+			'default'         => esc_html__( 'Related Projects', 'bistroly' ),
 			'priority'        => 7,
 			'active_callback' => array(
 				array(
@@ -825,17 +825,17 @@ function skinetic_customize_settings() {
         /* footer settings */
 		'footer_layout'     => array(
 			'type'        => 'select',  
-	 		'label'       => esc_attr__( 'Select Footer', 'skinetic' ), 
-	 		'description' => esc_attr__( 'Choose a footer for all site here.', 'skinetic' ), 
+	 		'label'       => esc_attr__( 'Select Footer', 'bistroly' ), 
+	 		'description' => esc_attr__( 'Choose a footer for all site here.', 'bistroly' ), 
 	 		'section'     => 'footer', 
 	 		'default'     => '', 
 	 		'priority'    => 1,
-	 		'placeholder' => esc_attr__( 'Select a footer', 'skinetic' ), 
+	 		'placeholder' => esc_attr__( 'Select a footer', 'bistroly' ), 
 	 		'choices'     => ( class_exists( 'Kirki_Helper' ) ) ? Kirki_Helper::get_posts( array( 'post_type' => 'xp_footer_builders', 'posts_per_page' => -1 ) ) : array(),
 		),
         'footer_fixed'  => array(
             'type'        => 'toggle',
-            'label'       => esc_html__( 'Footer Fixed On/Off?', 'skinetic' ),
+            'label'       => esc_html__( 'Footer Fixed On/Off?', 'bistroly' ),
             'section'     => 'footer',
             'default'     => 0,
             'priority'    => 2,
@@ -849,14 +849,14 @@ function skinetic_customize_settings() {
 		),
 		'backtotop'  => array(
             'type'        => 'toggle',
-            'label'       => esc_html__( 'Back To Top On/Off?', 'skinetic' ),
+            'label'       => esc_html__( 'Back To Top On/Off?', 'bistroly' ),
             'section'     => 'footer',
             'default'     => 1,
             'priority'    => 4,
         ),
         'bg_backtotop'    => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Background Color', 'skinetic' ),
+            'label'    => esc_html__( 'Background Color', 'bistroly' ),
             'section'  => 'footer',
             'priority' => 5,
             'default'     => '',
@@ -876,7 +876,7 @@ function skinetic_customize_settings() {
         ),
         'color_backtotop' => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Color', 'skinetic' ),
+            'label'    => esc_html__( 'Color', 'bistroly' ),
             'section'  => 'footer',
             'priority' => 6,
             'default'     => '',
@@ -896,7 +896,7 @@ function skinetic_customize_settings() {
         ),
         'spacing_backtotop' => array(
             'type'     => 'dimensions',
-            'label'    => esc_html__( 'Spacing', 'skinetic' ),
+            'label'    => esc_html__( 'Spacing', 'bistroly' ),
             'section'  => 'footer',
             'priority' => 7,
             'default'     => array(
@@ -905,8 +905,8 @@ function skinetic_customize_settings() {
 			),
 			'choices'     => array(
 				'labels' => array(
-					'bottom'  => esc_html__( 'Bottom (Ex: 20px)', 'skinetic' ),
-					'right'   => esc_html__( 'Right (Ex: 20px)', 'skinetic' ),
+					'bottom'  => esc_html__( 'Bottom (Ex: 20px)', 'bistroly' ),
+					'right'   => esc_html__( 'Right (Ex: 20px)', 'bistroly' ),
 				),
 			),
             'output'    => array(
@@ -932,7 +932,7 @@ function skinetic_customize_settings() {
 		/* typography */
         'body_typo'    => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Body Font 1', 'skinetic' ),
+            'label'    => esc_html__( 'Body Font 1', 'bistroly' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -951,7 +951,7 @@ function skinetic_customize_settings() {
         ),
         'second_font'    => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Body Font 2', 'skinetic' ),
+            'label'    => esc_html__( 'Body Font 2', 'bistroly' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -960,7 +960,7 @@ function skinetic_customize_settings() {
         ),
         'heading1_typo'                           => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Heading 1', 'skinetic' ),
+            'label'    => esc_html__( 'Heading 1', 'bistroly' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -979,7 +979,7 @@ function skinetic_customize_settings() {
         ),
         'heading2_typo'                           => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Heading 2', 'skinetic' ),
+            'label'    => esc_html__( 'Heading 2', 'bistroly' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -998,7 +998,7 @@ function skinetic_customize_settings() {
         ),
         'heading3_typo'                           => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Heading 3', 'skinetic' ),
+            'label'    => esc_html__( 'Heading 3', 'bistroly' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -1017,7 +1017,7 @@ function skinetic_customize_settings() {
         ),
         'heading4_typo'                           => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Heading 4', 'skinetic' ),
+            'label'    => esc_html__( 'Heading 4', 'bistroly' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -1036,7 +1036,7 @@ function skinetic_customize_settings() {
         ),
         'heading5_typo'                           => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Heading 5', 'skinetic' ),
+            'label'    => esc_html__( 'Heading 5', 'bistroly' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -1055,7 +1055,7 @@ function skinetic_customize_settings() {
         ),
         'heading6_typo'                           => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Heading 6', 'skinetic' ),
+            'label'    => esc_html__( 'Heading 6', 'bistroly' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -1076,9 +1076,9 @@ function skinetic_customize_settings() {
 		/* 404 */
 		'page_404'   	  => array(
 			'type'        => 'dropdown-pages',  
-	 		'label'       => esc_attr__( 'Select Page', 'skinetic' ), 
-	 		'description' => esc_attr__( 'Choose a custom page for page 404.', 'skinetic' ),
-	 		'placeholder' => esc_attr__( 'Select a page 404', 'skinetic' ), 
+	 		'label'       => esc_attr__( 'Select Page', 'bistroly' ), 
+	 		'description' => esc_attr__( 'Choose a custom page for page 404.', 'bistroly' ),
+	 		'placeholder' => esc_attr__( 'Select a page 404', 'bistroly' ), 
 	 		'section'     => 'error_404', 
 	 		'default'     => '', 
 			'priority'    => 3,
@@ -1087,7 +1087,7 @@ function skinetic_customize_settings() {
 		/* Color Scheme */
         'primary_color' => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Primary Color', 'skinetic' ),
+            'label'    => esc_html__( 'Primary Color', 'bistroly' ),
             'section'  => 'color_scheme',
             'default'  => '#b58c67',
             'priority' => 10,
@@ -1095,7 +1095,7 @@ function skinetic_customize_settings() {
 
         'secondary_color' => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Secondary Color', 'skinetic' ),
+            'label'    => esc_html__( 'Secondary Color', 'bistroly' ),
             'section'  => 'color_scheme',
             'default'  => '#e9dfde',
             'priority' => 10,
@@ -1103,7 +1103,7 @@ function skinetic_customize_settings() {
 
         'text_color' => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Text Color', 'skinetic' ),
+            'label'    => esc_html__( 'Text Color', 'bistroly' ),
             'section'  => 'color_scheme',
             'default'  => '#1d1312',
             'priority' => 10,
@@ -1111,7 +1111,7 @@ function skinetic_customize_settings() {
 
         'accent_color' => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Accent Color', 'skinetic' ),
+            'label'    => esc_html__( 'Accent Color', 'bistroly' ),
             'section'  => 'color_scheme',
             'default'  => '#0E1730',
             'priority' => 10,
@@ -1119,7 +1119,7 @@ function skinetic_customize_settings() {
 
         'bg_color' => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Background Color', 'skinetic' ),
+            'label'    => esc_html__( 'Background Color', 'bistroly' ),
             'section'  => 'color_scheme',
             'default'  => '#f4efef',
             'priority' => 10,
@@ -1127,7 +1127,7 @@ function skinetic_customize_settings() {
 
         'white_color' => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'White Color', 'skinetic' ),
+            'label'    => esc_html__( 'White Color', 'bistroly' ),
             'section'  => 'color_scheme',
             'default'  => '#FFFFFF',
             'priority' => 10,
@@ -1135,7 +1135,7 @@ function skinetic_customize_settings() {
 
         'divider_color' => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Divider Color', 'skinetic' ),
+            'label'    => esc_html__( 'Divider Color', 'bistroly' ),
             'section'  => 'color_scheme',
             'default'  => '#FFFFFF14',
             'priority' => 10,
@@ -1143,7 +1143,7 @@ function skinetic_customize_settings() {
 
         'dark_divider_color' => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Dark Divider Color', 'skinetic' ),
+            'label'    => esc_html__( 'Dark Divider Color', 'bistroly' ),
             'section'  => 'color_scheme',
             'default'  => '#3835373b',
             'priority' => 10,
@@ -1152,7 +1152,7 @@ function skinetic_customize_settings() {
         /*google atlantic*/
         'js_code'  => array(
             'type'        => 'code',
-            'label'       => esc_html__( 'Code', 'skinetic' ),
+            'label'       => esc_html__( 'Code', 'bistroly' ),
             'section'     => 'script_code',
             'choices'     => [
 				'language' => 'js',
@@ -1161,11 +1161,11 @@ function skinetic_customize_settings() {
         ),
 		
 	);
-	$settings['panels']   = apply_filters( 'skinetic_customize_panels', $panels );
-	$settings['sections'] = apply_filters( 'skinetic_customize_sections', $sections );
-	$settings['fields']   = apply_filters( 'skinetic_customize_fields', $fields );
+	$settings['panels']   = apply_filters( 'bistroly_customize_panels', $panels );
+	$settings['sections'] = apply_filters( 'bistroly_customize_sections', $sections );
+	$settings['fields']   = apply_filters( 'bistroly_customize_fields', $fields );
 
 	return $settings;
 }
 
-$skinetic_customize = new Skinetic_Customize( skinetic_customize_settings() );
+$bistroly_customize = new Bistroly_Customize( bistroly_customize_settings() );

@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Skinetic
+ * @package Bistroly
  */
 
 ?>
@@ -31,4 +31,4 @@
 } ?>
 <!-- #site-content-open -->
 <div id="content" class="site-content">
-	<?php skinetic_page_header(); ?>
+	<?php bistroly_page_header(); ?>

@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Search
  */
-class Skinetic_Search extends Widget_Base{
+class Bistroly_Search extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Skinetic_Search extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Search Header', 'skinetic' );
+		return __( 'XP Search Header', 'bistroly' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Skinetic_Search extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_skinetic_header' ];
+		return [ 'category_bistroly_header' ];
 	}
 
 	protected function register_controls() {
@@ -33,14 +33,14 @@ class Skinetic_Search extends Widget_Base{
 		$this->start_controls_section(
 			'style_icon_section',
 			[
-				'label' => __( 'Icon', 'skinetic' ),
+				'label' => __( 'Icon', 'bistroly' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'icon_size',
 			[
-				'label' => __( 'Icon Size', 'skinetic' ),
+				'label' => __( 'Icon Size', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -56,7 +56,7 @@ class Skinetic_Search extends Widget_Base{
 		$this->add_control(
 			'icon_color',
 			[
-				'label' => __( 'Icon Color', 'skinetic' ),
+				'label' => __( 'Icon Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -70,14 +70,14 @@ class Skinetic_Search extends Widget_Base{
 		$this->start_controls_section(
 			'style_form_section',
 			[
-				'label' => __( 'Form', 'skinetic' ),
+				'label' => __( 'Form', 'bistroly' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'form_width',
 			[
-				'label' => __( 'Width', 'skinetic' ),
+				'label' => __( 'Width', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -93,7 +93,7 @@ class Skinetic_Search extends Widget_Base{
 		$this->add_control(
 			'bg_form_color',
 			[
-				'label' => __( 'Background Color', 'skinetic' ),
+				'label' => __( 'Background Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -104,7 +104,7 @@ class Skinetic_Search extends Widget_Base{
 		$this->add_control(
 			'form_radius',
 			[
-				'label' => __( 'Border Radius', 'skinetic' ),
+				'label' => __( 'Border Radius', 'bistroly' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -122,7 +122,7 @@ class Skinetic_Search extends Widget_Base{
 		$this->add_control(
 			'input_title',
 			[
-				'label' => __( 'Input', 'skinetic' ),
+				'label' => __( 'Input', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -130,7 +130,7 @@ class Skinetic_Search extends Widget_Base{
 		$this->add_control(
 			'text_form_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -141,7 +141,7 @@ class Skinetic_Search extends Widget_Base{
 		$this->add_control(
 			'border_input_color',
 			[
-				'label' => __( 'Border Color', 'skinetic' ),
+				'label' => __( 'Border Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -152,7 +152,7 @@ class Skinetic_Search extends Widget_Base{
 		$this->add_control(
 			'btn_title',
 			[
-				'label' => __( 'Button', 'skinetic' ),
+				'label' => __( 'Button', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -160,7 +160,7 @@ class Skinetic_Search extends Widget_Base{
 		$this->add_control(
 			'btn_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -171,7 +171,7 @@ class Skinetic_Search extends Widget_Base{
 		$this->add_control(
 			'bg_btn',
 			[
-				'label' => __( 'Background Color', 'skinetic' ),
+				'label' => __( 'Background Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -203,5 +203,5 @@ class Skinetic_Search extends Widget_Base{
 	}
 
 }
-// After the Skinetic_Search class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Skinetic_Search() );
+// After the Bistroly_Search class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Bistroly_Search() );

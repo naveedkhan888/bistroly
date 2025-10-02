@@ -4,10 +4,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Skinetic
+ * @package Bistroly
  */
 
-if ( skinetic_get_layout() === 'full-content' ) {
+if ( bistroly_get_layout() === 'full-content' ) {
 	return;
 }
 

@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Post Carousel
  */
-class Skinetic_Post_Carousel extends Widget_Base{
+class Bistroly_Post_Carousel extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Post Carousel', 'skinetic' );
+		return __( 'XP Post Carousel', 'bistroly' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_skinetic' ];
+		return [ 'category_bistroly' ];
 	}
 
 	protected function register_controls() {
@@ -33,24 +33,24 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Posts', 'skinetic' ),
+				'label' => __( 'Posts', 'bistroly' ),
 			]
 		);
 		$this->add_control(
 			'post_cat',
 			[
-				'label' => __( 'Select Categories', 'skinetic' ),
+				'label' => __( 'Select Categories', 'bistroly' ),
 				'type' => Controls_Manager::SELECT2,
 				'options' => $this->select_param_cate_post(),
 				'multiple' => true,
 				'label_block' => true,
-				'placeholder' => __( 'All Categories', 'skinetic' ),
+				'placeholder' => __( 'All Categories', 'bistroly' ),
 			]
 		);
 		$this->add_control(
 			'post_num',
 			[
-				'label' => __( 'Show Number Posts', 'skinetic' ),
+				'label' => __( 'Show Number Posts', 'bistroly' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => '6',
 			]
@@ -58,7 +58,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'exc',
 			[
-				'label' => esc_html__( 'Excerpt Length', 'skinetic' ),
+				'label' => esc_html__( 'Excerpt Length', 'bistroly' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => '0',
 			]
@@ -66,19 +66,19 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'post_thumbnail',
 			[
-				'label' => __( 'Thumbnail Image Size', 'skinetic' ),
+				'label' => __( 'Thumbnail Image Size', 'bistroly' ),
 				'type' => Controls_Manager::SELECT,
-				'default' => 'skinetic-post-thumbnail-grid',
+				'default' => 'bistroly-post-thumbnail-grid',
 				'options' => [
-					'skinetic-post-thumbnail-grid' => __( 'Default', 'skinetic' ),
-					'full' => __( 'Full', 'skinetic' ),
+					'bistroly-post-thumbnail-grid' => __( 'Default', 'bistroly' ),
+					'full' => __( 'Full', 'bistroly' ),
 				],
 			]
 		);
 		$this->add_control(
 			'heading_slider',
 			[
-				'label' => __( 'Slider', 'skinetic' ),
+				'label' => __( 'Slider', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -90,10 +90,10 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'tshow',
 			[
-				'label' => __( 'Slides to Show', 'skinetic' ),
+				'label' => __( 'Slides to Show', 'bistroly' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'' => __( 'Default', 'skinetic' ),
+					'' => __( 'Default', 'bistroly' ),
 				] + $slides_show,
 				'default' => ''
 			]
@@ -101,31 +101,31 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'loop',
 			[
-				'label' => __( 'Loop', 'skinetic' ),
+				'label' => __( 'Loop', 'bistroly' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true' => __( 'Yes', 'skinetic' ),
-					'false' => __( 'No', 'skinetic' ),
+					'true' => __( 'Yes', 'bistroly' ),
+					'false' => __( 'No', 'bistroly' ),
 				]
 			]
 		);
 		$this->add_control(
 			'autoplay',
 			[
-				'label' => __( 'Autoplay', 'skinetic' ),
+				'label' => __( 'Autoplay', 'bistroly' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true' => __( 'Yes', 'skinetic' ),
-					'false' => __( 'No', 'skinetic' ),
+					'true' => __( 'Yes', 'bistroly' ),
+					'false' => __( 'No', 'bistroly' ),
 				]
 			]
 		);
 		$this->add_control(
 			'timeout',
 			[
-				'label' => __( 'Autoplay Timeout', 'skinetic' ),
+				'label' => __( 'Autoplay Timeout', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -145,31 +145,31 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrows',
 			[
-				'label' => __( 'Arrows', 'skinetic' ),
+				'label' => __( 'Arrows', 'bistroly' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true'   => __( 'Yes', 'skinetic' ),
-					'false'  => __( 'No', 'skinetic' ),
+					'true'   => __( 'Yes', 'bistroly' ),
+					'false'  => __( 'No', 'bistroly' ),
 				],
 			]
 		);
 		$this->add_control(
 			'dots',
 			[
-				'label' => __( 'Dots', 'skinetic' ),
+				'label' => __( 'Dots', 'bistroly' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true'   => __( 'Yes', 'skinetic' ),
-					'false'  => __( 'No', 'skinetic' ),
+					'true'   => __( 'Yes', 'bistroly' ),
+					'false'  => __( 'No', 'bistroly' ),
 				],
 			]
 		);
 		$this->add_responsive_control(
 			'w_gaps',
 			[
-				'label' => __( 'Gap Width', 'skinetic' ),
+				'label' => __( 'Gap Width', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -184,14 +184,14 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'posts_style',
 			[
-				'label' => __( 'Post Items', 'skinetic' ),
+				'label' => __( 'Post Items', 'bistroly' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'heading_general',
 			[
-				'label' => __( 'General', 'skinetic' ),
+				'label' => __( 'General', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -199,7 +199,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'radius_box',
 			[
-				'label' => __( 'Border Radius', 'skinetic' ),
+				'label' => __( 'Border Radius', 'bistroly' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -210,7 +210,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'item_bg',
 			[
-				'label' => __( 'Background', 'skinetic' ),
+				'label' => __( 'Background', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -230,7 +230,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'skinetic' ),
+				'label' => __( 'Title', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -238,7 +238,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'title_spacing',
 			[
-				'label' => __( 'Spacing', 'skinetic' ),
+				'label' => __( 'Spacing', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -254,7 +254,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -265,7 +265,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'title_hcolor',
 			[
-				'label' => __( 'Hover Color', 'skinetic' ),
+				'label' => __( 'Hover Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -285,7 +285,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'heading_excerpt',
 			[
-				'label' => __( 'Excerpt', 'skinetic' ),
+				'label' => __( 'Excerpt', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -293,7 +293,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'excerpt_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -313,7 +313,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'heading_cat',
 			[
-				'label' => __( 'Category', 'skinetic' ),
+				'label' => __( 'Category', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -321,10 +321,10 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'show_cat',
 			[
-				'label' => __( 'Show Category', 'skinetic' ),
+				'label' => __( 'Show Category', 'bistroly' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'skinetic' ),
-				'label_off' => __( 'Hide', 'skinetic' ),
+				'label_on' => __( 'Show', 'bistroly' ),
+				'label_off' => __( 'Hide', 'bistroly' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -332,7 +332,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'cat_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -346,7 +346,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'cat_bg',
 			[
-				'label' => __( 'Background', 'skinetic' ),
+				'label' => __( 'Background', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -372,7 +372,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'heading_meta',
 			[
-				'label' => __( 'Meta', 'skinetic' ),
+				'label' => __( 'Meta', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -380,7 +380,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'meta_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -391,7 +391,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'meta_hover_color',
 			[
-				'label' => __( 'Hover Color', 'skinetic' ),
+				'label' => __( 'Hover Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -403,7 +403,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'meta_bg',
 			[
-				'label' => __( 'Background', 'skinetic' ),
+				'label' => __( 'Background', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -425,7 +425,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'navigation_section',
 			[
-				'label' => __( 'Dots', 'skinetic' ),
+				'label' => __( 'Dots', 'bistroly' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'dots' => 'true',
@@ -436,7 +436,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'dots_spacing',
 			[
-				'label' => __( 'Spacing', 'skinetic' ),
+				'label' => __( 'Spacing', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -453,7 +453,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->add_control(
             'dots_bgcolor',
             [
-                'label' => __( 'Color', 'skinetic' ),
+                'label' => __( 'Color', 'bistroly' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot span' => 'background: {{VALUE}};',
@@ -464,7 +464,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
         $this->add_control(
             'dots_active_bgcolor',
             [
-                'label' => __( 'Color Active', 'skinetic' ),
+                'label' => __( 'Color Active', 'bistroly' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot.active span' => 'background: {{VALUE}};',
@@ -478,7 +478,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'style_nav',
 			[
-				'label' => __( 'Arrows', 'skinetic' ),
+				'label' => __( 'Arrows', 'bistroly' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'arrows' => 'true',
@@ -488,7 +488,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'arrow_spacing',
 			[
-				'label' => __( 'Spacing', 'skinetic' ),
+				'label' => __( 'Spacing', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -505,7 +505,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'arrow_width',
 			[
-				'label' => __( 'Width', 'skinetic' ),
+				'label' => __( 'Width', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -521,7 +521,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -533,7 +533,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_color',
 			[
-				'label' => __( 'Background', 'skinetic' ),
+				'label' => __( 'Background', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -544,7 +544,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_hcolor',
 			[
-				'label' => __( 'Color Hover', 'skinetic' ),
+				'label' => __( 'Color Hover', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -555,7 +555,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_hcolor',
 			[
-				'label' => __( 'Background Hover', 'skinetic' ),
+				'label' => __( 'Background Hover', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -566,7 +566,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'radius_arrow',
 			[
-				'label' => __( 'Border Radius', 'skinetic' ),
+				'label' => __( 'Border Radius', 'bistroly' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -636,7 +636,7 @@ class Skinetic_Post_Carousel extends Widget_Base{
 
 							<?php if ( has_post_thumbnail() ) { ?>
 								<div class="entry-media">
-									<?php if( $settings['show_cat'] ) { skinetic_posted_in(); } ?>
+									<?php if( $settings['show_cat'] ) { bistroly_posted_in(); } ?>
 									<a href="<?php the_permalink(); ?>">
 										<?php the_post_thumbnail($settings['post_thumbnail']); ?>
 									</a>
@@ -644,17 +644,17 @@ class Skinetic_Post_Carousel extends Widget_Base{
 							<?php } ?>
 
 							<div class="inner-post">
-								<?php if( !has_post_thumbnail() && $settings['show_cat'] ) skinetic_posted_in(); ?>
+								<?php if( !has_post_thumbnail() && $settings['show_cat'] ) bistroly_posted_in(); ?>
 								<div class="entry-header">
 
 									<?php the_title( '<h5 class="entry-title"><a class="title-link" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h5>' ); ?>
 
 								</div>
 
-								<?php if( $settings['exc'] ) { echo '<div class="entry-summary the-excerpt">' .skinetic_excerpt($settings['exc']). '...</div>'; } ?>
+								<?php if( $settings['exc'] ) { echo '<div class="entry-summary the-excerpt">' .bistroly_excerpt($settings['exc']). '...</div>'; } ?>
 							</div>
 							<div class="entry-meta">
-								<?php if( skinetic_get_option( 'post_entry_meta' ) ) { skinetic_post_meta(); } ?>
+								<?php if( bistroly_get_option( 'post_entry_meta' ) ) { bistroly_post_meta(); } ?>
 								<a href="<?php the_permalink(); ?>" class="btn-details"><i class="xp-webicon-trajectory"></i></a>
 							</div>
 
@@ -679,5 +679,5 @@ class Skinetic_Post_Carousel extends Widget_Base{
 	  	return $cat;
 	}
 }
-// After the Skinetic_Post_Carousel class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Skinetic_Post_Carousel() );
+// After the Bistroly_Post_Carousel class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Bistroly_Post_Carousel() );

@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 
  */
 
-class Skinetic_Vertical_Menu extends Widget_Base{
+class Bistroly_Vertical_Menu extends Widget_Base{
 
 
 
@@ -26,7 +26,7 @@ class Skinetic_Vertical_Menu extends Widget_Base{
 
 	public function get_title() {
 
-		return __( 'XP Vertical Services Menu', 'skinetic' );
+		return __( 'XP Vertical Services Menu', 'bistroly' );
 
 	}
 
@@ -42,7 +42,7 @@ class Skinetic_Vertical_Menu extends Widget_Base{
 
 	public function get_categories() {
 
-		return [ 'category_skinetic_sidebar' ];
+		return [ 'category_bistroly_sidebar' ];
 
 	}
 
@@ -58,7 +58,7 @@ class Skinetic_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Menu', 'skinetic' ),
+				'label' => __( 'Menu', 'bistroly' ),
 
 			]
 
@@ -74,7 +74,7 @@ class Skinetic_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => esc_html__( 'Select Services Menu', 'skinetic' ),
+				'label' => esc_html__( 'Select Services Menu', 'bistroly' ),
 
 				'type' => Controls_Manager::SELECT,
 
@@ -104,7 +104,7 @@ class Skinetic_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Vertical Menu Style', 'skinetic' ),
+				'label' => __( 'Vertical Menu Style', 'bistroly' ),
 
 				'tab'   => Controls_Manager::TAB_STYLE,
 
@@ -122,7 +122,7 @@ class Skinetic_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Background Color', 'skinetic' ),
+				'label' => __( 'Background Color', 'bistroly' ),
 
 				'type' => Controls_Manager::COLOR,
 
@@ -144,7 +144,7 @@ class Skinetic_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Background Hover Color', 'skinetic' ),
+				'label' => __( 'Background Hover Color', 'bistroly' ),
 
 				'type' => Controls_Manager::COLOR,
 
@@ -166,7 +166,7 @@ class Skinetic_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Background Flash Color', 'skinetic' ),
+				'label' => __( 'Background Flash Color', 'bistroly' ),
 
 				'type' => Controls_Manager::COLOR,
 
@@ -190,7 +190,7 @@ class Skinetic_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Text Color', 'skinetic' ),
+				'label' => __( 'Text Color', 'bistroly' ),
 
 				'type' => Controls_Manager::COLOR,
 
@@ -214,7 +214,7 @@ class Skinetic_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Hover Text Color', 'skinetic' ),
+				'label' => __( 'Hover Text Color', 'bistroly' ),
 
 				'type' => Controls_Manager::COLOR,
 
@@ -238,7 +238,7 @@ class Skinetic_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Active Menu Item Color', 'skinetic' ),
+				'label' => __( 'Active Menu Item Color', 'bistroly' ),
 
 				'type' => Controls_Manager::COLOR,
 
@@ -280,7 +280,7 @@ class Skinetic_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Item Padding', 'skinetic' ),
+				'label' => __( 'Item Padding', 'bistroly' ),
 
 				'type' => Controls_Manager::DIMENSIONS,
 
@@ -366,4 +366,4 @@ class Skinetic_Vertical_Menu extends Widget_Base{
 
 // Register the new vertical menu widget with Elementor
 
-Plugin::instance()->widgets_manager->register( new Skinetic_Vertical_Menu() );
+Plugin::instance()->widgets_manager->register( new Bistroly_Vertical_Menu() );

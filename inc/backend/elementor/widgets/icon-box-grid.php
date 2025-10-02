@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Icon Box Grid
  */
-class Skinetic_IconBox_Grid extends Widget_Base{
+class Bistroly_IconBox_Grid extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Skinetic_IconBox_Grid extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Icon Box Grid', 'skinetic' );
+		return __( 'XP Icon Box Grid', 'bistroly' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Skinetic_IconBox_Grid extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_skinetic' ];
+		return [ 'category_bistroly' ];
 	}
 
 	protected function register_controls() {
@@ -33,30 +33,30 @@ class Skinetic_IconBox_Grid extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Icon Boxes', 'skinetic' ),
+				'label' => __( 'Icon Boxes', 'bistroly' ),
 			]
 		);
 
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'skinetic' ),
+				'label' => __( 'Alignment', 'bistroly' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'skinetic' ),
+						'title' => __( 'Left', 'bistroly' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'skinetic' ),
+						'title' => __( 'Center', 'bistroly' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'skinetic' ),
+						'title' => __( 'Right', 'bistroly' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
-				// 'prefix_class' => 'skinetic%s-align-',
+				// 'prefix_class' => 'bistroly%s-align-',
 				'selectors' => [
 					'{{WRAPPER}}' => 'text-align: {{VALUE}};',
 				],
@@ -65,14 +65,14 @@ class Skinetic_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'column_grid',
 			[
-				'label' => __( 'Columns', 'skinetic' ),
+				'label' => __( 'Columns', 'bistroly' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'col-md-4',
 				'options' => [
-					'col-md-12' => __( '1', 'skinetic' ),
-					'col-md-6'  => __( '2', 'skinetic' ),
-					'col-md-4'  => __( '3', 'skinetic' ),
-					'col-md-3'  => __( '4', 'skinetic' ),
+					'col-md-12' => __( '1', 'bistroly' ),
+					'col-md-6'  => __( '2', 'bistroly' ),
+					'col-md-4'  => __( '3', 'bistroly' ),
+					'col-md-3'  => __( '4', 'bistroly' ),
 				]
 			]
 		);
@@ -83,7 +83,7 @@ class Skinetic_IconBox_Grid extends Widget_Base{
 		$repeater->add_control(
 			'icon_font',
 			[
-				'label' => __( 'Icon', 'skinetic' ),
+				'label' => __( 'Icon', 'bistroly' ),
 				'type' => Controls_Manager::ICONS,
 				'fa4compatibility' => 'icon',
 				'default' => [
@@ -96,10 +96,10 @@ class Skinetic_IconBox_Grid extends Widget_Base{
 		$repeater->add_control(
 			'title',
 			[
-				'label' => __( 'Title', 'skinetic' ),
+				'label' => __( 'Title', 'bistroly' ),
 				'type' => Controls_Manager::TEXT,
 				'label_block' => true,
-				'default' => esc_html__( 'Content Marketing', 'skinetic' ),
+				'default' => esc_html__( 'Content Marketing', 'bistroly' ),
 			]
 		);
 
@@ -108,16 +108,16 @@ class Skinetic_IconBox_Grid extends Widget_Base{
 			[
 				'label' => 'Description',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => esc_html__( 'You can provide the answers that your potential customers are trying to find, so you can become the industry.', 'skinetic' ),
+				'default' => esc_html__( 'You can provide the answers that your potential customers are trying to find, so you can become the industry.', 'bistroly' ),
 			]
 		);
 
 		$repeater->add_control(
 			'link',
 			[
-				'label' => __( 'Link', 'skinetic' ),
+				'label' => __( 'Link', 'bistroly' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://your-link.com', 'skinetic' ),
+				'placeholder' => __( 'https://your-link.com', 'bistroly' ),
 			]
 		);
 
@@ -129,21 +129,21 @@ class Skinetic_IconBox_Grid extends Widget_Base{
 		        'show_label'  => false,
 		        'default'     => [
 		            [
-		            	'icon_font' => __( 'fas fa-star', 'skinetic' ),
-		             	'title' => esc_html__( 'Content Marketing', 'skinetic' ),
-		                'des'	=> esc_html__( 'You can provide the answers that your potential customers are trying to find, so you can become the industry.', 'skinetic' ),
+		            	'icon_font' => __( 'fas fa-star', 'bistroly' ),
+		             	'title' => esc_html__( 'Content Marketing', 'bistroly' ),
+		                'des'	=> esc_html__( 'You can provide the answers that your potential customers are trying to find, so you can become the industry.', 'bistroly' ),
 		             	'link' => '',
 		            ],
 		            [
-		            	'icon_font' => __( 'fas fa-star', 'skinetic' ),
-		             	'title' => esc_html__( 'Content Marketing', 'skinetic' ),
-		                'des'	=> esc_html__( 'You can provide the answers that your potential customers are trying to find, so you can become the industry.', 'skinetic' ),
+		            	'icon_font' => __( 'fas fa-star', 'bistroly' ),
+		             	'title' => esc_html__( 'Content Marketing', 'bistroly' ),
+		                'des'	=> esc_html__( 'You can provide the answers that your potential customers are trying to find, so you can become the industry.', 'bistroly' ),
 		             	'link' => '',
 		            ],
 		            [
-		            	'icon_font' => __( 'fas fa-star', 'skinetic' ),
-		             	'title' => esc_html__( 'Content Marketing', 'skinetic' ),
-		                'des'	=> esc_html__( 'You can provide the answers that your potential customers are trying to find, so you can become the industry.', 'skinetic' ),
+		            	'icon_font' => __( 'fas fa-star', 'bistroly' ),
+		             	'title' => esc_html__( 'Content Marketing', 'bistroly' ),
+		                'des'	=> esc_html__( 'You can provide the answers that your potential customers are trying to find, so you can become the industry.', 'bistroly' ),
 		             	'link' => '',
 		            ]
 		        ],
@@ -154,7 +154,7 @@ class Skinetic_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'header_size',
 			[
-				'label' => __( 'Title HTML Tag', 'skinetic' ),
+				'label' => __( 'Title HTML Tag', 'bistroly' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
 					'h1' => 'H1',
@@ -177,14 +177,14 @@ class Skinetic_IconBox_Grid extends Widget_Base{
 		$this->start_controls_section(
 			'style_box_section',
 			[
-				'label' => __( 'Boxes', 'skinetic' ),
+				'label' => __( 'Boxes', 'bistroly' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'bg_box',
 			[
-				'label' => __( 'Background', 'skinetic' ),
+				'label' => __( 'Background', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .icon-box' => 'background: {{VALUE}};',
@@ -194,7 +194,7 @@ class Skinetic_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'bg_hover_box',
 			[
-				'label' => __( 'Border Color', 'skinetic' ),
+				'label' => __( 'Border Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .icon-box' => 'border-color: {{VALUE}};',
@@ -204,7 +204,7 @@ class Skinetic_IconBox_Grid extends Widget_Base{
 		$this->add_responsive_control(
 			'box_radius',
 			[
-				'label' => __( 'Border Radius', 'skinetic' ),
+				'label' => __( 'Border Radius', 'bistroly' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -215,7 +215,7 @@ class Skinetic_IconBox_Grid extends Widget_Base{
 		$this->add_responsive_control(
 			'box_padding',
 			[
-				'label' => __( 'Padding Box', 'skinetic' ),
+				'label' => __( 'Padding Box', 'bistroly' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -226,7 +226,7 @@ class Skinetic_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'heading_shadow',
 			[
-				'label' => __( 'Hover Box Shadow', 'skinetic' ),
+				'label' => __( 'Hover Box Shadow', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -244,7 +244,7 @@ class Skinetic_IconBox_Grid extends Widget_Base{
 		$this->start_controls_section(
 			'style_icon_section',
 			[
-				'label' => __( 'Icon', 'skinetic' ),
+				'label' => __( 'Icon', 'bistroly' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -252,7 +252,7 @@ class Skinetic_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'icon_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -264,7 +264,7 @@ class Skinetic_IconBox_Grid extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_size',
 			[
-				'label' => __( 'Size', 'skinetic' ),
+				'label' => __( 'Size', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -281,7 +281,7 @@ class Skinetic_IconBox_Grid extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_space',
 			[
-				'label' => __( 'Spacing', 'skinetic' ),
+				'label' => __( 'Spacing', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -300,7 +300,7 @@ class Skinetic_IconBox_Grid extends Widget_Base{
 		$this->start_controls_section(
 			'style_content_section',
 			[
-				'label' => __( 'Content', 'skinetic' ),
+				'label' => __( 'Content', 'bistroly' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -309,7 +309,7 @@ class Skinetic_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'skinetic' ),
+				'label' => __( 'Title', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -317,7 +317,7 @@ class Skinetic_IconBox_Grid extends Widget_Base{
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => __( 'Spacing', 'skinetic' ),
+				'label' => __( 'Spacing', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -333,7 +333,7 @@ class Skinetic_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -353,7 +353,7 @@ class Skinetic_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'heading_des',
 			[
-				'label' => __( 'Description', 'skinetic' ),
+				'label' => __( 'Description', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -361,7 +361,7 @@ class Skinetic_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'des_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -424,4 +424,4 @@ class Skinetic_IconBox_Grid extends Widget_Base{
 	}
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Skinetic_IconBox_Grid() );
+Plugin::instance()->widgets_manager->register( new Bistroly_IconBox_Grid() );

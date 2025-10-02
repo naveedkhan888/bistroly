@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Skinetic
+ * @package Bistroly
  */
 
 get_header(); ?>
@@ -12,8 +12,8 @@ get_header(); ?>
 <div class="entry-content">
 	<div class="container">
 		<div class="row">
-			<div id="primary" class="content-area <?php skinetic_content_columns(); ?>">
-				<main id="main" class="site-main <?php skinetic_blog_style(); ?>">
+			<div id="primary" class="content-area <?php bistroly_content_columns(); ?>">
+				<main id="main" class="site-main <?php bistroly_blog_style(); ?>">
 
 				<?php if ( have_posts() ) : ?>
 
@@ -31,7 +31,7 @@ get_header(); ?>
 
 					endwhile;
 
-						skinetic_posts_navigation();
+						bistroly_posts_navigation();
 
 					else :
 

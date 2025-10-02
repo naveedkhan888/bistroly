@@ -5,14 +5,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Widget Name: Post Grid
  */
-class Skinetic_Post_Grid extends Widget_Base {
+class Bistroly_Post_Grid extends Widget_Base {
 
  	public function get_name() {
 		return 'ipostgrid';
 	}
 
 	public function get_title() {
-		return __( 'XP Post Grid', 'skinetic' );
+		return __( 'XP Post Grid', 'bistroly' );
 	}
 
 	public function get_icon() {
@@ -20,7 +20,7 @@ class Skinetic_Post_Grid extends Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'category_skinetic' ];
+		return [ 'category_bistroly' ];
 	}
 
 	protected function register_controls() {
@@ -28,24 +28,24 @@ class Skinetic_Post_Grid extends Widget_Base {
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Posts', 'skinetic' ),
+				'label' => __( 'Posts', 'bistroly' ),
 			]
 		);
 		$this->add_control(
 			'post_cat',
 			[
-				'label' => __( 'Select Categories', 'skinetic' ),
+				'label' => __( 'Select Categories', 'bistroly' ),
 				'type' => Controls_Manager::SELECT2,
 				'options' => $this->select_param_cate_post(),
 				'multiple' => true,
 				'label_block' => true,
-				'placeholder' => __( 'All Categories', 'skinetic' ),
+				'placeholder' => __( 'All Categories', 'bistroly' ),
 			]
 		);
 		$this->add_control(
 			'post_num',
 			[
-				'label' => __( 'Show Number Posts', 'skinetic' ),
+				'label' => __( 'Show Number Posts', 'bistroly' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => '6',
 			]
@@ -53,7 +53,7 @@ class Skinetic_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'exc',
 			[
-				'label' => esc_html__( 'Excerpt Length', 'skinetic' ),
+				'label' => esc_html__( 'Excerpt Length', 'bistroly' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => '0',
 			]
@@ -61,12 +61,12 @@ class Skinetic_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'post_thumbnail',
 			[
-				'label' => __( 'Thumbnail Image Size', 'skinetic' ),
+				'label' => __( 'Thumbnail Image Size', 'bistroly' ),
 				'type' => Controls_Manager::SELECT,
-				'default' => 'skinetic-post-thumbnail-grid',
+				'default' => 'bistroly-post-thumbnail-grid',
 				'options' => [
-					'skinetic-post-thumbnail-grid' => __( 'Default', 'skinetic' ),
-					'full' => __( 'Full', 'skinetic' ),
+					'bistroly-post-thumbnail-grid' => __( 'Default', 'bistroly' ),
+					'full' => __( 'Full', 'bistroly' ),
 				],
 			]
 		);
@@ -75,7 +75,7 @@ class Skinetic_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'heading_grid',
 			[
-				'label' => __( 'Grid', 'skinetic' ),
+				'label' => __( 'Grid', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -84,7 +84,7 @@ class Skinetic_Post_Grid extends Widget_Base {
 		$this->add_responsive_control(
 			'columns',
 			[
-				'label' => __( 'Columns', 'skinetic' ),
+				'label' => __( 'Columns', 'bistroly' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '3',
 				'tablet_default' => '2',
@@ -103,7 +103,7 @@ class Skinetic_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'grid_gap',
 			[
-				'label' => __( 'Grid Gap', 'skinetic' ),
+				'label' => __( 'Grid Gap', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 30,
@@ -126,7 +126,7 @@ class Skinetic_Post_Grid extends Widget_Base {
 		$this->start_controls_section(
 			'posts_style',
 			[
-				'label' => __( 'Post Items', 'skinetic' ),
+				'label' => __( 'Post Items', 'bistroly' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -134,7 +134,7 @@ class Skinetic_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'heading_general',
 			[
-				'label' => __( 'General', 'skinetic' ),
+				'label' => __( 'General', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -143,7 +143,7 @@ class Skinetic_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'radius_box',
 			[
-				'label' => __( 'Border Radius', 'skinetic' ),
+				'label' => __( 'Border Radius', 'bistroly' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -155,7 +155,7 @@ class Skinetic_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'item_bg',
 			[
-				'label' => __( 'Background', 'skinetic' ),
+				'label' => __( 'Background', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -176,7 +176,7 @@ class Skinetic_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'skinetic' ),
+				'label' => __( 'Title', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -185,7 +185,7 @@ class Skinetic_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -197,7 +197,7 @@ class Skinetic_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'title_hcolor',
 			[
-				'label' => __( 'Hover Color', 'skinetic' ),
+				'label' => __( 'Hover Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -218,7 +218,7 @@ class Skinetic_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'heading_excerpt',
 			[
-				'label' => __( 'Excerpt', 'skinetic' ),
+				'label' => __( 'Excerpt', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -227,7 +227,7 @@ class Skinetic_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'excerpt_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -248,7 +248,7 @@ class Skinetic_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'heading_cat',
 			[
-				'label' => __( 'Category', 'skinetic' ),
+				'label' => __( 'Category', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -257,10 +257,10 @@ class Skinetic_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'show_cat',
 			[
-				'label' => __( 'Show Category', 'skinetic' ),
+				'label' => __( 'Show Category', 'bistroly' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'skinetic' ),
-				'label_off' => __( 'Hide', 'skinetic' ),
+				'label_on' => __( 'Show', 'bistroly' ),
+				'label_off' => __( 'Hide', 'bistroly' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -269,7 +269,7 @@ class Skinetic_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'cat_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -284,7 +284,7 @@ class Skinetic_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'cat_bg',
 			[
-				'label' => __( 'Background', 'skinetic' ),
+				'label' => __( 'Background', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -300,7 +300,7 @@ class Skinetic_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'heading_meta',
 			[
-				'label' => __( 'Meta', 'skinetic' ),
+				'label' => __( 'Meta', 'bistroly' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -309,7 +309,7 @@ class Skinetic_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'meta_color',
 			[
-				'label' => __( 'Color', 'skinetic' ),
+				'label' => __( 'Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -321,7 +321,7 @@ class Skinetic_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'meta_hover_color',
 			[
-				'label' => __( 'Hover Color', 'skinetic' ),
+				'label' => __( 'Hover Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -369,7 +369,7 @@ class Skinetic_Post_Grid extends Widget_Base {
 					<div class="post-inner">
 						<?php if ( has_post_thumbnail() ) { ?>
 							<div class="entry-media">
-								<?php if( $settings['show_cat'] ) { skinetic_posted_in(); } ?>
+								<?php if( $settings['show_cat'] ) { bistroly_posted_in(); } ?>
 								<a href="<?php the_permalink(); ?>">
 									<?php the_post_thumbnail($settings['post_thumbnail']); ?>
 								</a>
@@ -377,15 +377,15 @@ class Skinetic_Post_Grid extends Widget_Base {
 						<?php } ?>
 
 						<div class="inner-post">
-							<?php if( !has_post_thumbnail() && $settings['show_cat'] ) skinetic_posted_in(); ?>
+							<?php if( !has_post_thumbnail() && $settings['show_cat'] ) bistroly_posted_in(); ?>
 							<div class="entry-header">
 								<?php the_title( '<h5 class="entry-title"><a class="title-link" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h5>' ); ?>
 							</div>
 
-							<?php if( $settings['exc'] ) { echo '<div class="entry-summary the-excerpt">' .skinetic_excerpt($settings['exc']). '...</div>'; } ?>
+							<?php if( $settings['exc'] ) { echo '<div class="entry-summary the-excerpt">' .bistroly_excerpt($settings['exc']). '...</div>'; } ?>
 						</div>
 						<div class="entry-meta">
-							<?php if( skinetic_get_option( 'post_entry_meta' ) ) { skinetic_post_meta(); } ?>
+							<?php if( bistroly_get_option( 'post_entry_meta' ) ) { bistroly_post_meta(); } ?>
 							<a href="<?php the_permalink(); ?>" class="btn-details"><i class="xp-webicon-trajectory"></i></a>
 						</div>
 					</div>
@@ -409,4 +409,4 @@ class Skinetic_Post_Grid extends Widget_Base {
 	}
 }
 // Register the widget
-Plugin::instance()->widgets_manager->register( new Skinetic_Post_Grid() );
+Plugin::instance()->widgets_manager->register( new Bistroly_Post_Grid() );

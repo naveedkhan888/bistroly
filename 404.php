@@ -13,7 +13,7 @@
 <?php
 
 if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'single' ) ) {
-	skinetic_404_builder();
+	bistroly_404_builder();
 } 
 
 ?>

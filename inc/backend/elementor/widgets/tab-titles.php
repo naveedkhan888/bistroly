@@ -10,7 +10,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 	}
 
 	public function get_title() {
-		return __( 'XP Tab Titles', 'skinetic' );
+		return __( 'XP Tab Titles', 'bistroly' );
 	}
 
 	public function get_icon() {
@@ -18,7 +18,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'category_skinetic' ];
+		return [ 'category_bistroly' ];
 	}
 
 	protected function register_controls() {
@@ -26,7 +26,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Titles', 'skinetic' ),
+				'label' => __( 'Titles', 'bistroly' ),
 			]
 		);
 
@@ -35,7 +35,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$repeater->add_control(
 			'titles',
 			[
-				'label' => __( 'Title', 'skinetic' ),
+				'label' => __( 'Title', 'bistroly' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'default' => 'Content Marketing',
 			]
@@ -43,7 +43,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$repeater->add_control(
 			'title_link',
 			[
-				'label' => __( 'Link to ID Content', 'skinetic' ),
+				'label' => __( 'Link to ID Content', 'bistroly' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => '#tab-1',
 			]
@@ -51,7 +51,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$repeater->add_control(
 			'icon',
 			[
-				'label' => __( 'Icon', 'skinetic' ),
+				'label' => __( 'Icon', 'bistroly' ),
 				'type' => Controls_Manager::ICONS,
 				'default' => [
 					'value' => 'fas fa-star',
@@ -74,7 +74,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'skinetic' ),
+				'label' => __( 'Alignment', 'bistroly' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'flex-start' => [ 'title' => __( 'Left' ), 'icon' => 'eicon-text-align-left' ],
@@ -94,7 +94,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->start_controls_section(
 			'style_section',
 			[
-				'label' => __( 'Style', 'skinetic' ),
+				'label' => __( 'Style', 'bistroly' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -102,7 +102,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => __( 'Spacing', 'skinetic' ),
+				'label' => __( 'Spacing', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [ 'px' => [ 'min' => 0, 'max' => 150 ] ],
 				'selectors' => [
@@ -115,7 +115,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->add_responsive_control(
 			'padding_title',
 			[
-				'label' => __( 'Padding', 'skinetic' ),
+				'label' => __( 'Padding', 'bistroly' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -127,7 +127,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->add_control(
 			'radius_title',
 			[
-				'label' => __( 'Border Radius', 'skinetic' ),
+				'label' => __( 'Border Radius', 'bistroly' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -149,14 +149,14 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->start_controls_tab(
 			'tab_title_normal',
 			[
-				'label' => __( 'Normal', 'skinetic' ),
+				'label' => __( 'Normal', 'bistroly' ),
 			]
 		);
 
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Text Color', 'skinetic' ),
+				'label' => __( 'Text Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .title-item a' => 'color: {{VALUE}};',
@@ -166,7 +166,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->add_control(
 			'title_bg',
 			[
-				'label' => __( 'Background', 'skinetic' ),
+				'label' => __( 'Background', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .title-item a' => 'background: {{VALUE}};',
@@ -176,7 +176,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->add_control(
 			'icon_color',
 			[
-				'label' => __( 'Icon Color', 'skinetic' ),
+				'label' => __( 'Icon Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .title-item a .icon, {{WRAPPER}} .title-item a .icon svg' => 'color: {{VALUE}}; fill: {{VALUE}};',
@@ -187,7 +187,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->add_responsive_control(
 			'icon_size',
 			[
-				'label' => __( 'Icon Size', 'skinetic' ),
+				'label' => __( 'Icon Size', 'bistroly' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [ 'px' => [ 'min' => 10, 'max' => 100 ] ],
 				'selectors' => [
@@ -200,7 +200,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->add_control(
 			'title_border_color',
 			[
-				'label' => __( 'Border Color', 'skinetic' ),
+				'label' => __( 'Border Color', 'bistroly' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .title-item a' => 'border: 1px solid {{VALUE}};',
@@ -212,7 +212,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->add_control(
 			'title_border_width',
 			[
-				'label' => __( 'Border Width', 'skinetic' ),
+				'label' => __( 'Border Width', 'bistroly' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -233,14 +233,14 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->start_controls_tab(
 			'tab_title_hover',
 			[
-				'label' => __( 'Hover / Active', 'skinetic' ),
+				'label' => __( 'Hover / Active', 'bistroly' ),
 			]
 		);
 
 		$this->add_control(
 			'title_active_color',
 			[
-				'label' => __( 'Text Color', 'skinetic' ),
+				'label' => __( 'Text Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .title-item a:hover, {{WRAPPER}} .title-item a.tab-active' => 'color: {{VALUE}};',
@@ -250,7 +250,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->add_control(
 			'title_active_bg',
 			[
-				'label' => __( 'Background', 'skinetic' ),
+				'label' => __( 'Background', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .title-item a:hover, {{WRAPPER}} .title-item a.tab-active' => 'background: {{VALUE}};',
@@ -260,7 +260,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->add_control(
 			'icon_hover_color',
 			[
-				'label' => __( 'Icon Hover Color', 'skinetic' ),
+				'label' => __( 'Icon Hover Color', 'bistroly' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .title-item a:hover .icon, {{WRAPPER}} .title-item a:hover .icon svg, {{WRAPPER}} .title-item a.tab-active .icon, {{WRAPPER}} .title-item a.tab-active .icon svg' => 'color: {{VALUE}}; fill: {{VALUE}};',
@@ -271,7 +271,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->add_control(
 			'title_border_hover_color',
 			[
-				'label' => __( 'Border Color', 'skinetic' ),
+				'label' => __( 'Border Color', 'bistroly' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .title-item a:hover' => 'border: 1px solid {{VALUE}};',

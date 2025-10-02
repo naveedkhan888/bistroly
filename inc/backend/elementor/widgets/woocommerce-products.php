@@ -3,14 +3,14 @@ namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measure)
 
-class Skinetic_WooCommerce_Products extends Widget_Base {
+class Bistroly_WooCommerce_Products extends Widget_Base {
 
     public function get_name() {
         return 'woocommerce_products';
     }
 
     public function get_title() {
-        return __( 'WooCommerce Products', 'skinetic' );
+        return __( 'WooCommerce Products', 'bistroly' );
     }
 
     public function get_icon() {
@@ -18,7 +18,7 @@ class Skinetic_WooCommerce_Products extends Widget_Base {
     }
 
     public function get_categories() {
-        return [ 'category_skinetic' ];
+        return [ 'category_bistroly' ];
     }
 
     protected function register_controls() {
@@ -26,14 +26,14 @@ class Skinetic_WooCommerce_Products extends Widget_Base {
         $this->start_controls_section(
             'content_section',
             [
-                'label' => __( 'Content', 'skinetic' ),
+                'label' => __( 'Content', 'bistroly' ),
             ]
         );
 
         $this->add_control(
             'products',
             [
-                'label' => __( 'Products', 'skinetic' ),
+                'label' => __( 'Products', 'bistroly' ),
                 'type' => Controls_Manager::SELECT2,
                 'multiple' => true,
                 'options' => $this->get_woocommerce_products(),
@@ -48,7 +48,7 @@ class Skinetic_WooCommerce_Products extends Widget_Base {
         $this->start_controls_section(
             'style_content_section',
             [
-                'label' => __( 'Style', 'skinetic' ),
+                'label' => __( 'Style', 'bistroly' ),
                 'tab'   => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -56,7 +56,7 @@ class Skinetic_WooCommerce_Products extends Widget_Base {
         $this->add_control(
             'product_title_color',
             [
-                'label' => __( 'Product Title Color', 'skinetic' ),
+                'label' => __( 'Product Title Color', 'bistroly' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -68,7 +68,7 @@ class Skinetic_WooCommerce_Products extends Widget_Base {
         $this->add_control(
             'product_price_color',
             [
-                'label' => __( 'Product Price Color', 'skinetic' ),
+                'label' => __( 'Product Price Color', 'bistroly' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -80,7 +80,7 @@ class Skinetic_WooCommerce_Products extends Widget_Base {
         $this->add_control(
             'button_color',
             [
-                'label' => __( 'Button Color', 'skinetic' ),
+                'label' => __( 'Button Color', 'bistroly' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#000000',
                 'selectors' => [
@@ -92,7 +92,7 @@ class Skinetic_WooCommerce_Products extends Widget_Base {
         $this->add_responsive_control(
             'product_grid_columns',
             [
-                'label' => __( 'Columns', 'skinetic' ),
+                'label' => __( 'Columns', 'bistroly' ),
                 'type' => Controls_Manager::NUMBER,
                 'default' => 3,
                 'min' => 1,
@@ -133,7 +133,7 @@ class Skinetic_WooCommerce_Products extends Widget_Base {
                         <p class="product-price"><?php echo wp_kses_post( $product_obj->get_price_html() ); ?></p>
                         <?php if ( function_exists( 'wc_get_cart_url' ) ) : ?>
                             <a href="?add-to-cart=<?php echo esc_attr( $product_id ); ?>" class="add-to-cart-button">
-                                <?php _e( 'Add to Cart', 'skinetic' ); ?>
+                                <?php _e( 'Add to Cart', 'bistroly' ); ?>
                             </a>
                         <?php endif; ?>
                     </div>
@@ -163,4 +163,4 @@ class Skinetic_WooCommerce_Products extends Widget_Base {
     }
 }
 
-Plugin::instance()->widgets_manager->register( new Skinetic_WooCommerce_Products() );
+Plugin::instance()->widgets_manager->register( new Bistroly_WooCommerce_Products() );

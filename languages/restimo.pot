@@ -1,7 +1,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Skinetic\n"
+"Project-Id-Version: Bistroly\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-25 08:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.5.0; wp-5.5.3\n"
-"X-Domain: skinetic"
+"X-Domain: bistroly"
 
 #: inc/frontend/template-tags.php:41
 msgid " "
@@ -1467,7 +1467,7 @@ msgid "https://xpertpoin8.com/"
 msgstr ""
 
 #. URI of the theme
-msgid "https://themeforest.net/item/skinetic"
+msgid "https://themeforest.net/item/bistroly"
 msgstr ""
 
 #: inc/backend/elementor/widgets/team-1.php:109
@@ -1843,18 +1843,18 @@ msgstr ""
 
 #. Name of the theme
 #: inc/backend/elementor/elementor.php:17
-msgid "Skinetic"
+msgid "Bistroly"
 msgstr ""
 
 #. Description of the theme
 msgid ""
-"Skinetic is the nice WordPress theme for Consulting and Finance Industry. "
+"Bistroly is the nice WordPress theme for Consulting and Finance Industry. "
 "Financial Advisors, Insurance Brokers, Accountants, Lawyers, Consultants. "
-"Skinetic is easy to use, it provides everything you need to create great "
-"looking website. With Skinetic you can impress your customer by it’s "
-"professional design and the interactivity. Skinetic built with latest website "
+"Bistroly is easy to use, it provides everything you need to create great "
+"looking website. With Bistroly you can impress your customer by it’s "
+"professional design and the interactivity. Bistroly built with latest website "
 "technology to ensure your website is looks nice on desktop and mobile. Get "
-"Skinetic now!"
+"Bistroly now!"
 msgstr ""
 
 #: inc/backend/elementor/widgets/team-1.php:36
