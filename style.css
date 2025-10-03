@@ -5044,7 +5044,8 @@ object {
 @media (max-width: 767px) {
   .tab-titles,
 .tab-titles .title-item {
-    display: block;
+    flex-wrap: wrap;
+    gap: 15px;
   }
 }
 /*--------------------------------------------------------------
@@ -7830,7 +7831,6 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 .royal_preloader_percentage, 
 #royal_preloader, 
 #royal_preloader.royal_preloader_logo .royal_preloader_loader div {
- 
 }
 .xptf-cta-header .h-search-form-field .h-search-form-inner {
   padding: 30px;
