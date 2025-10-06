@@ -16,6 +16,17 @@ if(!function_exists('bistroly_color_scheme')){
 		$divider_color      = bistroly_get_option('divider_color', '#FFFFFF14');
 		$dark_divider_color = bistroly_get_option('dark_divider_color', '#3835373b'); // example fallback
 
+
+		// Ensure variables have values (use fallbacks if empty)
+        $primary_color      = !empty($primary_color) ? $primary_color : '#b58c67';
+        $secondary_color    = !empty($secondary_color) ? $secondary_color : '#151E36';
+        $text_color         = !empty($text_color) ? $text_color : '#1d1312';
+        $accent_color       = !empty($accent_color) ? $accent_color : '#0E1730';
+        $bg_color           = !empty($bg_color) ? $bg_color : '#f4efef';
+        $white_color        = !empty($white_color) ? $white_color : '#FFFFFF';
+        $divider_color      = !empty($divider_color) ? $divider_color : '#FFFFFF14';
+        $dark_divider_color = !empty($dark_divider_color) ? $dark_divider_color : '#3835373b';
+
 		// Output variables inside :root
 		$color_scheme .= "
 		:root {
