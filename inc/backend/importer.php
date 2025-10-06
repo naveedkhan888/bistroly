@@ -113,29 +113,3 @@ function bistroly_importer() {
 }
 
 add_filter( 'soo_demo_packages', 'bistroly_importer', 30 );
-
-/**
- * Clear Elementor cache after demo import
- *
- * @since 1.0
- */
-function bistroly_clear_elementor_cache_after_import() {
-	// Check if Elementor is active
-	if ( did_action( 'elementor/loaded' ) ) {
-		// Clear Elementor cache
-		\Elementor\Plugin::$instance->files_manager->clear_cache();
-		
-		// Regenerate CSS files
-		\Elementor\Plugin::$instance->posts_css_manager->clear_cache();
-		
-		// Clear page cache if available
-		if ( class_exists( '\Elementor\Core\Files\CSS\Post' ) ) {
-			\Elementor\Core\Files\CSS\Post::clear_cache();
-		}
-	}
-}
-
-// Hook into the demo import completion
-// Common hooks used by demo import plugins:
-add_action( 'pt-ocdi/after_import', 'bistroly_clear_elementor_cache_after_import' ); // For One Click Demo Import
-add_action( 'soo_demo_importer_after_content_import', 'bistroly_clear_elementor_cache_after_import' ); // For SOO Demo Importer
