@@ -3710,9 +3710,9 @@ object {
   font-weight: 400;
   letter-spacing: 0;
   font-family: "Meddon", cursive;
-  text-transform: normal;
   color: var(--primary-color);
   margin-bottom: 0px;
+  line-height: 1em;
 }
 .xp-heading > span.is_highlight {
   background: var(--primary-color);
