@@ -132,7 +132,7 @@ function bistroly_fonts_url() {
 	$second_font = bistroly_get_option( 'second_font', [] );
 
 	if ( !isset( $body_font['font-family'] ) || $body_font['font-family'] == '' ) {
-		$font_families[] = 'Lato:100,100i,300i,400,400i,700,700i,900,900i';
+		$font_families[] = 'Lato:100,100i,300,300i,400,400i,700,700i,900,900i';
 	}
 
 	if ( !isset( $second_font['font-family'] ) || $second_font['font-family'] == '' ) {
