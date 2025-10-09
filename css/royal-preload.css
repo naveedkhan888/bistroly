@@ -123,7 +123,7 @@ body.royal_preloader {
 #royal_preloader.royal_preloader_scale_text .royal_preloader_loader {
     color: #FFFFFF;
     position: absolute;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight:700;
     top: 0;
     bottom: 0;
@@ -183,7 +183,7 @@ body.royal_preloader {
     margin: 0px;
     color: var(--white-color) !important;
     text-align: center;
-    font-family: 'Open Sans';
+    font-family: 'Lato';
     font-size: 13px;
     font-weight: 400;
     letter-spacing:2px;

@@ -71,7 +71,7 @@ WooCommerce styles override
 }
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
   list-style: none;
-  font-family: "Marcellus", sans-serif;
+  font-family: "Belleza", sans-serif;
   text-align: center;
   margin-bottom: 35px;
   padding: 40px 40px;
@@ -420,7 +420,7 @@ WooCommerce styles override
 }
 
 .woocommerce table.shop_table {
-  font-family: "Marcellus", sans-serif;
+  font-family: "Belleza", sans-serif;
   font-weight: 600;
   border: none;
   border-collapse: collapse;
@@ -488,7 +488,7 @@ WooCommerce styles override
   width: 85px;
   height: 46px;
   line-height: 46px;
-  font-family: "Marcellus", sans-serif;
+  font-family: "Belleza", sans-serif;
   font-size: 16px;
   font-weight: 700;
   border-radius: 0;
@@ -550,7 +550,7 @@ WooCommerce styles override
 
 .cart_totals h2 {
   font-size: 24px;
-  font-family: "Marcellus", sans-serif;
+  font-family: "Belleza", sans-serif;
   font-weight: 700;
 }
 
@@ -558,7 +558,7 @@ WooCommerce styles override
 .woocommerce-cart .cart-collaterals .cart_totals table td, .woocommerce-cart .cart-collaterals .cart_totals table th,
 .woocommerce-checkout .cart-collaterals .cart_totals table td, .woocommerce-checkout .cart-collaterals .cart_totals table th {
   font-size: 18px;
-  font-family: "Marcellus", sans-serif;
+  font-family: "Belleza", sans-serif;
   font-weight: 600;
   line-height: 24px;
   padding: 9px 10px;
@@ -740,7 +740,7 @@ WooCommerce styles override
 }
 .woocommerce .site ul.product_list_widget li a:not(.remove) {
   display: block;
-  font-family: "Marcellus", sans-serif;
+  font-family: "Belleza", sans-serif;
   font-size: 15px;
   font-weight: 600;
   line-height: 22px;
@@ -774,7 +774,7 @@ WooCommerce styles override
 
 /* widget cart */
 .woocommerce .widget_shopping_cart .cart_list .quantity {
-  font-family: "Marcellus", sans-serif;
+  font-family: "Belleza", sans-serif;
   font-weight: 500;
   font-size: 14px;
 }
@@ -808,13 +808,13 @@ WooCommerce styles override
 }
 .woocommerce .widget_shopping_cart .total strong,
 .woocommerce.widget_shopping_cart .total strong {
-  font-family: "Marcellus", sans-serif;
+  font-family: "Belleza", sans-serif;
   font-weight: 600;
 }
 .woocommerce .widget_shopping_cart .total .woocommerce-Price-amount,
 .woocommerce.widget_shopping_cart .total .woocommerce-Price-amount {
   float: right;
-  font-family: "Marcellus", sans-serif;
+  font-family: "Belleza", sans-serif;
   font-weight: 600;
   font-size: 16px;
 }
@@ -825,7 +825,7 @@ WooCommerce styles override
 
 .woocommerce-mini-cart__buttons a.button.wc-forward {
   color: var(--white-color);
-  font-family: "Marcellus", sans-serif;
+  font-family: "Belleza", sans-serif;
   font-size: 13px;
   font-weight: 600;
   border-radius: 0;
@@ -851,7 +851,7 @@ WooCommerce styles override
 
 /* widget filter */
 .woocommerce .woocommerce-widget-layered-nav-list {
-  font-family: "Marcellus", sans-serif;
+  font-family: "Belleza", sans-serif;
   font-weight: 700;
   font-size: 14px;
   position: relative;
@@ -889,7 +889,7 @@ WooCommerce styles override
   top: -4px;
 }
 .woocommerce .widget_price_filter .price_slider_amount {
-  font-family: "Marcellus", sans-serif;
+  font-family: "Belleza", sans-serif;
   font-size: 14px;
   letter-spacing: 1px;
   color: ;
@@ -901,7 +901,7 @@ WooCommerce styles override
 }
 .woocommerce .widget_price_filter .price_slider_amount button.button {
   padding: 0;
-  font-family: "Marcellus", sans-serif;
+  font-family: "Belleza", sans-serif;
   font-size: 14px;
   letter-spacing: 0.5px;
   background: none;
@@ -916,7 +916,7 @@ WooCommerce styles override
 .product_meta > span {
   display: block;
   font-size: 16px;
-  font-family: "Marcellus", sans-serif;
+  font-family: "Belleza", sans-serif;
   font-weight: 600;
   letter-spacing: 0.5px;
   margin-bottom: 15px;
@@ -946,7 +946,7 @@ WooCommerce styles override
 .woocommerce div.product .entry-summary p.price,
 .woocommerce div.product .entry-summary span.price {
   font-size: 26px;
-  font-family: "Marcellus", sans-serif;
+  font-family: "Belleza", sans-serif;
 }
 .woocommerce div.product .entry-summary p.price .woocommerce-Price-amount,
 .woocommerce div.product .entry-summary span.price .woocommerce-Price-amount {
