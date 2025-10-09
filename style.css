@@ -936,6 +936,18 @@ td {
   border-radius: 50%;
 }
 
+.rotate_anim .elementor-widget-container {
+  width: 120px;
+  height: 120px;
+}
+
+.rotate_anim .elementor-widget-container .e-text-path {
+  margin: 0 auto;
+  text-align: center;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+}
 
 .rotate_anim svg {
     animation: rotate 20s linear infinite;
