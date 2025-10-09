@@ -434,6 +434,7 @@ h6 {
 }
 p {
   margin: 0 0 20px;
+  font-weight: 300;
 }
 
 dfn, cite, em, i {
@@ -4985,7 +4986,7 @@ object {
 }
 .tab-titles .title-item {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 400;
   text-transform: uppercase;
   display: inline-block;
   vertical-align: middle;
@@ -8499,16 +8500,16 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 
 
 
-
-
 .food-price-menu .menu-label {
   font-size: 74%;
   text-transform: uppercase;
   color: #fff;
   border-radius: 0;
-  padding: 1px 10px;
+  padding: 6px 10px;
   font-weight: 600;
   margin: 0 0 0 10px;
+  line-height: 1;
+  background: var(--primary-color);
 }
 .food-price-menu .menu-item:first-child {
   margin-top: 0 !important;
