@@ -1558,6 +1558,7 @@ a:hover, a:active {
 .main-navigation ul li li a {
   font-size: 16px;
   line-height: 30px;
+  font-weight: 400;
   color: #ffffff;
   text-align: left;
   display: block;
