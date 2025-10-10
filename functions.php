@@ -132,7 +132,7 @@ function bistroly_fonts_url() {
 	$second_font = bistroly_get_option( 'second_font', [] );
 
 	if ( !isset( $body_font['font-family'] ) || $body_font['font-family'] == '' ) {
-		$font_families[] = 'Inter:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i';
+		$font_families[] = 'Inter:300,400,500,600,700';
 	}
 
 	if ( !isset( $second_font['font-family'] ) || $second_font['font-family'] == '' ) {
@@ -143,6 +143,7 @@ function bistroly_fonts_url() {
 		$fonts_url = add_query_arg( array(
 			'family' => urlencode( implode( '|', $font_families ) ),
 			'subset' => urlencode( $subsets ),
+			'display' => 'swap',
 		), 'https://fonts.googleapis.com/css' );
 	}
 	return esc_url_raw( $fonts_url );
