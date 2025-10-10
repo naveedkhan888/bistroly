@@ -7615,7 +7615,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 .elementor-default li.elementor-icon-list-item,
 .elementor-default li.elementor-icon-list-item a {
   font-family: "Inter", sans-serif;
-  color: #65605c;
+  color: var(--white-color);
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
