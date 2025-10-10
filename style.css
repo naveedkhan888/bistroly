@@ -365,7 +365,7 @@ select,
 optgroup,
 textarea {
   color: #ffffff;
-  font-family: "Lato", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   line-height: 1.625;
   font-weight: 300;
@@ -530,7 +530,7 @@ mark, ins {
 }
 
 .font-main {
-  font-family: "Lato", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .font-second {
@@ -1388,8 +1388,8 @@ a:hover, a:active {
 }
 
 .main-navigation ul {
-  font-family: "Belleza", sans-serif;
-  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
   font-size: 16px;
   list-style: none;
   margin: 0px 0px;
@@ -1467,6 +1467,7 @@ a:hover, a:active {
   text-align: center;
   outline: none;
   color: ;
+  text-transform: uppercase;
   white-space: nowrap;
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
@@ -7350,7 +7351,7 @@ select option:checked {
 }
 .features-service-wrapper .features-service-item .features-service-content .features-service-desc {
   overflow: hidden;
-  font-family: "Lato", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 .features-service-wrapper .features-service-item .features-service-content .features-service-desc p {
   margin-top: 15px;
@@ -7607,7 +7608,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 .elementor-default .elementor-widget-text-editor,
 .elementor-default li.elementor-icon-list-item,
 .elementor-default li.elementor-icon-list-item a {
-  font-family: "Lato", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #65605c;
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
