@@ -1415,7 +1415,7 @@ a:hover, a:active {
 }
 
 .main-navigation > ul > li {
-  margin: 0px 29px;
+  margin: 0px 30PX;
   padding: 0px 0px;
   float: left;
   position: relative;
@@ -1543,7 +1543,7 @@ a:hover, a:active {
 }
 
 .main-navigation > ul > li.menu-item-has-children > a {
-  padding-right: 17px;
+  padding-right: 0;
 }
 
 .main-navigation > ul > li.menu-item-has-children:last-child > a:after {
