@@ -1097,7 +1097,7 @@ function bistroly_customize_settings() {
             'type'     => 'color',
             'label'    => esc_html__( 'Secondary Color', 'bistroly' ),
             'section'  => 'color_scheme',
-            'default'  => '#151E36',
+            'default'  => '#070e22',
             'priority' => 10,
         ),
 
@@ -1113,7 +1113,7 @@ function bistroly_customize_settings() {
             'type'     => 'color',
             'label'    => esc_html__( 'Accent Color', 'bistroly' ),
             'section'  => 'color_scheme',
-            'default'  => '#0E1730',
+            'default'  => '#0e1730',
             'priority' => 10,
         ),
 
