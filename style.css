@@ -7312,7 +7312,6 @@ select option:checked {
   width: 100%;
   overflow: hidden;
   display: flex;
-  background: #262832;
 }
 .features-service-wrapper .features-service-item {
   height: 745px;
