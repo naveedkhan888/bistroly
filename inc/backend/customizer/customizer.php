@@ -1105,7 +1105,7 @@ function bistroly_customize_settings() {
             'type'     => 'color',
             'label'    => esc_html__( 'Text Color', 'bistroly' ),
             'section'  => 'color_scheme',
-            'default'  => '#ced8d8',
+            'default'  => '#e3e3e3',
             'priority' => 10,
         ),
 

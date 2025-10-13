@@ -9,7 +9,7 @@ if(!function_exists('bistroly_color_scheme')){
 	  	// Get theme options with fallbacks
 		$primary_color      = bistroly_get_option('primary_color', '#b58c67');
 		$secondary_color    = bistroly_get_option('secondary_color', '#151E36');
-		$text_color         = bistroly_get_option('text_color', '#ced8d8');
+		$text_color         = bistroly_get_option('text_color', '#e3e3e3');
 		$accent_color       = bistroly_get_option('accent_color', '#0E1730');
 		$bg_color           = bistroly_get_option('bg_color', '#f4efef');
 		$white_color        = bistroly_get_option('white_color', '#FFFFFF');
