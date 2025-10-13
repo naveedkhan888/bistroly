@@ -4589,7 +4589,6 @@ object {
 }
 .xp-counter h6 {
   font-size: 14px;
-  line-height: 24px;
   text-transform: uppercase;
   color: #232323;
   font-weight: 600;
@@ -7550,6 +7549,14 @@ select option:checked {
 
   .qodef-qi-image-gallery .qodef-grid-inner > .qodef-e:nth-of-type(5n) {
     transform: rotate(-358deg) translateY(48px);
+  }
+
+  .qodef-qi-image-gallery .qodef-grid-inner > .qodef-e:nth-of-type(2n+1) .qodef-e-inner {
+    border-radius:0px 140px 0 0;
+  }
+
+  .qodef-qi-image-gallery .qodef-grid-inner > .qodef-e:nth-of-type(5n) .qodef-e-inner {
+    border-radius:140px 140px 0 0 ;
   }
 }
 
