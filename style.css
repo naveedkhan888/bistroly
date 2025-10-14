@@ -1653,7 +1653,7 @@ a:hover, a:active {
 }
 .main-navigation ul > li.menu-item-has-children:hover > a, 
 .main-navigation ul > li.current_page_item > a::after {
-  color: var(--white-color);
+  
 }
 .main-navigation ul > li.menu-item-has-children:hover > a:after {
   color: var(--primary-color);
@@ -7100,9 +7100,11 @@ select option:checked {
 }
 
 .select2-container .select2-selection--single .select2-selection__rendered {
-  padding: 14px 10px 13px 36px !important;
+  padding: 15px 10px 15px 36px !important;
   color: inherit !important;
-  line-height: 1.875 !important;
+  line-height: 1.625 !important;
+  font-weight: 300 !important;
+  font-size: 14px;
 }
 
 .select2-selection__clear, 
@@ -8100,7 +8102,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   height: 100vh;
   overflow-x: hidden;
   z-index: 9999;
-  background: #fff;
+  background: var(--accent-color);
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
