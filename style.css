@@ -8298,7 +8298,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  background: #f5f5f5;
+  background: var(--secondary-color);
   text-align: center;
 }
 .side-panel.on-left {
