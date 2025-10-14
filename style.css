@@ -8174,7 +8174,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   box-sizing: border-box;
 }
 .mmenu-wrapper .mobile_mainmenu > li.menu-item-has-children .arrow i {
-  color: #9397a7;
+  color: var(--primary-color);
   display: inline-block;
   line-height: 1;
   -webkit-transition: transform 0.3s ease-in-out;
