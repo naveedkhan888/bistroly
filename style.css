@@ -8258,7 +8258,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   top: 0;
   bottom: 0;
   right: 0;
-  background: #fff;
+  background: var(--accent-color);
   overflow-x: hidden;
   z-index: 9999;
   -webkit-transform: translateX(100%);
