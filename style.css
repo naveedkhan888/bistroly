@@ -7068,17 +7068,25 @@ select option:checked {
 
 .select2-container--default .select2-results > .select2-results__options {
   background: var(--accent-color);
-  padding: 15px;
+  padding: 15px 22px;
   border: 1px solid var(--divider-color);
 }
 .select2-results__option {
-  padding: 0; }
+  padding: 0;
+  color: var(--white-color);
+  opacity: 0.7;
+  transition: ;
+   }
 
 .select2-container--default .select2-results__option--selected {
   background-color: transparent;
 }
 .select2-results__option:hover {
   background: transparent !important;
+  opacity: 1;
+  -webkit-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .select2-container--open .select2-dropdown {
