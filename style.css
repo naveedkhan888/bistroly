@@ -3733,6 +3733,7 @@ object {
   color: var(--primary-color);
   margin-bottom: 0px;
   line-height: 1em;
+  text-transform: lowercase;
 }
 .xp-heading > span.is_highlight {
   background: var(--primary-color);
