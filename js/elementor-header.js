@@ -17,6 +17,19 @@
       }
   
       $('#panel-btn, .side-panel-close, .panel-overlay').on('click', panel_handler);
+
+      // Close side panel on scroll
+      let scrollTimer;
+      $(window).on('scroll', function() {
+          clearTimeout(scrollTimer);
+          scrollTimer = setTimeout(function() {
+              if ($('body').hasClass('side-panel-active')) {
+                  $('#panel-btn').removeClass('active');
+                  $('#side-panel').removeClass('side-panel-open');
+                  $('body').removeClass('side-panel-active');
+              }
+          }, 100);
+      });
   
     /* --------------------------------------------------
     * toggle search

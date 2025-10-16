@@ -798,6 +798,12 @@ WooCommerce styles override
   left: auto;
   font-weight: 500;
   font-size: 1.3em;
+  color: var(--primary-color) !important;
+}
+
+.woocommerce a.remove:hover {
+  color: #fff !important;
+  background: var(--primary-color);
 }
 
 .woocommerce .widget_shopping_cart .total,
