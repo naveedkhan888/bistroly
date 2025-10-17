@@ -7597,6 +7597,10 @@ body .elementor-widget:not(:last-child) {
   margin-bottom: 0;
 }
 
+.elementor-element > .elementor-widget-imenu {
+  height: 100%;
+}
+
 div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   color: ;
   font-weight: 700;
