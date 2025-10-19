@@ -3606,11 +3606,81 @@ Vertical Menu
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
-.box_cardss {
-  transition: all 0.6s ease-in-out;
+
+.xp-animated-image-wrapper {
+    display: inline-block;
+    width: 100%;
+}
+
+.xp-animated-image {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.xp-animated-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.xp-animated-image .reveal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: #000;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Ensure image is positioned correctly */
+.xp-animated-image.animating img {
+    position: relative;
+    z-index: 1;
+}
+
+/* Optional: Add a subtle hover effect after reveal */
+.xp-animated-image.revealed:hover img {
+    transform: scale(1.05);
+}
+
+/* Loading state */
+.xp-animated-image:not(.revealed):not(.animating) img {
+    opacity: 0;
+}
+
+/* Smooth link transitions */
+a .xp-animated-image {
+    transition: all 0.3s ease;
+}
+
+a:hover .xp-animated-image.revealed {
+    transform: translateY(-5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .xp-animated-image {
+        max-width: 100%;
+    }
+}
+
+/* Ensure proper stacking context */
+.xp-animated-image-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+
+.box_cardss img {
+  transition: transform .6s cubic-bezier(.34,.78,.45,.98);
 }
 .box_cardss:hover img {
-  transform: scale(1.14);
+  transform: scale(1.02);
 }
 .page-content .wp-smiley,
 .entry-content .wp-smiley,

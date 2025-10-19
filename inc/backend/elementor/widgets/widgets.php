@@ -48,3 +48,4 @@ locate_template('/inc/backend/elementor/widgets/new_widget2.php', true, true);
 locate_template('/inc/backend/elementor/widgets/new_widget3.php', true, true);
 locate_template('/inc/backend/elementor/widgets/new_widget4.php', true, true);
 locate_template('/inc/backend/elementor/widgets/xp-list-showcase.php', true, true);
+locate_template('/inc/backend/elementor/widgets/animated_image_widget.php', true, true);
