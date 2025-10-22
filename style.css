@@ -7645,7 +7645,7 @@ select option:checked {
 }
 
 .verticle_text {
-  writing-mode: vertical-rl;
+  writing-mode: sideways-lr;
 }
 
 
