@@ -924,6 +924,7 @@ td {
 
 .is-stuck.blurred_background {
   backdrop-filter: blur(13px);
+  border-bottom: 1px solid var(--divider-color);
 }
 
 .blurred_bg {
