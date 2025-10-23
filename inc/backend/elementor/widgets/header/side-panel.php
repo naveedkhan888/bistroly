@@ -135,7 +135,7 @@ class Bistroly_Sidepanel extends Widget_Base{
 	    	<div class="xptf-sidepanel xptf-cta-header">
 				<div class="site-overlay panel-overlay"></div>
 				<div id="panel-btn" class="panel-btn xptf-cta-icons">
-					<i class="xp-webicon-menu"></i>
+					<svg class="xp-svg-area-open" xmlns="http://www.w3.org/2000/svg" width="28" height="11.071"><g><path d="M.75.75h26.417"></path><path d="M.75 10.321h26.5"></path></g></svg>
 				</div>
 			</div>
 		    

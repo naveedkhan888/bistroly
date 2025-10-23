@@ -7648,6 +7648,53 @@ select option:checked {
   writing-mode: sideways-lr;
 }
 
+.xp-svg-area-open g {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-width: 1.5;
+}
+
+.panel-btn:hover svg:not(.xp-svg--search-opener) path {
+  animation: xp-draw .9s cubic-bezier(.57,.39,0,.86) 1 forwards;
+}
+
+.panel-btn:hover svg:not(.xp-svg--search-opener) path:nth-of-type(2) {
+  animation-name: xp-draw-from-right;
+  animation-delay: .15s;
+}
+
+@keyframes xp-draw {
+
+  0%,
+  100% {
+    clip-path: inset(-2px -2px)
+  }
+
+  42% {
+    clip-path: inset(-2px -2px -2px 100%)
+  }
+
+  43% {
+    clip-path: inset(-2px 100% -3px -2px)
+  }
+}
+
+@keyframes xp-draw-from-right {
+
+  0%,
+  100% {
+    clip-path: inset(-2px -2px)
+  }
+
+  42% {
+    clip-path: inset(-2px 100% -2px -2px)
+  }
+
+  43% {
+    clip-path: inset(-2px -3px -2px 100%)
+  }
+}
 
 .site-overlay {
   cursor: url(images/close.png) 16 16, default;
