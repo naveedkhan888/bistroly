@@ -798,7 +798,7 @@ WooCommerce styles override
   left: auto;
   font-weight: 500;
   font-size: 1.3em;
-  color: var(--primary-color) !important;
+  color: var(--white-color) !important;
 }
 
 .woocommerce a.remove:hover {
