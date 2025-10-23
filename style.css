@@ -8370,8 +8370,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 .panel-btn {
   line-height: 1;
 }
-.panel-btn i {
-  color: ;
+.panel-btn i, .panel-btn svg {
   cursor: pointer;
 }
 .panel-btn i:before {
