@@ -85,7 +85,7 @@ class XP_Lists_Showcase extends Widget_Base {
                     'span' => 'span',
                     'p' => 'p',
                 ],
-                'default' => 'h3',
+                'default' => 'h2',
             ]
         );
 
@@ -452,7 +452,7 @@ class XP_Lists_Showcase extends Widget_Base {
                         $this->add_link_attributes('link_' . $index, $item['link']);
                         $link_attr = $this->get_render_attribute_string('link_' . $index);
                     }
-                    $title_tag = !empty($item['title_tag']) ? $item['title_tag'] : 'h3';
+                    $title_tag = !empty($item['title_tag']) ? $item['title_tag'] : 'h2';
                     $subtitle_tag = !empty($item['subtitle_tag']) ? $item['subtitle_tag'] : 'p';
                 ?>
                     <a itemprop="url" class="xptheme-m-item xptheme-e" <?php echo $link_attr; ?>>
