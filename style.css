@@ -9835,13 +9835,6 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   position: relative;
   display: block;
   z-index: 2;
-  font-family: Cormorant, serif;
-  font-size: 100px;
-  font-weight: 400;
-  line-height: 1em;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  opacity: 0.4;
   transition: opacity 0.8s;
 }
 .xptheme-interactive-link-showcase .xptheme-m-item .xptheme-e-subtitle {
@@ -9890,7 +9883,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   .xptheme-m-item {
   width: 100%;
   position: relative;
-  padding: 33px 10vw 42px;
+  padding: 30px 0;
 }
 @media only screen and (max-width: 880px) {
   .xptheme-interactive-link-showcase.xptheme-layout--list
@@ -10024,9 +10017,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   .xptheme-m-item
   .xptheme-e-subtitle {
   display: block;
-  font-size: 20px;
-  letter-spacing: 0.03em;
-  margin-top: 13px;
+  margin: 0;
 }
 
 @media only screen and (max-width: 1512px) {

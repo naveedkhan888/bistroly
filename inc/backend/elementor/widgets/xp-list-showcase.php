@@ -477,6 +477,44 @@ class XP_Lists_Showcase extends Widget_Base {
         
         <?php
     }
+
+    protected function content_template() {
+        ?>
+        <#
+        var showTopBorder = settings.show_top_border === 'yes' ? 'xptheme-has-top-border' : '';
+        var showBottomBorder = settings.show_bottom_border === 'yes' ? 'xptheme-has-bottom-border' : '';
+        #>
+        
+        <div class="xptheme-shortcode xptheme-m xptheme-interactive-link-showcase xptheme-layout--list {{ showTopBorder }} {{ showBottomBorder }}">
+            <div class="xptheme-m-items">
+                <# _.each( settings.list_items, function( item, index ) {
+                    var titleTag = item.title_tag || 'h3';
+                    var subtitleTag = item.subtitle_tag || 'p';
+                    var linkUrl = item.link.url || '#';
+                    var linkTarget = item.link.is_external ? '_blank' : '_self';
+                    var linkRel = item.link.nofollow ? 'nofollow' : '';
+                #>
+                    <a itemprop="url" class="xptheme-m-item xptheme-e" href="{{ linkUrl }}" target="{{ linkTarget }}" rel="{{ linkRel }}">
+                        <{{ titleTag }} class="xptheme-e-title">{{{ item.title }}}</{{ titleTag }}>
+                        <{{ subtitleTag }} class="xptheme-e-subtitle">{{{ item.subtitle }}}</{{ subtitleTag }}>
+
+                        <# if ( item.image_1 && item.image_1.url ) { #>
+                            <img decoding="async" loading="lazy" src="{{ item.image_1.url }}" alt="{{ item.title }}" />
+                        <# } #>
+
+                        <# if ( item.image_2 && item.image_2.url ) { #>
+                            <img decoding="async" loading="lazy" src="{{ item.image_2.url }}" alt="{{ item.title }}" />
+                        <# } #>
+
+                        <# if ( item.image_3 && item.image_3.url ) { #>
+                            <img decoding="async" loading="lazy" src="{{ item.image_3.url }}" alt="{{ item.title }}" />
+                        <# } #>
+                    </a>
+                <# }); #>
+            </div>
+        </div>
+        <?php
+    }
 }
 
 // Register the widget
