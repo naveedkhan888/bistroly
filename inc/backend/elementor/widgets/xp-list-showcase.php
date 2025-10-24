@@ -23,6 +23,14 @@ class XP_Lists_Showcase extends Widget_Base {
         return [ 'category_bistroly' ];
     }
 
+    public function get_style_depends() {
+        return [];
+    }
+
+    public function get_script_depends() {
+        return [];
+    }
+
     protected function register_controls() {
 
         // Content Section
@@ -216,7 +224,7 @@ class XP_Lists_Showcase extends Widget_Base {
             [
                 'label' => __( 'Color', 'bistroly' ),
                 'type' => Controls_Manager::COLOR,
-                'default' => '#ffffff',
+                'default' => '#333333',
                 'selectors' => [
                     '{{WRAPPER}} .xptheme-e-title' => 'color: {{VALUE}};',
                 ],
@@ -228,7 +236,7 @@ class XP_Lists_Showcase extends Widget_Base {
             [
                 'label' => __( 'Active Color', 'bistroly' ),
                 'type' => Controls_Manager::COLOR,
-                'default' => '#ffffff',
+                'default' => '#000000',
                 'selectors' => [
                     '{{WRAPPER}} .xptheme-m-item.xptheme--active .xptheme-e-title' => 'color: {{VALUE}};',
                 ],
@@ -259,7 +267,7 @@ class XP_Lists_Showcase extends Widget_Base {
             [
                 'label' => __( 'Color', 'bistroly' ),
                 'type' => Controls_Manager::COLOR,
-                'default' => '#ffffff',
+                'default' => '#666666',
                 'selectors' => [
                     '{{WRAPPER}} .xptheme-e-subtitle' => 'color: {{VALUE}};',
                 ],
@@ -271,7 +279,7 @@ class XP_Lists_Showcase extends Widget_Base {
             [
                 'label' => __( 'Active Color', 'bistroly' ),
                 'type' => Controls_Manager::COLOR,
-                'default' => '#ffffff',
+                'default' => '#333333',
                 'selectors' => [
                     '{{WRAPPER}} .xptheme-m-item.xptheme--active .xptheme-e-subtitle' => 'color: {{VALUE}};',
                 ],
@@ -302,7 +310,7 @@ class XP_Lists_Showcase extends Widget_Base {
             [
                 'label' => __( 'Color', 'bistroly' ),
                 'type' => Controls_Manager::COLOR,
-                'default' => 'rgba(255, 255, 255, 0.3)',
+                'default' => '#e0e0e0',
                 'selectors' => [
                     '{{WRAPPER}} .xptheme-m-items:before' => 'background: {{VALUE}};',
                     '{{WRAPPER}} .xptheme-m-item:after' => 'background: {{VALUE}};',
@@ -350,6 +358,14 @@ class XP_Lists_Showcase extends Widget_Base {
                 'label' => __( 'Item Padding', 'bistroly' ),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
+                'default' => [
+                    'top' => '15',
+                    'right' => '0',
+                    'bottom' => '15',
+                    'left' => '0',
+                    'unit' => 'px',
+                    'isLinked' => false,
+                ],
                 'selectors' => [
                     '{{WRAPPER}} .xptheme-m-item' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -442,8 +458,60 @@ class XP_Lists_Showcase extends Widget_Base {
         $settings = $this->get_settings_for_display();
         $show_top_border = $settings['show_top_border'] === 'yes' ? 'xptheme-has-top-border' : '';
         $show_bottom_border = $settings['show_bottom_border'] === 'yes' ? 'xptheme-has-bottom-border' : '';
-        ?>
         
+        if (empty($settings['list_items'])) {
+            return;
+        }
+        ?>
+        <style>
+            .xptheme-interactive-link-showcase .xptheme-m-items {
+                position: relative;
+                display: block;
+            }
+            .xptheme-interactive-link-showcase .xptheme-m-item {
+                display: block;
+                text-decoration: none;
+                position: relative;
+                padding: 15px 0;
+            }
+            .xptheme-interactive-link-showcase .xptheme-e-title {
+                margin: 0 0 5px 0;
+                font-size: 18px;
+                font-weight: 600;
+            }
+            .xptheme-interactive-link-showcase .xptheme-e-subtitle {
+                margin: 0;
+                font-size: 14px;
+            }
+            .xptheme-interactive-link-showcase .xptheme-m-item img {
+                display: none;
+                max-width: 100%;
+                height: auto;
+            }
+            .xptheme-interactive-link-showcase.xptheme-has-top-border .xptheme-m-items:before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 1px;
+                background: #e0e0e0;
+            }
+            .xptheme-interactive-link-showcase .xptheme-m-item:after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 1px;
+                background: #e0e0e0;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+            .xptheme-interactive-link-showcase.xptheme-has-bottom-border .xptheme-m-item:last-child:after {
+                display: block;
+            }
+            .xptheme-interactive-link-showcase:not(.xptheme-has-bottom-border) .xptheme-m-item:last-child:after {
+                display: none;
+            }
+        </style>
         <div class="xptheme-shortcode xptheme-m xptheme-interactive-link-showcase xptheme-layout--list <?php echo esc_attr($show_top_border); ?> <?php echo esc_attr($show_bottom_border); ?>">
             <div class="xptheme-m-items">
                 <?php foreach ($settings['list_items'] as $index => $item): 
@@ -474,7 +542,6 @@ class XP_Lists_Showcase extends Widget_Base {
                 <?php endforeach; ?>
             </div>
         </div>
-        
         <?php
     }
 
@@ -483,18 +550,77 @@ class XP_Lists_Showcase extends Widget_Base {
         <#
         var showTopBorder = settings.show_top_border === 'yes' ? 'xptheme-has-top-border' : '';
         var showBottomBorder = settings.show_bottom_border === 'yes' ? 'xptheme-has-bottom-border' : '';
+        
+        if ( ! settings.list_items || settings.list_items.length === 0 ) {
+            #>
+            <div style="padding: 20px; text-align: center; background: #f5f5f5; border: 1px dashed #ccc;">
+                <p style="margin: 0; color: #666;">Add list items to display content</p>
+            </div>
+            <#
+            return;
+        }
         #>
+        
+        <style>
+            .xptheme-interactive-link-showcase .xptheme-m-items {
+                position: relative;
+                display: block;
+            }
+            .xptheme-interactive-link-showcase .xptheme-m-item {
+                display: block;
+                text-decoration: none;
+                position: relative;
+                padding: 15px 0;
+            }
+            .xptheme-interactive-link-showcase .xptheme-e-title {
+                margin: 0 0 5px 0;
+                font-size: 18px;
+                font-weight: 600;
+            }
+            .xptheme-interactive-link-showcase .xptheme-e-subtitle {
+                margin: 0;
+                font-size: 14px;
+            }
+            .xptheme-interactive-link-showcase .xptheme-m-item img {
+                display: none;
+                max-width: 100%;
+                height: auto;
+            }
+            .xptheme-interactive-link-showcase.xptheme-has-top-border .xptheme-m-items:before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 1px;
+                background: #e0e0e0;
+            }
+            .xptheme-interactive-link-showcase .xptheme-m-item:after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 1px;
+                background: #e0e0e0;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+            .xptheme-interactive-link-showcase.xptheme-has-bottom-border .xptheme-m-item:last-child:after {
+                display: block;
+            }
+            .xptheme-interactive-link-showcase:not(.xptheme-has-bottom-border) .xptheme-m-item:last-child:after {
+                display: none;
+            }
+        </style>
         
         <div class="xptheme-shortcode xptheme-m xptheme-interactive-link-showcase xptheme-layout--list {{ showTopBorder }} {{ showBottomBorder }}">
             <div class="xptheme-m-items">
                 <# _.each( settings.list_items, function( item, index ) {
                     var titleTag = item.title_tag || 'h3';
                     var subtitleTag = item.subtitle_tag || 'p';
-                    var linkUrl = item.link.url || '#';
-                    var linkTarget = item.link.is_external ? '_blank' : '_self';
-                    var linkRel = item.link.nofollow ? 'nofollow' : '';
+                    var linkUrl = item.link && item.link.url ? item.link.url : '#';
+                    var linkTarget = item.link && item.link.is_external ? '_blank' : '_self';
+                    var linkRel = item.link && item.link.nofollow ? 'nofollow' : '';
                 #>
-                    <a itemprop="url" class="xptheme-m-item xptheme-e" href="{{ linkUrl }}" target="{{ linkTarget }}" rel="{{ linkRel }}">
+                    <a itemprop="url" class="xptheme-m-item xptheme-e" href="{{ linkUrl }}" target="{{ linkTarget }}" <# if (linkRel) { #>rel="{{ linkRel }}"<# } #>>
                         <{{ titleTag }} class="xptheme-e-title">{{{ item.title }}}</{{ titleTag }}>
                         <{{ subtitleTag }} class="xptheme-e-subtitle">{{{ item.subtitle }}}</{{ subtitleTag }}>
 
