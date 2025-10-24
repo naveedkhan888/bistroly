@@ -226,7 +226,7 @@ class XP_Lists_Showcase extends Widget_Base {
                 'type' => Controls_Manager::COLOR,
                 'default' => '#333333',
                 'selectors' => [
-                    '{{WRAPPER}} .xptheme-e-title' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .xptheme-e-title' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -238,7 +238,7 @@ class XP_Lists_Showcase extends Widget_Base {
                 'type' => Controls_Manager::COLOR,
                 'default' => '#000000',
                 'selectors' => [
-                    '{{WRAPPER}} .xptheme-m-item.xptheme--active .xptheme-e-title' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .xptheme-m-item.xptheme--active .xptheme-e-title' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -269,7 +269,7 @@ class XP_Lists_Showcase extends Widget_Base {
                 'type' => Controls_Manager::COLOR,
                 'default' => '#666666',
                 'selectors' => [
-                    '{{WRAPPER}} .xptheme-e-subtitle' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .xptheme-e-subtitle' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -281,7 +281,7 @@ class XP_Lists_Showcase extends Widget_Base {
                 'type' => Controls_Manager::COLOR,
                 'default' => '#333333',
                 'selectors' => [
-                    '{{WRAPPER}} .xptheme-m-item.xptheme--active .xptheme-e-subtitle' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .xptheme-m-item.xptheme--active .xptheme-e-subtitle' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -460,58 +460,11 @@ class XP_Lists_Showcase extends Widget_Base {
         $show_bottom_border = $settings['show_bottom_border'] === 'yes' ? 'xptheme-has-bottom-border' : '';
         
         if (empty($settings['list_items'])) {
+            echo '<div style="padding: 20px; text-align: center; background: #f5f5f5; border: 1px dashed #ccc;"><p style="margin: 0; color: #666;">Add list items to display content</p></div>';
             return;
         }
         ?>
-        <style>
-            .xptheme-interactive-link-showcase .xptheme-m-items {
-                position: relative;
-                display: block;
-            }
-            .xptheme-interactive-link-showcase .xptheme-m-item {
-                display: block;
-                text-decoration: none;
-                position: relative;
-                padding: 15px 0;
-            }
-            .xptheme-interactive-link-showcase .xptheme-e-title {
-                margin: 0 0 5px 0;
-                font-size: 18px;
-                font-weight: 600;
-            }
-            .xptheme-interactive-link-showcase .xptheme-e-subtitle {
-                margin: 0;
-                font-size: 14px;
-            }
-            .xptheme-interactive-link-showcase .xptheme-m-item img {
-                display: none;
-                max-width: 100%;
-                height: auto;
-            }
-            .xptheme-interactive-link-showcase.xptheme-has-top-border .xptheme-m-items:before {
-                content: '';
-                display: block;
-                width: 100%;
-                height: 1px;
-                background: #e0e0e0;
-            }
-            .xptheme-interactive-link-showcase .xptheme-m-item:after {
-                content: '';
-                display: block;
-                width: 100%;
-                height: 1px;
-                background: #e0e0e0;
-                position: absolute;
-                bottom: 0;
-                left: 0;
-            }
-            .xptheme-interactive-link-showcase.xptheme-has-bottom-border .xptheme-m-item:last-child:after {
-                display: block;
-            }
-            .xptheme-interactive-link-showcase:not(.xptheme-has-bottom-border) .xptheme-m-item:last-child:after {
-                display: none;
-            }
-        </style>
+        
         <div class="xptheme-shortcode xptheme-m xptheme-interactive-link-showcase xptheme-layout--list <?php echo esc_attr($show_top_border); ?> <?php echo esc_attr($show_bottom_border); ?>">
             <div class="xptheme-m-items">
                 <?php foreach ($settings['list_items'] as $index => $item): 
@@ -523,25 +476,26 @@ class XP_Lists_Showcase extends Widget_Base {
                     $title_tag = !empty($item['title_tag']) ? $item['title_tag'] : 'h3';
                     $subtitle_tag = !empty($item['subtitle_tag']) ? $item['subtitle_tag'] : 'p';
                 ?>
-                    <a itemprop="url" class="xptheme-m-item xptheme-e" <?php echo $link_attr; ?>>
-                        <<?php echo esc_attr($title_tag); ?> class="xptheme-e-title"><?php echo esc_html($item['title']); ?></<?php echo esc_attr($title_tag); ?>>
-                        <<?php echo esc_attr($subtitle_tag); ?> class="xptheme-e-subtitle"><?php echo esc_html($item['subtitle']); ?></<?php echo esc_attr($subtitle_tag); ?>>
+                    <a itemprop="url" class="xptheme-m-item xptheme-e" <?php echo $link_attr; ?> style="display: block !important; text-decoration: none !important; position: relative !important; padding: 15px 0 !important;">
+                        <<?php echo esc_attr($title_tag); ?> class="xptheme-e-title" style="display: block !important; margin: 0 0 5px 0 !important; font-size: 18px !important; font-weight: 600 !important; color: #333 !important;"><?php echo esc_html($item['title']); ?></<?php echo esc_attr($title_tag); ?>>
+                        <<?php echo esc_attr($subtitle_tag); ?> class="xptheme-e-subtitle" style="display: block !important; margin: 0 !important; font-size: 14px !important; color: #666 !important;"><?php echo esc_html($item['subtitle']); ?></<?php echo esc_attr($subtitle_tag); ?>>
 
                         <?php if (!empty($item['image_1']['url'])): ?>
-                            <img decoding="async" loading="lazy" src="<?php echo esc_url($item['image_1']['url']); ?>" alt="<?php echo esc_attr($item['title']); ?>" />
+                            <img decoding="async" loading="lazy" src="<?php echo esc_url($item['image_1']['url']); ?>" alt="<?php echo esc_attr($item['title']); ?>" style="display: none !important; max-width: 100% !important; height: auto !important;" />
                         <?php endif; ?>
 
                         <?php if (!empty($item['image_2']['url'])): ?>
-                            <img decoding="async" loading="lazy" src="<?php echo esc_url($item['image_2']['url']); ?>" alt="<?php echo esc_attr($item['title']); ?>" />
+                            <img decoding="async" loading="lazy" src="<?php echo esc_url($item['image_2']['url']); ?>" alt="<?php echo esc_attr($item['title']); ?>" style="display: none !important; max-width: 100% !important; height: auto !important;" />
                         <?php endif; ?>
 
                         <?php if (!empty($item['image_3']['url'])): ?>
-                            <img decoding="async" loading="lazy" src="<?php echo esc_url($item['image_3']['url']); ?>" alt="<?php echo esc_attr($item['title']); ?>" />
+                            <img decoding="async" loading="lazy" src="<?php echo esc_url($item['image_3']['url']); ?>" alt="<?php echo esc_attr($item['title']); ?>" style="display: none !important; max-width: 100% !important; height: auto !important;" />
                         <?php endif; ?>
                     </a>
                 <?php endforeach; ?>
             </div>
         </div>
+        
         <?php
     }
 
@@ -561,58 +515,8 @@ class XP_Lists_Showcase extends Widget_Base {
         }
         #>
         
-        <style>
-            .xptheme-interactive-link-showcase .xptheme-m-items {
-                position: relative;
-                display: block;
-            }
-            .xptheme-interactive-link-showcase .xptheme-m-item {
-                display: block;
-                text-decoration: none;
-                position: relative;
-                padding: 15px 0;
-            }
-            .xptheme-interactive-link-showcase .xptheme-e-title {
-                margin: 0 0 5px 0;
-                font-size: 18px;
-                font-weight: 600;
-            }
-            .xptheme-interactive-link-showcase .xptheme-e-subtitle {
-                margin: 0;
-                font-size: 14px;
-            }
-            .xptheme-interactive-link-showcase .xptheme-m-item img {
-                display: none;
-                max-width: 100%;
-                height: auto;
-            }
-            .xptheme-interactive-link-showcase.xptheme-has-top-border .xptheme-m-items:before {
-                content: '';
-                display: block;
-                width: 100%;
-                height: 1px;
-                background: #e0e0e0;
-            }
-            .xptheme-interactive-link-showcase .xptheme-m-item:after {
-                content: '';
-                display: block;
-                width: 100%;
-                height: 1px;
-                background: #e0e0e0;
-                position: absolute;
-                bottom: 0;
-                left: 0;
-            }
-            .xptheme-interactive-link-showcase.xptheme-has-bottom-border .xptheme-m-item:last-child:after {
-                display: block;
-            }
-            .xptheme-interactive-link-showcase:not(.xptheme-has-bottom-border) .xptheme-m-item:last-child:after {
-                display: none;
-            }
-        </style>
-        
-        <div class="xptheme-shortcode xptheme-m xptheme-interactive-link-showcase xptheme-layout--list {{ showTopBorder }} {{ showBottomBorder }}">
-            <div class="xptheme-m-items">
+        <div class="xptheme-shortcode xptheme-m xptheme-interactive-link-showcase xptheme-layout--list {{ showTopBorder }} {{ showBottomBorder }}" style="display: block !important; min-height: 50px !important;">
+            <div class="xptheme-m-items" style="display: block !important; position: relative !important;">
                 <# _.each( settings.list_items, function( item, index ) {
                     var titleTag = item.title_tag || 'h3';
                     var subtitleTag = item.subtitle_tag || 'p';
@@ -620,20 +524,20 @@ class XP_Lists_Showcase extends Widget_Base {
                     var linkTarget = item.link && item.link.is_external ? '_blank' : '_self';
                     var linkRel = item.link && item.link.nofollow ? 'nofollow' : '';
                 #>
-                    <a itemprop="url" class="xptheme-m-item xptheme-e" href="{{ linkUrl }}" target="{{ linkTarget }}" <# if (linkRel) { #>rel="{{ linkRel }}"<# } #>>
-                        <{{ titleTag }} class="xptheme-e-title">{{{ item.title }}}</{{ titleTag }}>
-                        <{{ subtitleTag }} class="xptheme-e-subtitle">{{{ item.subtitle }}}</{{ subtitleTag }}>
+                    <a itemprop="url" class="xptheme-m-item xptheme-e" href="{{ linkUrl }}" target="{{ linkTarget }}" <# if (linkRel) { #>rel="{{ linkRel }}"<# } #> style="display: block !important; text-decoration: none !important; position: relative !important; padding: 15px 0 !important; border-bottom: 1px solid #e0e0e0 !important;">
+                        <{{ titleTag }} class="xptheme-e-title" style="display: block !important; margin: 0 0 5px 0 !important; font-size: 18px !important; font-weight: 600 !important; color: #333 !important;">{{{ item.title }}}</{{ titleTag }}>
+                        <{{ subtitleTag }} class="xptheme-e-subtitle" style="display: block !important; margin: 0 !important; font-size: 14px !important; color: #666 !important;">{{{ item.subtitle }}}</{{ subtitleTag }}>
 
                         <# if ( item.image_1 && item.image_1.url ) { #>
-                            <img decoding="async" loading="lazy" src="{{ item.image_1.url }}" alt="{{ item.title }}" />
+                            <img decoding="async" loading="lazy" src="{{ item.image_1.url }}" alt="{{ item.title }}" style="display: none !important; max-width: 100% !important; height: auto !important;" />
                         <# } #>
 
                         <# if ( item.image_2 && item.image_2.url ) { #>
-                            <img decoding="async" loading="lazy" src="{{ item.image_2.url }}" alt="{{ item.title }}" />
+                            <img decoding="async" loading="lazy" src="{{ item.image_2.url }}" alt="{{ item.title }}" style="display: none !important; max-width: 100% !important; height: auto !important;" />
                         <# } #>
 
                         <# if ( item.image_3 && item.image_3.url ) { #>
-                            <img decoding="async" loading="lazy" src="{{ item.image_3.url }}" alt="{{ item.title }}" />
+                            <img decoding="async" loading="lazy" src="{{ item.image_3.url }}" alt="{{ item.title }}" style="display: none !important; max-width: 100% !important; height: auto !important;" />
                         <# } #>
                     </a>
                 <# }); #>
