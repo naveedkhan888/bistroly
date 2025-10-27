@@ -164,6 +164,10 @@ class Bistroly_Image_Reveal extends Widget_Base{
 					'scale' => __( 'Scale Up', 'bistroly' ),
 					'blur' => __( 'Blur In', 'bistroly' ),
 					'clip' => __( 'Clip Path', 'bistroly' ),
+					'circle' => __( 'Circle Expand', 'bistroly' ),
+					'diagonal' => __( 'Diagonal', 'bistroly' ),
+					'rotate' => __( 'Rotate Scale', 'bistroly' ),
+					'flip' => __( '3D Flip', 'bistroly' ),
 				],
 				'condition' => [
 					'reveal_enable' => 'yes',
