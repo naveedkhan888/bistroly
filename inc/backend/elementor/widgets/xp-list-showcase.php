@@ -356,20 +356,21 @@ class XP_Lists_Showcase extends Widget_Base {
             ]
         );
 
-        // Image Sizes
-        $this->add_control(
-            'heading_image_sizes',
+        $this->end_controls_section();
+
+        // Image 1 Style Section
+        $this->start_controls_section(
+            'image_1_style_section',
             [
-                'label' => __( 'Image Sizes', 'bistroly' ),
-                'type' => Controls_Manager::HEADING,
-                'separator' => 'before',
+                'label' => __( 'Image 1 Style', 'bistroly' ),
+                'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'image_1_width',
             [
-                'label' => __( 'Image 1 Width', 'bistroly' ),
+                'label' => __( 'Width', 'bistroly' ),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => [ 'px', '%' ],
                 'range' => [
@@ -389,10 +390,33 @@ class XP_Lists_Showcase extends Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
+            'image_1_border_radius',
+            [
+                'label' => __( 'Border Radius', 'bistroly' ),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => [ 'px', '%', 'em' ],
+                'selectors' => [
+                    '{{WRAPPER}} .xptheme-m-item img:nth-of-type(1)' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->end_controls_section();
+
+        // Image 2 Style Section
+        $this->start_controls_section(
+            'image_2_style_section',
+            [
+                'label' => __( 'Image 2 Style', 'bistroly' ),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        $this->add_responsive_control(
             'image_2_width',
             [
-                'label' => __( 'Image 2 Width', 'bistroly' ),
+                'label' => __( 'Width', 'bistroly' ),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => [ 'px', '%' ],
                 'range' => [
@@ -412,10 +436,33 @@ class XP_Lists_Showcase extends Widget_Base {
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
+            'image_2_border_radius',
+            [
+                'label' => __( 'Border Radius', 'bistroly' ),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => [ 'px', '%', 'em' ],
+                'selectors' => [
+                    '{{WRAPPER}} .xptheme-m-item img:nth-of-type(2)' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->end_controls_section();
+
+        // Image 3 Style Section
+        $this->start_controls_section(
+            'image_3_style_section',
+            [
+                'label' => __( 'Image 3 Style', 'bistroly' ),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        $this->add_responsive_control(
             'image_3_width',
             [
-                'label' => __( 'Image 3 Width', 'bistroly' ),
+                'label' => __( 'Width', 'bistroly' ),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => [ 'px', '%' ],
                 'range' => [
@@ -431,6 +478,18 @@ class XP_Lists_Showcase extends Widget_Base {
                 ],
                 'selectors' => [
                     '{{WRAPPER}} .xptheme-m-item img:nth-of-type(3)' => 'max-width: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'image_3_border_radius',
+            [
+                'label' => __( 'Border Radius', 'bistroly' ),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => [ 'px', '%', 'em' ],
+                'selectors' => [
+                    '{{WRAPPER}} .xptheme-m-item img:nth-of-type(3)' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
