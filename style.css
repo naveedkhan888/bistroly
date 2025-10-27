@@ -3610,6 +3610,119 @@ Vertical Menu
 # Media
 --------------------------------------------------------------*/
 
+/* XP Image Reveal Styles */
+.xp-image-reveal {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+}
+
+.xp-image-reveal img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Reveal Animation Base */
+.xp-image-reveal.has-reveal {
+    overflow: hidden;
+}
+
+.xp-image-reveal.has-reveal img {
+    opacity: 0;
+}
+
+.xp-image-reveal.has-reveal.revealed img {
+    opacity: 1;
+}
+
+/* Left to Right Reveal */
+.xp-image-reveal.reveal-lr img {
+    transform: translateX(-100%);
+}
+
+.xp-image-reveal.reveal-lr.revealed img {
+    transform: translateX(0);
+    transition: transform var(--reveal-duration, 1s) cubic-bezier(0.77, 0, 0.175, 1), 
+                opacity var(--reveal-duration, 1s) ease;
+}
+
+/* Right to Left Reveal */
+.xp-image-reveal.reveal-rl img {
+    transform: translateX(100%);
+}
+
+.xp-image-reveal.reveal-rl.revealed img {
+    transform: translateX(0);
+    transition: transform var(--reveal-duration, 1s) cubic-bezier(0.77, 0, 0.175, 1), 
+                opacity var(--reveal-duration, 1s) ease;
+}
+
+/* Top to Bottom Reveal */
+.xp-image-reveal.reveal-tb img {
+    transform: translateY(-100%);
+}
+
+.xp-image-reveal.reveal-tb.revealed img {
+    transform: translateY(0);
+    transition: transform var(--reveal-duration, 1s) cubic-bezier(0.77, 0, 0.175, 1), 
+                opacity var(--reveal-duration, 1s) ease;
+}
+
+/* Bottom to Top Reveal */
+.xp-image-reveal.reveal-bt img {
+    transform: translateY(100%);
+}
+
+.xp-image-reveal.reveal-bt.revealed img {
+    transform: translateY(0);
+    transition: transform var(--reveal-duration, 1s) cubic-bezier(0.77, 0, 0.175, 1), 
+                opacity var(--reveal-duration, 1s) ease;
+}
+
+/* Scale Up Reveal */
+.xp-image-reveal.reveal-scale img {
+    transform: scale(0.8);
+}
+
+.xp-image-reveal.reveal-scale.revealed img {
+    transform: scale(1);
+    transition: transform var(--reveal-duration, 1s) cubic-bezier(0.34, 1.56, 0.64, 1), 
+                opacity var(--reveal-duration, 1s) ease;
+}
+
+/* Blur In Reveal */
+.xp-image-reveal.reveal-blur img {
+    filter: blur(20px);
+    transform: scale(1.1);
+}
+
+.xp-image-reveal.reveal-blur.revealed img {
+    filter: blur(0);
+    transform: scale(1);
+    transition: filter var(--reveal-duration, 1s) ease, 
+                transform var(--reveal-duration, 1s) ease, 
+                opacity var(--reveal-duration, 1s) ease;
+}
+
+/* Clip Path Reveal */
+.xp-image-reveal.reveal-clip img {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
+.xp-image-reveal.reveal-clip.revealed img {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: clip-path var(--reveal-duration, 1s) cubic-bezier(0.77, 0, 0.175, 1), 
+                opacity var(--reveal-duration, 1s) ease;
+}
+
+/* Editor Styles */
+.elementor-editor-active .xp-image-reveal.has-reveal img {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    clip-path: none !important;
+}
 
 .box_cardss img {
   transition: transform .6s cubic-bezier(.34,.78,.45,.98);
@@ -9883,6 +9996,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   width: 100%;
   position: relative;
   padding: 30px 0;
+  cursor: pointer;
 }
 @media only screen and (max-width: 880px) {
   .xptheme-interactive-link-showcase.xptheme-layout--list

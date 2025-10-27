@@ -191,6 +191,7 @@ function bistroly_scripts() {
 	wp_enqueue_script( 'countdown', get_template_directory_uri() . '/js/jquery.countdown.min.js', array( 'jquery' ), '20180910', true );
 	wp_enqueue_script( 'jquery-ui', get_template_directory_uri() . '/js/jquery-ui.js', array( 'jquery' ), '20180915', true );
 	wp_enqueue_script( 'select2-js', get_template_directory_uri() . '/js/select2.min.js', array( 'jquery' ), '20180917', true );
+	wp_enqueue_script( 'reveal-js', get_template_directory_uri() . '/js/image_reveal_js.js', array( 'jquery' ), '20180920', true );
     wp_enqueue_script( 'bistroly-elementor', get_template_directory_uri() . '/js/elementor.js', array( 'jquery' ), '20200716', true );
 	wp_enqueue_script( 'bistroly-elementor-header', get_template_directory_uri() . '/js/elementor-header.js', array('jquery'), '20200716', true );
 	wp_enqueue_script( 'bistroly-scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '20200716', true );
