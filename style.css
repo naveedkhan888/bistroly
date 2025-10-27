@@ -9875,7 +9875,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   content: "";
   width: 100%;
   height: 1px;
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--divider-color);
 }
 .xptheme-interactive-link-showcase.xptheme-layout--list
   .xptheme-m-items
@@ -10008,7 +10008,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   display: block;
   width: 100%;
   height: 1px;
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--divider-color);
   z-index: 0;
 }
 .xptheme-interactive-link-showcase.xptheme-layout--list

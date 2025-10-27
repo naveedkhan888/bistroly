@@ -456,8 +456,10 @@ class XP_Lists_Showcase extends Widget_Base {
                     $subtitle_tag = !empty($item['subtitle_tag']) ? $item['subtitle_tag'] : 'p';
                 ?>
                     <a itemprop="url" class="xptheme-m-item xptheme-e" <?php echo $link_attr; ?>>
-                        <<?php echo esc_attr($title_tag); ?> class="xptheme-e-title"><?php echo esc_html($item['title']); ?></<?php echo esc_attr($title_tag); ?>>
-                        <<?php echo esc_attr($subtitle_tag); ?> class="xptheme-e-subtitle"><?php echo esc_html($item['subtitle']); ?></<?php echo esc_attr($subtitle_tag); ?>>
+                        <div class="links_innnnner">
+                                <<?php echo esc_attr($title_tag); ?> class="xptheme-e-title"><?php echo esc_html($item['title']); ?></<?php echo esc_attr($title_tag); ?>>
+                            <<?php echo esc_attr($subtitle_tag); ?> class="xptheme-e-subtitle"><?php echo esc_html($item['subtitle']); ?></<?php echo esc_attr($subtitle_tag); ?>>
+                        </div>
 
                         <?php if (!empty($item['image_1']['url'])): ?>
                             <img decoding="async" loading="lazy" src="<?php echo esc_url($item['image_1']['url']); ?>" alt="<?php echo esc_attr($item['title']); ?>" />
