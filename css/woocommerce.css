@@ -91,7 +91,7 @@ WooCommerce styles override
   font-size: 18px;
   line-height: 28px;
   color: #ffffff;
-  font-weight: 700;
+  font-weight: 400;
   margin-top: 20px;
   margin-bottom: 3px;
   padding: 0px;
@@ -657,7 +657,7 @@ WooCommerce styles override
 .woocommerce button.button.alt, .woocommerce input.button.alt {
   overflow: hidden;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 400;
   text-transform: uppercase;
   padding: 16px 30px;
   outline: none;
@@ -707,7 +707,7 @@ WooCommerce styles override
 /* widget product */
 .woocommerce .woocommerce-Price-amount {
   color: var(--primary-color);
-  font-weight: 600;
+  font-weight: 400;
 }
 .woocommerce .site ul.product_list_widget li {
   margin-bottom: 28px;

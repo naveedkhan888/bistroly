@@ -2740,7 +2740,7 @@ Vertical Menu
   border-radius: 50%;
 }
 .blog-post .author-bio .author-info .title {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
   margin-bottom: 3px;
@@ -2847,7 +2847,6 @@ Vertical Menu
 .post-nav .info-post h6 {
   font-size: 16px;
   line-height: 24px;
-  font-weight: 500;
   margin-bottom: 6px;
   margin-top: -5px;
 }
