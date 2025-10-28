@@ -1764,6 +1764,9 @@ a:hover, a:active {
   top: 0;
   z-index: 99;
 }
+.elementor-editor-active .is-stuck {
+    position: relative;
+}
 
 .admin-bar .is-stuck,
 .admin-bar .header-overlay {
@@ -4549,6 +4552,7 @@ object {
 }
 .xp_bx_price {
   box-shadow: none !important;
+  position: relative;
 }
 .xp_bx_price .image-box img {
 }
