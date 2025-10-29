@@ -153,7 +153,7 @@ WooCommerce styles override
   color: #fff;
   font-size: 11px;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.5px;
   background-color: #ff5723;
   padding: 6px 9px;
@@ -247,7 +247,7 @@ WooCommerce styles override
 }
 .single-product .woocommerce-tabs h2 {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 400;
 }
 .single-product .woocommerce-tabs .comment-reply-title {
   font-size: 24px;
@@ -928,7 +928,7 @@ WooCommerce styles override
   margin-bottom: 15px;
 }
 .product_meta > span > * {
-  font-weight: 500;
+  font-weight: 400;
   text-transform: none;
   color: #b6b4b4;
 }

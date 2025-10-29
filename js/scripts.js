@@ -44,11 +44,11 @@
     * sticky header
     * --------------------------------------------------*/
 	// Append a clone of the header for spacing adjustment
-    $('.header-static .is-fixed').parent().append('<div class="header-clone"></div>');
+    $('.site-header .is-fixed').parent().append('<div class="header-clone"></div>');
     
     // Set the height of the header clone to match the fixed header
     $('.header-clone').height($('#site-header .is-fixed').outerHeight());
-    $('.header-static .header-clone').hide();
+    $('.site-header .header-clone').hide();
 
     let previousScroll = 0; // Store the previous scroll position
 
@@ -60,11 +60,11 @@
         if (currentScroll > site_header && currentScroll < previousScroll) {
             // Scrolling up: Add sticky class and show header clone
             $('.site-header .is-fixed').addClass('is-stuck');
-            $('.header-static .header-clone').show();
+            $('.site-header .header-clone').show();
         } else if (currentScroll <= site_header || currentScroll > previousScroll) {
             // Scrolling down or above the header: Remove sticky class and hide header clone
             $('.site-header .is-fixed').removeClass('is-stuck');
-            $('.header-static .header-clone').hide();
+            $('.site-header .header-clone').hide();
         }
 
         // Update the previous scroll position
