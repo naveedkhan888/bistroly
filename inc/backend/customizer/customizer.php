@@ -236,6 +236,12 @@ function bistroly_customize_settings() {
             'priority'    => 9,
             'capability'  => 'edit_theme_options',
         ),
+        /* color scheme */
+        'color_scheme'   => array(
+			'title'      => esc_html__( 'Color Scheme', 'bistroly' ),
+			'priority'   => 200,
+			'capability' => 'edit_theme_options',
+		),
         /* blog */
         'blog_page'           => array(
 			'title'       => esc_html__( 'Blog Page', 'bistroly' ),
@@ -284,12 +290,6 @@ function bistroly_customize_settings() {
             'priority'    => 11,
             'capability'  => 'edit_theme_options',
         ),
-        /* color scheme */
-        'color_scheme'   => array(
-			'title'      => esc_html__( 'Color Scheme', 'bistroly' ),
-			'priority'   => 200,
-			'capability' => 'edit_theme_options',
-		),
 		/* js code */
 		'script_code'   => array(
 			'title'      => esc_html__( 'Google Analytics(Script Code)', 'bistroly' ),
