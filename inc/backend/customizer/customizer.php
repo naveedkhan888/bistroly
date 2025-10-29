@@ -239,7 +239,7 @@ function bistroly_customize_settings() {
         /* color scheme */
         'color_scheme'   => array(
 			'title'      => esc_html__( 'Color Scheme', 'bistroly' ),
-			'priority'   => 200,
+			'priority'   => 7,
 			'capability' => 'edit_theme_options',
 		),
         /* blog */
