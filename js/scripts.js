@@ -44,32 +44,40 @@
     * sticky header
     * --------------------------------------------------*/
 	// Append a clone of the header for spacing adjustment
-    $('.site-header .is-fixed').parent().append('<div class="header-clone"></div>');
-    
-    // Set the height of the header clone to match the fixed header
-    $('.header-clone').height($('#site-header .is-fixed').outerHeight());
-    $('.site-header .header-clone').hide();
+	$('.header-static .is-fixed').parent().append('<div class="header-clone"></div>');
 
-    let previousScroll = 0; // Store the previous scroll position
+	// Set the height of the header clone to match the fixed header
+	$('.header-clone').height($('#site-header .is-fixed').outerHeight());
+	$('.header-static .header-clone').hide();
 
-    // Scroll event listener
-    $(window).on("scroll", function() {
-        var currentScroll = $(window).scrollTop(); // Current scroll position
-        var site_header = $('#site-header').outerHeight(); // Header height
-        
-        if (currentScroll > site_header && currentScroll < previousScroll) {
-            // Scrolling up: Add sticky class and show header clone
-            $('.site-header .is-fixed').addClass('is-stuck');
-            $('.site-header .header-clone').show();
-        } else if (currentScroll <= site_header || currentScroll > previousScroll) {
-            // Scrolling down or above the header: Remove sticky class and hide header clone
-            $('.site-header .is-fixed').removeClass('is-stuck');
-            $('.site-header .header-clone').hide();
-        }
+	let previousScroll = 0; // Store previous scroll position
 
-        // Update the previous scroll position
-        previousScroll = currentScroll;
-    });
+	$(window).on("scroll", function() {
+	    var currentScroll = $(window).scrollTop();
+	    var site_header = $('#site-header').outerHeight();
+	    var $fixedHeader = $('.site-header .is-fixed');
+
+	    // Add "scrolling-down" class once user scrolls down even slightly
+	    if (currentScroll > 0) {
+	        $fixedHeader.addClass('scrolling-down');
+	    } else {
+	        // Remove class when back at top
+	        $fixedHeader.removeClass('scrolling-down');
+	    }
+
+	    // Handle sticky header visibility (existing logic)
+	    if (currentScroll > site_header && currentScroll < previousScroll) {
+	        // Scrolling up: show sticky header
+	        $fixedHeader.addClass('is-stuck');
+	        $('.header-static .header-clone').show();
+	    } else if (currentScroll <= site_header || currentScroll > previousScroll) {
+	        // Scrolling down or above the header: hide sticky header
+	        $fixedHeader.removeClass('is-stuck');
+	        $('.header-static .header-clone').hide();
+	    }
+
+	    previousScroll = currentScroll;
+	});
 
     /* --------------------------------------------------
     * mobile menu
