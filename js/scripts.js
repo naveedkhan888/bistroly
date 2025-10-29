@@ -52,18 +52,18 @@
 
     let previousScroll = 0; // Store the previous scroll position
 
+    $(window).on("scroll", function() {
+	  if ($(this).scrollTop() > 0) {
+	    $('.site-header .is-fixed').addClass('scrolling-down');
+	  } else {
+	    $('.site-header .is-fixed').removeClass('scrolling-down');
+	  }
+	});
+
     // Scroll event listener
     $(window).on("scroll", function() {
         var currentScroll = $(window).scrollTop(); // Current scroll position
         var site_header = $('#site-header').outerHeight(); // Header height
-
-        // Add "scrolling-down" class once user scrolls down even slightly
-	    if (currentScroll > 0) {
-	        $fixedHeader.addClass('scrolling-down');
-	    } else {
-	        // Remove class when back at top
-	        $fixedHeader.removeClass('scrolling-down');
-	    }
         
         if (currentScroll > site_header && currentScroll < previousScroll) {
             // Scrolling up: Add sticky class and show header clone
