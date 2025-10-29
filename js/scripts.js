@@ -52,14 +52,6 @@
 
     let previousScroll = 0; // Store the previous scroll position
 
-    $(window).on("scroll", function() {
-	  if ($(this).scrollTop() > 0) {
-	    $('.site-header .is-fixed').addClass('scrolling-down');
-	  } else {
-	    $('.site-header .is-fixed').removeClass('scrolling-down');
-	  }
-	});
-
     // Scroll event listener
     $(window).on("scroll", function() {
         var currentScroll = $(window).scrollTop(); // Current scroll position
