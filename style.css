@@ -10227,3 +10227,8 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
     padding-left: 30px;
   }
 }
+
+
+sr7-col-bg, sr7-col-bg-mask {
+  width: 100%;
+}
