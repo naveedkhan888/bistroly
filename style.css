@@ -2528,7 +2528,7 @@ Vertical Menu
   font-weight: 400;
   font-family: "Belleza", sans-serif;
   line-height: 36px;
-  color: #191717;
+  color: var(--text-color);
 }
 .post-box .quote-box .quote-text span {
   font-size: 14px;
